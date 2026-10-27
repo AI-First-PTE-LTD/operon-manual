@@ -1,0 +1,38 @@
+---
+title: "4 · Template details and saving"
+description: Set the default case length and the client requirement, and save a new version of the template.
+sidebar:
+  order: 5
+  label: "4 · Template details and saving"
+---
+
+**Who:** tenant admin. **Where:** the template editor.
+
+## Details
+
+On the **Details** tab, under **Template settings**, set **Default case length**, for example `10` business days. **Needs a client** is on by default: a client must then be chosen when a case is started from the template.
+
+{% screenshot id="case-templates/details-settings" caption="The Details tab." /%}
+
+## Unsaved changes
+
+While the template has unsaved changes, **Discard** and **Save changes** are shown at the top right.
+
+{% screenshot id="case-templates/editor-unsaved" caption="Discard and Save changes at the top right." /%}
+
+## If saving is refused
+
+When you save, Operon checks two rules:
+
+- A section whose **Board status** is **Waiting for client** must have **Waiting on** set.
+- If a task is due relative to the case due date, **Default case length** must be set on the **Details** tab.
+
+The message names the section or task to correct.
+
+{% screenshot id="case-templates/save-refused" caption="A save refused, with the item to correct." /%}
+
+## Saved
+
+After you select **Save changes**, the status shows **Saved** and the version goes up by one (for example **v2**). Cases that have already started keep the version that they started with.
+
+{% screenshot id="case-templates/editor-saved" caption="The template saved as a new version." /%}

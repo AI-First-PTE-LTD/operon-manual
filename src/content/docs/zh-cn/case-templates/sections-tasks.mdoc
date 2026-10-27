@@ -1,0 +1,97 @@
+---
+title: "3 · 设置分区和任务"
+description: 添加内部分区和客户分区、添加任务，并设置每项任务由谁来做、何时到期。
+sidebar:
+  order: 4
+  label: "3 · 设置分区和任务"
+---
+
+**谁做：** 租户管理员。**在哪里：** 模板编辑器的 **任务**（Tasks）页签。
+
+分区是案子的一个阶段；任务是该阶段中某人要做的一件事。新添加的分区和任务会自动打开设置面板。
+
+## 分区菜单
+
+分区的 **⋯** 菜单中有 **分区设置**（Section settings）、**添加任务**（Add task）、**上移**（Move up）、**下移**（Move down）和 **删除分区**（Delete section）。
+
+{% screenshot id="case-templates/section-menu" caption="分区菜单。" /%}
+
+## 内部分区
+
+打开 **分区设置**，按以下步骤设置：
+
+{% steps %}
+
+1. 在 **名称**（Name）中填写分区名称，例如 `Information collection`。
+2. 在 **看板状态**（Board status）中选 **准备中**（Prep）。这是该分区进行中时案子在 **案子** 看板上所在的列。
+3. 在 **卡片上的副标题**（Sub-line on the card）中填写一句显示在案子卡片上的简短说明。
+
+{% /steps %}
+
+{% screenshot id="case-templates/section-internal" caption="内部分区的分区设置。" /%}
+
+## 任务
+
+选任务行即可打开其设置：
+
+- **名称**（Name）和 **要做什么**（What to do）。
+- **负责方**（Responsible）：**我们团队**（Our team）、**客户**（The client）或 **ACRA**。
+- 到期时间。本例设为开案后第 2 个工作日到期（**从哪里起算**（Counted from）选 **开案日期**（The case start date），**工作日**（Business days）填 `2`）。
+
+{% screenshot id="case-templates/task-settings" caption="任务的设置。" /%}
+
+## 跟随另一个任务到期
+
+要让任务在另一个任务之后到期：
+
+{% steps %}
+
+1. **从哪里起算**（Counted from）选 **另一个任务**（Another task）。
+2. **哪个任务**（Which task）选它所跟随的任务。
+3. 在 **工作日**（Business days）中填写工作日天数，例如 `1`。
+
+{% /steps %}
+
+{% aside type="caution" %}
+**哪个任务** 中不要选这项任务本身。任务不能以自己、或以自己为参照的任务为参照计算到期。
+{% /aside %}
+
+{% screenshot id="case-templates/task-due-after-task" caption="在另一个任务之后 1 个工作日到期的任务。" /%}
+
+## 并行分区
+
+对于 `Invoice & payment` 这类分区，打开 **分区设置**，在 **行为**（Behaviour）下：
+
+- 关掉 **推进案子**（Moves the case forward）。
+- 打开 **并行执行**（Runs in parallel）。
+
+该分区随后既不挡住其后的分区，也不改变案子在看板上所在的列。
+
+{% screenshot id="case-templates/section-parallel" caption="并行执行的分区。" /%}
+
+## 任务选项
+
+- 任务可以按案子到期日到期：**从哪里起算** 选 **案子到期日**（The case due date）。
+- 在其他系统中完成的工作，在 **选项**（Options）下打开 **在 StaffOnAI 之外完成**（Done outside StaffOnAI），任务行会显示 **平台外**（Off-platform）标签。
+
+{% screenshot id="case-templates/task-options" caption="任务选项：已打开「在 StaffOnAI 之外完成」。" /%}
+
+## 客户分区
+
+选 **+ 添加客户分区**（+ Add client section），再按以下步骤设置：
+
+{% steps %}
+
+1. 在 **催客户**（Chasing the client）下设置提醒，例如 **到期前提醒**（Remind before it’s due）选 `到期前 2 天`，**持续提醒**（Keep reminding）选 `每 3 天`，并打开 **逾期后再提醒一次**（Remind again once overdue）。
+2. 在 **看板状态**（Board status）中选 **等客户**（Waiting for client）。
+3. **在等谁**（Waiting on）选 **客户**（The client）。
+
+{% /steps %}
+
+{% screenshot id="case-templates/section-client" caption="客户分区的分区设置。" /%}
+
+## 客户任务
+
+在客户分区中选 **添加客户任务**（Add client task），并为任务命名，例如 `Sign engagement letter`。
+
+{% screenshot id="case-templates/client-task" caption="客户分区中的任务。" /%}

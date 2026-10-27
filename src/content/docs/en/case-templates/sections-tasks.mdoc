@@ -1,0 +1,97 @@
+---
+title: "3 · Set up sections and tasks"
+description: Add internal and client sections, add tasks, and set who does each task and when it is due.
+sidebar:
+  order: 4
+  label: "3 · Set up sections and tasks"
+---
+
+**Who:** tenant admin. **Where:** the template editor, **Tasks** tab.
+
+A section is one stage of the case. A task is one thing that someone does in that stage. When you add a section or a task, its settings panel opens automatically.
+
+## The section menu
+
+The **⋯** menu of a section contains **Section settings**, **Add task**, **Move up**, **Move down** and **Delete section**.
+
+{% screenshot id="case-templates/section-menu" caption="The section menu." /%}
+
+## An internal section
+
+Open **Section settings** and set the section up:
+
+{% steps %}
+
+1. In **Name**, enter the section name, for example `Information collection`.
+2. Under **Board status**, choose **Prep**. This is the column of the **Cases** board that the case is in while this section is open.
+3. In **Sub-line on the card**, enter a short line to show on the case card.
+
+{% /steps %}
+
+{% screenshot id="case-templates/section-internal" caption="Section settings of an internal section." /%}
+
+## A task
+
+Select a task row to open its settings:
+
+- **Name** and **What to do**.
+- **Responsible**: **Our team**, **The client** or **ACRA**.
+- The due date. In this example the task is due 2 business days after the case starts (**Counted from** **The case start date**, **Business days** `2`).
+
+{% screenshot id="case-templates/task-settings" caption="The settings of a task." /%}
+
+## Due after another task
+
+To make a task due after another task:
+
+{% steps %}
+
+1. In **Counted from**, choose **Another task**.
+2. In **Which task**, choose the task that it follows.
+3. In **Business days**, enter the number of business days, for example `1`.
+
+{% /steps %}
+
+{% aside type="caution" %}
+Do not choose the task itself in **Which task**. A task cannot be due relative to itself, or to a task that is due relative to it.
+{% /aside %}
+
+{% screenshot id="case-templates/task-due-after-task" caption="A task that is due 1 business day after another task." /%}
+
+## A section that runs alongside the others
+
+For a section such as `Invoice & payment`, open **Section settings** and, under **Behaviour**:
+
+- Turn off **Moves the case forward**.
+- Turn on **Runs in parallel**.
+
+The section then does not hold up the sections after it, and it does not change the case's column on the board.
+
+{% screenshot id="case-templates/section-parallel" caption="A section that runs in parallel." /%}
+
+## Task options
+
+- A task can be due on the case due date: in **Counted from**, choose **The case due date**.
+- For work that is done in another system, turn on **Done outside StaffOnAI** under **Options**. The task row then shows the **Off-platform** label.
+
+{% screenshot id="case-templates/task-options" caption="Task options, with Done outside StaffOnAI turned on." /%}
+
+## A client section
+
+Select **+ Add client section**, and then set the section up:
+
+{% steps %}
+
+1. Under **Chasing the client**, set the reminders, for example **Remind before it’s due** `2 days before due`, **Keep reminding** `Every 3 days`, and turn on **Remind again once overdue**.
+2. Under **Board status**, choose **Waiting for client**.
+3. In **Waiting on**, choose **The client**.
+
+{% /steps %}
+
+{% screenshot id="case-templates/section-client" caption="Section settings of a client section." /%}
+
+## A client task
+
+Select **Add client task** in the client section, and name the task, for example `Sign engagement letter`.
+
+{% screenshot id="case-templates/client-task" caption="A task in a client section." /%}
