@@ -1,0 +1,38 @@
+---
+title: "4 · 模板详情与保存"
+description: 设置默认案子时长和是否必须选客户，并将模板保存为新版本。
+sidebar:
+  order: 5
+  label: "4 · 模板详情与保存"
+---
+
+**谁做：** 租户管理员。**在哪里：** 模板编辑器。
+
+## 详情
+
+在 **详情**（Details）页签的 **模板设置**（Template settings）下设置 **默认案子时长**（Default case length），例如 `10` 个工作日。**建案时必须选客户**（Needs a client）默认打开：用此模板开案子时必须选择客户。
+
+{% screenshot id="case-templates/details-settings" caption="详情页签。" /%}
+
+## 未保存的修改
+
+模板有未保存的修改时，右上角会出现 **放弃修改**（Discard）和 **保存修改**（Save changes）。
+
+{% screenshot id="case-templates/editor-unsaved" caption="右上角的放弃修改和保存修改。" /%}
+
+## 保存被拒时
+
+保存时，Operon 检查两条规则：
+
+- **看板状态** 选了 **等客户** 的分区，必须设置 **在等谁**。
+- 有任务以案子到期日为参照计算到期时，必须在 **详情** 页签设置 **默认案子时长**。
+
+报错信息会写明需要修改的分区或任务。
+
+{% screenshot id="case-templates/save-refused" caption="保存被拒，并写明需要修改的项。" /%}
+
+## 已保存
+
+选 **保存修改** 后，状态显示 **已保存**（Saved），版本号加一（例如 **v2**）。已经开出的案子仍按其开出时的版本运行。
+
+{% screenshot id="case-templates/editor-saved" caption="模板已保存为新版本。" /%}

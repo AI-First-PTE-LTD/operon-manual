@@ -42,6 +42,11 @@ export default defineConfig({
           translations: { 'zh-CN': 'CRM · 合同管理' },
           items: [{ autogenerate: { directory: 'crm' } }],
         },
+        {
+          label: 'Case templates',
+          translations: { 'zh-CN': '案件模板' },
+          items: [{ autogenerate: { directory: 'case-templates' } }],
+        },
       ],
     }),
     markdoc(),

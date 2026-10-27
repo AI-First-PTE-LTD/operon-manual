@@ -1,0 +1,40 @@
+---
+title: "5 · 用模板新建案子"
+description: 在案子看板上用模板新建案子，并检查生成的任务。
+sidebar:
+  order: 6
+  label: "5 · 用模板新建案子"
+---
+
+**谁做：** 能在该部门开案子的用户（见 [当前已知限制](/zh-cn/case-templates/known-limitations/)）。**在哪里：** 部门工作区 › **案子**（Cases）。
+
+## 新建案子
+
+{% steps %}
+
+1. 选 **+ 新建案子**（+ New Case）。
+2. **案子类型**（Case type）选该模板。
+3. **指派给**（Assigned to）选负责人，例如 Demo Accountant。
+4. **客户**（Client）选客户，例如 ABC PTE. LTD.。模板中打开了 **建案时必须选客户** 时，客户必填。
+5. **开始**（Start）选开始日期。
+6. 选 **创建案子**（Create Case）。
+
+{% /steps %}
+
+{% screenshot id="case-templates/case-new" caption="新建案子对话框。" /%}
+
+## 看板上的案子
+
+案子出现在 **待开始**（Ready to start）列。进度显示已完成的任务数，例如 `0/7`。
+
+{% screenshot id="case-templates/case-board" caption="案子看板上的新案子。" /%}
+
+## 任务页签
+
+打开案子，选 **任务**（Tasks）页签：
+
+- 模板已展开为各个分区和任务。
+- 到期时间已换算为具体日期。
+- 须等待前面分区的分区会显示它在等哪个分区。如需提前开始，选 **仍要提前做**（Start anyway）。
+
+{% screenshot id="case-templates/case-tasks" caption="用模板开出的案子的任务页签。" /%}
