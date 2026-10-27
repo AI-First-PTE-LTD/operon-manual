@@ -1,0 +1,32 @@
+---
+title: "6 · 审批"
+description: 提交合同审批，批准或退回。
+sidebar:
+  order: 7
+  label: "6 · 审批"
+---
+
+**谁做：** 商机负责人提交；商机负责人所在部门的负责人审批。
+
+## 提交
+
+选 **提交审批**（Submit for approval），需要时附上说明。以下任一情况下，合同进入待审批：
+
+- 整单折扣超过所里设定的阈值（默认 10%）；
+- 草稿经人工修改。
+
+否则合同直接变为可发送。
+
+提交后，提交人能看到合同在等谁审批，并可以撤回或提醒。
+
+{% screenshot id="crm/approval-submitter" caption="提交人看到的页面。" /%}
+
+## 批准
+
+审批人在导航的 **商机**（Opportunity）上看到红色待办数。审批人打开合同，逐行对照目录价，选 **批准**（Approve）；或填写意见后选 **退回草稿**（Return to draft）。
+
+{% screenshot id="crm/approval-approver" caption="审批人看到的页面：原因、说明、逐行差额。" /%}
+
+{% aside type="note" title="不能自批" %}
+部门负责人自己提交的合同，由租户管理员审批。
+{% /aside %}

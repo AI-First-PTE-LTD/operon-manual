@@ -2,7 +2,7 @@
 title: "Step 2 · Reconcile: sales & purchases"
 description: Settle each sales invoice and purchase bill, confirm tax codes and handle what is still owed at period end.
 sidebar:
-  order: 8
+  order: 9
   label: "Step 2 · Sales & purchases"
 ---
 
@@ -12,7 +12,7 @@ sidebar:
 
 **Filters on Sales matching:** Needs action, All, Collected, On hold, Suspense, Not yet due, Waiting for client. **Aging** shows the aged receivables and exports them to Excel.
 
-**Filters on Purchases matching:** Needs action, Waiting for client, All, Paid, Not yet due. **Aging** shows the aged payables.
+**Filters on Purchases matching:** Needs action, Waiting for client, All, Paid, Not yet due. At the top right are **New purchase invoice**, **New expense voucher** and **Aging**; **Aging** shows the aged payables. Unpaid bills show how many days they are overdue.
 
 ## Invoice statuses
 
@@ -37,7 +37,7 @@ When Operon is not sure whether a document is an invoice (for example, a quotati
 |---|---|---|
 | The invoice is uncollected and the receipt is in the bank | Open the invoice › **Match transaction** › **Match** (or **Match combination** when several receipts add up) | The receipt is applied; the status becomes Collected. |
 | Partly received | **Choose a receipt for the balance** | The remaining receipt is applied. |
-| Received in cash, by card or through a director | To-do › **Record receipt…** | The receipt is recorded against the chosen account. |
+| Received in cash, by card or through a director | To-do › **Actions** › **Record receipt…** | The receipt is recorded against the chosen account. |
 | The customer still owes at quarter end | **Confirm still owed at period end** (or **Customer still owes**) | Recorded as still owed; matched later when paid. |
 | The tax code is to be confirmed | In the drawer's GST tax code block: confirm or change | The tax code is fixed; the F5 updates. |
 | A credit note | Use the credit note in the **Record receipt** form, or **Apply credit note** in the to-do item | The invoice is reduced by the credit. |
@@ -50,15 +50,17 @@ When Operon is not sure whether a document is an invoice (for example, a quotati
 
 ## Purchase bills: what to do
 
+A bill opens in its drawer: the document is on the left; the bill details, **Handle this one** and the payments matched to the bill are on the right.
+
 {% screenshot id="bookkeeping/purchases-bill-drawer" caption="A bill opened in its drawer." /%}
 
 | Situation | Select | Result |
 |---|---|---|
 | The bill is unpaid and the payment is in the bank | Open the bill › **Match transaction** › **Match** / **Match combination** | The payment is applied; the status becomes Paid. |
 | Partly paid | Choose a payment for the balance | The remaining payment is applied. |
-| Paid by a director, an employee or a credit card | To-do › **Record payment…** | Recorded against the director's, employee's or card account. |
+| Paid by a director, an employee or a credit card | To-do › **Actions** › **Record payment…** | Recorded against the director's, employee's or card account. |
 | Still unpaid at quarter end | **Confirm still owed at period end** (several at once: **Confirm still owed at period end (n)**) | Recorded as still owed; matched later when paid. |
-| A supplier credit note | Use the credit in the **Record payment** form, or **Apply credit note** | The bill is reduced. For another currency, confirm the rate (within 5% of the reference rate). |
+| A supplier credit note | Use the credit in the **Record payment** form, or **Apply credit note** › **Apply** | The bill is reduced. For another currency, confirm the rate (within 5% of the reference rate). |
 | A credit note not used by quarter end | **Keep unused to the next period** | Stays on the supplier's account; listed for review. |
 | A payable from last year that will not be paid | **Write back payable…** | The balance is written back to the chosen account. |
 | A duplicate, a quotation or pro forma, or not this company's | **Void…** and choose the reason | The bill is no longer booked. |
@@ -72,7 +74,7 @@ DEF SUPPLIES PTE. LTD. issues a bill of SGD 545.00 (SGD 500.00 plus 9% GST) on 2
 
 ## Bills without an original
 
-When there is no original document, a bill, a sales invoice or an expense can be entered by hand with **New bill**, **New invoice** or **New expense**.
+When there is no original document, a supplier bill or an expense can be entered by hand on **Purchases matching** with **New purchase invoice** or **New expense voucher**.
 
 {% aside type="note" title="Locked quarters" %}
 A bill dated in a locked quarter cannot be changed, but a later payment can still be applied to it. Otherwise use **Record in next open period…**, or ask a manager to reopen the quarter.

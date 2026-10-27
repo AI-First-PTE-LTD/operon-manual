@@ -1,0 +1,31 @@
+---
+title: "1 · 合同骨架"
+description: 按签约主体、国家、语言和版式登记事务所的 Word 合同模板（骨架）。
+sidebar:
+  order: 2
+  label: "1 · 合同骨架"
+---
+
+**谁做：** 租户管理员。**在哪里：** **管理** › **客户关系** › **设置** › **合同骨架**（Admin › CRM › Settings › Contract layouts）。
+
+骨架是事务所的一份 Word 模板，对应一个 **签约主体 × 国家 × 语言 × 版式** 组合。只有登记了骨架的组合才能生成合同。
+
+## 登记骨架
+
+{% steps %}
+
+1. 选 **登记骨架**（Register layout）。
+2. 选签约主体、国家、语言和版式。
+3. 上传 `.docx` 文件。
+
+{% /steps %}
+
+Operon 从文件里读出它用到的字段。文件里有不认识的字段时，Operon 列出这些字段的名字并拒绝登记。
+
+{% screenshot id="crm/templates-register" caption="登记骨架：字段从文件自动读出。" /%}
+
+## 一份模板给其他签约主体用
+
+要让另一个签约主体也用这份模板，在这一行选 **用于其他签约主体**（Use for another issuing entity），再选好主体即可。主体自己的名称、UEN、地址、收款账户和签字人在生成合同时自动填入，所以一份文件可以给多个主体用。
+
+{% screenshot id="crm/templates-other-entity" caption="把已登记的骨架用于其他签约主体。" /%}

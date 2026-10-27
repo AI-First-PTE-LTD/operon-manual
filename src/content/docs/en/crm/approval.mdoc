@@ -1,0 +1,32 @@
+---
+title: "6 · Approval"
+description: Submit a contract for approval, and approve or return it.
+sidebar:
+  order: 7
+  label: "6 · Approval"
+---
+
+**Who:** the person in charge submits; the department head of the person in charge approves.
+
+## Submit
+
+Select **Submit for approval** and add a note if it helps the approver. The contract waits for approval when either of these applies:
+
+- the total discount is above the firm's threshold (10% by default);
+- the draft was edited by hand.
+
+Otherwise the contract is ready to send at once.
+
+After submitting, the submitter sees who the contract is waiting for, and can withdraw it or send a reminder.
+
+{% screenshot id="crm/approval-submitter" caption="What the submitter sees." /%}
+
+## Approve
+
+The approver sees a red count on **Opportunity** in the navigation. The approver opens the contract, checks each line against the catalog price, and selects **Approve**, or writes a comment and selects **Return to draft**.
+
+{% screenshot id="crm/approval-approver" caption="What the approver sees: the reason, the note and the difference on each line." /%}
+
+{% aside type="note" title="No self-approval" %}
+When the department head submits the contract, a tenant admin approves it.
+{% /aside %}

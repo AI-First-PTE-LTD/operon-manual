@@ -1,0 +1,34 @@
+---
+title: How a quarter is done
+description: The order of work for one quarter, and what the AI employee and the accountant each do.
+sidebar:
+  order: 3
+---
+
+A quarter is done in this order: **Upload → Read → Answer → Reconcile → Review → Complete**. The AI employee does the first pass of most parts; the accountant checks its work and finishes what is left.
+
+{% aside type="tip" title="Start here" %}
+When you open a company's workbench, look first at **Client queries** at the top right. If the client has replied, record the answers first: an answer with documents attached is read, and the period is booked again automatically. Then work on the to-do list. The first time you do a company, do the documents and the to-do list first, and add a question to the list only when only the client can answer it. See [Ask the client](/en/bookkeeping/client-queries/).
+{% /aside %}
+
+{% steps %}
+
+1. **Upload.**
+   - *AI employee:* the quarter's documents are uploaded.
+   - *Accountant:* upload anything the client sends later with **Import documents** on the Documents page. The documents need not be sorted first.
+
+2. **Read.** Operon recognises each file. PDFs with a text layer, Excel, CSV and Word files are read at no cost. Scans and photos are read by the model: a price is shown first, and each one must be approved before it is read. A file that is not approved is not booked. A file that cannot be read goes to the to-do list. See [Step 1 · Documents](/en/bookkeeping/documents/).
+
+3. **Answer (check the AI employee's answers).**
+   - *AI employee:* every to-do item has been answered once; the answers are listed under **Reconcile › Answered**.
+   - *Accountant:* check each answer: the account, the tax code, which bank account a statement belongs to, duplicates and documents dated outside the quarter. If you disagree, use **Change or withdraw**; the books are booked again automatically. Follow up the client query list and record the client's replies. Then answer what is left in the to-do list. See [Step 2 · Journal](/en/bookkeeping/journal/).
+
+4. **Reconcile.**
+   - *AI employee:* the bank lines are matched to invoices and bills and booked; most lines are posted.
+   - *Accountant:* handle the few lines left, such as those waiting for the client and those marked **To apply** that must be applied to an invoice. When an account's month has a difference of 0, select **Complete reconciliation** to submit it. A reviewer signs it off; a month you prepared yourself must be signed off by another manager. See [Step 2 · Reconcile: bank](/en/bookkeeping/reconcile-bank/) and [Step 2 · Reconcile: sales & purchases](/en/bookkeeping/reconcile-sales-purchases/).
+
+5. **Review.** *Accountant:* book the period-end adjustments (for example foreign-currency revaluation), review each change under **Adjustment review**, resolve the items under **F5 check** and confirm the F5. See [Step 3 · Review](/en/bookkeeping/review/).
+
+6. **Complete.** *Accountant:* open **Complete** and complete the quarter once every quarter check is met. If a check cannot be met but the quarter must be completed, only a manager can override it, with a written reason. Completing locks the quarter; to change it again, a manager reopens it. The list of checks is under [Step 3 · Review](/en/bookkeeping/review/#complete).
+
+{% /steps %}
