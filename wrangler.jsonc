@@ -1,5 +1,5 @@
-// Worker for the customer manual (design §5.1). Not deployed yet: the Cloudflare account, the domain and the access
-// policy are pending owner decisions (design §5.2, §5.3, §6). @astrojs/cloudflare merges this file into the generated
+// Worker for the customer manual (design §5.1). Deployed to the Cloudflare account that holds the staffonai.com zone;
+// see README "Deploy". @astrojs/cloudflare merges this file into the generated
 // dist/server/wrangler.json; Starlight pages are served as static assets and only /keystatic and /api/keystatic run on
 // the Worker. No D1, R2 or KV bindings.
 //
@@ -9,5 +9,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "operon-manual",
-  "compatibility_date": "2026-10-19"
+  "compatibility_date": "2026-10-19",
+  // Public URL. A Workers Custom Domain: Cloudflare creates the DNS record and the certificate. The workers.dev URL
+  // stays on for previews.
+  "routes": [{ "pattern": "docs.staffonai.com", "custom_domain": true }],
+  "workers_dev": true
 }

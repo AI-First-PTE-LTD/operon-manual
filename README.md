@@ -46,7 +46,8 @@ Writing rules: formal written English; button, tab and field names exactly as th
 Pre-sales staff and other editors use the visual editor at `/keystatic` on the published site:
 
 1. Sign in with your GitHub account. You need `write` access to this repository only; ask a maintainer for an invitation.
-2. Create a branch. Its name must start with `edit/` (for example `edit/bank-recon-wording`). `main` is protected and cannot be edited directly.
+2. Create a branch with **New branch** before you edit. Its name must start with `edit/` (for example `edit/bank-recon-wording`). `main` is protected and cannot be edited directly.
+   > Organisation admins bypass the protection of `main`: if an admin saves while the branch menu shows `main`, Keystatic commits straight to `main`. Admins must always switch to an `edit/` branch first.
 3. Edit and save. Each save is a commit under your own name.
 4. Select **Create pull request**.
 
@@ -71,7 +72,43 @@ GitHub mode needs the Keystatic GitHub App. It is created once by an organisatio
 - Every change to `main` goes through a pull request and needs at least one approval from a code owner (`.github/CODEOWNERS`). Force pushes to `main` are blocked.
 - CI (`.github/workflows/check.yml`) runs `check:manual`, the type check and the build on every pull request.
 - Reviewers check the wording against the current Operon interface, check that both languages say the same thing, and check that no real client data appears anywhere in the change.
-- Merging to `main` publishes the site. Hosting is a Cloudflare Worker (`wrangler.jsonc`); deployment is not set up yet.
+- Merging to `main` does not publish the site yet; a maintainer deploys by hand (see **Deploy**).
+
+## Deploy
+
+The site is a Cloudflare Worker named `operon-manual` in the Cloudflare account that holds the `staffonai.com` zone (`a47ffc5bfe27f103c0bb382311fbd48b`). Starlight pages are static assets; only `/keystatic` and `/api/keystatic` run on the Worker. The Worker has no D1, R2 or KV bindings.
+
+- Preview URL: <https://operon-manual.operon-staffon.workers.dev>
+- Public URL: <https://docs.staffonai.com>, a Workers Custom Domain declared in `wrangler.jsonc` (`routes`). Cloudflare manages its DNS record and certificate.
+
+Always pass the account id and an API token explicitly. A wrangler OAuth login on a developer machine can point at another account.
+
+```sh
+export CLOUDFLARE_ACCOUNT_ID=a47ffc5bfe27f103c0bb382311fbd48b
+export CLOUDFLARE_API_TOKEN=...            # from the team's secret store; never commit it
+npx wrangler whoami                         # check the account before you deploy
+
+# Build. The PUBLIC_* values are compiled into the client bundle.
+SITE_URL=https://docs.staffonai.com \
+PUBLIC_KEYSTATIC_STORAGE=github \
+PUBLIC_KEYSTATIC_GITHUB_APP_SLUG=<app slug> \
+pnpm build
+
+# Deploy the generated config (it merges wrangler.jsonc).
+npx wrangler deploy --config dist/server/wrangler.json
+```
+
+Worker secrets for GitHub mode (set once per value, through stdin so the value is not in shell history):
+
+```sh
+printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_GITHUB_CLIENT_ID --name operon-manual
+printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_GITHUB_CLIENT_SECRET --name operon-manual
+printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_SECRET --name operon-manual
+```
+
+The same values are kept in the team's secret store (Infisical, `staging` environment, root path) with the prefix `MANUAL_KEYSTATIC_`. The GitHub App is `operon-manual-keystatic` (organisation AI-First-PTE-LTD), installed on this repository only; its callback URLs are `https://docs.staffonai.com/api/keystatic/github/oauth/callback` and the same path on the workers.dev URL.
+
+`src/middleware.ts` adds a `User-Agent` header to the Worker's requests to GitHub. Cloudflare Workers send none, and the GitHub REST API rejects such requests with 403; without the header, signing out of Keystatic does not revoke the editor's GitHub token. The Worker logs the result of each revocation (`wrangler tail operon-manual`).
 
 ## Screenshots
 
