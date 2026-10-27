@@ -9,5 +9,9 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "operon-manual",
-  "compatibility_date": "2026-10-19"
+  "compatibility_date": "2026-10-19",
+  // Public URL. A Workers Custom Domain: Cloudflare creates the DNS record and the certificate. The workers.dev URL
+  // stays on for previews.
+  "routes": [{ "pattern": "docs.staffonai.com", "custom_domain": true }],
+  "workers_dev": true
 }

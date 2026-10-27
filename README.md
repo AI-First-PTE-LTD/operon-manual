@@ -46,7 +46,8 @@ Writing rules: formal written English; button, tab and field names exactly as th
 Pre-sales staff and other editors use the visual editor at `/keystatic` on the published site:
 
 1. Sign in with your GitHub account. You need `write` access to this repository only; ask a maintainer for an invitation.
-2. Create a branch. Its name must start with `edit/` (for example `edit/bank-recon-wording`). `main` is protected and cannot be edited directly.
+2. Create a branch with **New branch** before you edit. Its name must start with `edit/` (for example `edit/bank-recon-wording`). `main` is protected and cannot be edited directly.
+   > Organisation admins bypass the protection of `main`: if an admin saves while the branch menu shows `main`, Keystatic commits straight to `main`. Admins must always switch to an `edit/` branch first.
 3. Edit and save. Each save is a commit under your own name.
 4. Select **Create pull request**.
 
@@ -78,7 +79,7 @@ GitHub mode needs the Keystatic GitHub App. It is created once by an organisatio
 The site is a Cloudflare Worker named `operon-manual` in the Cloudflare account that holds the `staffonai.com` zone (`a47ffc5bfe27f103c0bb382311fbd48b`). Starlight pages are static assets; only `/keystatic` and `/api/keystatic` run on the Worker. The Worker has no D1, R2 or KV bindings.
 
 - Preview URL: <https://operon-manual.operon-staffon.workers.dev>
-- Public URL (planned): <https://docs.staffonai.com>, bound as a Workers Custom Domain.
+- Public URL: <https://docs.staffonai.com>, a Workers Custom Domain declared in `wrangler.jsonc` (`routes`). Cloudflare manages its DNS record and certificate.
 
 Always pass the account id and an API token explicitly. A wrangler OAuth login on a developer machine can point at another account.
 
@@ -105,7 +106,9 @@ printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_GITHUB_CLIENT_SECRET --na
 printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_SECRET --name operon-manual
 ```
 
-The same values are kept in the team's secret store with the prefix `MANUAL_KEYSTATIC_`.
+The same values are kept in the team's secret store (Infisical, `staging` environment, root path) with the prefix `MANUAL_KEYSTATIC_`. The GitHub App is `operon-manual-keystatic` (organisation AI-First-PTE-LTD), installed on this repository only; its callback URLs are `https://docs.staffonai.com/api/keystatic/github/oauth/callback` and the same path on the workers.dev URL.
+
+`src/middleware.ts` adds a `User-Agent` header to the Worker's requests to GitHub. Cloudflare Workers send none, and the GitHub REST API rejects such requests with 403; without the header, signing out of Keystatic does not revoke the editor's GitHub token. The Worker logs the result of each revocation (`wrangler tail operon-manual`).
 
 ## Screenshots
 
