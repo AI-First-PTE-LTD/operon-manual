@@ -4,7 +4,7 @@ The customer manual for [Operon](https://app.staffonai.com): step-by-step instru
 
 Built with [Starlight](https://starlight.astro.build) (Astro) and edited with [Keystatic](https://keystatic.com). The first edition covers the bookkeeping workbench.
 
-> This repository is **public**. Draft branches and pull requests can be seen by anyone. Never put real client data — company names, people, UENs, amounts, account numbers, e-mail addresses or screenshots of real books — in any file, commit, branch or pull request. All examples use fictional data (the example company is *Harbourline Trading Pte. Ltd.*).
+> This repository is **public**. Draft branches and pull requests can be seen by anyone. Never put real client data — company names, people, UENs, amounts, account numbers, e-mail addresses or screenshots of real books — in any file, commit, branch or pull request. All examples use fictional data (the example company is *ABC PTE. LTD.*).
 
 ## Run locally
 
