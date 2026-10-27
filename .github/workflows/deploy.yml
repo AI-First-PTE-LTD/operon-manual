@@ -1,0 +1,42 @@
+name: Deploy
+
+# Publishes main to the `operon-manual` Worker (docs.staffonai.com). See README "Deploy".
+# Credentials: secret CLOUDFLARE_API_TOKEN is a token that can deploy this Worker only; variable
+# CLOUDFLARE_ACCOUNT_ID is the account that holds it. The Keystatic secrets are Worker secrets and are not needed here.
+# The PUBLIC_* values are compiled into the client bundle and are public.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check:manual
+      - name: Build
+        run: pnpm build
+        env:
+          SITE_URL: https://docs.staffonai.com
+          PUBLIC_KEYSTATIC_STORAGE: github
+          PUBLIC_KEYSTATIC_GITHUB_APP_SLUG: ${{ vars.PUBLIC_KEYSTATIC_GITHUB_APP_SLUG }}
+      - name: Deploy
+        run: pnpm exec wrangler deploy --config dist/server/wrangler.json
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}

@@ -72,7 +72,7 @@ GitHub mode needs the Keystatic GitHub App. It is created once by an organisatio
 - Every change to `main` goes through a pull request and needs at least one approval from a code owner (`.github/CODEOWNERS`). Force pushes to `main` are blocked.
 - CI (`.github/workflows/check.yml`) runs `check:manual`, the type check and the build on every pull request.
 - Reviewers check the wording against the current Operon interface, check that both languages say the same thing, and check that no real client data appears anywhere in the change.
-- Merging to `main` does not publish the site yet; a maintainer deploys by hand (see **Deploy**).
+- Merging to `main` publishes the site automatically (see **Deploy**).
 
 ## Deploy
 
@@ -81,7 +81,23 @@ The site is a Cloudflare Worker named `operon-manual` in the Cloudflare account 
 - Preview URL: <https://operon-manual.operon-staffon.workers.dev>
 - Public URL: <https://docs.staffonai.com>, a Workers Custom Domain declared in `wrangler.jsonc` (`routes`). Cloudflare manages its DNS record and certificate.
 
-Always pass the account id and an API token explicitly. A wrangler OAuth login on a developer machine can point at another account.
+### Automatic deploy
+
+Every push to `main` (that is, every merged pull request) runs `.github/workflows/deploy.yml`: it builds the site and runs `wrangler deploy` to `operon-manual`. The workflow can also be started by hand from the **Actions** tab (**Deploy** › **Run workflow**).
+
+The workflow reads these repository settings (**Settings** › **Secrets and variables** › **Actions**):
+
+| Name | Kind | Value |
+|---|---|---|
+| `CLOUDFLARE_API_TOKEN` | secret | A Cloudflare API token that can deploy this Worker only. A copy is kept in Infisical (`prod`, root path, `MANUAL_SITE_DEPLOY_TOKEN`). |
+| `CLOUDFLARE_ACCOUNT_ID` | variable | `a47ffc5bfe27f103c0bb382311fbd48b` |
+| `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG` | variable | `operon-manual-keystatic` |
+
+The Keystatic secrets are Worker secrets and are not stored in GitHub.
+
+### Manual deploy (fallback)
+
+Use this only when the workflow cannot run. Always pass the account id and an API token explicitly. A wrangler OAuth login on a developer machine can point at another account.
 
 ```sh
 export CLOUDFLARE_ACCOUNT_ID=a47ffc5bfe27f103c0bb382311fbd48b
