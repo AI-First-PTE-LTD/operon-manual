@@ -44,7 +44,7 @@ export default defineConfig({
         },
         {
           label: 'Case templates',
-          translations: { 'zh-CN': '案件模板' },
+          translations: { 'zh-CN': '案子模板' },
           items: [{ autogenerate: { directory: 'case-templates' } }],
         },
       ],
