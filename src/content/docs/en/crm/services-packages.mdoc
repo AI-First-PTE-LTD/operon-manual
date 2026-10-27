@@ -1,0 +1,32 @@
+---
+title: "2 · Services & Packages"
+description: Keep the catalog of services and packages, their prices and their contract wording up to date.
+sidebar:
+  order: 3
+  label: "2 · Services & Packages"
+---
+
+**Who:** department heads (their own department) and tenant admins (all departments). **Where:** **CRM** › **Catalog** › **Services & Packages**.
+
+The list shows each item's department, regions and price, and which contract texts are still missing.
+
+{% screenshot id="crm/catalog-list" caption="The Services & Packages list." /%}
+
+## Edit a service
+
+{% steps %}
+
+1. Select a service to edit it.
+2. Under **Regions and prices**, set the reference price for each country.
+3. Under **Contract text**, write the **Description** (required, one point on each line) and the optional **Conditions** for each country and language. The right side shows how the text will read in the contract.
+4. Select **Save changes**.
+
+{% /steps %}
+
+Contracts generated after the save use the new text. Contracts that were already generated keep their text.
+
+{% screenshot id="crm/catalog-service-edit" caption="Editing a service: prices and contract text." /%}
+
+{% aside type="caution" title="Missing text stops generation" %}
+If a service picked for a contract has no description for the contract's country and language, generation stops and names the service.
+{% /aside %}

@@ -1,0 +1,32 @@
+---
+title: "2 · 服务与套餐"
+description: 维护服务与套餐目录、价格和合同描述。
+sidebar:
+  order: 3
+  label: "2 · 服务与套餐"
+---
+
+**谁做：** 部门负责人（本部门）、租户管理员（全部部门）。**在哪里：** **CRM** › **目录** › **服务与套餐**（Catalog › Services & Packages）。
+
+列表显示每一项的所属部门、适用地区、价格，以及还缺哪些合同描述。
+
+{% screenshot id="crm/catalog-list" caption="服务与套餐列表。" /%}
+
+## 编辑一项服务
+
+{% steps %}
+
+1. 选一项服务进入编辑。
+2. 在 **地区与价格**（Regions and prices）里按国家填参考价。
+3. 在 **合同描述**（Contract text）里按国家和语言填写 **描述**（Description，必填，一行一条）和 **附带条件**（Conditions，选填）。右侧实时显示它在合同里的样子。
+4. 选 **保存修改**（Save changes）。
+
+{% /steps %}
+
+保存之后生成的合同使用新描述；已经生成的合同不受影响。
+
+{% screenshot id="crm/catalog-service-edit" caption="编辑服务：价格与合同描述。" /%}
+
+{% aside type="caution" title="缺描述不能生成" %}
+合同所选的服务在合同的国家和语言下没有描述时，生成会停下，并指出是哪一项服务。
+{% /aside %}

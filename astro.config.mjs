@@ -37,6 +37,11 @@ export default defineConfig({
           translations: { 'zh-CN': '记账工作台' },
           items: [{ autogenerate: { directory: 'bookkeeping' } }],
         },
+        {
+          label: 'CRM · Contracts',
+          translations: { 'zh-CN': 'CRM · 合同管理' },
+          items: [{ autogenerate: { directory: 'crm' } }],
+        },
       ],
     }),
     markdoc(),

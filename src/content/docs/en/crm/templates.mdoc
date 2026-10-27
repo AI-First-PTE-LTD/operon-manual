@@ -1,0 +1,31 @@
+---
+title: "1 · Contract templates"
+description: Register the firm's Word templates (skeletons) for each issuing entity, country, language and format.
+sidebar:
+  order: 2
+  label: "1 · Contract templates"
+---
+
+**Who:** tenant admin. **Where:** **Admin** › **CRM** › **Settings** › **Contract layouts**.
+
+A skeleton is the firm's Word template for one combination of **issuing entity × country × language × format**. A contract can be generated only for a combination that has a registered skeleton.
+
+## Register a skeleton
+
+{% steps %}
+
+1. Select **Register layout**.
+2. Choose the issuing entity, the country, the language and the format.
+3. Upload the `.docx` file.
+
+{% /steps %}
+
+Operon reads the fields that the file uses. A file that contains fields Operon does not recognise is refused, and the names of those fields are shown.
+
+{% screenshot id="crm/templates-register" caption="Registering a skeleton: the fields are read from the file." /%}
+
+## Use one template for another issuing entity
+
+To let another issuing entity use the same template, select **Use for another issuing entity** on the template's row and choose the entity. The entity's own name, UEN, address, bank account and signatory are filled in when the contract is generated, so one file can serve several entities.
+
+{% screenshot id="crm/templates-other-entity" caption="Using a registered skeleton for another issuing entity." /%}
