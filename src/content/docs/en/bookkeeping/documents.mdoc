@@ -1,0 +1,53 @@
+---
+title: "Step 1 · Documents"
+description: Upload, read and sort the documents of the period.
+sidebar:
+  order: 6
+---
+
+Step 1 holds every document of the period. It has two tabs: **Source Documents** and **Payroll**.
+
+{% screenshot id="bookkeeping/documents-overview" caption="Source Documents: the document cards, the status filter and the folder view." /%}
+
+## Upload documents
+
+Select **Import documents** at the top right and choose the files. A whole folder can be dropped in at once. The documents need not be sorted first: Operon recognises the type of each file (bank statement, sales invoice, purchase invoice, payroll, other record).
+
+Upload what the client sends later in the same way, at any time during the period.
+
+## Reading: free and paid
+
+After upload, Operon reads each document.
+
+- **Read at no cost:** PDFs with a text layer, Excel, CSV and Word files.
+- **Read by the model, after approval:** scanned PDFs and photos. A price is shown first, and each file must be approved (for example with **Approve reading**) before it is read. A file that is not approved is not read and is not booked.
+
+A file that cannot be read is listed as a to-do item.
+
+{% screenshot id="bookkeeping/documents-read-approval" caption="Scanned files waiting for approval before reading." /%}
+
+## The document cards
+
+The cards at the top group the documents of the period: documents to classify, sales invoices, purchase invoices, bank statements, records and reconciliation material, and documents marked as not needed. On the bank statement card, a dot for each month shows whether a statement for that month has been uploaded.
+
+## The status filter
+
+| Filter | Shows |
+|---|---|
+| **To do** | Documents with an open question. |
+| **Waiting for client** | Documents with a question on the client query list. |
+| **On hold** | Documents set aside with a reason. |
+| **All documents** | Every document of the period. |
+| **Undetermined** | Documents whose type or treatment is not yet decided. |
+
+{% aside type="caution" %}
+Undetermined documents stop the quarter from being completed. Decide each one, or mark it as not needed, before step 3.
+{% /aside %}
+
+## Duplicates and statement accounts
+
+When the same document is uploaded twice, Operon raises it as a duplicate; confirm or reject the match in the to-do item. When a bank statement could belong to more than one registered account, Operon asks which account it belongs to.
+
+## Payroll
+
+The **Payroll** tab imports payroll sheets or payslips. The payroll entries (salaries and CPF) are booked from them; see [Step 2 · Journal](/en/bookkeeping/journal/).

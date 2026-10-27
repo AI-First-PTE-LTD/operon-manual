@@ -1,0 +1,36 @@
+---
+title: "Company setup: onboarding"
+description: Take over a new client — learn prior years, confirm the items before opening and complete the items before closing.
+sidebar:
+  order: 3
+  label: "Setup: onboarding"
+---
+
+When a new client is taken over, several company-level settings must first be given by a person. They are collected in the **Onboarding** wizard under **Company setup › Onboarding**. The wizard shows its progress, for example "Onboarding: 2/4 steps completed".
+
+{% screenshot id="bookkeeping/setup-onboarding-wizard" caption="The onboarding wizard with its four steps." /%}
+
+## The four steps
+
+{% steps %}
+
+1. **① Learn prior years.** Upload the general ledgers and financial statements of earlier years and select **Learn prior years**. Operon learns the account mapping, the bank accounts, the GST registration and the opening balances from them. What it learns is only a suggestion: a suggestion takes effect only once a person confirms it. To learn again after more files are added, select **Learn again**.
+
+2. **② Confirm the three items before opening.** These three items determine how the documents are read and posted:
+   - **GST registration**: whether the company is GST-registered and from which date. This determines whether tax is split out.
+   - **Bank accounts**: the register of the company's bank and wallet accounts. This determines which account a statement belongs to.
+   - **Opening balances**: where the books start. Confirm the bank balances against the statements, confirm the balance sheet at the takeover date line by line, and confirm the aged lists of receivables and payables.
+
+3. **③ Upload and read this period's documents.** Uploads are available at any time, but reading and posting wait until all three items in step ② are complete. Select **Go to upload** to go to step 1 Documents.
+
+4. **④ Complete before closing.** Before the period can be closed, the company needs a payroll register (or a declaration that no salaries are paid in this financial year) and a decision for each category of period-end rule (a confirmed policy, or a declaration that the company has no such item).
+
+{% /steps %}
+
+{% aside type="caution" %}
+Until the three items before opening are complete, the documents of the period cannot be read or posted. Until the items before closing are complete, the period cannot be closed, not even by a manager's override.
+{% /aside %}
+
+## Example
+
+Harbourline Trading Pte. Ltd. is taken over from 1 July 2026. The accountant uploads the 2025 general ledger and financial statements and learns them. Operon suggests one SGD operating account (account number 123-456789-0), GST registration from 1 January 2024, and opening balances at 30 June 2026. The accountant confirms each suggestion against the client's records before uploading the documents of the third quarter.

@@ -1,0 +1,75 @@
+---
+title: "Step 2 · Reconcile: bank"
+description: Handle each bank line, then complete and submit the reconciliation of each account and month.
+sidebar:
+  order: 7
+---
+
+**Reconcile › Bank reconciliation** shows one card for each bank or wallet account. Under the cards are the statement balance, the book balance, the difference and the bank lines that still need action. Switch between the months of the quarter on the right.
+
+{% screenshot id="bookkeeping/bank-recon-overview" caption="Bank reconciliation for the SGD operating account of Harbourline Trading Pte. Ltd., August 2026." /%}
+
+Money in is on the left and money out on the right. Use the view filter **Needs action** to show only the lines that still need attention. Lines from the same counterparty are grouped; a whole group can be handled at once with **Confirm as suggested (n)** or **Match all (n)**, and any line in the group can still be changed on its own.
+
+Select a line to open its drawer: the statement is on the left, and the actions and entries for the line are on the right.
+
+{% screenshot id="bookkeeping/bank-recon-line-drawer" caption="A bank line opened in its drawer." /%}
+
+## Line statuses
+
+| Status | Meaning |
+|---|---|
+| **Needs action** | Not handled and not on hold. |
+| **Posted** | Has an entry. Nothing to do unless it is wrong. |
+| **To apply** / **To allocate** | A receipt or payment booked to receivables or payables but not yet applied to an invoice or bill. |
+| **Waiting for client** | On the client query list. Not counted as needing action. |
+| **On hold** | Set aside with a reason. Stops the quarter from being completed. |
+| **Account to be decided** | An account question is open for this line. |
+| **Purchase / Sales document missing** | No invoice or bill was found for this line. |
+| **Posted to suspense** | Booked to the suspense account for now. |
+
+## What to do
+
+| Situation | Select | Result |
+|---|---|---|
+| A receipt or payment for an open invoice or bill | **Match**, then choose the invoice (up to five candidates are ranked) | Applied to the invoice; the line is posted. |
+| A line marked To apply | Open the line, then **Match other documents…** or **Record payment** | Applied to the chosen invoices; any balance stays to apply. |
+| One remittance pays several invoices, or part of one | **Record payment** | One form: choose several invoices, apply part of an amount, or offset against the other party's account. |
+| The amount differs only by a small bank charge | In the to-do item: **Match and record difference as bank fee** | Matched; the difference goes to bank charges. To undo: **Unmatch**. |
+| No invoice exists (fees, interest, salaries, government) | **Change account…** / **Post to account…** | Booked directly to the chosen account (a reason is required). |
+| Money received before invoicing, or paid before the bill | **More actions** › **Record as advance…** / prepayment | Booked as an advance or prepayment; applied when the invoice arrives. |
+| A refund from a supplier or to a customer | **More actions** › **Record supplier refund…** / customer refund | Booked as a refund against that party. |
+| Payment of a balance brought forward from last year | **More actions** › **Match to opening receivables…** / payables | Clears the opening balance. |
+| A transfer between two of the company's own accounts | **Transfer…** | Both lines are booked as one transfer. To undo: **Unmatch transfer…** |
+| The wrong invoice was matched | **Unmatch** | Back to Needs action; the line is not matched to that invoice again. |
+| One line covers several accounts | **Split transaction…** | Split into parts, each with its own account. |
+| The same line appears twice (two copies of a statement) | **Mark as duplicate of…** | Only for the same account, date, amount and direction. To undo: **Restore line…** |
+| The client must explain the line | **Query client…** | Added to the client query list; the status becomes Waiting for client. |
+| A decision cannot be made yet | **Place on hold…** (with a reason) / **Remove hold** | Set aside. Must be cleared before the quarter is completed. |
+| A posted line is on the wrong account | **Change account…** / **Undo change…** | The old entry is reversed and the line is posted again. |
+| The line is dated in a locked quarter | **Record in next open period…** | Booked on the first open day. Alternatively, a manager reopens the quarter. |
+
+### Example
+
+On 14 August 2026 Harbourline Trading receives SGD 3,270.00 from Northgate Logistics Pte. Ltd. Two open invoices of SGD 1,090.00 and SGD 2,180.00 are outstanding. Open the line, select **Record payment**, choose both invoices and save: the receipt is applied to both, and the line is posted.
+
+## A new account opened during the period
+
+When a month before the first statement of an account has no statement, Operon may suggest that the account was newly opened. When the client confirms the opening date, select **Confirm new account** on that month. The months before the opening then need no statement; one confirmation covers all earlier months. To undo, select **Withdraw**.
+
+## Complete an account's month
+
+{% steps %}
+
+1. Check the statement balance. If it was misread, select **Edit**, correct it and select **Save corrected balance** (a reason is required).
+2. Handle every line that needs action. Then mark the period-end timing items on the book entries: **Mark as deposit in transit** or **Mark as unpresented cheque**.
+3. When the difference is 0, select **Complete reconciliation**, tick to confirm, and select **Save and submit for review**. To submit several months at once, use **Submit or sign off months (n)**.
+4. A manager who did not prepare the reconciliation selects **Review and sign off**, then **Sign off reconciliation**. The reviewer can **Return to preparer**; the preparer can **Withdraw submission**.
+
+{% /steps %}
+
+To change a month that is signed off, a manager selects **Revoke sign-off** (a reason is required).
+
+{% aside type="note" title="Why Complete reconciliation cannot be selected" %}
+**Complete reconciliation** stays unavailable while any of these remain: an opening balance not confirmed, bank lines not posted, lines on hold or in suspense, suggestions not confirmed, book entries not on the statement and not marked as timing items, a difference that is not explained, or a missing monthly statement. The page lists which of these applies.
+{% /aside %}

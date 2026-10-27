@@ -1,0 +1,31 @@
+---
+title: "Company setup: profile"
+description: The company profile, bank accounts, employees and related parties.
+sidebar:
+  order: 4
+  label: "Setup: profile"
+---
+
+**Company setup › Company profile** holds the facts about the company that the books depend on.
+
+{% screenshot id="bookkeeping/setup-profile-company" caption="The company profile of Harbourline Trading Pte. Ltd." /%}
+
+## Company Profile
+
+The company's name, UEN, financial year end, base currency and GST settings. Operon reads these when it books and when it prepares the F5. Correct them here when they change.
+
+## Bank accounts
+
+The register of every bank, wallet and card account of the company, with the currency of each account. Each bank statement is attached to one registered account. When a statement arrives for an account that is not registered, Operon asks which account it belongs to.
+
+An account that was opened during the period is confirmed on the bank reconciliation page (see [Step 2 · Reconcile: bank](/en/bookkeeping/reconcile-bank/)). The months before the opening date then need no statement.
+
+## Employees
+
+The payroll register. Operon uses it to recognise salaries, CPF and claims paid to staff. A payment to a person who is not on the register is raised as a to-do item.
+
+{% screenshot id="bookkeeping/setup-profile-employees" caption="The payroll register with two fictional employees." /%}
+
+## Related parties
+
+Directors, shareholders and related companies. Record them here so that payments to and from them can be booked to the right party, for example to the amount due to a director.

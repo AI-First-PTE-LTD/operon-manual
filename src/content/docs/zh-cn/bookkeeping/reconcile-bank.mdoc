@@ -1,0 +1,75 @@
+---
+title: 第 2 步 · 对账：银行流水
+description: 逐行处理银行流水，再按户口按月完成对账并提交复核。
+sidebar:
+  order: 7
+---
+
+**对账 › 银行流水对账**（Bank reconciliation）上方每张卡是一个银行或钱包户口；下方是对账单余额、账上余额、差额，以及还需处理的流水。右侧按月切换本季各月。
+
+{% screenshot id="bookkeeping/bank-recon-overview" caption="Harbourline Trading Pte. Ltd. SGD 营运户口 2026 年 8 月的银行对账。" /%}
+
+左边是收款，右边是付款。视图筛选选 **Needs action**，只显示还需处理的行。同一交易对手的行归成一组，整组可以一次处理：**Confirm as suggested (n)**（按建议确认）或 **Match all (n)**（全部核销）；组内任一行仍可单独修改。
+
+点一行打开抽屉：左边是对账单，右边是这一行的操作和分录。
+
+{% screenshot id="bookkeeping/bank-recon-line-drawer" caption="在抽屉中打开的一行银行流水。" /%}
+
+## 行的状态
+
+| 状态 | 含义 |
+|---|---|
+| **Needs action** | 尚未处理，也未挂起。 |
+| **Posted** | 已有分录。没有错就不用动。 |
+| **To apply** / **To allocate** | 收付款已记入应收或应付，但尚未核销到具体发票或账单。 |
+| **Waiting for client** | 已在问客户清单上。不计为待处理。 |
+| **On hold** | 写明原因后挂起。会挡住本季完成。 |
+| **Account to be decided** | 这一行有一道科目题未答。 |
+| **Purchase / Sales document missing** | 找不到对应的发票或账单。 |
+| **Posted to suspense** | 暂时记入暂记科目。 |
+
+## 各种情况怎么做
+
+| 情况 | 选 | 结果 |
+|---|---|---|
+| 收付款对应一张未结发票或账单 | **Match**，再选发票（系统最多排出五张候选） | 核销到该发票，这一行入账。 |
+| 行显示 To apply | 打开该行 › **Match other documents…** 或 **Record payment** | 金额核销到所选发票；未核完的余额仍待核销。 |
+| 一笔汇款付了几张发票，或只付了一张的一部分 | **Record payment** | 一张表单内可选多张发票、部分核销，或与对方往来账互抵。 |
+| 金额只差一点银行手续费 | 在待办中选 **Match and record difference as bank fee** | 核销，差额记银行手续费。撤销：**Unmatch**。 |
+| 本来就没有发票（手续费、利息、工资、政府款项） | **Change account…** / **Post to account…** | 直接记到所选科目（须写原因）。 |
+| 先收款后开票，或先付款后收票 | **More actions** › **Record as advance…** / 预付 | 记为预收或预付；发票到后再核销。 |
+| 供应商退款，或退款给客户 | **More actions** › **Record supplier refund…** / 客户退款 | 记为对该方的退款。 |
+| 收付的是上年结转的余额 | **More actions** › **Match to opening receivables…** / 应付 | 冲销期初余额。 |
+| 公司自己两个户口之间转账 | **Transfer…** | 两边的行合为一笔转账。撤销：**Unmatch transfer…** |
+| 系统配错了发票 | **Unmatch** | 回到 Needs action；之后不会再配给那张发票。 |
+| 一行要分到几个科目 | **Split transaction…** | 拆成几段，各段各自记科目。 |
+| 同一笔出现两次（两份对账单重复） | **Mark as duplicate of…** | 只限同户口、同日期、同金额、同方向。撤销：**Restore line…** |
+| 需要客户说明这笔是什么 | **Query client…** | 加入问客户清单，状态变为 Waiting for client。 |
+| 暂时定不了 | **Place on hold…**（写原因）/ **Remove hold** | 先挂起。本季完成前必须处理掉。 |
+| 已入账的行科目错了 | **Change account…** / **Undo change…** | 原分录冲回，重新入账。 |
+| 行的日期在已锁定的季度 | **Record in next open period…** | 记在第一个未锁定的日子。也可请经理重开该季。 |
+
+### 示例
+
+2026 年 8 月 14 日，Harbourline Trading 收到 Northgate Logistics Pte. Ltd. 汇来的 SGD 3,270.00，对方有两张未结发票，分别为 SGD 1,090.00 和 SGD 2,180.00。打开这一行，选 **Record payment**，选中两张发票后保存：收款核销到两张发票，这一行入账。
+
+## 期间中途开立的户口
+
+某户口第一份对账单之前的月份没有对账单时，Operon 可能提示这是新开的户口。客户确认开户日后，在该月份上选 **Confirm new account**。开户前的月份不再要求对账单；确认一次覆盖所有更早的月份。撤销选 **Withdraw**。
+
+## 完成一个户口一个月的对账
+
+{% steps %}
+
+1. 核对对账单余额。读错了的，选 **Edit**，改正后选 **Save corrected balance**（须写原因）。
+2. 处理所有待处理的行。再在账面分录上标出期末时间差：**Mark as deposit in transit**（在途存款）或 **Mark as unpresented cheque**（未兑支票）。
+3. 差额为 0 时，选 **Complete reconciliation**，勾选确认，再选 **Save and submit for review**。几个月一起提交，用 **Submit or sign off months (n)**。
+4. 由不是编制人的经理选 **Review and sign off**，再选 **Sign off reconciliation**。复核人可以 **Return to preparer**（退回）；编制人可以 **Withdraw submission**（撤回提交）。
+
+{% /steps %}
+
+已签字的月份要改，由经理选 **Revoke sign-off**（须写原因）。
+
+{% aside type="note" title="Complete reconciliation 为什么点不动" %}
+以下任一项仍存在时，**Complete reconciliation** 不可用：期初余额未确认、银行流水未入账、有挂起或暂记的行、建议未确认、账面分录不在对账单上又未标为时间差、差额无法解释、缺某个月的对账单。页面会列出是哪一项。
+{% /aside %}

@@ -1,0 +1,70 @@
+---
+/**
+ * {% screenshot id="<chapter>/<topic>-<state>" caption="..." /%}
+ *
+ * Shows the screenshot for the current locale from src/assets/screenshots/<locale>/<id>.png. Those files are written
+ * only by the screenshot pipeline in the Operon repository (fictional tenant, fictional data; design §3).
+ *
+ * Until the pipeline has produced an image, a labelled placeholder is shown. Set MANUAL_STRICT_SCREENSHOTS=1 to make a
+ * missing image fail the build (design §2.2 / §2.6); this becomes the default once the pipeline is running.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  id: string;
+  caption?: string;
+}
+
+const { id, caption } = Astro.props;
+const locale = Astro.currentLocale === 'zh-cn' || Astro.currentLocale === 'zh-CN' ? 'zh-cn' : 'en';
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/screenshots/**/*.png', { eager: true });
+const image = images[`/src/assets/screenshots/${locale}/${id}.png`]?.default;
+const t = Astro.locals.t;
+
+if (!image && process.env.MANUAL_STRICT_SCREENSHOTS === '1') {
+  throw new Error(`Screenshot "${id}" has no image for locale "${locale}".`);
+}
+---
+
+<figure class="manual-shot" data-screenshot-id={id}>
+  {
+    image ? (
+      <Image src={image} alt={caption ?? id} widths={[720, 1440]} sizes="(min-width: 50rem) 720px, 100vw" />
+    ) : (
+      <div class="manual-shot__placeholder" role="img" aria-label={`${t('manual.screenshot.pending')}: ${caption ?? id}`}>
+        <span class="manual-shot__badge">{t('manual.screenshot.pending')}</span>
+        <code>{id}</code>
+      </div>
+    )
+  }
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+  .manual-shot {
+    margin-block: 1.5rem;
+  }
+  .manual-shot__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    aspect-ratio: 16 / 9;
+    max-height: 22rem;
+    border: 1px dashed var(--sl-color-gray-4);
+    border-radius: 0.5rem;
+    background: var(--sl-color-gray-6);
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-sm);
+  }
+  .manual-shot__badge {
+    font-weight: 600;
+  }
+  figcaption {
+    margin-top: 0.5rem;
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-sm);
+  }
+</style>

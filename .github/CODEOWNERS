@@ -1,0 +1,6 @@
+# Reviewers for the customer manual. Every pull request to main needs an approval from a code owner.
+# Placeholder: the reviewer list is pending from the owner (design §6 item 8; at least two people).
+*                         @rayguo01
+
+# Screenshots are written only by the Operon screenshot pipeline; a maintainer still approves each update.
+/src/assets/screenshots/  @rayguo01

@@ -1,0 +1,113 @@
+---
+title: Ask the client
+description: Collect the questions only the client can answer, give them to the client at one time and record the replies.
+sidebar:
+  order: 10
+---
+
+The **Client query list** collects the questions that only the client can answer. The list stays in Operon; Operon does not send it to the client. The accountant gives the whole list to the client at one time and records each reply when it comes back.
+
+{% screenshot id="bookkeeping/client-queries-drawer" caption="The client query list for Harbourline Trading Pte. Ltd." /%}
+
+## When to look at the list
+
+- **Where it is.** Every page of steps 1 to 3 has a **Client queries** button at the top right. Each account card on the bank reconciliation page also has **+ Ask client**. The button opens a side drawer.
+- **The red count.** The red number on the button is the number of questions with no answer yet (To ask plus Provisional). Point to the button to see the totals, for example "12 in total: 3 to ask · 9 answered".
+- **Order of work.** Look at the red count first. If the client has replied, record the replies first: they change the questions in the to-do list. Then work on the to-do list.
+- **The first time for a company.** Do the documents and the to-do list first. Add a question to the list only when only the client can answer it. Do not add many questions at the start.
+
+## Give the list to the client
+
+When the questions are complete, use **Copy list**, **Export Excel** or **Print / Save as PDF** in the drawer heading. The output contains only the questions still to ask (To ask and Provisional), with English column headings. These buttons do not change any data and do not send anything.
+
+## What each row shows
+
+| Column | Content |
+|---|---|
+| **#** | The question number. The export and the printout use the same number; the client replies by this number. |
+| **Source** | What the question is about: a bank transaction, a document, an invoice, an account, or nothing. Select the identifier to go to that item and open its drawer. |
+| **Related** | What is printed on the client's documents: document, date, amount, GST. The client uses this column to recognise the item. |
+| **Question** | One line in English and one in Chinese. A missing version is shown as not translated; Operon does not translate questions. |
+| **Status** | **To ask**: no answer recorded yet. **Provisional**: already handled in the books, still to ask the client. **Answered**: the answer is recorded, or the question was closed without asking. |
+
+The buttons on the right of each row are **Record answer**, **Edit**, **Edit links** (only on a question added directly on the list) and **Remove**. Tick several rows to show a bar with **Mark answered (n)**, **Remove (n)**, **Copy (n)** and **Export (n)**.
+
+## Add a question
+
+**From a to-do item or a bank line**
+
+{% steps %}
+
+1. On a to-do question, select **Ask the client** (in a bank line drawer: **Query client…**). A draft question opens below the row, with the date, amount and GST of the related documents.
+2. Write the question. If nothing on the client's documents identifies the item, describe the payment or document as the client will recognise it, for example "card payment of SGD 86.40 on 9 September".
+3. Select **Add to client query list**. The question stays in the to-do list, marked as on the client query list.
+
+{% /steps %}
+
+**Directly on the list**
+
+Use this for a question that is not about one transaction or one document, for example a missing statement for a month, or staff details.
+
+{% steps %}
+
+1. In the list drawer, select **Add a question**.
+2. Choose what the question is about: **The whole company**, or a bank or wallet account (then choose the account and, if needed, the month).
+3. Write the question in English, in Chinese, or both. At least one is required.
+4. Optionally, link the question to a bank transaction or a document of this period.
+5. Select **Add to list**.
+
+{% /steps %}
+
+### How to write a good question
+
+- **Ask one thing in each question.** Provisional handling and closing apply to the whole question. If one question asks two things, it cannot be closed until both are settled.
+- **Give the amount, the date and the other party**, for example "SGD 1,635.00 paid to Kestrel Office Supplies Pte. Ltd. on 14 August", not only "this payment".
+- **Say where a reference comes from**, for example "invoice no. HT-2026-0187, given in the remarks of the payment on 14 August".
+- **Use exact terms.** When quoting a figure from the company's registration records, use the name the records use (for example, issued share capital is not paid-up capital).
+- **Ask for facts, not accounting decisions.** Ask what the payment is, who paid, whether there is an invoice. The accountant decides the account and the tax code.
+
+## Edit or remove a question
+
+- **Edit:** select **Edit**, change the English and Chinese text, then **Save** or cancel.
+- **Remove:** select **Remove**, give the reason (required) and confirm. The reason is recorded.
+- When a question is no longer needed (the statement has arrived, or another question covers it), prefer **Close without asking** or **Remove duplicate** when Operon offers them.
+
+## Record an answer
+
+{% steps %}
+
+1. On the question, select **Record answer**.
+2. Under **What the client said**, write the client's reply, for example "Legal fees for the lease renewal".
+3. Optionally, under **Attach documents from the client (optional)**, add up to 20 files.
+4. Select **Save answer**.
+
+{% /steps %}
+
+When documents are attached, Operon reads them and books the period again. The progress is shown under the status:
+
+| Shown on the row | Meaning and next step |
+|---|---|
+| **Reading the documents and re-booking** | In progress. Wait for it to finish. |
+| **Reading waits for approval** | A document needs a paid reading that is not approved. Approve it in step 1. |
+| **Re-booking did not finish** | Select **Run again** in the status line at the top of the workbench. |
+| **Question closed** | After re-booking, the question is no longer in the to-do list. Nothing more to do. |
+| **Still needs your action** | The question is still in the to-do list, with the client's reply shown on it. Answer it there. |
+| **Re-booked** | The documents were read and the period was booked again, but Operon cannot tell whether this kind of question is settled. Check the documents against the question. |
+
+Alternatively, select **Answer this question now** to open the question's own decision area. When it is answered there, the list item is marked Answered.
+
+## Provisional handling
+
+A **Provisional** question was handled in the books before the client replied, on the best available evidence. It stays on the list for the client, counts in the red number, and keeps the "figures are provisional" notice on the reports.
+
+When the client replies, record the answer. Then select **Open where it was handled**, check that the handling agrees with the reply and change it there if it does not, and select **Mark handling as checked**. Operon does not compare the two.
+
+Use **Close without asking** only when the client need not be asked, for example when the evidence is sufficient and no reply could change the books. It is not available when the quarter is locked. When Operon finds that a question may already be resolved, it offers **Close without asking** (or **Remove duplicate**) and **Keep on the list**; nothing is closed automatically.
+
+## Checks after the replies are recorded
+
+- The red number on **Client queries** is gone.
+- No row shows **Reading waits for approval**, **Re-booking did not finish** or **Still needs your action**, and each row marked **Re-booked** has been checked.
+- Each provisional item has been marked with **Mark handling as checked**.
+- The "figures are provisional" notice is gone from the reports and the F5 page.
+- On **Review › Complete**, the Waiting for client check is met.

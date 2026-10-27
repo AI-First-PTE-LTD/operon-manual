@@ -1,0 +1,79 @@
+---
+title: 第 2 步 · 对账：销售与采购
+description: 结清每张销售发票和采购账单，确认税码，处理期末仍欠的款项。
+sidebar:
+  order: 8
+  label: 第 2 步 · 销售与采购
+---
+
+**对账 › 销售对账**（Sales matching）每行一张销售发票：金额、已收、未收余额和状态。**对账 › 采购对账**（Purchases matching）是同一种页面，对象是供应商账单：已付、未付余额和状态。点一行打开抽屉：左边是单据原件，右边是明细、操作和已配对的收付款。
+
+{% screenshot id="bookkeeping/sales-matching-list" caption="销售对账：状态列显示每张发票还缺什么。" /%}
+
+**销售对账的筛选：** Needs action、All、Collected、On hold、Suspense、Not yet due、Waiting for client。**Aging** 显示应收账龄，可导出 Excel。
+
+**采购对账的筛选：** Needs action、Waiting for client、All、Paid、Not yet due。**Aging** 显示应付账龄。
+
+## 发票状态
+
+| 状态 | 含义 |
+|---|---|
+| **Uncollected** / **Part collected** / **Collected** | 未收 / 部分收到 / 全部收到。 |
+| **No receipt found** | 没有银行收款核销到这张发票。 |
+| **Tax code to confirm** / **Account to confirm** | 系统已选了一个，确认或改掉。 |
+| **Not yet due** | 季末的正常应收，不挡完成。 |
+| **n days overdue** / **Estimated at 30 days** | 已逾期；或没有找到账期，按开票日加 30 天估计到期日。 |
+| **Opening balance owed** | 来自上年账龄表，本期未见收款。 |
+| **Date to be filled** | 没读到开票日期；填上才能入账。 |
+| **Retired** | 不入账（作废或被替换）。勾选 **Show retired** 才显示。 |
+
+## 是不是发票
+
+Operon 不确定一份单据是否为发票时（例如报价单或形式发票），会在待办中提问。不是发票的单据不入账：选 **Void…** 并选择原因。
+
+## 销售发票：各种情况怎么做
+
+| 情况 | 选 | 结果 |
+|---|---|---|
+| 发票未收，银行里有这笔收款 | 打开发票 › **Match transaction** › **Match**（几笔收款合起来时用 **Match combination**） | 收款核销，状态变为 Collected。 |
+| 只收了一部分 | **Choose a receipt for the balance** | 余款核销。 |
+| 现金、刷卡或经董事收款 | 待办 › **Record receipt…** | 按所选科目记收款。 |
+| 季末客户仍欠 | **Confirm still owed at period end**（或 **Customer still owes**） | 记为仍欠；以后收到再核销。 |
+| 税码待确认 | 在抽屉的 GST 税码区确认或修改 | 税码确定，F5 随之更新。 |
+| 有贷项通知单（credit note） | 在 **Record receipt** 表单中使用该贷项，或在待办中选 **Apply credit note** | 发票按贷项金额冲减。 |
+| 确定收不回来 | **Write off as bad debt**（科目、金额、日期、原因） | 记坏账，列入复核清单。 |
+| 重复、报价单或形式发票、不是本公司的 | **Void…** 并选择原因 | 发票不再入账。 |
+| 日期错、销售 / 采购方向错、到期日错 | **Edit document…** | 改正后重新入账。方向只能改一次。 |
+| 一个文件里有几张发票 | **Split into several documents…** | 每张各自入账。 |
+| 核销了错的收款 | **Remove allocation**（写原因）/ **Re-allocate payment** | 收款释放后重新核销。 |
+| 收入科目错 | **Change account**（写原因） | 改记到新科目。 |
+
+## 采购账单：各种情况怎么做
+
+{% screenshot id="bookkeeping/purchases-bill-drawer" caption="在抽屉中打开的一张账单。" /%}
+
+| 情况 | 选 | 结果 |
+|---|---|---|
+| 账单未付，银行里有这笔付款 | 打开账单 › **Match transaction** › **Match** / **Match combination** | 付款核销，状态变为 Paid。 |
+| 只付了一部分 | 为余额选一笔付款 | 余款核销。 |
+| 董事、员工垫付或信用卡支付 | 待办 › **Record payment…** | 记到董事往来、员工往来或信用卡科目。 |
+| 季末仍未付 | **Confirm still owed at period end**（批量：**Confirm still owed at period end (n)**） | 记为仍欠；以后付了再核销。 |
+| 供应商贷项通知单 | 在 **Record payment** 表单中使用该贷项，或选 **Apply credit note** | 账单冲减。币种不同时须确认汇率（与参考汇率相差不超过 5%）。 |
+| 贷项到季末仍未用完 | **Keep unused to the next period** | 留在供应商往来上，列入复核清单。 |
+| 上年结转的应付确定不用付了 | **Write back payable…** | 余额转回到所选科目。 |
+| 重复、报价单或形式发票、不是本公司的 | **Void…** 并选择原因 | 账单不再入账。 |
+| 税码或科目待确认 | 在抽屉中确认税码；科目错时选 **Change account** | 进项税和费用改正，F5 随之更新。 |
+| 日期、方向或到期日错；一个文件里有几张账单 | **Edit document…** / **Split into several documents…** | 改正后重新入账。 |
+| 核销了错的付款 | **Remove allocation** / **Re-allocate payment** | 付款释放后重新核销。 |
+
+### 示例
+
+Kestrel Office Supplies Pte. Ltd. 于 2026 年 9 月 28 日开出 SGD 545.00 的账单（SGD 500.00 加 9% GST），到 9 月 30 日仍未支付。选 **Confirm still owed at period end**：这张账单在季末留在应付中，10 月付款时再核销。
+
+## 没有原件的单据
+
+没有原件时，可以用 **New bill**、**New invoice** 或 **New expense** 手工录入账单、销售发票或费用。
+
+{% aside type="note" title="已锁定的季度" %}
+日期在已锁定季度的账单不能修改，但之后的付款仍可核销到它。其他情况用 **Record in next open period…**，或请经理重开该季。
+{% /aside %}

@@ -1,0 +1,79 @@
+---
+title: "Step 2 · Reconcile: sales & purchases"
+description: Settle each sales invoice and purchase bill, confirm tax codes and handle what is still owed at period end.
+sidebar:
+  order: 8
+  label: "Step 2 · Sales & purchases"
+---
+
+**Reconcile › Sales matching** lists one sales invoice per row: amount, amount received, balance not yet collected and status. **Reconcile › Purchases matching** is the same page for supplier bills: amount paid, balance unpaid and status. Select a row to open its drawer: the document is on the left, and the details, the actions and the matched payments are on the right.
+
+{% screenshot id="bookkeeping/sales-matching-list" caption="Sales matching: the Status column shows what each invoice still needs." /%}
+
+**Filters on Sales matching:** Needs action, All, Collected, On hold, Suspense, Not yet due, Waiting for client. **Aging** shows the aged receivables and exports them to Excel.
+
+**Filters on Purchases matching:** Needs action, Waiting for client, All, Paid, Not yet due. **Aging** shows the aged payables.
+
+## Invoice statuses
+
+| Status | Meaning |
+|---|---|
+| **Uncollected** / **Part collected** / **Collected** | Nothing, part or all of the invoice has been received. |
+| **No receipt found** | No bank receipt is matched to this invoice. |
+| **Tax code to confirm** / **Account to confirm** | Operon chose one; confirm it or change it. |
+| **Not yet due** | A normal receivable at quarter end; it does not stop completion. |
+| **n days overdue** / **Estimated at 30 days** | Past its due date; or no terms were found and the due date is estimated as the invoice date plus 30 days. |
+| **Opening balance owed** | From last year's aged list; no receipt seen in this period. |
+| **Date to be filled** | The invoice date was not read; fill it in to book the invoice. |
+| **Retired** | Not booked (void or replaced). Hidden unless **Show retired** is ticked. |
+
+## Is it an invoice?
+
+When Operon is not sure whether a document is an invoice (for example, a quotation or a pro forma invoice), it asks in the to-do list. A document that is not an invoice is not booked: use **Void…** and choose the reason.
+
+## Sales invoices: what to do
+
+| Situation | Select | Result |
+|---|---|---|
+| The invoice is uncollected and the receipt is in the bank | Open the invoice › **Match transaction** › **Match** (or **Match combination** when several receipts add up) | The receipt is applied; the status becomes Collected. |
+| Partly received | **Choose a receipt for the balance** | The remaining receipt is applied. |
+| Received in cash, by card or through a director | To-do › **Record receipt…** | The receipt is recorded against the chosen account. |
+| The customer still owes at quarter end | **Confirm still owed at period end** (or **Customer still owes**) | Recorded as still owed; matched later when paid. |
+| The tax code is to be confirmed | In the drawer's GST tax code block: confirm or change | The tax code is fixed; the F5 updates. |
+| A credit note | Use the credit note in the **Record receipt** form, or **Apply credit note** in the to-do item | The invoice is reduced by the credit. |
+| The invoice will never be paid | **Write off as bad debt** (account, amount, date, reason) | A bad debt entry, listed for the reviewer. |
+| A duplicate, a quotation or pro forma, or not this company's | **Void…** and choose the reason | The invoice is no longer booked. |
+| Wrong date, wrong side (sales or purchase) or wrong due date | **Edit document…** | Corrected and booked again. The side can be corrected once only. |
+| One file holds several invoices | **Split into several documents…** | Each invoice is booked on its own. |
+| The wrong receipt was applied | **Remove allocation** (with a reason) / **Re-allocate payment** | The receipt is released and applied again. |
+| The wrong revenue account | **Change account** (with a reason) | Booked again to the new account. |
+
+## Purchase bills: what to do
+
+{% screenshot id="bookkeeping/purchases-bill-drawer" caption="A bill opened in its drawer." /%}
+
+| Situation | Select | Result |
+|---|---|---|
+| The bill is unpaid and the payment is in the bank | Open the bill › **Match transaction** › **Match** / **Match combination** | The payment is applied; the status becomes Paid. |
+| Partly paid | Choose a payment for the balance | The remaining payment is applied. |
+| Paid by a director, an employee or a credit card | To-do › **Record payment…** | Recorded against the director's, employee's or card account. |
+| Still unpaid at quarter end | **Confirm still owed at period end** (several at once: **Confirm still owed at period end (n)**) | Recorded as still owed; matched later when paid. |
+| A supplier credit note | Use the credit in the **Record payment** form, or **Apply credit note** | The bill is reduced. For another currency, confirm the rate (within 5% of the reference rate). |
+| A credit note not used by quarter end | **Keep unused to the next period** | Stays on the supplier's account; listed for review. |
+| A payable from last year that will not be paid | **Write back payable…** | The balance is written back to the chosen account. |
+| A duplicate, a quotation or pro forma, or not this company's | **Void…** and choose the reason | The bill is no longer booked. |
+| The tax code or account is to be confirmed | In the drawer: confirm the tax code; **Change account** if wrong | Input tax and expense corrected; the F5 updates. |
+| Wrong date, side or due date; several bills in one file | **Edit document…** / **Split into several documents…** | Corrected and booked again. |
+| The wrong payment was applied | **Remove allocation** / **Re-allocate payment** | The payment is released and applied again. |
+
+### Example
+
+Kestrel Office Supplies Pte. Ltd. issues a bill of SGD 545.00 (SGD 500.00 plus 9% GST) on 28 September 2026. It is not paid by 30 September. Select **Confirm still owed at period end**: the bill stays in payables at quarter end and is matched to the payment in October.
+
+## Bills without an original
+
+When there is no original document, a bill, a sales invoice or an expense can be entered by hand with **New bill**, **New invoice** or **New expense**.
+
+{% aside type="note" title="Locked quarters" %}
+A bill dated in a locked quarter cannot be changed, but a later payment can still be applied to it. Otherwise use **Record in next open period…**, or ask a manager to reopen the quarter.
+{% /aside %}

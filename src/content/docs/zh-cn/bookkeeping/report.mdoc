@@ -1,0 +1,38 @@
+---
+title: 第 4 步 · 报告
+description: 生成 F5 报告，标记 F5 已申报，查看各类报表。
+sidebar:
+  order: 12
+---
+
+第 4 步存放本期的报表。每张报表都可以导出 Excel。
+
+| 报表 | 内容 |
+|---|---|
+| **管理账**（Management Accounts） | 本期管理账。 |
+| **F5 报告**（F5 report） | 按已确认数字生成的一页 GST F5 表；底稿与明细为另附的附件。 |
+| **试算表**（Trial Balance） | 每个科目的余额。余额方向异常的科目会被标出。 |
+| **往来余额**（Control Accounts） | 应收、应付等往来科目与其明细的核对。 |
+| **总账**（General Ledger） | 按科目列出的全部分录。 |
+| **资产负债表** / **损益表**（Balance Sheet / Profit and Loss） | 本期财务状况与经营结果。 |
+| **应收账龄明细** / **应付账龄明细**（A/R / A/P Aging Detail） | 按账龄列出的应收与应付。 |
+
+{% screenshot id="bookkeeping/report-trial-balance" caption="Harbourline Trading Pte. Ltd. 2026 年 9 月 30 日的试算表。" /%}
+
+## F5 报告
+
+F5 报告由 **复核 › F5 核对** 中确认的数字生成，因此始终与确认的数字一致。数字尚未确认时，页面会提示先确认。
+
+{% steps %}
+
+1. 在 **复核 › F5 核对** 中确认数字。
+2. 生成 F5 报告，交客户确认。
+3. 向 IRAS 申报后，选 **Mark as filed**。
+
+{% /steps %}
+
+申报前要修改已确认的数字，选 **Withdraw confirmation**，改正账目后重新确认。已申报的申报表不能撤回：申报后账目有变动的，差额在以后的申报中报告。
+
+{% aside type="note" %}
+Operon 不会代为向 IRAS 申报 F5。申报由事务所在客户确认申报表后办理。
+{% /aside %}
