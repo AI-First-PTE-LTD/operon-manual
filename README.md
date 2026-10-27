@@ -71,7 +71,41 @@ GitHub mode needs the Keystatic GitHub App. It is created once by an organisatio
 - Every change to `main` goes through a pull request and needs at least one approval from a code owner (`.github/CODEOWNERS`). Force pushes to `main` are blocked.
 - CI (`.github/workflows/check.yml`) runs `check:manual`, the type check and the build on every pull request.
 - Reviewers check the wording against the current Operon interface, check that both languages say the same thing, and check that no real client data appears anywhere in the change.
-- Merging to `main` publishes the site. Hosting is a Cloudflare Worker (`wrangler.jsonc`); deployment is not set up yet.
+- Merging to `main` does not publish the site yet; a maintainer deploys by hand (see **Deploy**).
+
+## Deploy
+
+The site is a Cloudflare Worker named `operon-manual` in the Cloudflare account that holds the `staffonai.com` zone (`a47ffc5bfe27f103c0bb382311fbd48b`). Starlight pages are static assets; only `/keystatic` and `/api/keystatic` run on the Worker. The Worker has no D1, R2 or KV bindings.
+
+- Preview URL: <https://operon-manual.operon-staffon.workers.dev>
+- Public URL (planned): <https://docs.staffonai.com>, bound as a Workers Custom Domain.
+
+Always pass the account id and an API token explicitly. A wrangler OAuth login on a developer machine can point at another account.
+
+```sh
+export CLOUDFLARE_ACCOUNT_ID=a47ffc5bfe27f103c0bb382311fbd48b
+export CLOUDFLARE_API_TOKEN=...            # from the team's secret store; never commit it
+npx wrangler whoami                         # check the account before you deploy
+
+# Build. The PUBLIC_* values are compiled into the client bundle.
+SITE_URL=https://docs.staffonai.com \
+PUBLIC_KEYSTATIC_STORAGE=github \
+PUBLIC_KEYSTATIC_GITHUB_APP_SLUG=<app slug> \
+pnpm build
+
+# Deploy the generated config (it merges wrangler.jsonc).
+npx wrangler deploy --config dist/server/wrangler.json
+```
+
+Worker secrets for GitHub mode (set once per value, through stdin so the value is not in shell history):
+
+```sh
+printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_GITHUB_CLIENT_ID --name operon-manual
+printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_GITHUB_CLIENT_SECRET --name operon-manual
+printf %s "$VALUE" | npx wrangler secret put KEYSTATIC_SECRET --name operon-manual
+```
+
+The same values are kept in the team's secret store with the prefix `MANUAL_KEYSTATIC_`.
 
 ## Screenshots
 
