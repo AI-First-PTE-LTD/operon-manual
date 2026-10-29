@@ -1,0 +1,407 @@
+{
+  "note": "Fictional data. Generated from e2e/fixtures/books-mainlines/expected.json in the Operon repository; do not edit by hand.",
+  "firm": {
+    "name": "SAMPLE ACCOUNTING FIRM",
+    "users": [
+      "Demo Accountant",
+      "Demo Manager"
+    ]
+  },
+  "company": {
+    "name": "ABC PTE. LTD.",
+    "registeredName": "ABC Pte. Ltd.",
+    "uen": "201900001A",
+    "gstNo": "201900001A",
+    "address": "1 Sample Road #01-01 Singapore 000001",
+    "financialYearEnd": "2026-12-31",
+    "takeoverDate": "2026-06-30",
+    "quarter": {
+      "label": "Q3 2026",
+      "from": "2026-07-01",
+      "to": "2026-09-30"
+    },
+    "bank": {
+      "name": "UOB",
+      "label": "UOB SGD current",
+      "currency": "SGD",
+      "accountNumber": "1234567890",
+      "accountNumberDisplay": "123-456789-0"
+    }
+  },
+  "employee": {
+    "name": "DEMO EMPLOYEE",
+    "monthlyWages": "SGD 4,200.00",
+    "ordinaryWagesCents": 420000
+  },
+  "parties": [
+    {
+      "name": "XYZ LOGISTICS PTE. LTD.",
+      "role": "customer"
+    },
+    {
+      "name": "GHI RETAIL PTE. LTD.",
+      "role": "customer"
+    },
+    {
+      "name": "JKL HOTELS PTE. LTD.",
+      "role": "customer"
+    },
+    {
+      "name": "MNO PROPERTIES PTE. LTD.",
+      "role": "supplier"
+    },
+    {
+      "name": "PQR SOFTWARE PTE. LTD.",
+      "role": "supplier"
+    },
+    {
+      "name": "DEF SUPPLIES PTE. LTD.",
+      "role": "supplier"
+    },
+    {
+      "name": "STU CLOUD INC.",
+      "role": "supplier"
+    }
+  ],
+  "documents": [
+    {
+      "number": "ABC-26-0709",
+      "kind": "sales invoice",
+      "party": "XYZ LOGISTICS PTE. LTD.",
+      "date": "2026-07-09",
+      "currency": "SGD",
+      "netCents": 600000,
+      "taxCents": 54000,
+      "totalCents": 654000,
+      "total": "SGD 6,540.00",
+      "taxCode": "SR",
+      "account": "4020"
+    },
+    {
+      "number": "ABC-26-0722",
+      "kind": "sales invoice",
+      "party": "GHI RETAIL PTE. LTD.",
+      "date": "2026-07-22",
+      "currency": "SGD",
+      "netCents": 320000,
+      "taxCents": 28800,
+      "totalCents": 348800,
+      "total": "SGD 3,488.00",
+      "taxCode": "SR",
+      "account": "4020"
+    },
+    {
+      "number": "ABC-26-0814",
+      "kind": "sales invoice",
+      "party": "JKL HOTELS PTE. LTD.",
+      "date": "2026-08-14",
+      "currency": "SGD",
+      "netCents": 850000,
+      "taxCents": 76500,
+      "totalCents": 926500,
+      "total": "SGD 9,265.00",
+      "taxCode": "SR",
+      "account": "4020"
+    },
+    {
+      "number": "ABC-26-0902",
+      "kind": "sales invoice",
+      "party": "JKL HOTELS PTE. LTD.",
+      "date": "2026-09-02",
+      "currency": "SGD",
+      "netCents": 180000,
+      "taxCents": 16200,
+      "totalCents": 196200,
+      "total": "SGD 1,962.00",
+      "taxCode": "SR",
+      "account": "4020"
+    },
+    {
+      "number": "ABC-26-0925",
+      "kind": "sales invoice",
+      "party": "XYZ LOGISTICS PTE. LTD.",
+      "date": "2026-09-25",
+      "currency": "SGD",
+      "netCents": 240000,
+      "taxCents": 21600,
+      "totalCents": 261600,
+      "total": "SGD 2,616.00",
+      "taxCode": "SR",
+      "account": "4020"
+    },
+    {
+      "number": "MNO-2607-018",
+      "kind": "purchase bill",
+      "party": "MNO PROPERTIES PTE. LTD.",
+      "date": "2026-07-01",
+      "currency": "SGD",
+      "netCents": 380000,
+      "taxCents": 34200,
+      "totalCents": 414200,
+      "total": "SGD 4,142.00",
+      "taxCode": "TX",
+      "account": "5110"
+    },
+    {
+      "number": "MNO-2608-018",
+      "kind": "purchase bill",
+      "party": "MNO PROPERTIES PTE. LTD.",
+      "date": "2026-08-01",
+      "currency": "SGD",
+      "netCents": 380000,
+      "taxCents": 34200,
+      "totalCents": 414200,
+      "total": "SGD 4,142.00",
+      "taxCode": "TX",
+      "account": "5110"
+    },
+    {
+      "number": "MNO-2609-018",
+      "kind": "purchase bill",
+      "party": "MNO PROPERTIES PTE. LTD.",
+      "date": "2026-09-01",
+      "currency": "SGD",
+      "netCents": 380000,
+      "taxCents": 34200,
+      "totalCents": 414200,
+      "total": "SGD 4,142.00",
+      "taxCode": "TX",
+      "account": "5110"
+    },
+    {
+      "number": "PQR-88213",
+      "kind": "purchase bill",
+      "party": "PQR SOFTWARE PTE. LTD.",
+      "date": "2026-07-15",
+      "currency": "SGD",
+      "netCents": 120000,
+      "taxCents": 10800,
+      "totalCents": 130800,
+      "total": "SGD 1,308.00",
+      "taxCode": "TX",
+      "account": "5260"
+    },
+    {
+      "number": "DEF-5640",
+      "kind": "purchase bill",
+      "party": "DEF SUPPLIES PTE. LTD.",
+      "date": "2026-08-18",
+      "currency": "SGD",
+      "netCents": 86000,
+      "taxCents": 7740,
+      "totalCents": 93740,
+      "total": "SGD 937.40",
+      "taxCode": "TX",
+      "account": "5250"
+    },
+    {
+      "number": "STU-1182",
+      "kind": "purchase bill",
+      "party": "STU CLOUD INC.",
+      "date": "2026-08-03",
+      "currency": "USD",
+      "netCents": 115000,
+      "taxCents": 0,
+      "totalCents": 115000,
+      "total": "USD 1,150.00",
+      "taxCode": "NR",
+      "account": "5260"
+    }
+  ],
+  "bankStatement": {
+    "openingCents": 5248000,
+    "opening": "SGD 52,480.00",
+    "closingCents": 4316730,
+    "closing": "SGD 43,167.30",
+    "lines": [
+      {
+        "date": "2026-07-02",
+        "counterparty": "DEMO EMPLOYEE",
+        "amountCents": -336000,
+        "amount": "SGD -3,360.00"
+      },
+      {
+        "date": "2026-07-03",
+        "counterparty": "XYZ LOGISTICS PTE LTD",
+        "amountCents": 763000,
+        "amount": "SGD 7,630.00"
+      },
+      {
+        "date": "2026-07-06",
+        "counterparty": "MNO PROPERTIES PTE LTD",
+        "amountCents": -414200,
+        "amount": "SGD -4,142.00"
+      },
+      {
+        "date": "2026-07-08",
+        "counterparty": "DEF SUPPLIES PTE LTD",
+        "amountCents": -327000,
+        "amount": "SGD -3,270.00"
+      },
+      {
+        "date": "2026-07-14",
+        "counterparty": "CPF BOARD",
+        "amountCents": -156400,
+        "amount": "SGD -1,564.00"
+      },
+      {
+        "date": "2026-07-20",
+        "counterparty": "XYZ LOGISTICS PTE LTD",
+        "amountCents": 654000,
+        "amount": "SGD 6,540.00"
+      },
+      {
+        "date": "2026-07-24",
+        "counterparty": "PQR SOFTWARE PTE LTD",
+        "amountCents": -130800,
+        "amount": "SGD -1,308.00"
+      },
+      {
+        "date": "2026-07-28",
+        "counterparty": "IRAS GST",
+        "amountCents": -214000,
+        "amount": "SGD -2,140.00"
+      },
+      {
+        "date": "2026-07-30",
+        "counterparty": "DEMO EMPLOYEE",
+        "amountCents": -336000,
+        "amount": "SGD -3,360.00"
+      },
+      {
+        "date": "2026-07-31",
+        "counterparty": "SERVICE CHARGE",
+        "amountCents": -1500,
+        "amount": "SGD -15.00"
+      },
+      {
+        "date": "2026-08-04",
+        "counterparty": "MNO PROPERTIES PTE LTD",
+        "amountCents": -414200,
+        "amount": "SGD -4,142.00"
+      },
+      {
+        "date": "2026-08-05",
+        "counterparty": "GHI RETAIL PTE LTD",
+        "amountCents": 839300,
+        "amount": "SGD 8,393.00"
+      },
+      {
+        "date": "2026-08-12",
+        "counterparty": "STU CLOUD INC",
+        "amountCents": -149730,
+        "amount": "SGD -1,497.30"
+      },
+      {
+        "date": "2026-08-14",
+        "counterparty": "CPF BOARD",
+        "amountCents": -156400,
+        "amount": "SGD -1,564.00"
+      },
+      {
+        "date": "2026-08-25",
+        "counterparty": "DEF SUPPLIES PTE LTD",
+        "amountCents": -93740,
+        "amount": "SGD -937.40"
+      },
+      {
+        "date": "2026-08-27",
+        "counterparty": "DEMO PAYEE",
+        "amountCents": -48000,
+        "amount": "SGD -480.00"
+      },
+      {
+        "date": "2026-08-28",
+        "counterparty": "DEMO EMPLOYEE",
+        "amountCents": -336000,
+        "amount": "SGD -3,360.00"
+      },
+      {
+        "date": "2026-08-31",
+        "counterparty": "SERVICE CHARGE",
+        "amountCents": -1500,
+        "amount": "SGD -15.00"
+      },
+      {
+        "date": "2026-09-07",
+        "counterparty": "MNO PROPERTIES PTE LTD",
+        "amountCents": -414200,
+        "amount": "SGD -4,142.00"
+      },
+      {
+        "date": "2026-09-14",
+        "counterparty": "CPF BOARD",
+        "amountCents": -156400,
+        "amount": "SGD -1,564.00"
+      },
+      {
+        "date": "2026-09-21",
+        "counterparty": "JKL HOTELS PTE LTD",
+        "amountCents": 500000,
+        "amount": "SGD 5,000.00"
+      },
+      {
+        "date": "2026-09-30",
+        "counterparty": "SERVICE CHARGE",
+        "amountCents": -1500,
+        "amount": "SGD -15.00"
+      }
+    ]
+  },
+  "clientQuery": {
+    "payee": "DEMO PAYEE",
+    "amountCents": 48000,
+    "amount": "SGD 480.00",
+    "answer": "Reimbursement to a freelancer for courier and printing costs on the JKL Hotels shoot"
+  },
+  "partPayment": {
+    "from": "JKL HOTELS PTE LTD",
+    "invoice": "ABC-26-0814",
+    "amountCents": 500000,
+    "amount": "SGD 5,000.00"
+  },
+  "foreignCurrency": {
+    "invoiceUsd": "USD 1,150.00",
+    "bookedSgd": "SGD 1,467.98",
+    "paidSgd": "SGD 1,497.30",
+    "loss": "SGD 29.32"
+  },
+  "f5": {
+    "box1": {
+      "cents": 2190000,
+      "amount": "SGD 21,900.00"
+    },
+    "box2": {
+      "cents": 0,
+      "amount": "SGD 0.00"
+    },
+    "box3": {
+      "cents": 2932,
+      "amount": "SGD 29.32"
+    },
+    "box4": {
+      "cents": 2192932,
+      "amount": "SGD 21,929.32"
+    },
+    "box5": {
+      "cents": 1346000,
+      "amount": "SGD 13,460.00"
+    },
+    "box6": {
+      "cents": 197100,
+      "amount": "SGD 1,971.00"
+    },
+    "box7": {
+      "cents": 121140,
+      "amount": "SGD 1,211.40"
+    },
+    "box8": {
+      "cents": 75960,
+      "amount": "SGD 759.60"
+    },
+    "box13": {
+      "cents": 2190000,
+      "amount": "SGD 21,900.00"
+    }
+  }
+}
