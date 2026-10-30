@@ -1,0 +1,62 @@
+---
+title: "3 · Issue and send"
+description: Issue a draft so that it takes its number, then send it by email, share the online link or download the PDF.
+sidebar:
+  order: 4
+  label: "3 · Issue and send"
+---
+
+**Who:** any member who can see the client or the opportunity. Credit notes are issued by managers only.
+
+## Issue the invoice
+
+A draft is only a working copy. Issuing it gives it its number, fixes the issue date and the due date, records the issuing entity's and the client's details as they are at that moment, and files the PDF.
+
+{% steps %}
+
+1. In the editor, save your changes with **Create** or **Update**. **Issue** stays greyed out while there are unsaved changes.
+2. Select **Issue**. The heading changes to the invoice number, for example **INV-2026-0007**, and the status becomes **Awaiting payment**.
+
+{% /steps %}
+
+A draft can also be issued from the invoice page: select **Issue invoice** and confirm. Several drafts can be issued together from the list with **Issue selected** (see [The invoice list](/en/invoices/list/)).
+
+Operon refuses to issue an invoice when:
+
+- it has no line, or the total is zero or less (**The total must be greater than zero before the document can be issued.**);
+- the issuer's name or the client's name is missing;
+- the issuing entity is GST-registered and the issuer's address, the issuer's GST registration number or the client's address is missing. These are the details that IRAS requires on a tax invoice. The message names what is missing; add it to the client record or ask the tenant admin to complete the issuing entity's settings, then issue again;
+- the draft came from a floating-quote contract and its amount has not been set yet (**This draft came from a floating-quote contract. Set the amount before issuing it.**).
+
+A refused issue takes no number.
+
+{% aside type="caution" title="An issued invoice cannot be deleted" %}
+Once issued, an invoice can no longer be deleted, only voided by a manager. Its number is never given to another invoice. Check the draft before you issue it.
+{% /aside %}
+
+## Send by email
+
+**Where:** the invoice page.
+
+{% steps %}
+
+1. Select **Send by email**.
+2. Check **To**. It is filled in with the client's email address. When the client has none, the email of a current contact person of the company is used, and after that the email of the client signatory of the contract. The address can be changed. Separate several addresses with commas.
+3. Add **Cc** addresses if needed, and check the **Subject** and the **Message**.
+4. Select **Send**. Operon confirms how many addresses the email was sent to, and lists any address it could not deliver to.
+
+{% /steps %}
+
+The email carries a link to the online copy of the invoice, not an attachment. The client opens the link to view the invoice and download the PDF. The email is sent in the name of the issuing entity, and the client's replies go to the email address of the person who sent it.
+
+Several issued invoices can be emailed together from the list with **Email selected**. Each invoice goes to its own default recipient; an invoice with no email address found is reported and skipped.
+
+## Copy the online link
+
+On the invoice page, select **More** › **Copy online link**. The link opens the invoice without a login: the client sees the invoice and a **Download PDF** button, and a paid invoice says so on the paper. When the client opens the link, the invoice's history records **Viewed by client**, at most once a day.
+
+Drafts have no online link. When an invoice is voided, its link stops working: the page says **This invoice link is no longer available** and shows nothing of the invoice.
+
+## Download the PDF
+
+On the invoice page, select **More** › **Download PDF**. The PDF is the copy filed when the invoice was issued. It is produced again whenever the invoice is edited after issue or voided; a void invoice's PDF is marked VOID.

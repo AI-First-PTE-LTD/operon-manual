@@ -1,0 +1,65 @@
+---
+title: "11 · FAQ"
+description: Answers to common questions about invoices, numbers, GST, payments and corrections.
+sidebar:
+  order: 12
+  label: "11 · FAQ"
+---
+
+## Why is Issue greyed out?
+
+The reason is written next to the button. The most common ones: the changes are not saved yet (select **Update** first), the invoice has no line, or the total is zero or less. A draft from a floating-quote contract needs its amount set first.
+
+## Issue was refused with a message about missing details. What do I do?
+
+The message names what is missing, for example the client's address or the issuer's GST registration number. Complete the client's record in CRM, or ask the tenant admin to complete the issuing entity's settings (see [Invoice settings and reminders](/en/invoices/settings-reminders/)), then issue again. The draft has not taken a number.
+
+## Can I type a name that is not in the service catalog?
+
+No. Each line must be a service from the service catalog. Ask the department head to add the service to the catalog (see [Services & Packages](/en/crm/services-packages/)).
+
+## Can I enter the GST amount by hand?
+
+No. GST is calculated from each line's tax code and the issuing entity's GST registration, and cannot be added as an adjustment.
+
+## Why is the title "Tax Invoice" and not the title in the template?
+
+A GST-registered issuing entity always issues a tax invoice, so Operon prints **Tax Invoice** as the title.
+
+## The invoice has a mistake but it is already issued. What do I do?
+
+- No payment or credit recorded yet: open the invoice, select **Edit invoice**, correct it and select **Update**. It keeps its number, and its PDF is produced again.
+- A payment or credit is recorded: ask a manager to create a credit note for the difference (see [Credit notes](/en/invoices/credit-notes/)).
+- The issuing entity is wrong: ask a manager to void the invoice, then duplicate it, correct the duplicate and issue it.
+
+## Can I delete an issued invoice?
+
+No. An issued invoice can only be voided, by a manager, with a reason. It keeps its number.
+
+## Why can I not void this invoice?
+
+A payment or applied credit is recorded on it. Delete the payments and remove the applied credit first. Only managers and tenant admins can void.
+
+## The client paid by bank transfer. Will the invoice update by itself?
+
+No. Payments are not collected or matched automatically. Record the payment on the invoice (see [Record payments](/en/invoices/payments/)).
+
+## Does the client receive the PDF as an attachment?
+
+No. The email carries a link. The client opens the online copy and downloads the PDF from there.
+
+## The client says the link does not work.
+
+The invoice may have been voided; a void invoice's link no longer opens. Otherwise, copy the link again from **More** › **Copy online link** and send it to the client.
+
+## Why did the client not receive a payment reminder?
+
+Check, in order: the invoice has been emailed at least once; **Payment reminders on** is switched on in the invoice's **Delivery** card; the invoice still has an amount due; and a reminder rule is switched on for that day in **Invoice settings**.
+
+## Does a change to a template change old invoices?
+
+No. Each invoice keeps the layout it was created with.
+
+## Can I invoice in a currency other than SGD?
+
+Not in this release. Invoices are raised in SGD.

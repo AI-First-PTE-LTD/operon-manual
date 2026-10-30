@@ -1,0 +1,56 @@
+---
+title: "9 · Templates and numbering"
+description: Create, edit and delete invoice templates, and set the number format of the invoices.
+sidebar:
+  order: 10
+  label: "9 · Templates and numbering"
+---
+
+**Who:** managers and tenant admins maintain templates. Members can only choose one. **Where:** the **Choose an invoice template** window, which opens from **Create invoice** or **+ New invoice**.
+
+A template sets the layout of the invoices made from it: the title, the columns of the line table, the To and From rows, the sections that are printed, the default due date, the date format, the theme colour, the default description and footer, and the number format. Every firm starts with two templates: **Default Invoice** and **Default Credit Note**.
+
+## The template window
+
+The window shows each template with the date it was last used (or **Not used yet**). The firm's default is marked **Default**. Use **Search templates** to find one by name, and **Sort by** **Recently used** or **Name**.
+
+Members only pick a template. Managers also see **Create new template** and a **More actions** menu on each template.
+
+## Create a template
+
+{% steps %}
+
+1. Open the template window and select **Create new template**. The template editor opens. It works like the invoice editor, but is not addressed to a client.
+2. On the **Settings** tab, enter the **Template name** and the **Serial number format**, and set the **Date format**, **Default due date**, **Theme colour** and **Invoice sections**.
+3. On the **Defaults** tab, choose the **Default issuing entity** that new invoices start with, and use **Auto-fill recipient details** to choose which client fields fill the **To** rows.
+4. Lay out the paper: title, columns, To and From rows, description and footnote (see [Edit lines, adjustments and GST](/en/invoices/edit/)).
+5. Select **Save template**.
+
+{% /steps %}
+
+## Edit or delete a template
+
+In the template window, open the template's **More actions** menu:
+
+- **Edit template** opens the template editor. Make the changes and select **Save template**.
+- **Delete** removes the template after you confirm. It is no longer offered for new invoices.
+
+Changing or deleting a template never changes invoices already created from it: each invoice keeps a copy of the layout it was created with.
+
+## Number format
+
+The number format is the pattern of the invoice numbers, for example `INV-{YYYY}-####`.
+
+- `{YYYY}` prints the year of issue (Singapore time). It may appear once, or not at all.
+- A run of `#` is the running number, padded with zeros. Use one run of 3 to 8 `#`.
+- Everything else is printed as written.
+
+How numbers are given:
+
+- A number is given only when the invoice is issued, never to a draft.
+- Each issuing entity has its own sequence for each format. Two issuing entities can both have an `INV-2026-0001`.
+- With `{YYYY}` in the format, the running number starts again at 1 in each new year.
+- A void invoice keeps its number, and the number is never used again.
+- Credit notes have their own format and sequence, by default `CN-{YYYY}-####`.
+
+Once an invoice has been issued with a format, the format of that template can no longer be changed. The template editor then shows **Locked: a document was already issued with this format.** To use another format, create a new template.

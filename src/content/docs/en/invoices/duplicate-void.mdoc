@@ -1,0 +1,51 @@
+---
+title: "7 · Duplicate, void and delete a draft"
+description: Copy an invoice into a new draft, cancel an issued invoice with a reason, and delete a draft.
+sidebar:
+  order: 8
+  label: "7 · Duplicate, void and delete a draft"
+---
+
+## Duplicate an invoice
+
+**Who:** any member who can see the invoice.
+
+Use this for a similar invoice, for example next month's retainer, or to reissue an invoice that was voided.
+
+{% steps %}
+
+1. Open the invoice and select **More** › **Duplicate invoice**.
+2. A new draft opens in the editor with the same client, lines and layout. It has no number, and no payment or history is copied.
+3. Change what is needed, select **Update**, and issue it when it is ready.
+
+{% /steps %}
+
+Any invoice can be duplicated, whatever its status. Uploaded invoices and credit notes cannot be duplicated.
+
+## Void an invoice
+
+**Who:** managers and tenant admins.
+
+Voiding cancels an issued invoice. The invoice keeps its number, which is never given to another invoice, so the numbering has no gap.
+
+{% steps %}
+
+1. Open the invoice and select **More** › **Void invoice**.
+2. Enter the **Reason**. **Void invoice** stays greyed out until a reason is entered.
+3. Select **Void invoice**.
+
+{% /steps %}
+
+The status becomes **Void** and the reason is shown on the invoice page and in its history. The online link stops working, and the PDF is produced again with a VOID mark. A void invoice cannot be changed any more.
+
+An invoice with a payment or applied credit cannot be voided. First delete its payments and remove the applied credit (see [Record payments](/en/invoices/payments/) and [Credit notes](/en/invoices/credit-notes/)), then void it. A credit note is voided in the same way, with **Void credit note**.
+
+{% aside type="tip" title="Wrong issuing entity" %}
+The issuing entity of an issued invoice cannot be changed, because its number belongs to that entity's series. Void the invoice, duplicate it, correct the duplicate and issue it again.
+{% /aside %}
+
+## Delete a draft
+
+**Who:** any member who can see the invoice. Credit note drafts are deleted by managers.
+
+Open the draft, select **More** › **Delete draft** and confirm. The draft is removed. It had no number, so nothing is skipped in the numbering. Only drafts can be deleted; an issued invoice can only be voided.

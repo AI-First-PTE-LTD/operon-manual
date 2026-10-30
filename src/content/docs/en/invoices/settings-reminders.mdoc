@@ -1,0 +1,61 @@
+---
+title: "10 · Invoice settings and reminders"
+description: Set GST and payment details for the firm and for each issuing entity, and the rules for payment reminders to clients.
+sidebar:
+  order: 11
+  label: "10 · Invoice settings and reminders"
+---
+
+**Who:** tenant admin. Other users see the settings without being able to change them. **Where:** **Admin** › **Corporate secretary** › **Invoice settings** tab.
+
+The tab holds four cards: two for the firm's defaults, one for the payment reminder rules and one for the issuing entities.
+
+## Firm defaults
+
+**Tax and numbering** and **Printed invoice content** hold the firm's own settings: **GST registered**, **GST rate**, **GST registration number**, **Payment terms**, the **Issuer name** and **Issuer address**, **Bank account details**, **PayNow**, **Terms** and **Footer note**. Select **Save** after a change.
+
+These settings apply to an invoice that has no issuing entity, and to every issuing entity that has no settings of its own yet.
+
+## Settings of each issuing entity
+
+Each issuing entity invoices as its own company, with its own GST registration, number sequence and payment details. The **Invoicing per issuing entity** card lists the active issuing entities. An entity marked **Uses tenant defaults** has not been set up here yet.
+
+{% steps %}
+
+1. Find the issuing entity on the card.
+2. Set **GST registered**. For a registered entity, enter the **GST rate (%)**, for example 9, and the **GST registration no.**
+3. Enter the **Payment terms (days)**, the **PayNow UEN** and the **Bank account currency** (**Same as the invoice** unless the account is in another currency).
+4. Select **Save** followed by the entity's name.
+
+{% /steps %}
+
+The next invoice that the entity issues uses these settings. Invoices already issued keep the details they were issued with.
+
+{% aside type="caution" title="GST-registered entities" %}
+A GST-registered issuing entity can only issue an invoice when its address and its GST registration number are filled in, and the client's address is known. Its invoices are titled **Tax Invoice** and show GST by tax code.
+{% /aside %}
+
+## Payment reminders to clients
+
+Operon emails the client a reminder about an unpaid invoice on the days set in the **Client payment reminders** card. By default there are three rules: 3 days before the due date, and 7 and 14 days after it.
+
+{% steps %}
+
+1. To change a rule, enter its **Days from due date** (a negative number is before the due date, 0 is the due date) and switch it **On** or off.
+2. To add a rule, select **+ Add rule**. Up to 5 rules can be set, and no two can fall on the same day.
+3. To remove a rule, select **Remove rule**.
+4. Select **Save reminders**.
+
+{% /steps %}
+
+Once a day, Operon checks every invoice that is **Awaiting payment** or **Partially paid** with an amount still due. When one of the enabled rules falls on that day, the client receives a reminder:
+
+- The reminder goes to the addresses that the invoice was last emailed to. An invoice that has never been emailed receives no reminder.
+- Each address receives each rule's reminder once. If a reminder could not be sent, Operon tries again on the next two days.
+- Each reminder sent is recorded in the invoice's history as **Reminder sent**, with the addresses.
+
+The person who created the invoice also receives an internal notice when the invoice becomes overdue.
+
+## Turn reminders off for an invoice
+
+On the invoice page, switch off **Payment reminders on** in the **Delivery** card. The switch then reads **Payment reminders off**; switch it on again to resume. To turn reminders off for several invoices, select them in the list and use **Turn reminders off for selected**.

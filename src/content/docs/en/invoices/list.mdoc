@@ -1,0 +1,77 @@
+---
+title: "8 · The invoice list"
+description: Find invoices with the amount cards, status tabs, search and filters; act on several invoices at once; export to CSV.
+sidebar:
+  order: 9
+  label: "8 · The invoice list"
+---
+
+**Where:** **Invoices** in the left sidebar for the whole firm, or the **Invoices** tab of an opportunity, a company or a contact for one deal or one client.
+
+## Amount cards
+
+Four cards above the list sum up the invoices that match the current search and filters:
+
+| Card | Amount shown |
+|---|---|
+| **Draft** | The total of the drafts. |
+| **Awaiting payment** | What remains due on issued invoices, including overdue ones. |
+| **Overdue** | What remains due on invoices past their due date. The card turns red when there is any. |
+| **Paid this month** | The total of the invoices fully paid in the current calendar month (Singapore time). |
+
+Select a card to show the matching tab; select it again to clear it. **Paid this month** opens the **Paid** tab with a **Paid this month** filter that can be removed. The cards are not shown for credit notes.
+
+## Tabs and document type
+
+The tabs **All**, **Draft**, **Awaiting payment**, **Overdue**, **Paid** and **Void** each show their count. **Awaiting payment** includes partially paid invoices.
+
+Switch between **Invoices** and **Credit notes** to list one kind of document. On the credit note list, the **Awaiting payment** tab reads **Credit remaining**.
+
+## Search and filters
+
+- **Search number or client** finds an invoice by its number or by the client's name.
+- The client selector (**All clients**) limits the list to one client.
+- **Filters** opens the panel with **Issued between**, **Due between**, **Source** (invoices issued in Operon or uploaded), **Total between** and, when the firm has more than one issuing entity, **Issuing entity**.
+
+Every active filter is shown as a chip above the table; select its cross to remove it, or select **Clear filters**. The **Filters** button shows how many filters are active. The cards, the tab counts and the totals all follow the search and the filters.
+
+## Columns
+
+| Column | Shows |
+|---|---|
+| **Number** | The invoice number, or **Draft**. Select it to open the invoice. |
+| **Client** | The client, with the opportunity in grey under it. |
+| **Source** | **Issued here** or **Uploaded**. |
+| **Issued by** | The issuing entity. Shown only when the firm has more than one. |
+| **Issued** / **Due** | The issue date and the due date. An overdue invoice shows its due date in red with, for example, **5 days overdue**. |
+| **Total**, **Paid / credited**, **Amount due** | The amounts. On the credit note list, the last two read **Applied / refunded** and **Remaining**. |
+| **Status** | The status. |
+| **Sent / viewed** | Two marks: whether the invoice was emailed, and whether the client has viewed it. A mark that has not happened is dimmed. |
+
+Select a column header to sort by it: once for ascending, again for descending, and a third time to return to the default order. Sorting covers all matching invoices, not only those on screen.
+
+The last row of the table shows the number of matching invoices and the sums of **Total** and **Amount due** over all of them. When more invoices match than are shown, select **Load more**.
+
+## Act on several invoices
+
+Tick the invoices in the first column (or the box in the header to select all). A bar appears with:
+
+| Action | What it does |
+|---|---|
+| **Issue selected** | Issues the selected drafts. |
+| **Email selected** | Emails each selected issued invoice to its default recipient. |
+| **Turn reminders off for selected** | Stops the payment reminders of the selected invoices. |
+| **Export selected** | Downloads the selected rows as a CSV file. |
+| **Clear selection** | Unticks every row and closes the bar. |
+
+Each invoice is handled on its own. An invoice that does not qualify, for example a paid invoice in **Issue selected**, is skipped, and **Results** lists it with the reason.
+
+## Export to CSV
+
+Select **Export CSV**. The file holds every invoice that matches the current tab, search and filters, not only the rows on screen. Its columns are always in English:
+
+`Type, Number, Status, Source, Client, Opportunity, Issue date, Due date, Currency, Subtotal, GST, Total, Paid, Credited, Amount due, Overdue`
+
+Dates are written as YYYY-MM-DD (Singapore time) and amounts as plain numbers with two decimals. When the subtotal or the GST of an uploaded invoice is not known, the cell is empty, not 0.
+
+At most 5,000 rows can be exported at once. When more match, Operon says so; narrow the filters and export again.
