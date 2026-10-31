@@ -1,0 +1,112 @@
+---
+title: "2 · Edit lines, adjustments and GST"
+description: Use the invoice editor - the left panel, the line items from the service catalog, discounts and fees, GST and the printed sections.
+sidebar:
+  order: 3
+  label: "2 · Edit lines, adjustments and GST"
+---
+
+**Who:** any member who can see the client or the opportunity. **Where:** the invoice editor, which opens when an invoice is created, or from **Edit invoice** on the invoice page.
+
+The editor has a panel on the left and the invoice paper on the right. You edit directly on the paper; what you see is what the client will receive.
+
+## The top bar
+
+| Button | What it does |
+|---|---|
+| **Create** / **Update** | Saves the invoice. It reads **Create** until the first save and **Update** after it. It is greyed out when there is nothing to save. |
+| **Issue** | Issues the draft. See [Issue and send](/en/invoices/issue-send/). |
+| **Preview** / **Edit** | Shows the paper as it will be printed, without the left panel, and switches back. |
+| **More actions** › **Download as PDF** | Downloads the saved invoice as a PDF. Save your changes first. |
+| **Close** | Leaves the editor. With unsaved changes, Operon asks first: **Keep editing** or **Exit without saving**. |
+
+## The left panel
+
+The panel has two tabs. Select **Collapse panel** to give the paper more room.
+
+**Association** shows what the invoice belongs to:
+
+- **Recipient**: the client the invoice is addressed to. The **To** rows on the paper are filled from this client's record. **Change recipient** opens a client search. It is offered while the invoice's amounts can still be edited: on a draft, or on an issued invoice with no payment and no credit applied. Once a payment or credit is recorded, it is no longer offered.
+- **Opportunity** and **Contract**: shown for information. An invoice from a contract stays linked to it.
+- **Issuing entity**: the company that issues the invoice. Its GST settings, bank account and number series apply. After the invoice is issued, the issuing entity can no longer be changed.
+
+**Settings** holds the layout of this invoice: the **Serial number format** (read-only here), **Locale**, **Currency** (only SGD in this release), **Date format**, **Default due date**, **Theme colour** and the **Invoice sections**. The sections are switched on or off one by one:
+
+| Section | Prints |
+|---|---|
+| **Logo image** | The logo at the top. |
+| **Due date** | The due date. |
+| **Description** | A free-text description. |
+| **Payment details** | The issuing entity's bank account and PayNow UEN. |
+| **Signature image** | An uploaded signature image. |
+| **Signature collection** | A block for the client to sign, with **Include counter signature** for a second signer. |
+| **Footer note** | A note at the bottom, with an optional **Border**. |
+
+Changes made here apply to this invoice only. The template itself is not changed.
+
+## Line items
+
+{% steps %}
+
+1. Select **New Item** under the table. An empty line is added.
+2. In the name cell, type part of a service name and pick the service from the list. Only services in the service catalog can be used; a name that matches no service cannot be saved.
+3. Enter the **Quantity** and check the **Price**. The price comes from the catalog and can be changed for this invoice.
+4. To give a discount or a fee on one line, select the line's **Adjustment** cell, choose **Discount** or **Fee**, choose **Percentage** or **Fixed amount**, and enter the value.
+5. To change the order, drag a line by its handle. To remove a line, select **Delete line**.
+
+{% /steps %}
+
+New services are added to the service catalog by the department head, not in the invoice (see [Services & Packages](/en/crm/services-packages/)).
+
+## Columns
+
+Select a column header to open its toolbar: **Move left**, **Move right**, **Add column**, **Column settings** and **Delete column**. **Add column** offers **Text**, **Discount**, **Fee**, **Multiplier** and, when they are not already on the table, **Tax**, **Description**, **SKU** and **Adjustment**. Column names can be edited. **Name**, **Price**, **Quantity** and **Total** are required columns and cannot be deleted.
+
+## Discounts and fees on the whole invoice
+
+{% steps %}
+
+1. Under the subtotal, select **Adjustment**.
+2. Choose **Discount · Percentage**, **Discount · Fixed amount**, **Fee · Percentage** or **Fee · Fixed amount**.
+3. Enter a label and the value. To remove an adjustment, select **Remove adjustment**.
+
+{% /steps %}
+
+Adjustments are applied in the order listed. Each one is worked out on the amount left by the ones above it, starting from the subtotal. A discount cannot be larger than the amount it applies to.
+
+## GST
+
+GST is calculated by Operon. It cannot be typed in or added as an adjustment.
+
+- When the issuing entity is not registered for GST, no GST is charged and no tax column is printed.
+- When it is registered, each line is taxed by its tax code. **SR** (standard-rated) lines are taxed at the issuing entity's GST rate; **ZR**, **ES** and **OS** lines are not taxed. A line picked from the catalog takes its tax code from the service. To see or change it, add the **Tax** column.
+- Discounts and fees on the whole invoice are shared across the tax codes in proportion to their amounts before GST is worked out.
+- A GST-registered issuing entity always prints **Tax Invoice** as the title.
+
+## A worked example
+
+ABC PTE. LTD. is invoiced for two services. The issuing entity is GST-registered at 9%.
+
+| Line or adjustment | Amount (SGD) |
+|---|---|
+| Monthly retainer, 1 × 1,200.00, line discount 10% | 1,080.00 |
+| Annual return filing, 2 × 350.00 | 700.00 |
+| **Subtotal** | 1,780.00 |
+| Discount, fixed amount | −50.00 |
+| Fee 5% (of 1,730.00) | 86.50 |
+| GST 9% (of 1,816.50) | 163.49 |
+| **Total** | 1,979.99 |
+
+## The rest of the paper
+
+- **Title**: select it to edit it.
+- **Number**: shown as a placeholder until the invoice is issued.
+- **Issue date**: set to the day of issue when the invoice is issued.
+- **Due date**: choose a number of days from the issue date or **Custom date**.
+- **Logo**: **Upload logo**, **Replace logo** or **Remove logo** (PNG, JPG or SVG).
+- **To** and **From** rows: drag to reorder, **Delete row**, or **Add** a **Text** row or a **Field** row that is filled from the client or the issuing entity.
+- **Add a description** and **Add a footnote** add free text.
+
+{% aside type="caution" title="Edit after issue" %}
+An issued invoice can still be edited while no payment and no credit is recorded on it. It keeps its number and its issuing entity, and its total must stay above zero. Once a payment or a credit is recorded, only the description and the footnote can be changed. A paid or void invoice cannot be edited.
+{% /aside %}

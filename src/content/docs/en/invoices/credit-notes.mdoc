@@ -1,0 +1,68 @@
+---
+title: "6 · Credit notes"
+description: Create a credit note from an issued invoice, apply its credit to the client's invoices, and record a refund.
+sidebar:
+  order: 7
+  label: "6 · Credit notes"
+---
+
+**Who:** managers and tenant admins. **Where:** the invoice page.
+
+A credit note reduces what a client owes on an issued invoice, for example after a price reduction or a service that was not delivered. An issued invoice is never changed for this once money has been received; the credit note records the correction.
+
+## Create and issue a credit note
+
+{% steps %}
+
+1. Open the issued invoice to be credited and select **More** › **Create credit note**. A draft credit note is created with the invoice's lines, and the editor opens.
+2. Change the lines to the amounts to be credited. For example, to credit S$300.00 of a S$1,200.00 service, change the line's **Price** to 300.00. GST is worked out as on an invoice.
+3. Select **Update** to save.
+4. Select **Issue**. The credit note takes its number from its own series, for example **CN-2026-0001**.
+
+{% /steps %}
+
+A credit note can be created from an invoice that is **Awaiting payment**, **Partially paid** or **Paid**. It uses the firm's default credit note template.
+
+## Apply the credit to invoices
+
+{% steps %}
+
+1. Open the issued credit note and select **Apply credit**. The page moves to the **Apply credit** form under the paper.
+2. The form lists the client's unpaid invoices of the same issuing entity in the same currency. The invoice the credit note was raised for comes first, filled in with the credit remaining or its amount due, whichever is smaller.
+3. Enter or change the **Amount to apply** for each invoice. **Total to apply** and **Credit remaining after applying** follow as you type.
+4. Select **Apply credit**.
+
+{% /steps %}
+
+Each invoice's amount due goes down by the amount applied, and its status becomes **Partially paid** or **Paid**. Both documents record the allocation in their history. For example, applying S$327.00 to an invoice of S$1,308.00 leaves S$981.00 due.
+
+Operon refuses an application when an amount is above that invoice's amount due, when the total is above the credit remaining, or when no amount is entered.
+
+## Remove an allocation
+
+Credit applied in error is taken back from the **Payments and credit** table of the invoice, or from the **Credit applied and refunds** table of the credit note: select **Remove allocation** on the row and confirm. The invoice's amount due goes back up, and the credit becomes available again.
+
+## Record a refund
+
+When the client is paid back instead of having the credit applied:
+
+{% steps %}
+
+1. Open the credit note and select **Record refund**.
+2. Enter the **Amount (SGD)**, the **Date**, the **Method** and, optionally, the **Reference** and a **Note**.
+3. Select **Save**.
+
+{% /steps %}
+
+A refund cannot be larger than the credit remaining.
+
+## Status of a credit note
+
+| Status | Meaning |
+|---|---|
+| **Draft** | Being prepared; no number. |
+| **Credit remaining** | Issued; part or all of the credit is still unused. |
+| **Fully applied** | All of the credit has been applied or refunded. |
+| **Void** | Cancelled with a reason. |
+
+Credit notes are listed separately: in the invoice list, switch from **Invoices** to **Credit notes**.

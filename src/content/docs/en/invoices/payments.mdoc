@@ -1,0 +1,50 @@
+---
+title: "5 · Record payments"
+description: Record full and partial payments received from the client, and delete a payment recorded in error.
+sidebar:
+  order: 6
+  label: "5 · Record payments"
+---
+
+**Who:** any member who can see the invoice. Only managers can delete a payment. **Where:** the invoice page.
+
+Operon does not collect payments online. When the client pays, for example by bank transfer, the payment is recorded on the invoice by hand.
+
+## Record a payment
+
+{% steps %}
+
+1. Open the invoice and select **Record payment**. The page moves to the **Record payment** form under the paper.
+2. **Amount paid (SGD)** is filled in with the amount still due. Change it for a partial payment.
+3. Check **Date paid**. It is filled in with today's date.
+4. Choose the **Method**: **Bank transfer**, **PayNow**, **Cheque**, **Cash**, **Card** or **Other**.
+5. Optionally, enter the **Reference**, for example the bank reference.
+6. Select **Record payment**.
+
+{% /steps %}
+
+The payment is added to **Payments and credit** and to the history, and the amount strip is updated:
+
+- When part of the amount remains due, the status becomes **Partially paid**. The form stays open for the next payment, filled in with the rest.
+- When nothing remains due, the status becomes **Paid** and the form closes.
+
+For example, an invoice of S$1,979.99 with a payment of S$800.00 reads **Partially paid** with S$1,179.99 due. Recording S$1,179.99 makes it **Paid**.
+
+A payment cannot be larger than the amount due (**The amount cannot exceed …**), and no payment can be recorded on a draft or a void invoice.
+
+## Delete a payment
+
+A payment recorded in error is deleted by a manager.
+
+{% steps %}
+
+1. Under **Payments and credit**, find the payment and select **Delete payment**.
+2. Confirm. The amount due goes back up and the status steps back, for example from **Paid** to **Partially paid**.
+
+{% /steps %}
+
+The deletion is kept in the history, with who deleted the payment and when.
+
+{% aside type="note" title="Payments lock the amounts" %}
+While a payment is recorded on an invoice, its lines and amounts cannot be edited, and it cannot be voided. To correct the amount of an invoice that has been paid in part, a manager creates a credit note (see [Credit notes](/en/invoices/credit-notes/)).
+{% /aside %}

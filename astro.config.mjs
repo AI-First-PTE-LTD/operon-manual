@@ -43,6 +43,11 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'crm' } }],
         },
         {
+          label: 'Invoices',
+          translations: { 'zh-CN': '发票' },
+          items: [{ autogenerate: { directory: 'invoices' } }],
+        },
+        {
           label: 'Case templates',
           translations: { 'zh-CN': '案子模板' },
           items: [{ autogenerate: { directory: 'case-templates' } }],

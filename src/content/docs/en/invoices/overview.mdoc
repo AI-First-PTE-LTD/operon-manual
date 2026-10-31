@@ -1,0 +1,67 @@
+---
+title: Overview
+description: How invoices are raised from CRM, issued, sent to the client and followed until they are paid.
+sidebar:
+  order: 1
+---
+
+Invoices are raised in CRM, either from a signed contract or directly for a client. Each invoice is edited on a full-page editor that shows the invoice exactly as the client will see it. When the invoice is issued, it takes its number and its PDF is filed. It is then sent to the client by email with a link to an online copy, and followed until it is paid. Corrections are made with credit notes and by voiding, never by deleting an issued invoice.
+
+## Where invoices are found
+
+| Place | What it shows |
+|---|---|
+| **Invoices** in the left sidebar | Every invoice and credit note of the firm. |
+| The opportunity › **Invoices** tab | The invoices of one deal. The tab comes right after the **Contract** tab. |
+| The company or contact › **Invoices** tab | The invoices of one client. |
+
+All three show the same list, with the same tabs, columns and actions. New invoices are started from an opportunity or a client, not from the sidebar page.
+
+## The life of an invoice
+
+| Status | Meaning |
+|---|---|
+| **Draft** | Being prepared. A draft has no number and is not sent to anyone. It can be changed or deleted. |
+| **Awaiting payment** | Issued: it has a number and can be sent. Nothing has been paid yet. |
+| **Partially paid** | Part of the amount has been received or covered by a credit note. |
+| **Paid** | Nothing remains due. |
+| **Void** | Cancelled with a reason. It keeps its number, and its online link stops working. |
+| **Overdue** | Shown for an invoice that is awaiting payment or partially paid after its due date. |
+
+A credit note shows **Credit remaining** while part of its credit is still unused, and **Fully applied** when all of it is used.
+
+## The issuing entity
+
+Every invoice is issued by an issuing entity: the firm's company that signs the contract. An invoice created from a contract takes the contract's issuing entity. The issuing entity decides the GST treatment, the bank account printed on the invoice and the number series. Two issuing entities number their invoices separately.
+
+## Who does what
+
+| Role | Work |
+|---|---|
+| **Member** (any staff member who can see the client or the opportunity) | Creates, edits and deletes drafts. Issues invoices, sends them by email, copies the online link, duplicates invoices and records payments. Adds notes. |
+| **Manager** | Everything a member does. Also voids invoices, creates, issues and applies credit notes, records refunds, deletes payments, removes credit allocations, and maintains the invoice templates. |
+| **Tenant admin** | Everything a manager does. Also maintains the invoice settings, the settings of each issuing entity and the payment reminder rules. Only tenant admins can open the invoice settings. |
+
+An action that a role can never take is not shown to that role. An action that is shown but cannot be taken yet is greyed out, with the reason written under it.
+
+## The chapters
+
+1. [Create an invoice](/en/invoices/create/)
+2. [Edit lines, adjustments and GST](/en/invoices/edit/)
+3. [Issue and send](/en/invoices/issue-send/)
+4. [The invoice page](/en/invoices/invoice-page/)
+5. [Record payments](/en/invoices/payments/)
+6. [Credit notes](/en/invoices/credit-notes/)
+7. [Duplicate, void and delete a draft](/en/invoices/duplicate-void/)
+8. [The invoice list](/en/invoices/list/)
+9. [Templates and numbering](/en/invoices/templates/)
+10. [Invoice settings and reminders](/en/invoices/settings-reminders/)
+11. [FAQ](/en/invoices/faq/)
+
+{% aside type="note" title="The invoice itself is always in English" %}
+The invoice that the client receives (the PDF, the online copy and the paper shown in the editor) is always in English, whatever interface language you use. Only the screens around it follow your interface language.
+{% /aside %}
+
+{% aside type="note" title="Examples in this chapter" %}
+All firms, companies, people, amounts and invoice numbers in this chapter are fictional. The example firm is SAMPLE ACCOUNTING FIRM, and the example client is ABC PTE. LTD. (UEN 201900001A). Amounts are in SGD, and the issuing entity is registered for GST at 9%.
+{% /aside %}

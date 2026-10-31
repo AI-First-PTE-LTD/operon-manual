@@ -1,0 +1,67 @@
+---
+title: "4 · The invoice page"
+description: What the invoice page shows - the header and its actions, the amount strip, payments, history and notes, and the side cards.
+sidebar:
+  order: 5
+  label: "4 · The invoice page"
+---
+
+**Where:** select an invoice number in any invoice list. **← Back to invoices** returns to the firm-wide list.
+
+The invoice page shows the invoice paper, read-only and exactly as the client sees it, with everything needed to follow it up around it.
+
+## The header
+
+The header shows the document and its number (for example **Invoice INV-2026-0007**), its status and its source. The second line shows the client, the issue date, the due date and, for an invoice from a contract, the contract number as the reference.
+
+At most two main buttons are shown next to the header:
+
+| Document | Main buttons |
+|---|---|
+| Draft | **Issue invoice**, **Edit invoice** |
+| Issued invoice | **Record payment**, **Send by email** |
+| Credit note | **Apply credit**, **Record refund** |
+
+The other actions are under **More**: **Edit invoice**, **Send by email**, **Duplicate invoice**, **Copy online link** and **Download PDF**. Below them, a **Corrections** group holds **Create credit note** and **Void invoice**, which only managers see, and **Delete draft**. Only the actions that apply to the document's status are listed. When one is greyed out, the reason is written under it, for example **Delete its payments and remove applied credit before voiding.**
+
+## The amount strip
+
+The strip under the header reads **Total** − **Paid** − **Credited** = **Amount due**, with the **Due date** and how far away it is (**In 12 days**, **Due today** or **3 days overdue**). **Amount due** is green when nothing is due and red when the invoice is overdue.
+
+For a credit note, the strip reads **Credit total** − **Applied** − **Refunded** = **Credit remaining**.
+
+## Below the paper
+
+- **Record payment**: the form for recording a payment, shown while an amount is due. See [Record payments](/en/invoices/payments/).
+- **Payments and credit**: every payment, credit applied and refund, newest first, with **Date**, **Type**, **Method or source**, **Reference**, **Recorded by** and **Amount**, and a total. Managers can delete a payment or remove an allocation from its row.
+- **History and notes**: who did what and when: created, edited, issued, emailed, viewed by the client, payments, credit, reminders, voided and notes. The filter shows **All**, **People**, **System** or **Client** entries.
+
+### Add a note
+
+Anyone who can open the invoice can add a note, for example a promise of payment from the client.
+
+{% steps %}
+
+1. Under **History and notes**, type the text in **Add a note to this invoice**. A note can be up to 2,000 characters.
+2. Select **Add note**.
+
+{% /steps %}
+
+A note cannot be edited or deleted afterwards.
+
+## The side cards
+
+| Card | Shows |
+|---|---|
+| **Client** | The client's name, UEN, address, contact, email and phone, where known, and **Open client**. |
+| **Related** | The contract, the opportunity, the case, and the credit notes applied to this invoice with their amounts. For a credit note, the invoice it credits. |
+| **Delivery** | When the invoice was last emailed, when the client last viewed it, the **Payment reminders on** switch and the date of the next reminder. |
+| **Open invoices for this client** | Credit notes only: the client's unpaid invoices in the same currency and their total due. |
+
+An issued invoice that has never been emailed shows **No reminder is sent until the invoice has been emailed once.** See [Invoice settings and reminders](/en/invoices/settings-reminders/).
+
+## Uploaded invoices
+
+An invoice issued outside Operon and recorded on a case from its file is marked **Uploaded**. Its page shows the original file first, with **Open in Documents** and **Download original file**, and an **As printed on the file** card with the values read from the file. A dash there means that the file does not state the value; it is not zero.
+
+An uploaded invoice cannot be edited, duplicated or credited in Operon. Payments can be recorded on it as on any other invoice.
