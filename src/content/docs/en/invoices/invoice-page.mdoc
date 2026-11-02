@@ -12,7 +12,7 @@ The invoice page shows the invoice paper, read-only and exactly as the client se
 
 ## The header
 
-The header shows the document and its number (for example **Invoice INV-2026-0007**), its status and its source. The second line shows the client, the issue date, the due date and, for an invoice from a contract, the contract number, labelled **Contract**.
+The header shows the document and its number (for example **Invoice INV-2026-0007**), its status and its source. The second line shows the client, the issue date, the due date and, for an invoice from a contract, the contract number, labelled **Contract**, for example **Contract AGR-2026-0012**. When the invoice has a customer reference, it is shown as a separate item, for example **Reference PO-7781**. An invoice with no reference shows no **Reference** item.
 
 At most two main buttons are shown next to the header:
 
@@ -33,7 +33,7 @@ For a credit note, the strip reads **Credit total** − **Applied** − **Refund
 ## Below the paper
 
 - **Record payment**: the form for recording a payment, shown while an amount is due. See [Record payments](/en/invoices/payments/).
-- **Payments and credit**: every payment, credit applied and refund, newest first, with **Date**, **Type**, **Method or source**, **Reference**, **Recorded by** and **Amount**, and a total. Managers can delete a payment or remove an allocation from its row.
+- **Payments and credit**: every payment, credit applied and refund, newest first, with **Date**, **Type**, **Method or source**, **Reference**, **Recorded by** and **Amount**, and a total. Managers can delete a payment or remove an allocation from its row. A payment above the amount due says how much was kept as an overpayment, with **Open overpayment** (see [Overpayments](/en/invoices/overpayments/)).
 - **History and notes**: who did what and when: created, edited, issued, emailed, viewed by the client, payments, credit, reminders, voided and notes. The filter shows **All**, **People**, **System** or **Client** entries.
 
 ### Add a note
@@ -54,11 +54,11 @@ A note cannot be edited or deleted afterwards.
 | Card | Shows |
 |---|---|
 | **Client** | The client's name, UEN, address, contact, email and phone, where known, and **Open client**. |
-| **Related** | The contract, the opportunity, the case, and the credit notes applied to this invoice with their amounts. For a credit note, the invoice it credits. |
+| **Related** | The contract, the opportunity, the case, the credit notes applied to this invoice with their amounts, and any overpayments. For a credit note, the invoice it credits. |
 | **Delivery** | When the invoice was last emailed, when the client last viewed it, the **Payment reminders on** switch and the date of the next reminder. |
 | **Open invoices for this client** | Credit notes only: the client's unpaid invoices in the same currency and their total due. |
 
-An issued invoice that has never been emailed shows **No reminder is sent until the invoice has been emailed once.** See [Invoice settings and reminders](/en/invoices/settings-reminders/).
+An issued invoice that has never been emailed shows **No reminder is sent until the invoice has been emailed once.** When reminders are turned off for the client, the card shows **Reminders are off for this client.** and no next reminder date. See [Invoice settings and reminders](/en/invoices/settings-reminders/).
 
 ## Uploaded invoices
 

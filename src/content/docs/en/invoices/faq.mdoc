@@ -1,9 +1,9 @@
 ---
-title: "11 · FAQ"
+title: "12 · FAQ"
 description: Answers to common questions about invoices, numbers, GST, payments and corrections.
 sidebar:
-  order: 12
-  label: "11 · FAQ"
+  order: 13
+  label: "12 · FAQ"
 ---
 
 ## Why is Issue greyed out?
@@ -32,6 +32,26 @@ A GST-registered issuing entity always issues a tax invoice, so Operon prints **
 - A payment or credit is recorded: ask a manager to create a credit note for the difference (see [Credit notes](/en/invoices/credit-notes/)).
 - The issuing entity is wrong: ask a manager to void the invoice, then duplicate it, correct the duplicate and issue it.
 
+## The client paid more than the invoice. What do I do?
+
+Record the full amount received. The invoice becomes **Paid**, and the rest is kept as an overpayment for the client. A manager can later apply it to another invoice of the same client, issuing entity and currency, or record a refund. See [Overpayments](/en/invoices/overpayments/).
+
+## The overpayment was recorded in error. How do I undo it?
+
+Ask a manager to delete the payment on the overpaid invoice. The overpayment is voided with it. If part of the overpayment has already been applied or refunded, remove those first.
+
+## Does an overpayment have GST or a PDF?
+
+No. An overpayment is not a supply. It has no GST, no number and no PDF, and it is not sent to the client.
+
+## The client's price includes GST. How do I enter it?
+
+Set **Amounts are** to **Tax inclusive** on the editor's **Settings** tab, and enter the price including GST. Operon works the GST back from it. See [Tax-inclusive amounts](/en/invoices/edit/#tax-inclusive-amounts).
+
+## Where do I put the client's purchase order number?
+
+In **Reference** on the editor's **Association** tab. It is printed on the invoice and can be searched in the invoice list.
+
 ## Can I delete an issued invoice?
 
 No. An issued invoice can only be voided, by a manager, with a reason. It keeps its number.
@@ -54,7 +74,7 @@ The invoice may have been voided; a void invoice's link no longer opens. Otherwi
 
 ## Why did the client not receive a payment reminder?
 
-Check, in order: the invoice has been emailed at least once; **Payment reminders on** is switched on in the invoice's **Delivery** card; the invoice still has an amount due; and a reminder rule is switched on for that day in **Invoice settings**. Only a tenant admin can open **Invoice settings**; ask one to check the rules.
+Check, in order: the invoice has been emailed at least once; **Payment reminders for this client** is on in the client's **Invoices** tab; **Payment reminders on** is switched on in the invoice's **Delivery** card; the invoice still has an amount due; and a reminder rule is switched on for that day in **Invoice settings**. Only a tenant admin can open **Invoice settings**; ask one to check the rules.
 
 ## Does a change to a template change old invoices?
 

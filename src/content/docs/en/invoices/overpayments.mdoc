@@ -1,0 +1,91 @@
+---
+title: "6 · Overpayments"
+description: Keep money that a client paid beyond an invoice's amount due, then apply it to another invoice of the client or refund it.
+sidebar:
+  order: 7
+  label: "6 · Overpayments"
+---
+
+**Who:** any member who can see the invoice records the payment that creates an overpayment. Only managers and tenant admins apply or refund an overpayment. **Where:** the invoice page, and **Invoices** › **Overpayments**.
+
+An overpayment is money that a client paid beyond the amount due on an invoice. Operon keeps it for that client, so that it can be applied to another of the client's invoices later or paid back. An overpayment is not a supply: it has no GST, no number and no PDF, and it is never emailed to the client.
+
+## Record a payment above the amount due
+
+{% steps %}
+
+1. Open the invoice and select **Record payment** (see [Record payments](/en/invoices/payments/)).
+2. In **Amount paid (SGD)**, enter the amount actually received. When it is above the amount due, a line under the amount says how much is above the amount due and that it will be kept as an overpayment for the client.
+3. Complete **Date paid**, **Method** and, optionally, **Reference**, and select **Record payment**.
+
+{% /steps %}
+
+The payment is recorded for the amount due, and the invoice becomes **Paid**. The rest is kept as an overpayment of the same client, with the same issuing entity and currency as the invoice. In **Payments and credit**, the payment row says, for example, **S$190.00 kept as overpayment**, with **Open overpayment**.
+
+For example, ABC PTE. LTD. pays S$6,000.00 for invoice INV-2026-0012, which has S$5,810.00 due. INV-2026-0012 becomes **Paid** with a payment of S$5,810.00, and an overpayment of S$190.00 is kept for ABC PTE. LTD.
+
+{% screenshot id="invoices/overpayment-record-notice" caption="The Record payment form with an amount above the amount due." /%}
+
+## Find an overpayment
+
+- In the invoice list, switch the document type to **Overpayments**. Overpayments are listed only there, never under **Invoices** or **Credit notes**. The **Number** column reads **Overpayment**, with the invoice that was overpaid under **Source**.
+- On the overpaid invoice, select **Open overpayment** in its payment row, or the overpayment in the **Related** card.
+
+An overpayment has one of these statuses:
+
+| Status | Meaning |
+|---|---|
+| **Credit remaining** | Part or all of the overpayment is still unused. |
+| **Fully applied** | All of it has been applied to invoices or refunded. |
+| **Void** | The payment it came from was deleted. |
+
+{% screenshot id="invoices/overpayments-list" caption="The invoice list switched to Overpayments." /%}
+
+## The overpayment page
+
+The header reads **Overpayment**, with its status, the date it was received and **From invoice** followed by the invoice number. The **Payment** card shows the **Payment date**, **Method**, **Reference**, **Source invoice**, **Amount** and **Credit remaining**. The table below lists each application and refund, and the history records each step.
+
+{% screenshot id="invoices/overpayment-page" caption="An overpayment of S$190.00 kept for ABC PTE. LTD." /%}
+
+## Apply an overpayment to another invoice
+
+**Who:** managers and tenant admins.
+
+{% steps %}
+
+1. Open the overpayment and select **Apply credit**. The page moves to the **Apply credit** form.
+2. The form lists the client's open invoices with the same issuing entity and currency. Enter the **Amount to apply** for each invoice. **Total to apply** and **Credit remaining after applying** follow as you type.
+3. Select **Apply credit**.
+
+{% /steps %}
+
+Each invoice's amount due goes down by the amount applied, and both documents record the application in their history. No GST is charged or reduced by an application. For example, applying the S$190.00 to invoice INV-2026-0015, which has S$1,090.00 due, leaves S$900.00 due; INV-2026-0015 becomes **Partially paid**, and the overpayment becomes **Fully applied**.
+
+The same rules as for credit notes apply: an amount cannot be above that invoice's amount due, and the total cannot be above the credit remaining. An application is taken back with **Remove allocation** on its row (see [Credit notes](/en/invoices/credit-notes/)).
+
+## Refund an overpayment
+
+**Who:** managers and tenant admins.
+
+When the client is paid back instead:
+
+{% steps %}
+
+1. Open the overpayment and select **Record refund**.
+2. Enter the **Amount (SGD)**, the **Date**, the **Method** and, optionally, the **Reference** and a **Note**.
+3. Select **Save**.
+
+{% /steps %}
+
+A refund cannot be larger than the credit remaining. When nothing remains, **Apply credit** is greyed out with **No credit remains on this overpayment.**
+
+## Undo an overpayment
+
+An overpayment cannot be edited, voided or deleted on its own page. It is undone by deleting the payment it came from on the overpaid invoice (see [Record payments](/en/invoices/payments/)):
+
+- When the overpayment is still unused, a manager deletes the payment. The confirmation says that the overpayment is voided as well. The invoice steps back to its previous status, and the overpayment becomes **Void**.
+- When any of the overpayment has been applied or refunded, the deletion is refused with **This payment left an overpayment that has been applied or refunded. Remove those first.** First remove its applications and refunds, then delete the payment.
+
+{% aside type="note" title="What an overpayment is not" %}
+An overpayment has no number, no lines, no due date and no PDF. It cannot be issued, emailed, paid, duplicated or credited, and no reminder is sent about it. It is not counted in the client's amounts billed, collected or outstanding.
+{% /aside %}

@@ -30,7 +30,11 @@ The payment is added to **Payments and credit** and to the history, and the amou
 
 For example, an invoice of S$1,979.99 with a payment of S$800.00 reads **Partially paid** with S$1,179.99 due. Recording S$1,179.99 makes it **Paid**.
 
-A payment cannot be larger than the amount due (**The amount cannot exceed …**), and no payment can be recorded on a draft or a void invoice.
+No payment can be recorded on a draft, a void invoice, a credit note or an overpayment.
+
+## The client paid more than the amount due
+
+Enter the amount actually received. When it is above the amount due, the form says, under the amount, how much is above the amount due and that it will be kept as an overpayment for the client. Select **Record payment**: the payment is recorded for the amount due, the invoice becomes **Paid**, and the rest is kept as an overpayment. A payment above the amount due is always recorded this way; it is never recorded on the invoice for more than the amount due. See [Overpayments](/en/invoices/overpayments/).
 
 ## Delete a payment
 
@@ -45,6 +49,8 @@ A payment recorded in error is deleted by a manager.
 
 The deletion is kept in the history, with who deleted the payment and when.
 
+When the payment left an overpayment, the confirmation says that the overpayment is voided as well. If any of the overpayment has been applied or refunded, the deletion is refused: remove those applications and refunds first.
+
 {% aside type="note" title="Payments lock the amounts" %}
-While a payment is recorded on an invoice, its lines and amounts cannot be edited, and it cannot be voided. To correct the amount of an invoice that has been paid in part, a manager creates a credit note (see [Credit notes](/en/invoices/credit-notes/)).
+While a payment is recorded on an invoice, its lines and amounts cannot be edited, and it cannot be voided. The description, the footer note and the reference can still be changed. To correct the amount of an invoice that has been paid in part, a manager creates a credit note (see [Credit notes](/en/invoices/credit-notes/)).
 {% /aside %}
