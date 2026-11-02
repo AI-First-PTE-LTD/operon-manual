@@ -6,7 +6,7 @@ sidebar:
   label: "4 · Template details and saving"
 ---
 
-**Who:** tenant admin. **Where:** the template editor.
+**Who:** tenant admin, or a user with **Template access**. **Where:** the template editor.
 
 ## Details
 
@@ -22,7 +22,7 @@ While the template has unsaved changes, **Discard** and **Save changes** are sho
 
 ## If saving is refused
 
-When you save, Operon checks two rules:
+When you save, Operon checks the template. The two most common reasons for a refusal are:
 
 - A section whose **Board status** is **Waiting for client** must have **Waiting on** set.
 - If a task is due relative to the case due date, **Default case length** must be set on the **Details** tab.

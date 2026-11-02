@@ -6,13 +6,13 @@ sidebar:
   label: "Step 2 · Sales & purchases"
 ---
 
-**Reconcile › Sales matching** lists one sales invoice per row: amount, amount received, balance not yet collected and status. **Reconcile › Purchases matching** is the same page for supplier bills: amount paid, balance unpaid and status. Select a row to open its drawer: the document is on the left, and the details, the actions and the matched payments are on the right.
+**Reconcile › Sales** lists one sales invoice per row: amount, amount received, uncollected balance and status. **Reconcile › Purchases** is the same page for supplier bills: amount paid, balance unpaid and status. Select a row to open its drawer: the document is on the left, and the details, the actions and the matched payments are on the right.
 
-{% screenshot id="bookkeeping/sales-matching-list" caption="Sales matching: the Status column shows what each invoice still needs." /%}
+{% screenshot id="bookkeeping/sales-matching-list" caption="Sales: the Status column shows what each invoice still needs." /%}
 
-**Filters on Sales matching:** Needs action, All, Collected, On hold, Suspense, Not yet due, Waiting for client. **Aging** shows the aged receivables and exports them to Excel.
+**Filters on Sales:** Needs action, All, Uncollected, Collected, On hold, Suspense, Excluded from to-do, Waiting for client. A filter is shown only when it applies (in the screenshot above, only Needs action, All, Uncollected and Collected). **Aging** shows the aged receivables and exports them to Excel.
 
-**Filters on Purchases matching:** Needs action, Waiting for client, All, Paid, Not yet due. **Aging** shows the aged payables. Unpaid bills show how many days they are overdue.
+**Filters on Purchases:** Needs action, All, Unpaid, Paid, On hold, Suspense, Excluded from to-do, Waiting for client. **Aging** shows the aged payables. Unpaid bills show how many days they are overdue.
 
 ## Invoice statuses
 
@@ -21,7 +21,7 @@ sidebar:
 | **Uncollected** / **Part collected** / **Collected** | Nothing, part or all of the invoice has been received. |
 | **No receipt found** | No bank receipt is matched to this invoice. |
 | **Tax code to confirm** / **Account to confirm** | Operon chose one; confirm it or change it. |
-| **Not yet due** | A normal receivable at quarter end; it does not stop completion. |
+| **Excluded from to-do** (filter) | Not yet due at quarter end (issued fewer than 60 days before it, or due after it): a normal receivable that does not stop completion. |
 | **n days overdue** / **Estimated at 30 days** | Past its due date; or no terms were found and the due date is estimated as the invoice date plus 30 days. |
 | **Opening balance owed** | From last year's aged list; no receipt seen in this period. |
 | **Date to be filled** | The invoice date was not read; fill it in to book the invoice. |
@@ -70,11 +70,11 @@ A bill opens in its drawer: the document is on the left; the bill details, its s
 
 ### Example
 
-DEF SUPPLIES PTE. LTD. issues a bill of SGD 545.00 (SGD 500.00 plus 9% GST) on 28 September 2026. It is not paid by 30 September. Select **Confirm still owed at period end**: the bill stays in payables at quarter end and is matched to the payment in October.
+DEF SUPPLIES PTE. LTD. issues bill DEF-5640 for SGD 937.40 (SGD 860.00 plus 9% GST of SGD 77.40) on 18 August 2026. The company pays it on 25 August. Open the bill › **Match transaction** › **Match** and choose the payment of SGD 937.40: the payment is applied, and the status becomes Paid. A bill that is still unpaid at 30 September is handled with **Confirm still owed at period end** instead: it stays in payables at quarter end and is matched to the payment later.
 
 ## Bills without an original
 
-When there is no original document, a bill or an expense can be entered by hand on **Purchases matching** with **New bill** or **New expense**, and a sales invoice on **Sales matching** with **New invoice**.
+When there is no original document, a bill or an expense can be entered by hand on **Purchases** with **New bill** or **New expense**, and a sales invoice on **Sales** with **New invoice**.
 
 {% aside type="note" title="Locked quarters" %}
 A bill dated in a locked quarter cannot be changed, but a later payment can still be applied to it. Otherwise use **Record in next open period…**, or ask a manager to reopen the quarter.

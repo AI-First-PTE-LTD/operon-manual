@@ -9,29 +9,29 @@ sidebar:
 
 ## 期末调整（Period-end adjustments）
 
-季末事项：外币重估、计提、摊销，以及公司记账政策中的其他事项。页面显示哪些已记、哪些未记。在同一页上可以录入调整分录（**Post an adjusting entry**）、记录 **Asset disposal**（资产处置）或设立 **Instalment schedule**（分期计划）。
+季末事项：外币重估、计提、摊销，以及公司记账政策中的其他事项。页面显示哪些已记、哪些未记。金额不预填：每项调整须填写金额和原因后才记账。没有设置这类政策的公司显示「该公司未设置期末调整。」政策之外的分录在右侧 **其他录入**（Other entries）中录入：在 **手工分录**（Manual journal entry）、**资产处置**（Asset disposal）或 **分期付款表**（Instalment schedule）旁选 **新建**（New）。
 
-{% screenshot id="bookkeeping/review-period-end-adjustments" caption="期末调整：一项尚未记账的外币重估。" /%}
+{% screenshot id="bookkeeping/review-period-end-adjustments" caption="未设置期末政策的公司的期末调整页，以及其他录入面板。" /%}
 
 ## 调整复核（Adjustment review）
 
-只列出本季由人作出的改动，以及 Operon 自动记的分录。逐条复核后选 **Mark reviewed**。经理自己的改动须由另一位复核人复核。
+只列出本季由人作出的改动，以及 Operon 自动记的分录。逐条复核后选 **已复核**（Mark reviewed）。经理自己的改动须由另一位复核人复核。
 
-页面顶部出现红条，表示某项账目自洽检查未通过。选 **Show** 查看是哪一项。
+页面顶部出现红条，表示某项账目自洽检查未通过。选 **展开**（Show）查看是哪一项。
 
 {% screenshot id="bookkeeping/review-adjustment-review" caption="调整复核，顶部为自洽检查条。" /%}
 
 ## F5 核对（F5 check）
 
-本季 GST F5 各栏的数字，并与上季对比。右侧的 **Before filing** 列出申报前须处理的事项。问客户清单上还有未答的题时，数字标为 **Provisional**（暂定）。
+本季 GST F5 各栏的数字，并与上季对比。右侧的 **申报前须处理**（Before filing）列出申报前须处理的事项。问客户清单上还有未答的题时，数字标为 **Provisional**（暂定）。
 
-数字无误后，选 **Confirm figures**。确认之后账目又有变动的，须重新确认 F5。
+数字无误后，由经理选 **生成 F5**（Generate F5）。生成 F5 即确认数字：各格数字及其背后的分录行予以冻结；此后账目变更的，须重新生成。在 myTax 申报后，在页面底部填写 IRAS 回执号，选 **标记已申报**（Mark as filed），见[第 4 步 · 报告](/zh-cn/bookkeeping/report/)。
 
 {% screenshot id="bookkeeping/review-f5-check" caption="2026 年第三季的 F5 核对。" /%}
 
 ## 完成（Complete）
 
-季度检查清单、往来余额和银行对账记录。每项未满足的检查旁有 **Resolve** 按钮，直达要处理的地方。检查项为：
+季度检查清单、往来余额和银行对账记录。每项未满足的检查旁有 **去处理 →**（Resolve →）按钮，直达要处理的地方。检查项为：
 
 - 每个户口每个月都已对平并签字。
 - 待办已清（挂起的也算未清）。
@@ -42,7 +42,7 @@ sidebar:
 - 人工改动已复核。
 - 没有未定的单据。
 
-全部检查满足后，在页面底部选 **Complete quarter**。完成后本季锁账。要再修改本季，须由经理重开，见[重开已完成的期间](/zh-cn/bookkeeping/reopen/)。
+全部检查满足后，在页面底部的 **完成本案**（Finish this case）中填写 **交付内容**（例如「GST 报告客户已确认」），选 **标记案子完成**（Mark case complete）。完成后账目锁定至季末。财年最后一季的按钮则为 **完成本季**（Complete quarter）：它锁定本季，案子保持在办，以办理年末工作（见[年末](/zh-cn/bookkeeping/year-end/)）。要再修改本季，须由经理重开，见[重开已完成的期间](/zh-cn/bookkeeping/reopen/)。
 
 {% screenshot id="bookkeeping/review-complete" caption="完成：季度检查清单。" /%}
 

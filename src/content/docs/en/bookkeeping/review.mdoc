@@ -9,9 +9,9 @@ Step 3 has four tabs: **Period-end adjustments**, **Adjustment review**, **F5 ch
 
 ## Period-end adjustments
 
-The quarter-end items: foreign-currency revaluation, accruals, amortisation and similar items from the company's policies. The page shows which items are booked and which are not. From the same page, post an adjusting entry (**Post an adjusting entry**), record an **Asset disposal** or set up an **Instalment schedule**.
+The quarter-end items: foreign-currency revaluation, accruals, amortisation and similar items from the company's policies. The page shows which items are booked and which are not. Amounts are not prefilled: each adjustment is booked only after an amount and a reason are entered. A company without such policies shows "No period-end adjustments are set up for this company." Entries outside the policies are made under **Other entries** on the right: select **New** next to **Manual journal entry**, **Asset disposal** or **Instalment schedule**.
 
-{% screenshot id="bookkeeping/review-period-end-adjustments" caption="Period-end adjustments: a foreign-currency revaluation not yet booked." /%}
+{% screenshot id="bookkeeping/review-period-end-adjustments" caption="Period-end adjustments for a company with no period-end policies, and the Other entries panel." /%}
 
 ## Adjustment review
 
@@ -25,13 +25,13 @@ A red bar at the top of the page means that a books consistency check has failed
 
 The GST F5 boxes for this quarter, compared with the previous quarter. **Before filing**, on the right, lists what must be resolved before filing. While questions on the client query list are unanswered, the figures are marked **Provisional**.
 
-When the figures are right, select **Confirm figures**. If the books change after confirmation, the F5 must be confirmed again.
+When the figures are right, a manager selects **Generate F5**. Generating the F5 confirms the figures: the boxes and the entry lines behind them are frozen. If the books change afterwards, the F5 must be generated again. After the return is filed in myTax, enter the IRAS acknowledgement number at the bottom of the page and select **Mark as filed**; see [Step 4 · Report](/en/bookkeeping/report/).
 
 {% screenshot id="bookkeeping/review-f5-check" caption="F5 check for Q3 2026." /%}
 
 ## Complete
 
-The quarter checks, the control account balances and the bank reconciliation records. Each check that is not met has a **Resolve** button that goes to where it is fixed. The checks are:
+The quarter checks, the control account balances and the bank reconciliation records. Each check that is not met has a **Resolve →** button that goes to where it is fixed. The checks are:
 
 - Every account and month is reconciled and signed off.
 - The to-do list is clear (items on hold still count).
@@ -42,7 +42,7 @@ The quarter checks, the control account balances and the bank reconciliation rec
 - The manual changes are reviewed.
 - No document is undetermined.
 
-When every check is met, select **Complete quarter** at the bottom of the page. Completing locks the books of the quarter. To change the quarter again, a manager reopens it; see [Reopen a period](/en/bookkeeping/reopen/).
+When every check is met, go to **Finish this case** at the bottom of the page, enter **What was delivered** (for example, "GST report approved by the client") and select **Mark case complete**. Completing locks the books to the end of the quarter. In the last quarter of a financial year the button is **Complete quarter** instead: it locks the quarter and keeps the case open for the year-end work (see [Year end](/en/bookkeeping/year-end/)). To change the quarter again, a manager reopens it; see [Reopen a period](/en/bookkeeping/reopen/).
 
 {% screenshot id="bookkeeping/review-complete" caption="Complete: the quarter checks." /%}
 

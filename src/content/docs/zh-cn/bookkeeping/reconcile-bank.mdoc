@@ -5,9 +5,9 @@ sidebar:
   order: 8
 ---
 
-**对账 › 银行流水对账**（Bank reconciliation）上方每张卡是一个银行或钱包户口；下方是对账单余额、账上余额、差额，以及还需处理的流水。右侧按月切换本季各月。
+**对账 › 资金流水**（Reconcile › Bank）上方每张卡是一个银行或钱包户口；卡片下方的 **银行对账**（Bank reconciliation）面板显示对账单余额、账上余额和差额，其下列出银行流水。右侧可在整季与本季各月之间切换。
 
-{% screenshot id="bookkeeping/bank-recon-overview" caption="ABC PTE. LTD. SGD 营运户口 2026 年 8 月的银行对账。" /%}
+{% screenshot id="bookkeeping/bank-recon-overview" caption="ABC PTE. LTD. UOB SGD current 户口 2026 年 7 月至 9 月的银行对账。" /%}
 
 左边是收款，右边是付款。视图筛选选 **Needs action**，只显示还需处理的行。同一交易对手的行归成一组，整组可以一次处理：**Confirm as suggested (n)**（按建议确认）或 **Match all (n)**（全部核销）；组内任一行仍可单独修改。
 
@@ -24,7 +24,7 @@ sidebar:
 | **To apply** / **To allocate** | 收付款已记入应收或应付，但尚未核销到具体发票或账单。 |
 | **Waiting for client** | 已在问客户清单上。不计为待处理。 |
 | **On hold** | 写明原因后挂起。会挡住本季完成。 |
-| **Account to be decided** | 这一行有一道科目题未答。 |
+| **科目待定**（Account to assign） | 这一行有一道科目题未答。 |
 | **Purchase / Sales document missing** | 找不到对应的发票或账单。 |
 | **Posted to suspense** | 暂时记入暂记科目。 |
 
@@ -36,7 +36,7 @@ sidebar:
 | 行显示 To apply | 打开该行 › **Match other documents…** 或 **Record payment** | 金额核销到所选发票；未核完的余额仍待核销。 |
 | 一笔汇款付了几张发票，或只付了一张的一部分 | **Record payment** | 一张表单内可选多张发票、部分核销，或与对方往来账互抵。 |
 | 金额只差一点银行手续费 | 在待办中选 **Match and record difference as bank fee** | 核销，差额记银行手续费。撤销：**Unmatch**。 |
-| 本来就没有发票（手续费、利息、工资、政府款项） | **Change account…** / **Post to account…** | 直接记到所选科目（须写原因）。 |
+| 本来就没有发票（手续费、利息、工资、政府款项） | **Change account…** / **指定入账科目…**（Assign an account…） | 直接记到所选科目（须写原因）。 |
 | 先收款后开票，或先付款后收票 | **More actions** › **Record as advance…** / 预付 | 记为预收或预付；发票到后再核销。 |
 | 供应商退款，或退款给客户 | **More actions** › **Record supplier refund…** / 客户退款 | 记为对该方的退款。 |
 | 收付的是上年结转的余额 | **More actions** › **Match to opening receivables…** / 应付 | 冲销期初余额。 |
@@ -51,7 +51,7 @@ sidebar:
 
 ### 示例
 
-2026 年 8 月 14 日，ABC PTE. LTD. 收到 XYZ LOGISTICS PTE. LTD. 汇来的 SGD 3,270.00，对方有两张未结发票，分别为 SGD 1,090.00 和 SGD 2,180.00。打开这一行，选 **Record payment**，选中两张发票后保存：收款核销到两张发票，这一行入账。
+2026 年 8 月 5 日，ABC PTE. LTD. 收到 GHI RETAIL PTE. LTD. 汇来的 SGD 8,393.00。这笔收款付的是两张发票：ABC-26-0624，SGD 4,905.00，来自 2026 年 6 月 30 日的期初应收账龄表；ABC-26-0722，SGD 3,488.00。打开这一行，选 **Record payment**，选中两张发票后保存：收款核销到两张发票，这一行入账。
 
 ## 期间中途开立的户口
 
