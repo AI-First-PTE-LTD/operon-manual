@@ -1,9 +1,9 @@
 ---
-title: "10 · Invoice settings and reminders"
+title: "11 · Invoice settings and reminders"
 description: Set GST and payment details for the firm and for each issuing entity, and the rules for payment reminders to clients.
 sidebar:
-  order: 11
-  label: "10 · Invoice settings and reminders"
+  order: 12
+  label: "11 · Invoice settings and reminders"
 ---
 
 **Who:** tenant admins only. Other users cannot open the invoice settings. **Where:** **Admin** › **Corporate secretary** › **Invoice settings** tab.
@@ -15,6 +15,8 @@ The tab holds four cards: two for the firm's defaults, one for the payment remin
 **GST** and **Printed invoice content** hold the firm's own settings: **GST registered**, **GST rate**, **GST registration number**, the **Issuer name** and **Issuer address**, **Bank account details**, **PayNow**, **Terms** and **Footer note**. Select **Save** after a change.
 
 These settings apply to an invoice that has no issuing entity, and to every issuing entity that has no settings of its own yet.
+
+The settings have no invoice number prefix and no payment terms. The number format is set in each template, and the due date by the template's **Default due date** (see [Templates and numbering](/en/invoices/templates/)).
 
 ## Settings of each issuing entity
 
@@ -55,6 +57,21 @@ Once a day, Operon checks every invoice that is **Awaiting payment** or **Partia
 - Each reminder sent is recorded in the invoice's history as **Reminder sent**, with the addresses.
 
 The person who created the invoice also receives an internal notice when the invoice becomes overdue.
+
+## Turn reminders off for a client
+
+**Who:** any member who can open the client's **Invoices** tab.
+
+{% steps %}
+
+1. Open the company or the contact and select the **Invoices** tab.
+2. Above the list, switch **Payment reminders for this client** to **Off**.
+
+{% /steps %}
+
+The client then receives no payment reminder for any of its invoices. The **Delivery** card of each of its invoices shows **Reminders are off for this client.** and no next reminder date. Each invoice keeps its own switch; when the client's reminders are switched **On** again, each invoice's own setting applies again.
+
+{% screenshot id="invoices/client-reminders-switch" caption="The Payment reminders for this client switch on a company's Invoices tab." /%}
 
 ## Turn reminders off for an invoice
 

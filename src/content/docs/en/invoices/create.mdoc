@@ -1,6 +1,6 @@
 ---
 title: "1 · Create an invoice"
-description: Start an invoice from a signed contract, from an opportunity without a contract, or from a client.
+description: Start an invoice from a signed contract, from an opportunity without a contract, from a client, or from the invoice list.
 sidebar:
   order: 2
   label: "1 · Create an invoice"
@@ -8,7 +8,7 @@ sidebar:
 
 **Who:** any member who can see the client or the opportunity.
 
-An invoice can be started in three places. In each case you first choose a template, and the editor then opens with the client already filled in. Signing a contract never raises an invoice by itself; a person always starts it.
+An invoice can be started in four places. In each case you first choose a template, and the editor then opens with the client already filled in. Signing a contract never raises an invoice by itself; a person always starts it.
 
 ## From a signed contract
 
@@ -45,15 +45,31 @@ The same shortcut is at the top of the opportunity's **Invoices** tab: one **Cre
 
 Select **+ New invoice**, select a template, add the lines and select **Save draft**. The invoice is addressed to that client and is not linked to an opportunity.
 
+## From the invoice list
+
+**Where:** **Invoices** in the left sidebar.
+
+An invoice is always billed to one client, so the client is chosen first.
+
+{% steps %}
+
+1. Select **+ New invoice**. The **New invoice** window opens.
+2. Under **Client**, search for and pick the company or the contact. **Continue** stays greyed out until a client is picked.
+3. Optionally, under **Opportunity**, pick one of the client's opportunities. The default is **No opportunity**.
+4. Select **Continue**, then select a template.
+5. The editor opens for that client, with the opportunity if one was picked. Add the lines and select **Save draft**.
+
+{% /steps %}
+
+This window does not offer a contract. To invoice a signed contract, start from the contract (see above), so that its lines and its issuing entity are taken over.
+
+{% screenshot id="invoices/new-invoice-client-dialog" caption="The New invoice window: the client comes first, the opportunity is optional." /%}
+
 ## Before the first save
 
 The invoice is saved for the first time when you select **Save draft**. If you close the editor before that, Operon asks whether to discard it: **Keep editing** returns to the editor, and **Exit without saving** discards the invoice. Nothing is left behind.
 
 A saved draft has no number yet; it shows **Draft** in the list. The number is given when the invoice is issued, so deleting a draft leaves no gap in the numbering.
-
-{% aside type="note" title="The Invoices page in the sidebar" %}
-The firm-wide **Invoices** page lists invoices but has no **+ New invoice** button. Start a new invoice from the opportunity or the client it belongs to.
-{% /aside %}
 
 {% aside type="tip" title="Choosing a template" %}
 The template sets the layout of the invoice: the columns, the sections that are printed, the default due date and the number format. Use the template marked **Default** unless your firm has agreed on another one. The search box and **Sort by** help to find a template when there are many. See [Templates and numbering](/en/invoices/templates/).

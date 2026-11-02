@@ -1,9 +1,9 @@
 ---
-title: "6 · Credit notes"
+title: "7 · Credit notes"
 description: Create a credit note from an issued invoice, apply its credit to the client's invoices, and record a refund.
 sidebar:
-  order: 7
-  label: "6 · Credit notes"
+  order: 8
+  label: "7 · Credit notes"
 ---
 
 **Who:** managers and tenant admins. **Where:** the invoice page.
@@ -14,14 +14,17 @@ A credit note reduces what a client owes on an issued invoice, for example after
 
 {% steps %}
 
-1. Open the issued invoice to be credited and select **More** › **Create credit note**. A draft credit note is created with the invoice's lines, and the editor opens.
-2. Change the lines to the amounts to be credited. For example, to credit S$300.00 of a S$1,200.00 service, change the line's **Price** to 300.00. GST is worked out as on an invoice.
-3. Select **Save changes** to save.
-4. Select **Issue**. The credit note takes its number from its own series, for example **CN-2026-0001**.
+1. Open the issued invoice to be credited and select **More** › **Create credit note**. The **Choose a credit note template** window opens.
+2. Select a template. A draft credit note is created from it with the invoice's lines, and the editor opens.
+3. Change the lines to the amounts to be credited. For example, to credit S$300.00 of a S$1,200.00 service, change the line's **Price** to 300.00. GST is worked out as on an invoice.
+4. Select **Save changes** to save.
+5. Select **Issue**. The credit note takes its number from its template's series, for example **CN-2026-0001**.
 
 {% /steps %}
 
-A credit note can be created from an invoice that is **Awaiting payment**, **Partially paid** or **Paid**. It uses the firm's default credit note template.
+A credit note can be created from an invoice that is **Awaiting payment**, **Partially paid** or **Paid**. It takes the invoice's customer reference and its **Amounts are** mode.
+
+The template window always opens, so that the template can be chosen each time. Managers can also create, edit and delete credit note templates in it, as for invoice templates (see [Templates and numbering](/en/invoices/templates/)).
 
 ## Apply the credit to invoices
 
