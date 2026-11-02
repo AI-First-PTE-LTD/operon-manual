@@ -16,7 +16,7 @@ A credit note reduces what a client owes on an issued invoice, for example after
 
 1. Open the issued invoice to be credited and select **More** › **Create credit note**. A draft credit note is created with the invoice's lines, and the editor opens.
 2. Change the lines to the amounts to be credited. For example, to credit S$300.00 of a S$1,200.00 service, change the line's **Price** to 300.00. GST is worked out as on an invoice.
-3. Select **Update** to save.
+3. Select **Save changes** to save.
 4. Select **Issue**. The credit note takes its number from its own series, for example **CN-2026-0001**.
 
 {% /steps %}
@@ -28,7 +28,7 @@ A credit note can be created from an invoice that is **Awaiting payment**, **Par
 {% steps %}
 
 1. Open the issued credit note and select **Apply credit**. The page moves to the **Apply credit** form under the paper.
-2. The form lists the client's unpaid invoices of the same issuing entity in the same currency. The invoice the credit note was raised for comes first, filled in with the credit remaining or its amount due, whichever is smaller.
+2. The form lists the client's unpaid invoices in the same currency. The invoice the credit note was raised for comes first, filled in with the credit remaining or its amount due, whichever is smaller.
 3. Enter or change the **Amount to apply** for each invoice. **Total to apply** and **Credit remaining after applying** follow as you type.
 4. Select **Apply credit**.
 
@@ -36,7 +36,7 @@ A credit note can be created from an invoice that is **Awaiting payment**, **Par
 
 Each invoice's amount due goes down by the amount applied, and its status becomes **Partially paid** or **Paid**. Both documents record the allocation in their history. For example, applying S$327.00 to an invoice of S$1,308.00 leaves S$981.00 due.
 
-Operon refuses an application when an amount is above that invoice's amount due, when the total is above the credit remaining, or when no amount is entered.
+Operon refuses an application when an amount is above that invoice's amount due, when the total is above the credit remaining, when an invoice was issued by another issuing entity, or when no amount is entered.
 
 ## Remove an allocation
 

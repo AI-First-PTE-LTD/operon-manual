@@ -17,18 +17,18 @@ Upload what the client sends later in the same way, at any time during the perio
 
 ## Reading: free and paid
 
-After upload, Operon reads each document.
+After upload, the import window goes on to its **Read** step. Operon first checks each document: it sorts the documents by type and reads, at no cost, every document with a text layer and a known layout.
 
-- **Read at no cost:** PDFs with a text layer, Excel, CSV and Word files.
-- **Read by the model, after approval:** scanned PDFs and photos. A price is shown first, and each file must be approved (for example with **Approve reading**) before it is read. A file that is not approved is not read and is not booked.
+- **Read at no cost:** documents with a text layer (PDF, Excel, CSV, Word) whose layout is known.
+- **Read by the model, after approval:** scanned PDFs and photos, PDFs without a usable text layer, and one sample of each layout not seen before (after the layout is learned, every document of that layout is read at no cost). When checking is finished, these documents are listed with the estimated cost. Select **Start reading (up to $…)** to approve the amount once for the whole import. A single document can also be read on its own with **Read with model (about $…)**. A document that is not approved is not read and is not booked; it is listed in the to-do list, where it can be approved with **Approve reading**.
 
 A file that cannot be read is listed as a to-do item.
 
-{% screenshot id="bookkeeping/documents-read-approval" caption="Scanned files waiting for approval before reading." /%}
+{% screenshot id="bookkeeping/documents-read-approval" caption="The Read step of the import window: all 12 documents read at no cost." /%}
 
 ## The document cards
 
-The cards at the top group the documents of the period: documents to classify, sales invoices, purchase invoices, bank statements, records and reconciliation material, and documents marked as not needed. On the bank statement card, a dot for each month shows whether a statement for that month has been uploaded.
+The cards at the top group the documents of the period: **To classify**, **Sales invoices**, **Purchase invoices**, **Bank statements**, **Records and reconciliation**, **Marked as not needed** and **Outside this period**. On the bank statement card, a dot for each month shows whether a statement for that month has been uploaded.
 
 ## The status filter
 

@@ -6,13 +6,13 @@ sidebar:
   label: 第 2 步 · 销售与采购
 ---
 
-**对账 › 销售对账**（Sales matching）每行一张销售发票：金额、已收、未收余额和状态。**对账 › 采购对账**（Purchases matching）是同一种页面，对象是供应商账单：已付、未付余额和状态。点一行打开抽屉：左边是单据原件，右边是明细、操作和已配对的收付款。
+**对账 › 销售**（Sales）每行一张销售发票：金额、已收、未收余额和状态。**对账 › 采购**（Purchases）是同一种页面，对象是供应商账单：已付、未付余额和状态。点一行打开抽屉：左边是单据原件，右边是明细、操作和已配对的收付款。
 
-{% screenshot id="bookkeeping/sales-matching-list" caption="销售对账：状态列显示每张发票还缺什么。" /%}
+{% screenshot id="bookkeeping/sales-matching-list" caption="销售：状态列显示每张发票还缺什么。" /%}
 
-**销售对账的筛选：** Needs action、All、Collected、On hold、Suspense、Not yet due、Waiting for client。**Aging** 显示应收账龄，可导出 Excel。
+**销售页的筛选：** 需处理（Needs action）、全部（All）、未收（Uncollected）、已收清（Collected）、挂起（On hold）、悬账（Suspense）、不计入待办（Excluded from to-do）、等客户（Waiting for client）。筛选项只在适用时出现（上图只有需处理、全部、未收、已收清）。**Aging** 显示应收账龄，可导出 Excel。
 
-**采购对账的筛选：** Needs action、Waiting for client、All、Paid、Not yet due。**Aging** 显示应付账龄。未付账单显示逾期天数。
+**采购页的筛选：** 需处理、全部、未付（Unpaid）、已付清（Paid）、挂起、悬账、不计入待办、等客户。**Aging** 显示应付账龄。未付账单显示逾期天数。
 
 ## 发票状态
 
@@ -21,7 +21,7 @@ sidebar:
 | **Uncollected** / **Part collected** / **Collected** | 未收 / 部分收到 / 全部收到。 |
 | **No receipt found** | 没有银行收款核销到这张发票。 |
 | **Tax code to confirm** / **Account to confirm** | 系统已选了一个，确认或改掉。 |
-| **Not yet due** | 季末的正常应收，不挡完成。 |
+| **不计入待办**（Excluded from to-do，筛选项） | 季末尚未到期（季末前不足 60 天开出，或到期日在季末之后）：属正常应收，不挡完成。 |
 | **n days overdue** / **Estimated at 30 days** | 已逾期；或没有找到账期，按开票日加 30 天估计到期日。 |
 | **Opening balance owed** | 来自上年账龄表，本期未见收款。 |
 | **Date to be filled** | 没读到开票日期；填上才能入账。 |
@@ -70,11 +70,11 @@ Operon 不确定一份单据是否为发票时（例如报价单或形式发票�
 
 ### 示例
 
-DEF SUPPLIES PTE. LTD. 于 2026 年 9 月 28 日开出 SGD 545.00 的账单（SGD 500.00 加 9% GST），到 9 月 30 日仍未支付。选 **Confirm still owed at period end**：这张账单在季末留在应付中，10 月付款时再核销。
+DEF SUPPLIES PTE. LTD. 于 2026 年 8 月 18 日开出账单 DEF-5640，SGD 937.40（SGD 860.00 加 9% GST SGD 77.40），公司于 8 月 25 日付款。打开账单 › **Match transaction** › **Match**，选 SGD 937.40 那笔付款：付款核销，状态变为 Paid。到 9 月 30 日仍未支付的账单，则改用 **Confirm still owed at period end**：账单在季末留在应付中，以后付款时再核销。
 
 ## 没有原件的单据
 
-没有原件时，可以在 **采购对账** 页用 **New bill** 或 **New expense** 手工录入账单或费用，在 **销售对账** 页用 **New invoice** 手工录入销售发票。
+没有原件时，可以在 **采购** 页用 **New bill** 或 **New expense** 手工录入账单或费用，在 **销售** 页用 **New invoice** 手工录入销售发票。
 
 {% aside type="note" title="已锁定的季度" %}
 日期在已锁定季度的账单不能修改，但之后的付款仍可核销到它。其他情况用 **Record in next open period…**，或请经理重开该季。
