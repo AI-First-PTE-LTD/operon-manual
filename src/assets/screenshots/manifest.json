@@ -4,72 +4,72 @@
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "sd-txn-drawer",
-    "sha256": "bcfefbea883305f692eb6ba382399d2e0d5164bf413742e0374205b5645faff9",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:38:58.148Z"
+    "sha256": "db3d13e6654cd3fdbabc0ebc245b7453cb5cbc4c91e903c14693382983530ef7",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:15:39.727Z"
   },
   {
     "id": "bookkeeping/bank-recon-line-drawer",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "sd-txn-drawer",
-    "sha256": "9771a90a32355037dd6e7141a2c8a29ba1be349710b6a601cbdf591c9b7a558b",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:39:02.065Z"
+    "sha256": "8b3306e3f118fd37906105c7417460000c9f3eeb7a910040040a3e33eed48a82",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:15:40.596Z"
   },
   {
     "id": "bookkeeping/bank-recon-overview",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "bank-rec-bar",
-    "sha256": "e43bd4d0ccab7249c9cd0fc6bc00debf42fe243c33c566d04df11d23be7889fa",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:39:45.448Z"
+    "sha256": "617ce34bb78ed72e2d112dc11d15ff52c1d5b947fc69b81549695269561eebcb",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:15:59.492Z"
   },
   {
     "id": "bookkeeping/bank-recon-overview",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "bank-rec-bar",
-    "sha256": "76fbbc15af194c67a12496efccb34979e599c52abd55f5575be64b1a805afc75",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:40:01.401Z"
+    "sha256": "6d8e6e171a03c318c9590bcc1dd4ae0d6e623b6acbf5c9f56642b2d8cf22130d",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:16:00.314Z"
   },
   {
     "id": "bookkeeping/client-queries-drawer",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "client-query-list",
-    "sha256": "095b9bdb4be9dbc18f980c8c11d5c551cca844098f04cfca098f92ce1663cc85",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:35:24.947Z"
+    "sha256": "9bbba7ef900b57da5f918a4b1d01cac444330fb0bc44352b356b1a9aeb6fe52b",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:14:25.884Z"
   },
   {
     "id": "bookkeeping/client-queries-drawer",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "client-query-list",
-    "sha256": "daf402ce12c4309cfec8591969401ae4d843f24bea8ec4fe58e8a5555fd24c8e",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:35:26.049Z"
+    "sha256": "1cd8aa1ac1dcb32766f3873a7b2f52a281c6191add4b4bd27501081d0dc235e7",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:14:26.690Z"
   },
   {
     "id": "bookkeeping/documents-overview",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=documents",
     "anchor": "docs-page",
-    "sha256": "cad91c9b53907b6b9808e9a59243c45da58d56475338b7021fda4a8485aae5f3",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:24:16.150Z"
+    "sha256": "384354eabc42bb08201e7c3b3174e784514083fca2320ee69c7456e0b122a6f1",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:07:33.648Z"
   },
   {
     "id": "bookkeeping/documents-overview",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=documents",
     "anchor": "docs-page",
-    "sha256": "a2244823de280c2ff723d962ea7646f6d17019a958ec1a99cbf32481261872c5",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:24:20.302Z"
+    "sha256": "a382cc2d6980c0dcc2e1be524dfa4d6ae7100847cd137fa0dfb76da96ebae664",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:07:34.486Z"
   },
   {
     "id": "bookkeeping/documents-read-approval",
@@ -92,92 +92,92 @@
   {
     "id": "bookkeeping/getting-started-case-entry",
     "locale": "en",
-    "route": "/workspace/crm/clients/:clientId?tab=cases",
+    "route": "/clients/companies/:clientId?tab=cases",
     "anchor": "org-detail",
-    "sha256": "b3a01f3cb45fe459b8d63ba9eed9eec01dad3195e7fbb953bdac09f4c7a161c2",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:48:04.636Z"
+    "sha256": "e3af436fbac5f4526d72234a232339d3f8b0207b07308d6118c71b6d8dbd4075",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:20:35.008Z"
   },
   {
     "id": "bookkeeping/getting-started-case-entry",
     "locale": "zh-cn",
-    "route": "/workspace/crm/clients/:clientId?tab=cases",
+    "route": "/clients/companies/:clientId?tab=cases",
     "anchor": "org-detail",
-    "sha256": "22eee02a9babf5f9b9617553b427e328135f9c77b744722b545ed605beae5ae2",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:48:07.385Z"
+    "sha256": "308ff052382808b14e39ad0ccfbfaa81134eff111c96d3d7e9f1a5ae8aeec7b7",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:20:36.628Z"
   },
   {
     "id": "bookkeeping/journal-answered",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=todo&focus=answered",
     "anchor": "answered-view",
-    "sha256": "fe4e012c0cccef9ebd3ad626169b27093a530321ea0acc78cca0e8ef66497f30",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:36:47.151Z"
+    "sha256": "19cb125d986b716145b97eb9c68e41cebeb7bb7ae9389aeb905cb5b7c75c5078",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:14:52.838Z"
   },
   {
     "id": "bookkeeping/journal-answered",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=todo&focus=answered",
     "anchor": "answered-view",
-    "sha256": "c303e22bcdf840c3df79ebf3893c7852a89f48a3c2b69aff650a00b099e631b7",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:36:54.771Z"
+    "sha256": "28c0939ef6a81ff7e750d9751381b88e848ccd10879b16e2f64c89279771dc81",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:14:53.582Z"
   },
   {
     "id": "bookkeeping/journal-list",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=journal",
     "anchor": "workbench-host",
-    "sha256": "c71077c682f3e267e72375f2f24ca2813940eadd5981f8e23444ee66f275f714",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:41:05.385Z"
+    "sha256": "7ef9b5818b0ab975d64a002505cce2dd50ae17050fb06c61f5435c42d1740c48",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:16:51.773Z"
   },
   {
     "id": "bookkeeping/journal-list",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=journal",
     "anchor": "workbench-host",
-    "sha256": "0a1a692ec7af35b3f009b086af03a4b66c56c02b7e19cd7e9e3ce1c25f0c3297",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:41:17.248Z"
+    "sha256": "3740d6f65aee382f753e0e18ded103546302c3017ee81bdce16eb46c066f7b30",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:16:54.672Z"
   },
   {
     "id": "bookkeeping/overview-steps",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "books-steps",
-    "sha256": "ed0d9aa83e9c82428f619da73105313e8ad0f113b6aafc986d75a4336058e05b",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:24:05.327Z"
+    "sha256": "a3e63db87c5875ae429ffb486c33cf9a677843203ae62c813b49ab6b2199251d",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:07:16.518Z"
   },
   {
     "id": "bookkeeping/overview-steps",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "books-steps",
-    "sha256": "b5b23c4d350d9dc2d4bcc193aff7cd13faa76287caeb6946eb08eb146c1f5d55",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:24:07.160Z"
+    "sha256": "830e1fb47f978111688a6d443d63617b9cac119f54305629c1a12bb5b829e501",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:07:18.342Z"
   },
   {
     "id": "bookkeeping/purchases-bill-drawer",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=bills&focus=purchases",
     "anchor": "bill-drawer-facts",
-    "sha256": "8be78c2b351f2598e47cd76e5a6c66f858555c06c426464f82f54e1160fcc352",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:30:41.025Z"
+    "sha256": "a67bf02491ab0a7380f7333e7fdc69e511af19d70005eb67f80eac2caccaa0f4",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:12:56.677Z"
   },
   {
     "id": "bookkeeping/purchases-bill-drawer",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=bills&focus=purchases",
     "anchor": "bill-drawer-facts",
-    "sha256": "c9ebb7332df8748a9b651e4e7fa0c7afcc42a2caf65ca7bbf17818f26ba55cd4",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:30:41.989Z"
+    "sha256": "4e043a0d095523ed1be2b7257f3b341ab5871e30ec341984c348f0574be49d32",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:12:57.429Z"
   },
   {
     "id": "bookkeeping/reopen-quarter-dialog",
@@ -202,126 +202,126 @@
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=trial-balance",
     "anchor": "workbench-host",
-    "sha256": "30bab85e21c0d3dc40dd2354de0fbb1f8bccae456a8e65fd27c5012fa63cee91",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:47:09.999Z"
+    "sha256": "afd8149c829f31ad6eece498d09a1914d195d4350d3af29a970798a8ff1acf37",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:20:14.823Z"
   },
   {
     "id": "bookkeeping/report-trial-balance",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=trial-balance",
     "anchor": "workbench-host",
-    "sha256": "9630f493861afa0dc1c578cba7eb956d465f89f2b276efb1c20d4a5d19e6520a",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:47:20.382Z"
+    "sha256": "60d562583d1732eed9d0903ab858c50ff0328d8ac2287a5766b78c759f4f7f93",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:20:15.531Z"
   },
   {
     "id": "bookkeeping/review-adjustment-review",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=review",
     "anchor": "quarter-manual-review",
-    "sha256": "7ea48218585925b4e8f38362189d521e9633c8b778d2696486cb02d9d6617401",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:43:10.821Z"
+    "sha256": "be188ed72ae43bc45b954aec55ac86049cf4b74d985330f200897c66ad0ce0d9",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:18:29.651Z"
   },
   {
     "id": "bookkeeping/review-adjustment-review",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=review",
     "anchor": "quarter-manual-review",
-    "sha256": "d8bf8726d1e29b36227889a350391e0040454c62da42ccd5e68f1a4d5159629f",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:43:24.503Z"
+    "sha256": "a4c499d423e673ec899f8098c155db309037b1409c0c965689873d1d3f44dcff",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:18:30.630Z"
   },
   {
     "id": "bookkeeping/review-complete",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=close-list",
     "anchor": "quarter-checks",
-    "sha256": "ddc4d54452a071599977f3346f7fb4b52a2d4d710e82f5f752a3e7d8bff9577c",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:46:59.772Z"
+    "sha256": "3ae14b2b888c1ed8b876da954166015b0dd0bc7647192fcfd4afce495a03ef8c",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:20:07.827Z"
   },
   {
     "id": "bookkeeping/review-complete",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=close-list",
     "anchor": "quarter-checks",
-    "sha256": "5136c54a7b3afda09914271a20b303bb9bf9b95d08d5bc980fd8ccb907c037f7",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:47:04.581Z"
+    "sha256": "f0033af5880993615e7ec5382674251a0337e11cd1964d1474e8d78d3b0b903b",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:20:08.559Z"
   },
   {
     "id": "bookkeeping/review-f5-check",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=gst",
     "anchor": "gst-review-compare",
-    "sha256": "ee967e381b412060a388815f14b7ca9c736d50a0c98e4867831ea869c7e3f58e",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:45:25.471Z"
+    "sha256": "53cac41b83bcc631319bb5fffe6f7134753fc41339551bc00e78755782d1afa8",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:19:25.939Z"
   },
   {
     "id": "bookkeeping/review-f5-check",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=gst",
     "anchor": "gst-review-compare",
-    "sha256": "7148595b4b8323e70accde47b9f600dbd60a3f9296f92491af0765446a8c3692",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:45:28.924Z"
+    "sha256": "c605441db755aece787ab586e922a822ecb52b23e5cf5d94938a359af9fe8339",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:19:26.650Z"
   },
   {
     "id": "bookkeeping/review-period-end-adjustments",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=adjustments",
     "anchor": "workbench-host",
-    "sha256": "e4a3c0ab3e5000f968985454ec94ba6ee11a54bfc9f38ccfe69f25ec0fcf7a97",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:41:44.149Z"
+    "sha256": "dc0e6efdf63e4dbe4c990c7b13cfc6da8a1460d0c459f0c0009be49c466c105c",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:17:25.487Z"
   },
   {
     "id": "bookkeeping/review-period-end-adjustments",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=adjustments",
     "anchor": "workbench-host",
-    "sha256": "2f31899bf07adc36e04ea16ac7a895beee32ad51a8dddc8e27aa00839c4f79b9",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:41:58.636Z"
+    "sha256": "1ccd1b673f09cd0f35842f693db21b917910ff0cef492380e0b9a82d2e6e5137",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:17:29.195Z"
   },
   {
     "id": "bookkeeping/sales-matching-list",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=bills&focus=sales",
     "anchor": "workbench-host",
-    "sha256": "f52e86dfb0bbf578b13b6c7b91ca288d88b9fe9ad12420ad1646e7d9f5b8fc55",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:34:18.756Z"
+    "sha256": "47e515d0fa9d87f914dd84cd174768a05023e0b7fd3c10f93866efc77d38a47a",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:14:04.536Z"
   },
   {
     "id": "bookkeeping/sales-matching-list",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=bills&focus=sales",
     "anchor": "workbench-host",
-    "sha256": "449cc95ce6318870e9e6934d082a49a22dede88b3330ef3c659934a1faee4a04",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:34:33.798Z"
+    "sha256": "e040a1ff4f38516ef69a6e0193f803d1b8d3f3d82af777b7bb5db0b4d9395179",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:14:05.236Z"
   },
   {
     "id": "bookkeeping/setup-conventions-rules",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=mapping",
     "anchor": "workbench-host",
-    "sha256": "ce54bf8448f344b4ed19e4d3aca55c7e9abd29e3fe20deb0f99f3a5cd65bbb8f",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:42:53.168Z"
+    "sha256": "f9c43289d340677bdb1887b5ecc41c43e3f7487c4e93d214fea71a38475e8bb1",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:18:13.261Z"
   },
   {
     "id": "bookkeeping/setup-conventions-rules",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=mapping",
     "anchor": "workbench-host",
-    "sha256": "832bb7def84f166ec1e13b97a25f038dc9899b6fab5b21407a8fbd77d8dbbf12",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:43:03.214Z"
+    "sha256": "8ecb3877f52c24f619daa8100f5c629c3b3192de38a0bbf13edaa17c8d627bc1",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:18:14.202Z"
   },
   {
     "id": "bookkeeping/setup-onboarding-wizard",
@@ -337,27 +337,27 @@
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=onboarding&focus=bank-opening",
     "anchor": "onboarding-wizard",
-    "sha256": "fdac6276d708040c3885a44014e227ee21348459ef286cb4a791ed7dcdcdd7d7",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:24:51.177Z"
+    "sha256": "b2c5527c061fef76a722bf3b39782e0184922816b10e9f8695b3a0e78e132fba",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:08:05.307Z"
   },
   {
     "id": "bookkeeping/setup-profile-company",
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=profile",
     "anchor": "profile-basics",
-    "sha256": "fb9eb50fd9ed8ff6b33c37eca8bca9b4a171b1543d53bdb3d3fdd68af870594c",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:24:35.356Z"
+    "sha256": "3f438f304103e2cf0514cfdaeb34114ad5ae17d30263bd6020584215bf22ea4c",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:07:52.779Z"
   },
   {
     "id": "bookkeeping/setup-profile-company",
     "locale": "zh-cn",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=profile",
     "anchor": "profile-basics",
-    "sha256": "db1765ac88ad0d3979c9226fd6641a36855da32897573f9790c98a3e5687d71c",
-    "operonCommit": "615f0261608e264d1e18e9ca7aecb3372caebca5",
-    "capturedAt": "2026-10-29T07:24:38.679Z"
+    "sha256": "02d0c360bbd285d00c34388fb6984dec9ebcec04b67c45246f4feff1a8c1e05d",
+    "operonCommit": "bcd1adb288a1c6743ae9dcbe73fa196953a48ffb",
+    "capturedAt": "2026-11-07T16:07:53.523Z"
   },
   {
     "id": "bookkeeping/setup-profile-employees",
