@@ -22,17 +22,18 @@ While the template has unsaved changes, **Discard** and **Save changes** are sho
 
 ## If saving is refused
 
-When you save, Operon checks the template. The two most common reasons for a refusal are:
+When you save, Operon checks the template. If something must be corrected, the save is refused and a list of the problems opens at the top of the editor. Select a group in the list to read what to correct. The most common reasons are:
 
-- A section whose **Board status** is **Waiting for client** must have **Waiting on** set.
 - If a task is due relative to the case due date, **Default case length** must be set on the **Details** tab.
+- A section that has **Moves the case forward** turned on needs a **Board status**.
+- At least one task must have **Must be done** turned on.
 
-The message names the section or task to correct.
+Each problem names the section or task to correct.
 
 {% screenshot id="case-templates/save-refused" caption="A save refused, with the item to correct." /%}
 
 ## Saved
 
-After you select **Save changes**, the status shows **Saved** and the version goes up by one (for example **v2**). Cases that have already started keep the version that they started with.
+After you select **Save changes**, the status shows **Saved** and the version goes up by one (for example **v3**). Cases that have already started keep the version that they started with.
 
 {% screenshot id="case-templates/editor-saved" caption="The template saved as a new version." /%}
