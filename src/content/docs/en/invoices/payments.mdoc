@@ -8,7 +8,7 @@ sidebar:
 
 **Who:** any member who can see the invoice. Only managers can delete a payment. **Where:** the invoice page.
 
-Operon does not collect payments online. When the client pays, for example by bank transfer, the payment is recorded on the invoice by hand.
+Operon does not collect payments online. When the client pays, for example by bank transfer, the payment is recorded on the invoice by hand. When the issuing entity is linked to Xero, payments are recorded in Xero instead (see [below](#when-the-issuing-entity-is-linked-to-xero)).
 
 ## Record a payment
 
@@ -50,6 +50,10 @@ A payment recorded in error is deleted by a manager.
 The deletion is kept in the history, with who deleted the payment and when.
 
 When the payment left an overpayment, the confirmation says that the overpayment is voided as well. If any of the overpayment has been applied or refunded, the deletion is refused: remove those applications and refunds first.
+
+## When the issuing entity is linked to Xero
+
+When the invoice's issuing entity is linked to a Xero organisation, the payments of its invoices are recorded in Xero, not here. Operon reads them back from Xero, and they appear on the invoice after the next sync, marked **From Xero**. Such an invoice offers no **Record payment** and no **Delete payment**: change or delete a payment in Xero.
 
 {% aside type="note" title="Payments lock the amounts" %}
 While a payment is recorded on an invoice, its lines and amounts cannot be edited, and it cannot be voided. The description, the footer note and the reference can still be changed. To correct the amount of an invoice that has been paid in part, a manager creates a credit note (see [Credit notes](/en/invoices/credit-notes/)).

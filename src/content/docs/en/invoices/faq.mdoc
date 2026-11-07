@@ -10,9 +10,17 @@ sidebar:
 
 The reason is written next to the button. The most common ones: the changes are not saved yet (select **Save changes** first), the invoice has no line, or the total is zero or less. A draft from a floating-quote contract needs its amount set first.
 
-## Issue was refused with a message about missing details. What do I do?
+## The editor says the document cannot be issued yet. What do I do?
 
-The message names what is missing, for example the client's address or the issuer's GST registration number. Complete the client's record in CRM, or ask the tenant admin to complete the issuing entity's settings (see [Invoice settings and reminders](/en/invoices/settings-reminders/)), then issue again. The draft has not taken a number.
+The note names what is missing, for example the client's address or the issuer's GST registration number, and links to where it is added. Complete the client's record, or ask a tenant admin to complete the issuing entity or its GST registration number, then issue again. The draft has not taken a number. See [Details a tax invoice must show](/en/invoices/issue-send/#details-a-tax-invoice-must-show).
+
+## How do I bill only the first installment of a contract?
+
+Select **Create invoice** on the signed contract. In **Choose installments**, the next installment of each line is ticked; leave it as it is and select **Continue**. Raise the next installment later in the same way. See [Bill a contract by its installments](/en/invoices/create/#bill-a-contract-by-its-installments).
+
+## Can an installment be billed twice?
+
+No. An installment on a draft or an issued invoice cannot be chosen again. Void the invoice or delete the draft to free it; a credit note does not free it.
 
 ## Can I type a name that is not in the service catalog?
 
@@ -62,7 +70,15 @@ A payment or applied credit is recorded on it. Delete the payments and remove th
 
 ## The client paid by bank transfer. Will the invoice update by itself?
 
-No. Payments are not collected or matched automatically. Record the payment on the invoice (see [Record payments](/en/invoices/payments/)).
+No, unless the issuing entity is linked to Xero. Payments are not collected or matched automatically: record the payment on the invoice (see [Record payments](/en/invoices/payments/)). When the issuing entity is linked to Xero, the payment is recorded in Xero and appears on the invoice after the next sync.
+
+## Why is there no Record payment button?
+
+The invoice's issuing entity is linked to Xero, so its payments are recorded in Xero, or the invoice was imported from Xero. Record or change the payment in Xero.
+
+## Can I connect Xero?
+
+A tenant admin connects Xero from **Invoice settings** › **Third-party connections**. See [Connect Xero](/en/invoices/settings-reminders/#connect-xero).
 
 ## Does the client receive the PDF as an attachment?
 
@@ -74,7 +90,7 @@ The invoice may have been voided; a void invoice's link no longer opens. Otherwi
 
 ## Why did the client not receive a payment reminder?
 
-Check, in order: the invoice has been emailed at least once; **Payment reminders for this client** is on in the client's **Invoices** tab; **Payment reminders on** is switched on in the invoice's **Delivery** card; the invoice still has an amount due; and a reminder rule is switched on for that day in **Invoice settings**. Only a tenant admin can open **Invoice settings**; ask one to check the rules.
+Check, in order: automatic reminders are on for the organisation (**Automatically email payment reminders to clients** in **Invoice settings**; they are off for a new organisation); the invoice has been emailed at least once; **Payment reminders for this client** is on in the client's **Invoices** tab; **Payment reminders on** is switched on in the invoice's **Delivery** card; the invoice still has an amount due; and a reminder rule is switched on for that day in **Invoice settings**. Only a tenant admin can open **Invoice settings**; ask one to check the rules.
 
 ## Does a change to a template change old invoices?
 

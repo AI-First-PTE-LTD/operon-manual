@@ -20,9 +20,9 @@ An overpayment is money that a client paid beyond the amount due on an invoice. 
 
 {% /steps %}
 
-The payment is recorded for the amount due, and the invoice becomes **Paid**. The rest is kept as an overpayment of the same client, with the same issuing entity and currency as the invoice. In **Payments and credit**, the payment row says, for example, **S$190.00 kept as overpayment**, with **Open overpayment**.
+The payment is recorded for the amount due, and the invoice becomes **Paid**. The rest is kept as an overpayment of the same client, with the same issuing entity and currency as the invoice. In **Payments and credit**, the payment row says, for example, **S$192.00 kept as overpayment**, with **Open overpayment**.
 
-For example, ABC PTE. LTD. pays S$6,000.00 for invoice INV-2026-0012, which has S$5,810.00 due. INV-2026-0012 becomes **Paid** with a payment of S$5,810.00, and an overpayment of S$190.00 is kept for ABC PTE. LTD.
+For example, ABC PTE. LTD. pays S$1,500.00 for invoice INV-2026-0003, which has S$1,308.00 due. INV-2026-0003 becomes **Paid** with a payment of S$1,308.00, and an overpayment of S$192.00 is kept for ABC PTE. LTD.
 
 {% screenshot id="invoices/overpayment-record-notice" caption="The Record payment form with an amount above the amount due." /%}
 
@@ -45,7 +45,7 @@ An overpayment has one of these statuses:
 
 The header reads **Overpayment**, with its status, the date it was received and **From invoice** followed by the invoice number. The **Payment** card shows the **Payment date**, **Method**, **Reference**, **Source invoice**, **Amount** and **Credit remaining**. The table below lists each application and refund, and the history records each step.
 
-{% screenshot id="invoices/overpayment-page" caption="An overpayment of S$190.00 kept for ABC PTE. LTD." /%}
+{% screenshot id="invoices/overpayment-page" caption="An overpayment of S$192.00 kept for ABC PTE. LTD." /%}
 
 ## Apply an overpayment to another invoice
 
@@ -59,7 +59,7 @@ The header reads **Overpayment**, with its status, the date it was received and 
 
 {% /steps %}
 
-Each invoice's amount due goes down by the amount applied, and both documents record the application in their history. No GST is charged or reduced by an application. For example, applying the S$190.00 to invoice INV-2026-0015, which has S$1,090.00 due, leaves S$900.00 due; INV-2026-0015 becomes **Partially paid**, and the overpayment becomes **Fully applied**.
+Each invoice's amount due goes down by the amount applied, and both documents record the application in their history. No GST is charged or reduced by an application. For example, applying the S$192.00 to invoice INV-2026-0001, which has S$1,179.99 due, leaves S$987.99 due; INV-2026-0001 stays **Partially paid**, and the overpayment becomes **Fully applied**.
 
 The same rules as for credit notes apply: an amount cannot be above that invoice's amount due, and the total cannot be above the credit remaining. An application is taken back with **Remove allocation** on its row (see [Credit notes](/en/invoices/credit-notes/)).
 
@@ -85,6 +85,10 @@ An overpayment cannot be edited, voided or deleted on its own page. It is undone
 
 - When the overpayment is still unused, a manager deletes the payment. The confirmation says that the overpayment is voided as well. The invoice steps back to its previous status, and the overpayment becomes **Void**.
 - When any of the overpayment has been applied or refunded, the deletion is refused with **This payment left an overpayment that has been applied or refunded. Remove those first.** First remove its applications and refunds, then delete the payment.
+
+## Overpayments recorded in Xero
+
+When the issuing entity is linked to Xero, a client's overpayment or prepayment is recorded in Xero, and comes to Operon as an overpayment marked **From Xero**. Its credit is applied, refunded and removed in Xero only, so **Apply credit**, **Record refund** and **Remove allocation** are not offered on it. Changes made in Xero appear here after the next sync. When part of the credit was applied in Xero to documents that are not in Operon, the page says how much.
 
 {% aside type="note" title="What an overpayment is not" %}
 An overpayment has no number, no lines, no due date and no PDF. It cannot be issued, emailed, paid, duplicated or credited, and no reminder is sent about it. It is not counted in the client's amounts billed, collected or outstanding.
