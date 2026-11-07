@@ -1,17 +1,34 @@
 ---
 title: "9 · Opportunity files"
-description: Where the drafts, signed copies and other files of a deal are kept.
+description: Where the drafts, signed copies and other files of a deal are kept, and how a file is deleted.
 sidebar:
   order: 10
   label: "9 · Opportunity files"
 ---
 
-**Who:** anyone who can see the opportunity can see its files. Uploading needs edit rights on the opportunity.
+**Who:** anyone who can see the opportunity can see its files. Uploading and deleting need edit rights on the opportunity.
 
-Each opportunity is treated as a case with its own folder. The drafts (PDF and Word), the edited drafts, the signed copies and every file uploaded on the **Files** tab are kept there.
+Each opportunity is treated as a case with its own folder. The drafts (PDF and Word), the edited drafts, the signed copies and every file uploaded on the **Files** tab with **Upload file** are kept there. Select a file's name to preview it, or select **Download**.
 
 {% screenshot id="crm/files-tab" caption="The Files tab of an opportunity." /%}
 
 While the folder holds files, the same folder is also shown in the document library under **Cases**, next to the folders of task cases.
 
 {% screenshot id="crm/files-library-cases" caption="The same folder under Cases in the document library." /%}
+
+## Delete a file
+
+{% steps %}
+
+1. On the file's row, select **Delete file**.
+2. Check the file name in the dialog and select **Delete file** again.
+
+{% /steps %}
+
+The file is removed from the opportunity's files; this cannot be undone here.
+
+{% screenshot id="crm/files-delete" caption="Deleting a file uploaded by mistake." /%}
+
+{% aside type="note" title="Contract files cannot be deleted here" %}
+The drafts and signed copies of the opportunity's contracts are locked: they carry an ⓘ instead of **Delete file**. Change them from the **Contract** tab. A file that has moved to the company's files is managed there.
+{% /aside %}

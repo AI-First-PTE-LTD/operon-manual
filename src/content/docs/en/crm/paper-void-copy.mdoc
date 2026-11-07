@@ -1,16 +1,23 @@
 ---
 title: "8 · Paper signing, void and copy"
-description: Sign on paper, void a contract that must change after sending, and keep several contracts on one deal.
+description: Record a contract signed on paper, void a contract that must change, and keep several contracts on one deal.
 sidebar:
   order: 9
   label: "8 · Paper signing, void and copy"
 ---
 
-**Who:** the person in charge.
+**Who:** the person in charge, or any staff member who records a signed paper copy.
 
 ## Paper signing
 
-On a **Ready to send** contract, upload the scanned signed copy. The contract becomes **Signed**.
+{% steps %}
+
+1. On the **Send for signature** card, set the **Client** row to **Paper**, select **Download PDF to print**, and have the contract signed by hand.
+2. Select **Upload signed paper copy instead** and choose the scan. The contract becomes **Signed**.
+
+{% /steps %}
+
+A paper copy can also be uploaded while the contract is out for e-signature: the signing request is then withdrawn and the contract is signed by the upload.
 
 {% screenshot id="crm/paper-signed" caption="Signed on paper; the history on the right lists every step." /%}
 
@@ -20,11 +27,31 @@ A contract that has gone for approval or for signing is not edited in place.
 
 {% steps %}
 
-1. Select **Void contract** and give the reason (required). The voided contract keeps its number and its history.
-2. Create a new contract from the current services. The new contract receives a new number, for example SAF-2026-0002.
+1. Select **Void contract** in the contract header and give the **Reason** (required). The voided contract keeps its number and its history; a contract out for signature has its signing links withdrawn.
+2. Select **Duplicate as new contract** on the voided contract, or **Create contract from services** in the contract list. The new contract receives a new number, for example SAF-2026-0002.
 
 {% /steps %}
 
-## Several contracts on one deal
+When the **Services** tab changed after a contract was generated, the notice above the step bar offers **Void and start a new contract**.
 
-Each contract on an opportunity picks its own issuing entity. The **Contract** tab lists all contracts of the opportunity. Open one from the list; select **Back to contracts** to return.
+## The contract list
+
+The **Contract** tab lists every contract of the opportunity with its number, status, issuing entity, layout, amounts, services, the dates sent and signed, and the **Delivery** and **Invoicing** status. **Invoicing** reads **Not invoiced**, **Partially invoiced** or **Fully invoiced**. Open a contract from the list; select **Back to contracts** to return.
+
+{% screenshot id="crm/contract-list" caption="The contract list of an opportunity: a signed contract and an add-on contract." /%}
+
+## Add-on contracts
+
+Services in a signed contract are locked. To sell more to the same client on the same opportunity:
+
+{% steps %}
+
+1. Add the new services on the **Services** tab.
+2. On the **Contract** tab, select **Create contract from services**. The new contract holds only the services that are not yet in a signed contract.
+3. Prepare, generate and sign it as usual. Each contract picks its own issuing entity.
+
+{% /steps %}
+
+## Invoice a signed contract
+
+A signed contract has **Create invoice** in its header. When the contract has installments, choose the installments to bill; **Installment billing** on the contract shows which invoice holds each installment. See [Create an invoice](/en/invoices/create/) for the invoice itself.

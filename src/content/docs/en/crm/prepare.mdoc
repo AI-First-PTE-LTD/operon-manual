@@ -1,6 +1,6 @@
 ---
 title: "4 · Prepare the contract"
-description: Choose the client, the signatory, the issuing entity, the language and the format.
+description: Choose the client, the signatory, the issuing entity, the language and the format, and enter the values of the payment schedule.
 sidebar:
   order: 5
   label: "4 · Prepare the contract"
@@ -8,31 +8,48 @@ sidebar:
 
 **Who:** the person in charge. **Where:** the opportunity › **Contract** tab › step 1 **Prepare**.
 
+The **Contract** tab opens on the list of the opportunity's contracts. Select **Create contract from services** to start a new one. Each contract has its own number. While a contract is in progress (not yet signed or void), a second one cannot be started.
+
 ## Client
 
 Choose **Company** or **Individual**.
 
-- **Company:** the UEN and the address come from the company's CRM record. Pick the **Client signatory** from the company's contacts. If the services are for another company, choose it under **Company the services are for**.
-- **Individual:** the details you enter are saved as a person under CRM **People**.
+- **Company:** the UEN and the address come from the company's CRM record. A missing value is marked **Missing — add it to the record before generating**. Pick the **Client signatory**. If the services are for another company, choose it under **Company the services are for**: **Same as client**, **Another company in CRM**, or **Proposed name (not yet incorporated)**.
+- **Individual:** the details you enter are saved as a person under CRM **People** with **Save to People**.
 
-{% aside type="note" title="The signatory must be linked to the company" %}
-The client signatory must be a current contact of the company in CRM, for example a director. If the list is empty, first link the person to the company in CRM.
+{% aside type="note" title="Who can be the client signatory" %}
+Only people who can sign for the company are offered: a current director, chairman, partner, sole proprietor, manager, corporate representative or contact person of the company in CRM. Shareholders, the secretary, nominee directors and vendors are not offered. If the list is empty, first add a director or manager to the company in CRM; any staff member can do this.
 {% /aside %}
 
 ## Contract
 
-Choose the country (the opportunity's country by default), the **Issuing entity**, the **Language** and the **Format** (engagement letter, quotation or VIP contract). Together they select the template.
+Choose the country (the opportunity's country by default), the **Issuing entity**, the **Language** and the **Format** (**Engagement letter**, **Quotation** or **VIP contract**). Together they select the template.
 
-Only combinations with a registered template are offered. If the country has none, the page says so; ask a tenant admin to register one (see [1 · Contract templates](/en/crm/templates/)).
+Only combinations with a registered template are offered. If the country has none, the page says so; ask a tenant admin to register one (see [1 · Contract settings](/en/crm/templates/)). An issuing entity that lacks a bank account in the contract's currency is marked **Setup incomplete**.
 
 {% screenshot id="crm/prepare-form" caption="The Prepare step: client, signatory, issuing entity, language and format." /%}
 
 {% screenshot id="crm/prepare-entities" caption="Only issuing entities with a template are offered." /%}
 
+## Signs for the firm
+
+Under the step bar, **Signs for the firm** shows who signs the contract for the firm: the contract signatory of the opportunity's **Director in charge**. If no one can sign, the reason and the fix are shown, for example:
+
+- the opportunity has no Director in charge: set it on the opportunity's **Details** tab;
+- the Director in charge is not a contract signatory, or may not sign for the chosen issuing entity: a tenant admin adds or changes the record under **Contract signatories** (**Open CRM settings**).
+
+Without a signatory the contract cannot be generated or sent. Without an active saved signature it can be generated, but not sent.
+
 ## Services and prices
 
-The services and prices are read from the **Services** tab. To change them, select **Edit in Services**.
+The services and prices are read from the **Services** tab. To change them, select **Edit in Services**. Services already in a signed contract are not included: a contract made after signing holds only the services added since.
+
+## Payment schedule
+
+Under the services, when a service is paid in installments or has a refund clause, the **Payment schedule** shows each installment with its share and amount. Enter the values asked for, for example the **Refund percentage (%)** or the **Refund deduction amount**, or the amount of an extra fee. A value marked **Required before generating** must be entered before the contract can be generated.
+
+{% screenshot id="crm/prepare-payment-schedule" caption="The payment schedule: two installments and the refund percentage for this contract." /%}
 
 ## Generate
 
-When every choice is made, select **Generate contract**. The page moves to step 2 **Draft** (see [5 · Generate and check the draft](/en/crm/draft/)).
+When every choice is made, select **Generate contract**. If something is missing, the reason is shown next to the button. The page moves to step 2 **Draft** (see [5 · Generate and check the draft](/en/crm/draft/)).

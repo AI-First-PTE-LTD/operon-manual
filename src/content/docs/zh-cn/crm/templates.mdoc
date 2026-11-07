@@ -1,31 +1,87 @@
 ---
-title: "1 · 合同骨架"
-description: 按签约主体、地区、语言和版式登记事务所的 Word 合同模板（骨架）。
+title: "1 · 合同设置"
+description: 设定合同编号与审批阈值、签约主体、代表事务所签字的人，以及 Word 合同模板（骨架）。
 sidebar:
   order: 2
-  label: "1 · 合同骨架"
+  label: "1 · 合同设置"
 ---
 
-**谁做：** 租户管理员。**在哪里：** **管理** › **套件** › **客户关系**（**客户关系设置** 页）› **合同骨架**（Admin › Suites › CRM › Contract layouts）。
+**谁做：** 租户管理员。**在哪里：** **管理** › **套件** › **客户关系**（**客户关系设置** 页；Admin › Suites › CRM）。与合同有关的卡片是 **合同**（Contracts）、**签约主体**（Issuing entities）、**合同签字人**（Contract signatories）和 **合同骨架**（Contract layouts）。
+
+## 合同编号与审批
+
+在 **合同** 卡片上：
+
+- **合同编号前缀**（Contract number prefix）：1 到 10 位大写字母或数字。合同编号由前缀、年份和 4 位序号组成，例如 SAF-2026-0001。没设前缀之前不能生成合同。
+- **审批阈值（%）**（Approval threshold (%)）：合同总价比目录价低出这个百分比以上，就要审批。人工改过的草稿一律要审批。
+
+选 **保存**（Save）。
+
+## 签约主体
+
+签约主体是以事务所一方名义出合同的公司。选 **新建签约主体**（New issuing entity），或点某一行进行修改，填写：
+
+- **公司信息**（Company details）：**公司名称**、**UEN**、**注册地址**，以及选填的 **电话**、**传真** 和 **公司邮箱**。
+- **收款账户**（Bank accounts）：每种币种一个账户。模板印有银行信息时，没有该币种账户的合同不能生成；**准备** 步骤会把这样的主体标为 **资料不全**（Setup incomplete）。
+- **公章**（Company seal）：选填，只盖在 VIP 合同的预存签名旁。
+
+选 **创建签约主体**（Create issuing entity）或 **保存签约主体**（Save issuing entity）。不再使用的主体可以用 **停用签约主体**（Deactivate issuing entity）停用；已在用它的合同保留它的资料。
+
+## 合同签字人
+
+合同由商机 **负责总监**（Director in charge）的合同签字人登记代表事务所签署，并且只能签该登记上列出的签约主体的合同。没有这样的登记，合同既不能生成，也不能发出。
+
+{% steps %}
+
+1. 在 **合同签字人** 卡片上选 **添加签字人**（Add signatory）。
+2. 选 **关联用户**（Linked user，即在商机上担任负责总监的人），填写 **印刷姓名**（Printed name）和 **职务**（Title）。**证件号**（ID number）选填，有值才印在合同上。
+3. 在 **签约主体**（Issuing entities）里选这个人可以代签的主体。
+4. 选 **添加签字人**。
+
+{% /steps %}
+
+{% screenshot id="crm/settings-signatories" caption="合同签字人卡片：谁代表事务所签字、可签哪些签约主体、预存签名状态。" /%}
+
+### 登记预存签名
+
+我方一律以签字人的预存签名签署，合同从不发给我方。委托函和报价单在发出前签上；VIP 合同在客户签完后自动会签。
+
+{% steps %}
+
+1. 点签字人那一行打开它，在 **预存签名**（Saved signature）下选 **添加签名**（Add signature）。
+2. 采集签名：**手写**（Draw）、**输入**（Type）或 **上传**（Upload）。
+3. 阅读 **声明**（Statement）并勾选。可以附上 **授权书（PDF）**（Authorisation letter (PDF)），选填。
+4. 选 **保存签名**（Save signature），状态显示 **有效**（Active）。
+
+{% /steps %}
+
+{% screenshot id="crm/settings-signatory-signature" caption="为签字人登记的预存签名。" /%}
+
+{% aside type="caution" title="会撤销预存签名的修改" %}
+改印刷姓名、停用签字人，或（对较早登记的签名）改签约主体，都会撤销预存签名，Operon 会先请你确认。撤销后在登记新签名之前合同不能发出；已签的合同保留原签名。
+{% /aside %}
+
+## 合同骨架
 
 骨架是事务所的一份 Word 模板，对应一个 **签约主体 × 地区 × 语言 × 版式** 组合。只有登记了骨架的组合才能生成合同。
 
-## 登记骨架
+### 登记骨架
 
 {% steps %}
 
 1. 选 **登记骨架**（Register layout）。
 2. 选签约主体、地区、语言和版式。
-3. 上传 `.docx` 文件。
+3. 选择 `.docx` 文件。
+4. 选 **登记骨架**。
 
 {% /steps %}
 
-Operon 从文件里读出它用到的字段。文件里有不认识的字段时，Operon 列出这些字段的名字并拒绝登记。
+Operon 从文件里读出它用到的字段。文件里有不认识的字段时不能登记，并列出要改的字段。同一组合再登记一次会替换原文件。
 
 {% screenshot id="crm/templates-register" caption="登记骨架：字段从文件自动读出。" /%}
 
-## 一份模板给其他签约主体用
+### 一份模板给其他签约主体用
 
-要让另一个签约主体也用这份模板，在这一行选 **用于其他签约主体**（Use for another issuing entity），再选好主体即可。主体自己的名称、UEN、地址、收款账户和签字人在生成合同时自动填入，所以一份文件可以给多个主体用。
+要让另一个签约主体也用这份模板，在这一行选 **用于其他签约主体**（Use for another issuing entity），选好主体后选 **登记骨架**。主体自己的名称、UEN、地址、收款账户和签字人在生成合同时自动填入，所以一份文件可以给多个主体用。
 
 {% screenshot id="crm/templates-other-entity" caption="把已登记的骨架用于其他签约主体。" /%}

@@ -1,32 +1,69 @@
 ---
 title: "2 · 服务与套餐"
-description: 维护服务与套餐目录、价格和合同描述。
+description: 维护服务与套餐目录：价格、付款条件、交付方式和合同描述。
 sidebar:
   order: 3
   label: "2 · 服务与套餐"
 ---
 
-**谁做：** 部门负责人（本部门）、租户管理员（全部部门）。**在哪里：** **CRM** › **目录** › **服务与套餐**（Catalog › Services & Packages）。
+**谁做：** 部门负责人（本部门）和租户管理员（所有部门）。**在哪里：** **CRM** › **目录** › **服务与套餐**（CRM › Catalog › Services & Packages）。
 
-列表显示每一项的所属部门、适用地区、价格，以及还缺哪些合同描述。
+页面有 **服务**（Services）、**套餐**（Packages）、**类别标题**（Category titles）和 **前置条件清单**（Prerequisite checklists）几个页签。列表显示每一项的部门、地区和价格，以及还缺哪些合同描述。在 **显示范围**（Which items）里选 **本部门**（My department）或 **全部（只读）**（All (read-only)）。
 
 {% screenshot id="crm/catalog-list" caption="服务与套餐列表。" /%}
 
-## 编辑一项服务
+## 编辑服务
 
-{% steps %}
+点一项服务进行编辑，或选 **新建服务**（New service）。编辑页有这些卡片：
 
-1. 选一项服务进入编辑。
-2. 在 **地区与价格**（Regions and prices）里按地区填参考价。
-3. 在 **合同描述**（Contract text）里按合同语言（英文、中文）填写 **描述要点**（Description，必填，一行一条）和 **附带条件**（Conditions，选填），各地区共用。右侧实时显示它在合同里的样子。
-4. 选 **保存更改**（Save changes）。
+| 卡片 | 内容 |
+|---|---|
+| **基本信息**（Basics） | **名称**、**编号**、**类别**、**所属部门**，以及 **合同名称（English）** 和 **合同名称（中文）**。 |
+| **地区与价格**（Regions and prices） | 提供这项服务的地区，以及每个地区的参考价、币种和计价单位。价格留空表示按单报价。 |
+| **合同描述**（Contract text） | 各合同语言的 **描述要点**（Description，必填，每行一点）和选填的 **附带条件**（Conditions）。右侧显示它在合同里的样子。 |
+| **付款条件**（Payment terms） | **一次付清**（Paid as one amount）还是 **分期付款**（Paid in installments），见下文。 |
+| **开票**（Invoicing） | 开票收费、计费周期、税务处理和 KYC。 |
+| **交付**（Delivery） | 合同收到款后这项服务如何交付，见下文。 |
 
-{% /steps %}
-
-保存之后生成的合同使用新描述；已经生成的合同不受影响。
+选 **保存更改**（Save changes；新建时为 **创建服务**，Create service）。保存后生成的合同使用新的描述和条件，已经生成的合同保留原来的内容。
 
 {% screenshot id="crm/catalog-service-edit" caption="编辑服务：价格与合同描述。" /%}
 
-{% aside type="caution" title="缺描述不能生成" %}
-合同所选的服务在合同的语言下没有描述时，生成会停下，并指出是哪一项服务。
+{% aside type="caution" title="缺描述会停止生成" %}
+用某种语言生成合同，需要条目在该语言下的合同名称和合同描述。所选服务缺少时，生成会停下，并指明是哪项服务。
 {% /aside %}
+
+## 付款条件
+
+选 **分期付款**，这一项在每份合同里的金额就按期拆分。每一期填写 **名称（英文）**、**名称（中文）** 和 **比例（%）**，各期比例合计必须是 100%。选 **添加一期**（Add installment）增加一期。
+
+- **低于此金额一次付清**（Pay in full below）：合同里这一行的金额低于此值时，在第一期一次收齐。留空表示总是分期。
+- **随最后一期收取的附加费用**（Extra fee with the last installment）：随最后一期收取的费用名称，例如管理费。金额在每份合同上填写。
+- **退款值**（Refund value）：**无退款条款**、**退款比例** 或 **扣除金额**。不设预设值，由商机负责人在每份合同上填写。在合同描述中要填值的位置写 `{refund_percent}` 或 `{refund_amount}`。
+
+分期只适用于一次性收费。合同按这一行的成交价算出每期金额，生成合同时冻结付款安排。
+
+{% screenshot id="crm/catalog-payment-terms" caption="付款条件：分两期，各 50%。" /%}
+
+## 交付
+
+**交付** 卡片决定合同签署并收款之后发生什么：
+
+- **服务类型**（Service type）：**一次性**（One-off，开一个案件）、**周期**（Recurring，每期开一个案件）或 **持续性**（Continuous，不开案件，只开票）。
+- **工作到期日**（Work due date）和 **开案时间（到期前天数）**：每期工作何时到期，以及提前几天开案。
+- **默认案件类型**（Default case type）：为这项服务自动开出的案件类型。用 **添加地区覆盖**（Add region override）可以为某个地区的合同改用别的类型。
+- **前置条件**（Prerequisites）：首个案件交给部门经理之前必须完成的事项，例如 **合同已收款**（Contract payment received）或 **手工确认项**（Manual check）。选 **有前置条件**（Has prerequisites），再选 **清单模板**（Checklist template）和/或填写 **本服务的事项**（Items of this service）。
+
+配置不全的服务标为 **开案配置不全**（Onboarding setup incomplete），并写明原因。
+
+{% screenshot id="crm/catalog-delivery" caption="交付卡片：服务类型、默认案件类型和前置条件。" /%}
+
+可复用的清单放在 **前置条件清单** 页签，只有租户管理员可以修改。
+
+## 套餐
+
+套餐把多项服务组合在一起。选 **新建套餐**（New package），在 **包含的服务**（Included services）里对每项服务选 **添加服务**（Add service），并设为 **必选**（Required）或 **可选**（Optional）。套餐在某地区的价格是其必选服务在该地区价格之和；可选服务作为加购提供。套餐没有自己的合同描述时，合同印出所含各项服务的描述。
+
+## 类别标题
+
+在 **类别标题** 页签填写每个类别在合同中的中英文标题，选 **保存类别标题**（Save category titles）。某种语言缺标题时，不能生成该语言的合同。
