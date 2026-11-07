@@ -75,7 +75,7 @@
       "totalCents": 654000,
       "total": "SGD 6,540.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0722",
@@ -88,7 +88,7 @@
       "totalCents": 348800,
       "total": "SGD 3,488.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0814",
@@ -101,7 +101,7 @@
       "totalCents": 926500,
       "total": "SGD 9,265.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0902",
@@ -114,7 +114,7 @@
       "totalCents": 196200,
       "total": "SGD 1,962.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0925",
@@ -127,7 +127,7 @@
       "totalCents": 261600,
       "total": "SGD 2,616.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "MNO-2607-018",
@@ -403,5 +403,81 @@
       "cents": 2190000,
       "amount": "SGD 21,900.00"
     }
+  },
+  "crm": {
+    "contractPrefix": "SAF",
+    "approvalThresholdPct": 10,
+    "issuingEntities": [
+      {
+        "name": "SAMPLE ACCOUNTING FIRM PTE. LTD.",
+        "uen": "201800002B"
+      },
+      {
+        "name": "SAMPLE CORPORATE SERVICES PTE. LTD.",
+        "uen": "201800003C"
+      }
+    ],
+    "signatory": {
+      "printedName": "Demo Manager",
+      "title": "Director"
+    },
+    "clientSignatory": "Alex Tan",
+    "deal": "Annual compliance 2026",
+    "services": [
+      {
+        "name": "Annual bookkeeping",
+        "category": "Accounting & tax",
+        "department": "Tax",
+        "price": "SGD 2,400.00",
+        "priceCents": 240000
+      },
+      {
+        "name": "GST filing",
+        "category": "Accounting & tax",
+        "department": "Tax",
+        "price": "SGD 1,200.00",
+        "priceCents": 120000
+      },
+      {
+        "name": "XBRL filing",
+        "category": "Accounting & tax",
+        "department": "Tax",
+        "price": "SGD 500.00",
+        "priceCents": 50000
+      },
+      {
+        "name": "Company secretary",
+        "category": "Corporate secretarial",
+        "department": "Corporate Secretarial",
+        "price": "SGD 600.00",
+        "priceCents": 60000
+      },
+      {
+        "name": "Annual return filing",
+        "category": "Corporate secretarial",
+        "department": "Corporate Secretarial",
+        "price": "SGD 300.00",
+        "priceCents": 30000
+      }
+    ],
+    "package": {
+      "name": "Annual compliance package",
+      "services": [
+        "Company secretary",
+        "Annual return filing"
+      ]
+    },
+    "installments": [
+      {
+        "label": "On signing",
+        "percent": 50
+      },
+      {
+        "label": "On completion",
+        "percent": 50
+      }
+    ],
+    "refundPercent": 30,
+    "agreedDiscountPct": 20
   }
 }
