@@ -75,7 +75,7 @@
       "totalCents": 654000,
       "total": "SGD 6,540.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0722",
@@ -88,7 +88,7 @@
       "totalCents": 348800,
       "total": "SGD 3,488.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0814",
@@ -101,7 +101,7 @@
       "totalCents": 926500,
       "total": "SGD 9,265.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0902",
@@ -114,7 +114,7 @@
       "totalCents": 196200,
       "total": "SGD 1,962.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "ABC-26-0925",
@@ -127,7 +127,7 @@
       "totalCents": 261600,
       "total": "SGD 2,616.00",
       "taxCode": "SR",
-      "account": "4020"
+      "account": "4000-02"
     },
     {
       "number": "MNO-2607-018",
