@@ -1,0 +1,97 @@
+---
+title: "1 · Send a signature request"
+description: Upload one or more PDFs, name the request, add the signers and CC recipients, place the signature fields and send.
+sidebar:
+  order: 2
+  label: "1 · Send a signature request"
+---
+
+**Who:** any user of the firm. **Where:** **E-Sign** › **+ New Request**.
+
+A request is sent in two screens: first the files, then the review screen where the signers and fields are set.
+
+## Upload the documents
+
+{% steps %}
+
+1. Under **Request name**, type a name for the request (optional). The name is the title of the request on the list, on its page and in the email subjects. If you leave it blank, the first file name is used, for example "Engagement Letter.pdf +2 more".
+2. Under **Upload PDFs**, select **Choose PDFs**, or drag the files onto the page. Each file is shown as a card with its number of pages and size.
+3. Select **Next**.
+
+{% /steps %}
+
+All files you add are sent together as one request: each signer gets one email for all of them. The limits are:
+
+| Limit | Value |
+|---|---|
+| Files per request | 10 |
+| Size of one file | 10 MB |
+| Pages per file | 30 |
+| Size of all files together | 20 MB |
+
+A file that is not a PDF, cannot be read or is over a limit is not added, and the reason is shown. Remove it, or send it as a second request. **Next** cannot be selected until every file has been read.
+
+{% screenshot id="e-sign/new-upload" caption="Two PDFs uploaded under the request name." /%}
+
+## Add the signers
+
+The review screen has three columns: the documents on the left, the open document in the centre, and the signers on the right.
+
+{% steps %}
+
+1. Select **+ Add signer** for each person who signs, and type the name and the email.
+2. To remove a signer, select **Remove** on the signer.
+
+{% /steps %}
+
+The signers are set once for the whole request. Each email address is one signer: a person who signs several documents still gets one email and one link. Every signer of a request from the E-Sign menu signs online.
+
+{% aside type="note" title="Signing order" %}
+All signers receive their invitation at the same time. The order of the list is for display only; Operon does not make one signer wait for another.
+{% /aside %}
+
+## Place the signature fields
+
+Each document needs at least one signature field, and each signer needs a signature field on the documents they sign.
+
+When a PDF has signature lines in its text, Operon finds them and proposes signature fields and signers for you. Check each proposed field: drag, add or remove fields until they match the real signing spots. If nothing is found, place the fields yourself as below.
+
+{% steps %}
+
+1. In the document list, select a document's name to open it.
+2. Under the signer, select **+ Signature**, then click the spot on the page where the signature goes. Press Esc to cancel.
+3. To have the completion date printed on the document, select **+ Date** at the top of the signer column and click the spot. The date is filled in when signing is complete (see [4 · Completed documents and evidence](/en/e-sign/completed/)).
+4. Repeat for every document.
+
+{% /steps %}
+
+Fields are coloured by signer. Drag a field to move it; select it to change its signer or to remove it. The toolbar above the page moves between pages and zooms. Under each signer, the screen shows how many signature fields they have in the open file, or **Not signing this file**.
+
+The **Before sending** box at the bottom of the signer column lists what is still missing, for example a document with no signature field or a signer with no email. Select an item to go to it. When nothing is missing, it reads **Ready to send ✓**.
+
+{% screenshot id="e-sign/new-checklist" caption="Two signers added; Before sending lists the signature fields still to be placed." /%}
+
+## Copy someone (CC)
+
+To keep someone informed without asking them to sign, select **+ Add CC** below the signers and enter the name and the email. A request can have up to 20 CC recipients.
+
+CC recipients get an email when signing starts, each time a signer signs, if signing is declined, withdrawn or expires, and a download link when everyone has signed. Signers do not see who is copied. With **Can view while signing** set to **Yes**, the person can also open a preview of the documents while signing is in progress (see [2 · What the signer sees](/en/e-sign/signer/#the-cc-recipients-page)). A signer cannot also be a CC recipient of the same request.
+
+## Send
+
+{% steps %}
+
+1. Under **Expires in**, choose how long the signing links stay valid: 1, 3, 7, 15 or 30 days. The default is 7 days.
+2. To change the wording of the emails for this request only, select **Email content** (see [5 · Email content and templates](/en/e-sign/email-templates/)).
+3. Tick **I have reviewed the signature field positions and signer roles.**
+4. Select **Send**.
+
+{% /steps %}
+
+{% screenshot id="e-sign/new-review" caption="Ready to send: each signer's fields and the completion date placed, one CC recipient." /%}
+
+The request's page opens with a line such as "Sent to 2 signers and 1 CC recipient." If the request cannot be sent, a message says why and everything you entered is kept.
+
+{% screenshot id="e-sign/detail-sent" caption="The request's page right after sending." /%}
+
+If you leave the screen before sending, Operon asks for confirmation, because the files and fields you added are lost.

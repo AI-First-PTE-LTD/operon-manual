@@ -1,0 +1,63 @@
+---
+title: "2 · What the signer sees"
+description: The signing page a signer opens from the email, signing all documents at once, declining, and the read-only page of a CC recipient.
+sidebar:
+  order: 3
+  label: "2 · What the signer sees"
+---
+
+A signer needs no Operon account. They open the link in the invitation email and sign in the browser. The signing page opens in English; the signer can switch it to Chinese at the top of the page. Knowing what the signer sees helps you answer their questions.
+
+## Adopt a signature
+
+The page first asks the signer to adopt a signature. It is placed on every document they sign with this link.
+
+{% steps %}
+
+1. Choose the **Signature method**. The **Type** tab opens first, with your name already shown in a handwriting font; you can change the name. You can also choose **Draw** (with the mouse or a finger) or **Upload** (a PNG or JPEG image of up to 10 MB).
+2. Tick the statement "I agree that this electronic signature is the legal equivalent of my handwritten signature on the documents I sign."
+3. Select **Adopt and continue**.
+
+{% /steps %}
+
+{% screenshot id="e-sign/portal-adopt" caption="Adopting a typed signature." /%}
+
+The signature can be changed later with **Change** next to **Your signature** at the top of the page.
+
+## Sign all documents at once
+
+The left column, **Your documents**, lists every document the signer has on this link, with the number of places to sign and its expiry date. The documents are shown one after another on the right, with the signer's places highlighted.
+
+Before the signer can sign everything at once, each signature page must have been opened on screen: a document whose signature page has not been seen is marked **Not viewed**. Until then the main button reads **Go to the next signature page** and takes the signer there. When every signature page has been seen, the button reads **Sign all *N* documents**, and one click signs them all.
+
+The signer can also untick a document to leave it for later, or click each place (**Click to sign**) and then select **Finish signing**. Documents left unsigned can be signed later with the same link, until it expires.
+
+{% screenshot id="e-sign/portal-sign-all" caption="Every signature page seen: one click signs both documents." /%}
+
+When the signer is done, the page reads **All done — you can close this window**. Operon emails the signer when every party has signed; the final documents can then be downloaded from the same link for 90 days.
+
+{% screenshot id="e-sign/portal-done" caption="Both documents signed." /%}
+
+## Decline
+
+A signer who will not sign selects **Decline…**, ticks the documents they decline, optionally gives a reason, and selects **Decline *N* documents**. A declined document can no longer be signed from the link. You see who declined and the reason on the request's page (see [3 · Follow a request](/en/e-sign/follow-up/#when-a-signer-declines)).
+
+{% screenshot id="e-sign/portal-decline" caption="Declining a document, with a reason." /%}
+
+## Messages the signer may see
+
+| Message | Meaning | What to do |
+|---|---|---|
+| **This link has expired** | Every document on the link has expired. | Give the signer a new deadline with **Extend & resend** (see [3 · Follow a request](/en/e-sign/follow-up/)). |
+| **This link is not valid** | The link was replaced, for example after the signer's email was changed. | The signer uses the newest email. |
+| **Withdrawn by your secretary** | The request was withdrawn. | Nothing; send a new request if needed. |
+
+## The CC recipient's page
+
+A CC recipient's emails carry a link to a read-only page. It shows the request's status, each signer's state and the documents. Depending on **Can view while signing**, the documents can be previewed while signing is in progress (**In-progress copy**) or only once signing is complete (**Signed copy**). The page says "You are viewing this because you were copied. You cannot sign from this page."
+
+{% screenshot id="e-sign/cc-portal" caption="The page of a CC recipient while signing is in progress." /%}
+
+{% aside type="note" title="Agreements signed when a firm joins Operon" %}
+When a new firm signs up for Operon, its agreements with Operon are signed on the same signing page. There the signer confirms once for all agreements: **Confirm and sign all agreements**, a tick on "I have read and agree to the agreements listed above." and **Agree and sign *N* agreements**.
+{% /aside %}

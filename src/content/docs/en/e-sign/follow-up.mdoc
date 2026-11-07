@@ -1,0 +1,86 @@
+---
+title: "3 · Follow a request"
+description: Find a request on the E-Sign list, read its status, remind signers, change an email, extend a link, manage CC recipients, rename and withdraw.
+sidebar:
+  order: 4
+  label: "3 · Follow a request"
+---
+
+**Who:** the sender, a manager above the sender, or a tenant admin (see [Overview](/en/e-sign/overview/#who-can-see-and-do-what)). **Where:** **E-Sign**.
+
+## The list
+
+**List view** switches between two layouts:
+
+- **By request** — one row per request, with **Name**, **Source**, **Signers**, **Status**, **Sent by** and **Sent**. A request with several documents shows "*N* files" next to its name (point at it to see the file names) and, while signing is in progress, how many documents are signed.
+- **By file** — one row per document, with the request it belongs to.
+
+To narrow the list, type in the search box (name, file or signer), choose a **Status**, or tick **Sent by me**. Select **Sent** in the header to sort by the date sent. Select a row to open the request.
+
+{% screenshot id="e-sign/list-by-request" caption="By request: one row per request." /%}
+
+{% screenshot id="e-sign/list-by-file" caption="By file: one row per document." /%}
+
+## Statuses
+
+| Status | Meaning |
+|---|---|
+| **Sent** | Sent; nobody has signed yet. |
+| **In progress** | At least one signer has signed; others have not. |
+| **Awaiting date** | Everyone has signed; the sender must confirm the completion date (see [4 · Completed documents and evidence](/en/e-sign/completed/)). |
+| **Completed** | Every document is signed. |
+| **Declined** | A signer declined. |
+| **Withdrawn** | The sender withdrew the request. |
+
+## The request's page
+
+The top of the page shows the name, the status and, for a request sent from the E-Sign menu, **✎ Rename** and **Withdraw**. **Details** shows when it was sent and completed and who sent it.
+
+The **Collect signed documents** card shows how many documents are complete and has two views:
+
+- **By document** — each document with its signers and status. **View document** opens it.
+- **By signer** — each signer with their documents, the **Reminders** column and the actions.
+
+{% screenshot id="e-sign/detail-by-signer" caption="By signer: one signer has signed both documents, the other has not yet." /%}
+
+On **By document**, point at a signer who has signed to see how and when: for example "Signature: Drawn".
+
+## Remind a signer
+
+Operon reminds a signer who has not signed automatically every 3 days, at most once a day. The **Reminders** column shows when the last reminder was sent and when the next one is due.
+
+To remind someone now, select **Remind now** on their row, then **Send reminder**.
+
+## Change a signer's email
+
+If an invitation went to the wrong address, select **Change email**, type the new address and select **Save & resend link**. The link sent to the old address stops working.
+
+## Give a signer more time
+
+To give a signer who has not signed a new deadline, for example when their link has expired, select **Extend & resend**, choose the new deadline under **New deadline in**, and select **Extend & resend** again. The signer gets their link again.
+
+Reminding, changing an email and extending are done on this page only for requests sent from the E-Sign menu. For a request sent from a case or a contract, use the case's signing card or the contract.
+
+## When a signer declines
+
+The request becomes **Declined**. Point at the signer marked "declined" to see **Declined by** and the reason they gave. The declined document can no longer be signed from the link; to ask again, send a new request.
+
+## The Emails card
+
+The **Emails** card at the bottom of the page has:
+
+- **Email content** — the wording of this request's emails (see [5 · Email content and templates](/en/e-sign/email-templates/)).
+- **CC recipients** — select **+ Add CC**, enter the name and email and select **Add and notify**: the person is sent the "signing started" email at once, with the progress so far. **Remove** stops their emails, and their link stops working at once. When signing has ended, the list can no longer be changed.
+- **Sent emails** — every email sent for this request, to signers and CC recipients, newest first, with its delivery state (**Delivered**, **Bounced** …). Select a row to see the email exactly as it was sent.
+
+{% screenshot id="e-sign/detail-emails" caption="The Emails card: the CC recipient and the emails sent so far." /%}
+
+## Rename
+
+Select **✎ Rename**, type the new name and select **Save**. Emails sent from then on use the new name; emails already sent keep the old one. Clear the name and save to go back to the default name.
+
+## Withdraw
+
+Select **Withdraw**, then **Withdraw** again to confirm. None of the request's documents can be signed any more; documents already completed stay completed. Signers and CC recipients are emailed that the request was withdrawn. A request that has ended cannot be withdrawn.
+
+{% screenshot id="e-sign/detail-withdraw" caption="Withdrawing a request." /%}
