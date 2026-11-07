@@ -1,6 +1,6 @@
 ---
 title: "6 · 审批"
-description: 提交合同审批，批准或退回。
+description: 提交合同审批；批准或退回合同。
 sidebar:
   order: 7
   label: "6 · 审批"
@@ -10,23 +10,25 @@ sidebar:
 
 ## 提交
 
-选 **提交审批**（Submit for approval），需要时附上说明。以下任一情况下，合同进入待审批：
+需要时填写 **给审批人的说明（选填）**（Note to the approver (optional)），选 **提交审批**（Submit for approval）。出现下列任一情况时，合同要等待审批：
 
 - 整单折扣超过所里设定的阈值（默认 10%）；
 - 草稿经人工修改。
 
-否则合同直接变为可发送：该按钮显示为 **进入签署**（Continue to signing），合同进入第 4 步。
+否则合同可以直接发送：同一个按钮显示为 **进入签署**（Continue to signing），合同进入第 4 步。
 
-提交后，提交人能看到合同在等谁审批，并可以撤回或提醒。
+提交后，提交人能看到合同在等谁审批、为什么要审批。提交人可以选 **撤回并修改**（Withdraw and edit），或用带审批人姓名的 **提醒**（Remind）按钮提醒审批人（一小时最多一次）。
 
 {% screenshot id="crm/approval-submitter" caption="提交人看到的页面。" /%}
 
-## 批准
+## 审批
 
-审批人在导航的 **商机**（Opportunity）上看到红色待办数。审批人打开合同，逐行对照目录价，选 **批准**（Approve）；或填写意见后选 **退回草稿**（Return to draft）。
+审批人在导航的 **商机**（Opportunity）上看到红色数字。审批人打开合同，在 **目录价**（Catalog）、**成交价**（Agreed）和 **差额**（Difference）几列逐行对照目录价。改过的草稿可以用 **打开改稿**（Open edited draft）和 **对比系统生成稿**（Compare with generated draft）查看改了什么。
 
-{% screenshot id="crm/approval-approver" caption="审批人看到的页面：原因、说明、逐行差额。" /%}
+然后选 **批准**（Approve），或写下意见后选 **退回草稿**（Return to draft）。退回时必须写意见。
 
-{% aside type="note" title="不能自批" %}
-部门负责人自己提交的合同，由租户管理员审批。
+{% screenshot id="crm/approval-approver" caption="审批人看到的页面：审批原因、说明和逐行差额。" /%}
+
+{% aside type="note" title="不能自己审批自己" %}
+部门负责人自己提交的合同，由租户管理员审批。示例中由部门负责人 Demo Manager 提交，租户管理员 Demo Accountant 审批。
 {% /aside %}

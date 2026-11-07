@@ -10,23 +10,25 @@ sidebar:
 
 ## Submit
 
-Select **Submit for approval** and add a note if it helps the approver. The contract waits for approval when either of these applies:
+Write a **Note to the approver (optional)** if it helps the approver, and select **Submit for approval**. The contract waits for approval when either of these applies:
 
 - the total discount is above the firm's threshold (10% by default);
 - the draft was edited by hand.
 
 Otherwise the contract is ready to send at once: the same button reads **Continue to signing** and the contract moves to step 4.
 
-After submitting, the submitter sees who the contract is waiting for, and can withdraw it or send a reminder.
+After submitting, the submitter sees who the contract is waiting for and why. The submitter can select **Withdraw and edit**, or send the approver a reminder with **Remind** and the approver's name (at most once an hour).
 
 {% screenshot id="crm/approval-submitter" caption="What the submitter sees." /%}
 
 ## Approve
 
-The approver sees a red count on **Opportunity** in the navigation. The approver opens the contract, checks each line against the catalog price, and selects **Approve**, or writes a comment and selects **Return to draft**.
+The approver sees a red count on **Opportunity** in the navigation. The approver opens the contract and checks each line against the catalog price in the **Catalog**, **Agreed** and **Difference** columns. For an edited draft, **Open edited draft** and **Compare with generated draft** show what was changed.
+
+Then select **Approve**, or write a comment and select **Return to draft**. A comment is required to return the contract.
 
 {% screenshot id="crm/approval-approver" caption="What the approver sees: the reason, the note and the difference on each line." /%}
 
 {% aside type="note" title="No self-approval" %}
-When the department lead submits the contract, a tenant admin approves it.
+When the department lead submits the contract, a tenant admin approves it. In the examples, Demo Manager (the department lead) submits, and Demo Accountant (a tenant admin) approves.
 {% /aside %}

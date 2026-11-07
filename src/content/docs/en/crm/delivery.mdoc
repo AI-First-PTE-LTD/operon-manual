@@ -1,0 +1,54 @@
+---
+title: "11 · Delivery after signing"
+description: How the services of a signed contract open their cases, how to follow their delivery, and how to end a service.
+sidebar:
+  order: 12
+  label: "11 · Delivery after signing"
+---
+
+**Who:** the person in charge and the departments that deliver the services. **Where:** the opportunity › **Services** tab, **Delivery** column; or the client's **Services** tab.
+
+## When the cases open
+
+A signed contract starts its delivery when it receives its first payment: once a payment is recorded on an invoice of the contract, Operon opens the first cases.
+
+| Service type | What opens |
+|---|---|
+| **One-off** | One case of the service's default case type. |
+| **Recurring** | One case for each cycle, a set number of days before the cycle's work due date. |
+| **Continuous** | No case. The service is only invoiced on its billing calendar. |
+
+A case of a service with prerequisites stays with the opportunity owner, with its prerequisite checklist on top, until every item is done; then it goes to the department manager. The service type, the case type and the prerequisites are set on the service's **Delivery** card (see [2 · Services & Packages](/en/crm/services-packages/)).
+
+## Follow the delivery
+
+The **Delivery** column reads:
+
+- **Not started**: signed, no case linked yet and not onboarded (waiting for the first payment);
+- **Started**: a case is linked, or the contract is onboarded and has a continuous service;
+- **Completed**: every service is one-off and every case is completed;
+- **Ended**: the service has been ended.
+
+Select the value to open the service's delivery: its status, the next work due date, when the next case opens, the next invoice, its **Cases** and its **Billing history**. If a case cannot open automatically, the drawer says why under **Cannot open automatically** and links to where it is fixed.
+
+{% screenshot id="crm/delivery-drawer" caption="The delivery of a signed one-off service that has not started yet." /%}
+
+On the contract list, the **Delivery** value of a contract opens a read-only overview of all its services.
+
+## Start a case by hand
+
+Before the first payment, or for a cycle whose case has not opened yet, select **Start case** in the service's delivery. The case is linked to the contract and carries the same prerequisite checklist. Only someone who can edit the opportunity, or a tenant admin, sees **Start case**.
+
+## End a service
+
+{% steps %}
+
+1. Open the service's delivery and select **End service**.
+2. Enter the **End date** and the **Reason**.
+3. Select **End service**.
+
+{% /steps %}
+
+No new cases open for the service after the end date, and invoices due after the end date that are not issued yet are cancelled. Cases already opened are not changed. A service that is part of a package ends the whole package and every service in it.
+
+{% screenshot id="crm/delivery-end-service" caption="Ending a service: the end date and the reason." /%}
