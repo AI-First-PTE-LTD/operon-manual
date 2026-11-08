@@ -148,9 +148,9 @@
     "locale": "en",
     "route": "/workspace/tax/cases/:taskId/workbench?tab=reconciliation",
     "anchor": "books-steps",
-    "sha256": "ad1ed42b73701cb30ecac6dd4751d63d3ab7bfcb2cb260f0011d3a3e7993ae9e",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:11:40.054Z"
+    "sha256": "a3e63db87c5875ae429ffb486c33cf9a677843203ae62c813b49ab6b2199251d",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:34:03.346Z"
   },
   {
     "id": "bookkeeping/overview-steps",
@@ -810,6 +810,24 @@
     "capturedAt": "2026-11-07T21:25:33.219Z"
   },
   {
+    "id": "case-templates/version-history",
+    "locale": "en",
+    "route": "/workspace/:workspaceId/case-templates/:templateId/revisions",
+    "anchor": "revision-snapshot",
+    "sha256": "41a340bfc3c3b0d1f2bb8419118adda3ea03827e4108703a8e6726552798f28a",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:46:59.260Z"
+  },
+  {
+    "id": "case-templates/version-history",
+    "locale": "zh-cn",
+    "route": "/workspace/:workspaceId/case-templates/:templateId/revisions",
+    "anchor": "revision-snapshot",
+    "sha256": "a476fcd3b49a2e1fbb7978fd5fa99f24add364e40475fcbe28e81b8bf1fb04d4",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:47:02.321Z"
+  },
+  {
     "id": "case-templates/workspace-create",
     "locale": "en",
     "route": "/workspace/secretary/my-week",
@@ -994,18 +1012,18 @@
     "locale": "en",
     "route": "/workspace/crm/opportunities/:opportunityId",
     "anchor": "opportunity-files",
-    "sha256": "9b3c88ae716e5d25843cd1196d5a63293441d2621b31184e472193da540b5dc7",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:52.590Z"
+    "sha256": "35e6e1f724158d793e05f7767d5bba0b62057145cddcdb547e8f757c8b70723c",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:51:38.392Z"
   },
   {
     "id": "crm/close-won-moved",
     "locale": "zh-cn",
     "route": "/workspace/crm/opportunities/:opportunityId",
     "anchor": "opportunity-files",
-    "sha256": "0350c18d9aa3014d79313b93a13284bcf08acb0184774bf8bde3b04507fab7d7",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:56.149Z"
+    "sha256": "53437e563d65a6a3988386fd6766143a92707b73a96d4465d919d0e97b570e42",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:51:41.945Z"
   },
   {
     "id": "crm/contract-list",
@@ -1084,9 +1102,9 @@
     "locale": "en",
     "route": "/workspace/crm/opportunities/:opportunityId",
     "anchor": "app-dialog-confirmation",
-    "sha256": "783c7e838649a478062e228cb92da7ce34441fe0fe9d0446874a80909de9e21c",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:15.174Z"
+    "sha256": "bb9f91bfb3e2304212b883a59d9de50c5076af0d4a3227483babb2032e6c4b41",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:51:01.331Z"
   },
   {
     "id": "crm/files-delete",
@@ -1102,36 +1120,36 @@
     "locale": "en",
     "route": "/documents",
     "anchor": "library-opportunity-files",
-    "sha256": "dee6735b784f2e5506213fc177844dde99a47d430adf92e8c42eda5a3cba1172",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:23.867Z"
+    "sha256": "9a04da29937b577f312847b4989fbac449b6d9cb70013953477a147582af4b9d",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:51:09.995Z"
   },
   {
     "id": "crm/files-library-cases",
     "locale": "zh-cn",
     "route": "/documents",
     "anchor": "library-opportunity-files",
-    "sha256": "14039e58252944c9e78e4d25c19d1bf7c16c57484a4d8c7f74a9020b658145fd",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:26.324Z"
+    "sha256": "3f52d13dae5e3c44bb8dd610db71c4f6ba8bc0de471c7583c388e2d8753133e3",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:51:12.448Z"
   },
   {
     "id": "crm/files-tab",
     "locale": "en",
     "route": "/workspace/crm/opportunities/:opportunityId",
     "anchor": "opportunity-files",
-    "sha256": "d1843472dbc2e880022c0f19076249ba649b33dab7928f331965910bb77be3cd",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:07.604Z"
+    "sha256": "26aabb7ed1afd0c647eb062d67a3118dc7998bdb87a14b619ca16b39f49dcc06",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:50:53.729Z"
   },
   {
     "id": "crm/files-tab",
     "locale": "zh-cn",
     "route": "/workspace/crm/opportunities/:opportunityId",
     "anchor": "opportunity-files",
-    "sha256": "6662a971bd1d3e18701917adb5ae711593cf64740159f4722318c9697bcc6d42",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:11.222Z"
+    "sha256": "5f6a61e06189600c01648f87e81d91ff5578db271bfd758ea48c1c0bd0e0e015",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:50:57.363Z"
   },
   {
     "id": "crm/paper-signed",
@@ -1318,18 +1336,18 @@
     "locale": "en",
     "route": "/admin/crm-settings",
     "anchor": "crm-contract-signatories",
-    "sha256": "9e09ae0e22b461224b310db49d76c71fadb7814cc3e0d36971bc69a59478f360",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:28:05.529Z"
+    "sha256": "301f3710cad3c160c9e8072130a49c9913783a8e1a91f5f674629046627c5ae3",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:47:47.604Z"
   },
   {
     "id": "crm/settings-signatories",
     "locale": "zh-cn",
     "route": "/admin/crm-settings",
     "anchor": "crm-contract-signatories",
-    "sha256": "097bbc4bc2c061a92ab7165e6542a5a52c74f46ecf18266c1f89748ca850fd66",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:28:08.580Z"
+    "sha256": "06a76b84e1cd5a752b13a10e62fd49d884ee648a9c7f6cd89f4941260f8c1a82",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:47:50.838Z"
   },
   {
     "id": "crm/settings-signatory-signature",
@@ -1363,27 +1381,27 @@
     "locale": "zh-cn",
     "route": "/workspace/crm/opportunities/:opportunityId?tab=contract",
     "anchor": "contract-step-signing-card",
-    "sha256": "74cb5c6acc49235dac10f119238fdfeaa972f6d0d40328f857f4b31fb65ffa78",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:30:26.459Z"
+    "sha256": "96e94c44f87918c1ec26a4f03b44ccd4b33cba6b72a5652dbad42014e6898d26",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:50:12.519Z"
   },
   {
     "id": "crm/signing-sent",
     "locale": "en",
     "route": "/workspace/crm/opportunities/:opportunityId?tab=contract",
     "anchor": "contract-signing-status",
-    "sha256": "46a0349df15fe535f6652acaa209c3508cf6468609faf1d0880482748914c45d",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:33.714Z"
+    "sha256": "303811ecac95bfed8975d1062f396ed9278ca007d861121f9c977ae490e364b1",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:51:19.622Z"
   },
   {
     "id": "crm/signing-sent",
     "locale": "zh-cn",
     "route": "/workspace/crm/opportunities/:opportunityId?tab=contract",
     "anchor": "contract-signing-status",
-    "sha256": "920a2726d9220baaa3d97d85b0453c59a38972636925131d98b72b1e50042ce5",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:31:37.399Z"
+    "sha256": "73aabd8988ca04b0a2eeb82d684899d25f5b9b15a6511166b73efade04641009",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:51:23.232Z"
   },
   {
     "id": "crm/templates-other-entity",
@@ -1462,90 +1480,90 @@
     "locale": "en",
     "route": "/e-sign/:engagementRequestId",
     "anchor": "signing-card",
-    "sha256": "e53778ffa7a76a1a15a4f82789caba612aa158de591a26da1cde5c5c29c82fbf",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:06.122Z"
+    "sha256": "56cf0661cbcf254fea1eacf91a76bb1b2068076be90a29509f1875ff6e95618b",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:37.535Z"
   },
   {
     "id": "e-sign/detail-completed",
     "locale": "zh-cn",
     "route": "/e-sign/:engagementRequestId",
     "anchor": "signing-card",
-    "sha256": "34f77c1c7e1ba1e3dff106517ecbd0c9253e70983c1fe3c100402e5ad19bb986",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:09.519Z"
+    "sha256": "4e99ddf1493c2f32953e5cfbf12b9745212fb1bcaeb5227f425f3a31e05884e9",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:40.433Z"
   },
   {
     "id": "e-sign/detail-confirm-date",
     "locale": "en",
     "route": "/e-sign/:engagementRequestId",
     "anchor": "esign-confirm-completion-date",
-    "sha256": "91e0db9e57eb6fa0225d899ed8489a55a00e7b918bfde2d299883eca2b6b0dfa",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:35:56.297Z"
+    "sha256": "50e5ec69e1bccfe58a43b41e46d3f631a28fd196f89db4c09b258c331d1e76cb",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:29.303Z"
   },
   {
     "id": "e-sign/detail-confirm-date",
     "locale": "zh-cn",
     "route": "/e-sign/:engagementRequestId",
     "anchor": "esign-confirm-completion-date",
-    "sha256": "64269c754746026577b2576cc2e32c8bded8d2e71aab8784dd5d4901d9b3f1f6",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:00.121Z"
+    "sha256": "7c17fc6a6035e0a478fc5014bfb7463281455f540635ab1ad2cb36679b6a281c",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:32.528Z"
   },
   {
     "id": "e-sign/detail-emails",
     "locale": "en",
     "route": "/e-sign/:agmRequestId",
     "anchor": "esign-detail-emails",
-    "sha256": "658644199317979e43e519c2c99eb483e52359944548eb9ec1cccfddef88ba29",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:35:37.412Z"
+    "sha256": "28a9c92dd2ad14850c0d3694202ba4d7243160ad2ca31dde131e75958b8cfd58",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:14.446Z"
   },
   {
     "id": "e-sign/detail-emails",
     "locale": "zh-cn",
     "route": "/e-sign/:agmRequestId",
     "anchor": "esign-detail-emails",
-    "sha256": "707a9c1a6489ebf6006a39ba7d01547debb051874cadf8ee9ffe232f268191ea",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:35:41.065Z"
+    "sha256": "440cd7c283e6508e82377a5dce06c1a06804a0767d3cfd48af54f6014a346e23",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:17.370Z"
   },
   {
     "id": "e-sign/detail-sent",
     "locale": "en",
     "route": "/e-sign/:agmRequestId",
     "anchor": "esign-detail-title",
-    "sha256": "731ee22570efe0184d39729dc95664747da8c041ef6035121231d3c38a512e32",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:32:32.337Z"
+    "sha256": "74270177b3ad478ee48b711ea5288a8b28022f93a0021fad5c0281ca0730ff37",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:52:18.047Z"
   },
   {
     "id": "e-sign/detail-sent",
     "locale": "zh-cn",
     "route": "/e-sign/:agmRequestId",
     "anchor": "esign-detail-title",
-    "sha256": "5e3e806141f8f4b747e1d018505272b7c5250a787eb0db1081e2438eff8f56ce",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:32:34.263Z"
+    "sha256": "f94c38b85496d9e4d307084092534cd77d4b0484ae30cb3ac30ae65efb02e97c",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:52:19.872Z"
   },
   {
     "id": "e-sign/detail-withdraw",
     "locale": "en",
     "route": "/e-sign/:registersRequestId",
     "anchor": "app-dialog-confirmation",
-    "sha256": "a939396f2c39f0e850862e52a954bb78b9254f11c3187dda01093e62eca47657",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:35:46.009Z"
+    "sha256": "06bfcc627e6b8b8f5184e2857b0594c9fcaba38567e1152e95d1e723117fe6e1",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:21.571Z"
   },
   {
     "id": "e-sign/detail-withdraw",
     "locale": "zh-cn",
     "route": "/e-sign/:registersRequestId",
     "anchor": "app-dialog-confirmation",
-    "sha256": "f1322d89283e9a124cc82dc3154c230b03717c532cd58d2d9ab217a6d2d3d6da",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:35:49.528Z"
+    "sha256": "dbeb52bc680633d3616e6770d34eec400d67d0d798be6a2f085b6a5309318c09",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:24.482Z"
   },
   {
     "id": "e-sign/list-by-file",
@@ -1561,63 +1579,63 @@
     "locale": "zh-cn",
     "route": "/e-sign",
     "anchor": "esign-list-by-file",
-    "sha256": "bacf020eea272a29fc69b601168024c3b39f231d448f2d670898835254f124b6",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:27.014Z"
+    "sha256": "2b2327cbc7eb6a968b134240a85d6a18c153861a81f57040a135131977fcee56",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:54.414Z"
   },
   {
     "id": "e-sign/list-by-request",
     "locale": "en",
     "route": "/e-sign",
     "anchor": "esign-list-by-request",
-    "sha256": "427c58f17283b25afd34c873d87f45c9405420a76bb81ed448aee8dbd029a0fc",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:15.127Z"
+    "sha256": "c5d4b0c5da32ec4665855aeeac73fbe0da1ca6c0b7c987e66d9216a3e85b4f95",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:44.775Z"
   },
   {
     "id": "e-sign/list-by-request",
     "locale": "zh-cn",
     "route": "/e-sign",
     "anchor": "esign-list-by-request",
-    "sha256": "cd29f15895a1b4dc6d03f8d95aee496e6ab30dc7c7a4cadf00d972fb50e9d73c",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:18.482Z"
+    "sha256": "78eac0a5a2b75d1723cbc8f11c4a5f193d2b2c70b2e80cf7dcca25e2dab16c83",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:55:47.429Z"
   },
   {
     "id": "e-sign/new-checklist",
     "locale": "en",
     "route": "/e-sign/new",
     "anchor": "esign-batch-signer-rail",
-    "sha256": "c8f47d85d49bdd3474aeff8be914ceb1a5abc04214d254c61b3a84ade3b5ba97",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:32:16.799Z"
+    "sha256": "a004b7b190c4a7d31227dc41e0f2ee862af8d46766ec9d010bda7fdf18492fed",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:52:02.667Z"
   },
   {
     "id": "e-sign/new-checklist",
     "locale": "zh-cn",
     "route": "/e-sign/new",
     "anchor": "esign-batch-signer-rail",
-    "sha256": "e198d6174ad87cd662aafd8a84ed568bbc3e4407d46c214c135068825bb1847f",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:32:19.444Z"
+    "sha256": "905b10421d6dbec017214eb9a28d8ba807202325b02433c385c15de0bd671d33",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:52:05.396Z"
   },
   {
     "id": "e-sign/new-review",
     "locale": "en",
     "route": "/e-sign/new",
     "anchor": "esign-prepare-page",
-    "sha256": "8629f643a2903d6a8904fd52f1ed4f399e2b52d5ea4580931ce28d6c0fd3d758",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:32:24.314Z"
+    "sha256": "659f1fe1f1ea19c43088fef820332b06f6f8da4cce67197174c4da1933086510",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:52:10.278Z"
   },
   {
     "id": "e-sign/new-review",
     "locale": "zh-cn",
     "route": "/e-sign/new",
     "anchor": "esign-prepare-page",
-    "sha256": "9e76678d4715650ee6d954eb5ace930fea669079c1b1e7e7ea25902bb859fa59",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:32:27.794Z"
+    "sha256": "4ecf8fd449a17d0a214728709d39539cf230f0053e662b04c6807141da3c2c45",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:52:13.706Z"
   },
   {
     "id": "e-sign/new-upload",
@@ -1836,6 +1854,24 @@
     "capturedAt": "2026-11-07T21:38:00.951Z"
   },
   {
+    "id": "invoices/invoice-xero-sync-status",
+    "locale": "en",
+    "route": "/invoices/:xeroSyncedId",
+    "anchor": "invoice-card-xero-sync",
+    "sha256": "8136ba4bf31970b034b314a1363144eeb20b38cce952cc20aa149e26d5802286",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:57:52.811Z"
+  },
+  {
+    "id": "invoices/invoice-xero-sync-status",
+    "locale": "zh-cn",
+    "route": "/invoices/:xeroSyncedId",
+    "anchor": "invoice-card-xero-sync",
+    "sha256": "21196459145fa82bbe66d6a8c279c2fc1219ae98d12d4bd284d6793c9e7992a7",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:57:55.425Z"
+  },
+  {
     "id": "invoices/new-invoice-client-dialog",
     "locale": "en",
     "route": "/invoices",
@@ -1930,17 +1966,35 @@
     "locale": "en",
     "route": "/admin/secretary-suite?tab=invoice",
     "anchor": "third-party-connections",
-    "sha256": "ddffb6eaec0766812016593ab7022a5dd75a74d3de3c69051e2604608d82592d",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:54.509Z"
+    "sha256": "2aca566b4812fcc2fc91d8e42e81824a5c1f87d80a7a8d97a8821c375254399f",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:56:15.185Z"
   },
   {
     "id": "invoices/settings-third-party-connections",
     "locale": "zh-cn",
     "route": "/admin/secretary-suite?tab=invoice",
     "anchor": "third-party-connections",
-    "sha256": "d284aa63f27b434b302ca00900508882dab48313e194d1d507f7e0d187fc2062",
-    "operonCommit": "ebc3f67099c8219773d01fb73f73b3df15357252",
-    "capturedAt": "2026-11-07T21:36:58.728Z"
+    "sha256": "021b9e48834b7b3a5cfb7c49c1a1cdef66d093362afdb03f9f78769c4dc666ad",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:56:18.236Z"
+  },
+  {
+    "id": "invoices/xero-connection-overview",
+    "locale": "en",
+    "route": "/admin/invoice-settings/xero/:xeroConnectionId",
+    "anchor": "xero-connection-page",
+    "sha256": "48ec43fa2e411829edc343092c99fa82eb79c97e3d52492eef11f84f23ed3bf5",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:57:44.581Z"
+  },
+  {
+    "id": "invoices/xero-connection-overview",
+    "locale": "zh-cn",
+    "route": "/admin/invoice-settings/xero/:xeroConnectionId",
+    "anchor": "xero-connection-page",
+    "sha256": "7e85d1b0945f3b72154b914bbbf837f717c4bd76bf75c718df2361b0b10f4438",
+    "operonCommit": "cc1cf4f079a319b1f94fa91626c90654fa30fd6c",
+    "capturedAt": "2026-11-08T02:57:47.699Z"
   }
 ]
