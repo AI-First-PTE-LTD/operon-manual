@@ -1,6 +1,6 @@
 ---
 title: "2 · Services & Packages"
-description: Keep the catalog of services and packages, their prices and their contract wording up to date.
+description: Keep the catalog of services and packages, their prices, payment terms, delivery and contract wording up to date.
 sidebar:
   order: 3
   label: "2 · Services & Packages"
@@ -8,25 +8,62 @@ sidebar:
 
 **Who:** department leads (their own department) and tenant admins (all departments). **Where:** **CRM** › **Catalog** › **Services & Packages**.
 
-The list shows each item's department, regions and price, and which contract texts are still missing.
+The page has the tabs **Services**, **Packages**, **Category titles** and **Prerequisite checklists**. The lists show each item's department, regions and price, and which contract texts are still missing. Under **Which items**, choose **My department** or **All (read-only)**.
 
 {% screenshot id="crm/catalog-list" caption="The Services & Packages list." /%}
 
 ## Edit a service
 
-{% steps %}
+Select a service to edit it, or select **New service**. The editor has these cards:
 
-1. Select a service to edit it.
-2. Under **Regions and prices**, set the reference price for each region.
-3. Under **Contract text**, write the **Description** (required, one point on each line) and the optional **Conditions** in each contract language (English, Chinese). The text is shared by every region. The right side shows how the text will read in the contract.
-4. Select **Save changes**.
+| Card | What it holds |
+|---|---|
+| **Basics** | **Name**, **Code**, **Category**, **Department**, and the **Name on contract (English)** and **Name on contract (Chinese)**. |
+| **Regions and prices** | The regions the service is offered in, with the reference price, currency and unit of each. An empty price means it is quoted per deal. |
+| **Contract text** | The **Description** (required, one point on each line) and the optional **Conditions**, in each contract language. The right side shows how the text will read in the contract. |
+| **Payment terms** | Whether the service is **Paid as one amount** or **Paid in installments** (see below). |
+| **Invoicing** | The invoice fee, billing cycle, tax treatment and KYC. |
+| **Delivery** | How the service is delivered once the contract has received a payment (see below). |
 
-{% /steps %}
-
-Contracts generated after the save use the new text. Contracts that were already generated keep their text.
+Select **Save changes** (or **Create service** for a new one). Contracts generated after the save use the new text and terms. Contracts that were already generated keep theirs.
 
 {% screenshot id="crm/catalog-service-edit" caption="Editing a service: prices and contract text." /%}
 
 {% aside type="caution" title="Missing text stops generation" %}
-If a service picked for a contract has no description in the contract's language, generation stops and names the service.
+A contract in a language needs the item's name on contract and its contract text in that language. If a service picked for a contract has neither, generation stops and names the service.
 {% /aside %}
+
+## Payment terms
+
+Choose **Paid in installments** to split every contract line of this item into installments. For each installment, enter the **Name (English)**, the **Name (Chinese)** and the **Share (%)**; the shares must add up to 100%. Select **Add installment** for another one.
+
+- **Pay in full below**: a contract line below this amount is paid in full at the first installment. Leave it empty to always split.
+- **Extra fee with the last installment**: the name of a fee collected with the last installment, for example a management fee. Its amount is entered on each contract.
+- **Refund value**: **No refund clause**, **Refund percentage** or **Deduction amount**. There is no preset value: the person in charge enters it on each contract. Write `{refund_percent}` or `{refund_amount}` in the contract text where the value goes.
+
+Installments apply to one-time fees only. The contract computes each amount from the agreed price of its line, and generating the contract freezes the schedule.
+
+{% screenshot id="crm/catalog-payment-terms" caption="Payment terms: two installments of 50%." /%}
+
+## Delivery
+
+The **Delivery** card says what happens after the contract is signed and paid:
+
+- **Service type**: **One-off** (one case), **Recurring** (one case per cycle) or **Continuous** (no case; only invoiced).
+- **Work due date** and **Open the case (days before due)**: when each cycle's work is due, and how many days earlier its case opens.
+- **Default case type**: the case type opened automatically for this service. A region row (**Add region override**) replaces it for contracts in that region.
+- **Prerequisites**: what must be done before the first case goes to the department manager, for example **Contract payment received** or a **Manual check**. Choose **Has prerequisites**, then a **Checklist template** and/or the **Items of this service**.
+
+A service whose setup is not complete is marked **Onboarding setup incomplete**, with the reason.
+
+{% screenshot id="crm/catalog-delivery" caption="The Delivery card: service type, default case type and prerequisites." /%}
+
+Reusable checklists are kept on the **Prerequisite checklists** tab. Only a tenant admin can change them.
+
+## Packages
+
+A package groups several services. Select **New package**, and under **Included services** select **Add service** for each service, as **Required** or **Optional**. The package price in a region is the sum of its required services' prices; optional services are offered as add-ons. If the package has no contract text of its own, the contract prints the contract text of each included service.
+
+## Category titles
+
+On the **Category titles** tab, enter the heading each category is printed under in a contract, in English and in Chinese, and select **Save category titles**. A contract in a language whose title is missing cannot be generated.

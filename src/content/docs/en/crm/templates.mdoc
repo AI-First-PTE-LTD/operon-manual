@@ -1,31 +1,87 @@
 ---
-title: "1 · Contract templates"
-description: Register the firm's Word templates (skeletons) for each issuing entity, region, language and format.
+title: "1 · Contract settings"
+description: Set the contract numbers and the approval threshold, the issuing entities, the people who sign for the firm, and the Word templates (skeletons).
 sidebar:
   order: 2
-  label: "1 · Contract templates"
+  label: "1 · Contract settings"
 ---
 
-**Who:** tenant admin. **Where:** **Admin** › **Suites** › **CRM** (the **CRM settings** page) › **Contract layouts**.
+**Who:** tenant admin. **Where:** **Admin** › **Suites** › **CRM** (the **CRM settings** page). The contract cards are **Contracts**, **Issuing entities**, **Contract signatories** and **Contract layouts**.
+
+## Contract numbers and approval
+
+On the **Contracts** card:
+
+- **Contract number prefix**: 1 to 10 upper-case letters or digits. Contract numbers read prefix, year and a 4-digit sequence, for example SAF-2026-0001. Contracts cannot be generated until the prefix is set.
+- **Approval threshold (%)**: a contract whose total is below the catalog price by more than this percentage needs approval. A draft edited by hand always needs approval.
+
+Select **Save**.
+
+## Issuing entities
+
+An issuing entity is a firm-side company that contracts are issued by. Select **New issuing entity**, or a row to edit it, and fill in:
+
+- **Company details**: **Company name**, **UEN**, **Registered address**, and optionally **Phone**, **Fax** and **Company email**.
+- **Bank accounts**: one account per currency. A contract in a currency with no account cannot be generated if its template prints bank details. The **Prepare** step marks such an entity **Setup incomplete**.
+- **Company seal**: optional. It is stamped next to the saved signature on VIP contracts only.
+
+Select **Create issuing entity** or **Save issuing entity**. An entity that is no longer used can be deactivated with **Deactivate issuing entity**; contracts that already use it keep its details.
+
+## Contract signatories
+
+A contract is signed for the firm by the contract signatory record of the opportunity's **Director in charge**, and only for the issuing entities listed on that record. Without such a record a contract cannot be generated or sent.
+
+{% steps %}
+
+1. On the **Contract signatories** card, select **Add signatory**.
+2. Choose the **Linked user** (the person who is Director in charge on opportunities), and enter the **Printed name** and the **Title**. The **ID number** is optional: it is printed only when it has a value.
+3. Under **Issuing entities**, choose the entities this person may sign for.
+4. Select **Add signatory**.
+
+{% /steps %}
+
+{% screenshot id="crm/settings-signatories" caption="The Contract signatories card: who signs for the firm, for which issuing entities, and the state of the saved signature." /%}
+
+### Add the saved signature
+
+The firm always signs with the signatory's saved signature and is never sent the contract. Engagement letters and quotations are signed with it before they are sent; VIP contracts are countersigned with it automatically once the client has signed.
+
+{% steps %}
+
+1. Select the signatory's row to open it, and select **Add signature** under **Saved signature**.
+2. Capture the signature: **Draw**, **Type** or **Upload**.
+3. Read the **Statement** and tick it. An **Authorisation letter (PDF)** can be attached; it is optional.
+4. Select **Save signature**. The state reads **Active**.
+
+{% /steps %}
+
+{% screenshot id="crm/settings-signatory-signature" caption="A saved signature registered for the signatory." /%}
+
+{% aside type="caution" title="Changes that revoke the saved signature" %}
+Changing the printed name, deactivating the signatory or (for older signatures) changing its issuing entities revokes the saved signature. Operon asks for confirmation first. Contracts cannot be sent until a new signature is added; contracts already signed keep their signature.
+{% /aside %}
+
+## Contract layouts (skeletons)
 
 A skeleton is the firm's Word template for one combination of **issuing entity × region × language × format**. A contract can be generated only for a combination that has a registered skeleton.
 
-## Register a skeleton
+### Register a skeleton
 
 {% steps %}
 
 1. Select **Register layout**.
 2. Choose the issuing entity, the region, the language and the format.
-3. Upload the `.docx` file.
+3. Choose the `.docx` file.
+4. Select **Register layout**.
 
 {% /steps %}
 
-Operon reads the fields that the file uses. A file that contains fields Operon does not recognise is refused, and the names of those fields are shown.
+Operon reads the fields that the file uses. A file that contains fields Operon does not recognise cannot be registered, and the fields to correct are listed. Registering the same combination again replaces its file.
 
 {% screenshot id="crm/templates-register" caption="Registering a skeleton: the fields are read from the file." /%}
 
-## Use one template for another issuing entity
+### Use one template for another issuing entity
 
-To let another issuing entity use the same template, select **Use for another issuing entity** on the template's row and choose the entity. The entity's own name, UEN, address, bank account and signatory are filled in when the contract is generated, so one file can serve several entities.
+To let another issuing entity use the same template, select **Use for another issuing entity** on the template's row, choose the entity and select **Register layout**. The entity's own name, UEN, address, bank account and signatory are filled in when the contract is generated, so one file can serve several entities.
 
 {% screenshot id="crm/templates-other-entity" caption="Using a registered skeleton for another issuing entity." /%}

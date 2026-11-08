@@ -10,29 +10,45 @@ sidebar:
 
 {% steps %}
 
-1. Open the opportunity and go to the **Services** tab. The country comes from the opportunity; only the items offered in that country are listed.
-2. Search, or filter by category, and select **Add** on a package or a single service. The agreed price starts at the catalog price.
-3. Change **Qty** or **Agreed** where needed. The totals and the discount against the catalog (**vs catalog**) are updated as you type.
+1. Open the opportunity and go to the **Services** tab. The country comes from the opportunity; only the items offered in that country can be added.
+2. Select **Add packages and services**. The catalog opens as its own view.
+3. Choose a group (**Packages** or a category), search, or filter by **Department**, and select **Add** on a package or a single service. The agreed price starts at the catalog price. The catalog stays open, so several items can be added in a row.
+4. Select **← Back to services**.
+5. Change **Qty** or **Agreed** where needed. The totals and the discount against the catalog (**vs catalog**) are updated as you type.
 
 {% /steps %}
 
 {% screenshot id="crm/services-list" caption="The packages and services offered in the opportunity's country." /%}
 
-## The list of packages and services
+## The catalog view
 
-The **Add packages and services** list shows the code, category, department, billing and reference price of each item. Filter by department or by category, or search by name or code.
+The **Add packages and services** view groups the items: **Packages**, then one group for each category, then **Other**. Select a group to list its items, or search by name or code across every group. Each row shows the code, category, department, billing and reference price of the item. The **Department** filter narrows the list to one department.
 
-A service marked **Missing contract text** has no wording yet for this country in that language. Generation of a contract in that language stops on it. Ask the department lead to add the text under **Services & Packages** (see [2 · Services & Packages](/en/crm/services-packages/)).
+- Select the arrow on a package to expand it and see the services it includes.
+- A service that is already included in a package on the opportunity cannot be added on its own, and a package that includes a service already on the opportunity cannot be added. The row says why.
+- A service marked **Missing contract text** has no wording yet for this country in that language. Generation of a contract in that language stops on it. Ask the department lead to add the text under **Services & Packages** (see [2 · Services & Packages](/en/crm/services-packages/)).
 
 {% screenshot id="crm/services-filter-department" caption="Filtering the list by department." /%}
 
+{% screenshot id="crm/services-package-expanded" caption="A package expanded to show the services it includes." /%}
+
 {% aside type="note" title="Prices are changed only here" %}
-The **Services** tab is the only place where the services and prices of a deal are changed. Once the opportunity has a contract, the opportunity's amount follows the contract.
+The **Services** tab is the only place where the services and prices of a deal are changed. Once the opportunity has contracts, the opportunity's amount is the total of every contract that is not void.
 {% /aside %}
 
-{% screenshot id="crm/services-added" caption="Two services added at the catalog price." /%}
+{% screenshot id="crm/services-added" caption="Services added at the catalog price." /%}
 
 {% screenshot id="crm/services-agreed-discount" caption="Agreed prices lowered to 20% below the catalog price." /%}
+
+## The services table
+
+Besides the price columns, each row shows its **Contract** and **Contract status** (**Not in a contract**, **Draft**, **Sent** or **Signed**). Once a contract is signed, the **Delivery**, **Next invoice** and **Next work due** columns follow the delivery of each signed service (see [11 · Delivery after signing](/en/crm/delivery/)).
+
+## Services in a signed contract are locked
+
+A row in a signed contract cannot be changed or removed: its quantity and price are shown as text, with the contract number. To stop such a service, end it on the contract (see [11 · Delivery after signing](/en/crm/delivery/)). To sell more, add the new services here and make an add-on contract for them (see [8 · Paper signing, void and copy](/en/crm/paper-void-copy/)).
+
+{% screenshot id="crm/services-signed-locked" caption="Services in a signed contract: read-only, with the contract number and status." /%}
 
 ## Example
 

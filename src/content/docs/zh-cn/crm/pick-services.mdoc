@@ -10,29 +10,45 @@ sidebar:
 
 {% steps %}
 
-1. 打开商机，进入 **服务** 页签。国家取自商机，只列出该国提供的条目。
-2. 搜索或按类别筛选，在套餐或单项服务上选 **添加**（Add）。成交价默认等于目录价。
-3. 按需要修改 **数量**（Qty）和 **成交价**（Agreed）。合计和相对目录价的折扣（**对比目录价**，vs catalog）随输入即时更新。
+1. 打开商机，进入 **服务** 页签。国家取自商机，只能添加该国提供的条目。
+2. 选 **添加套餐与服务**（Add packages and services），目录以单独的视图打开。
+3. 选一个分组（**套餐** 或某个类别）、搜索，或按 **部门**（Department）筛选，在套餐或单项服务上选 **添加**（Add）。成交价默认等于目录价。目录添加后不关闭，可以连续添加几项。
+4. 选 **← 返回服务列表**（← Back to services）。
+5. 按需要修改 **数量**（Qty）和 **成交价**（Agreed）。合计和相对目录价的折扣（**对比目录价**，vs catalog）随输入即时更新。
 
 {% /steps %}
 
 {% screenshot id="crm/services-list" caption="商机所在国家可选的套餐与服务。" /%}
 
-## 套餐与服务列表
+## 目录视图
 
-**添加套餐与服务**（Add packages and services）列表显示每一项的编码、类别、部门、计费方式和参考价。可以按部门、按类别筛选，也可以按名称或编号搜索。
+**添加套餐与服务** 视图把条目分组：先是 **套餐**（Packages），然后每个类别一组，最后是 **其他**（Other）。选一个分组列出其中的条目，或按名称、编号在所有分组中搜索。每一行显示编码、类别、部门、计费方式和参考价。**部门** 筛选只列出某一部门的条目。
 
-标着 **缺合同描述**（Missing contract text）的服务，在这个国家还没有对应语言的描述，用那种语言生成合同时会在它上面停下。请部门负责人在「服务与套餐」里补上（见 [2 · 服务与套餐](/zh-cn/crm/services-packages/)）。
+- 点套餐前的箭头可以展开，查看它包含的服务。
+- 已含在本商机某个套餐里的服务不能再单独添加；包含本商机已有单项服务的套餐也不能添加。该行会写明原因。
+- 标着 **缺合同描述**（Missing contract text）的服务，在这个国家还没有对应语言的描述，用那种语言生成合同时会在它上面停下。请部门负责人在「服务与套餐」里补上（见 [2 · 服务与套餐](/zh-cn/crm/services-packages/)）。
 
 {% screenshot id="crm/services-filter-department" caption="按部门筛选。" /%}
 
+{% screenshot id="crm/services-package-expanded" caption="展开套餐，查看它包含的服务。" /%}
+
 {% aside type="note" title="价格只在这里改" %}
-一单业务的服务和价格只在 **服务** 页签修改。商机有合同后，商机金额跟随合同金额。
+一单业务的服务和价格只在 **服务** 页签修改。商机有合同后，商机金额为全部未作废合同的合计。
 {% /aside %}
 
-{% screenshot id="crm/services-added" caption="按目录价添加了两项服务。" /%}
+{% screenshot id="crm/services-added" caption="按目录价添加的服务。" /%}
 
 {% screenshot id="crm/services-agreed-discount" caption="成交价下调，比目录价低 20%。" /%}
+
+## 服务表
+
+除价格列外，每一行还显示 **合同**（Contract）和 **合同状态**（Contract status：**未进合同**、**草稿**、**已发出** 或 **已签**）。合同签署后，**执行**（Delivery）、**下次开票**（Next invoice）和 **下个工作到期**（Next work due）几列跟随每项已签服务的交付情况（见 [11 · 签约后的交付](/zh-cn/crm/delivery/)）。
+
+## 已签合同中的服务不能再改
+
+已进入已签合同的行不能修改或移除：数量和价格以文字显示，并附合同编号。要停止这项服务，在合同上结束它（见 [11 · 签约后的交付](/zh-cn/crm/delivery/)）。要追加销售，在这里添加新服务，再为它们出一份补充合同（见 [8 · 纸签、作废与复制](/zh-cn/crm/paper-void-copy/)）。
+
+{% screenshot id="crm/services-signed-locked" caption="已签合同中的服务：只读，附合同编号和状态。" /%}
 
 ## 示例
 

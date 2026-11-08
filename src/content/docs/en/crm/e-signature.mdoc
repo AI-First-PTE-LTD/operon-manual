@@ -1,6 +1,6 @@
 ---
 title: "7 · Send for e-signature"
-description: Send a ready contract for signing online, follow the signers and receive the signed copy.
+description: Send a ready contract for signing online, follow the client's signing and receive the signed copy.
 sidebar:
   order: 8
   label: "7 · Send for e-signature"
@@ -8,24 +8,36 @@ sidebar:
 
 **Who:** the person in charge. **Where:** step 4 **Signing**.
 
+The firm always signs with the saved signature of its signatory (see [1 · Contract settings](/en/crm/templates/)) and is never sent the contract. Only the client is invited to sign.
+
+- **Engagement letter** and **Quotation**: the firm's saved signature is applied before the contract is sent, so the client receives a copy that already carries it.
+- **VIP contract**: once the client has signed, Operon countersigns automatically with the saved signature, and with the company seal when one is registered for the issuing entity.
+
 {% steps %}
 
-1. When the contract is **Ready to send**, check the signers on the **Send for signature** card and select **Send**. The signature boxes are placed from the marks in the template; nothing has to be dragged.
-2. Each party signs online through an e-mail link, or is switched to paper.
-3. Follow the signers on the **Signing** card.
+1. When the contract is **Ready to send**, check the signers on the **Send for signature** card. The **Service provider** row shows the firm's signatory with **Saved signature**. On the **Client** row, choose **Online** or **Paper**.
+2. If someone should be kept informed, select **+ Add CC** and enter the name and email. CC recipients get an email when signing starts, each time someone signs, and a download link when everyone has signed. The client does not see who is copied.
+3. To change the wording of the invitation, reminder and completion emails for this contract only, select **Email content**.
+4. Select **Send**. The signature boxes are placed from the marks in the template; nothing has to be dragged. For an edited draft that lost a mark, place the boxes first with **Check signature boxes**.
 
 {% /steps %}
 
 {% screenshot id="crm/signing-ready" caption="Approved and ready to send." /%}
 
-## The Signing card
+If the contract cannot be sent, the reason is shown next to **Send**, for example when the Director in charge has no active saved signature. A tenant admin adds it under **Contract signatories** in CRM settings.
 
-The card shows each signer's status and the date on which the signing link expires. For each signer you can select **Send reminder**, **Change email** or **Switch to paper**. **Open in E-sign** in the contract header shows the signing request itself.
+## Follow the signing
+
+The card shows each signer's status (**Not opened**, **Viewed**, **Signed** …) and the date on which the signing link expires. For the client you can select **Send reminder**, **Change email** or **Switch to paper**. When a link has expired, select **Extend and resend**. **Open in E-sign** in the contract header opens the signing request itself in a new tab.
 
 {% screenshot id="crm/signing-sent" caption="Sent: each signer's status and link expiry." /%}
 
 ## When everyone has signed
 
-The contract becomes **Signed**, and the signed PDF is filed in the opportunity's files automatically. If filing fails, it is tried again every 15 minutes.
+The contract becomes **Signed**, and the signed PDF is filed in the opportunity's files automatically. If filing fails, it is tried again every 15 minutes; until then the signed copy can be downloaded on the card.
 
-If the client declines to sign, the contract returns to **Ready to send**, the reason is shown, and you can select **Send again**.
+If the client declines to sign, the reason is shown, the contract goes back to the Signing step, and you can select **Send again**.
+
+{% aside type="caution" title="If the automatic countersignature fails" %}
+For a VIP contract, the card shows **Our signature could not be applied** with the reason. Select **Switch to paper signing**, then upload the signed copy to finish the contract.
+{% /aside %}
