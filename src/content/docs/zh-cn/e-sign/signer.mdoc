@@ -1,0 +1,63 @@
+---
+title: "2 · 签署人看到什么"
+description: 签署人从邮件打开的签署页面、一次签完全部文书、拒签，以及抄送人的只读页面。
+sidebar:
+  order: 3
+  label: "2 · 签署人看到什么"
+---
+
+签署人不需要 Operon 账号，打开邀请邮件里的链接，在浏览器里签署。签署页面默认英文，签署人可以在页面顶部切换为中文。了解签署人看到什么，便于回答他们的问题。
+
+## 采用签名
+
+页面先请签署人采用一个签名，这个签名会放在他用这个链接签的每份文书上。
+
+{% steps %}
+
+1. 选 **签名方式**（Signature method）。默认打开 **输入**（Type）页签，已用手写字体填好你的姓名，可以修改。也可以选 **手写**（Draw，用鼠标或手指）或 **上传**（Upload，10 MB 以内的 PNG 或 JPEG 图片）。
+2. 勾选声明「我同意此电子签名与我在所签文书上的手写签名具有同等法律效力。」
+3. 选 **采用并继续**（Adopt and continue）。
+
+{% /steps %}
+
+{% screenshot id="e-sign/portal-adopt" caption="采用一个输入的签名。" /%}
+
+之后可以用页面顶部 **你的签名**（Your signature）旁边的 **更换**（Change）换签名。
+
+## 一次签完全部文书
+
+左栏 **你的文书**（Your documents）列出签署人在这个链接上要签的全部文书，带待签位置数和到期日。右边依次显示各份文书，签署人的签名位高亮。
+
+要一次签完，每份文书的签字页都要在屏幕上显示过；签字页还没看过的文书标为 **未查看**（Not viewed）。在那之前，主按钮显示 **跳到下一份的签署页**（Go to the next signature page），点一下带签署人过去。所有签字页都看过后，按钮变为 **签署全部 *N* 份文书**（Sign all *N* documents），点一次全部签完。
+
+签署人也可以取消勾选某份文书留到以后签，或逐个点签名位（**点击签署**，Click to sign）后选 **完成签署**（Finish signing）。没签的文书可以在链接到期前用同一个链接再签。
+
+{% screenshot id="e-sign/portal-sign-all" caption="所有签字页都已看过：点一次签完两份文书。" /%}
+
+签完后页面显示 **全部完成 —— 可以关闭此窗口**（All done — you can close this window）。所有人都签完后，Operon 会发邮件通知签署人，最终文书可以在同一个链接下载，保留 90 天。
+
+{% screenshot id="e-sign/portal-done" caption="两份文书都已签署。" /%}
+
+## 拒签
+
+不愿签的签署人选 **拒签…**（Decline…），勾选要拒签的文书，可以写原因，再选 **拒签 *N* 份文书**（Decline *N* documents）。拒签的文书不能再用这个链接签署。在请求详情页上能看到谁拒签了及其原因（见 [3 · 跟进请求](/zh-cn/e-sign/follow-up/#签署人拒签时)）。
+
+{% screenshot id="e-sign/portal-decline" caption="拒签一份文书并写明原因。" /%}
+
+## 签署人可能看到的提示
+
+| 提示 | 含义 | 怎么处理 |
+|---|---|---|
+| **这个链接已过期**（This link has expired） | 链接上的全部文书都已过期。 | 用 **延长并重发**（Extend & resend）给签署人新的截止时间（见 [3 · 跟进请求](/zh-cn/e-sign/follow-up/)）。 |
+| **这个链接无效**（This link is not valid） | 链接已被替换，例如签署人的邮箱改过。 | 签署人用最新那封邮件里的链接。 |
+| **已被秘书撤回**（Withdrawn by your secretary） | 请求已撤回。 | 无需处理；需要时重新发一个请求。 |
+
+## 抄送人的页面
+
+抄送人收到的邮件里有一个只读页面的链接，页面显示请求状态、各签署人的进度和文书。按 **签署中可查看** 的设置，文书在签署进行中可以预览（**当前进度版**，In-progress copy），或在签署完成后才能查看（**已签版**，Signed copy）。页面上写明「你被抄送了这次签署，所以能看到这一页。这里不能签署。」
+
+{% screenshot id="e-sign/cc-portal" caption="签署进行中，抄送人的页面。" /%}
+
+{% aside type="note" title="事务所加入 Operon 时签署的协议" %}
+新事务所注册 Operon 时，与 Operon 的协议也在同一个签署页面上签。那里签署人对全部协议确认一次：**确认并签署全部协议**（Confirm and sign all agreements），勾选「本人已阅读并同意上述协议。」，再选 **同意并签署 *N* 份协议**（Agree and sign *N* agreements）。
+{% /aside %}

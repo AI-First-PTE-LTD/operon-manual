@@ -52,6 +52,11 @@ export default defineConfig({
           translations: { 'zh-CN': '案子模板' },
           items: [{ autogenerate: { directory: 'case-templates' } }],
         },
+        {
+          label: 'E-Sign',
+          translations: { 'zh-CN': '电子签' },
+          items: [{ autogenerate: { directory: 'e-sign' } }],
+        },
       ],
     }),
     markdoc(),
