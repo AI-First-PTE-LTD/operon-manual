@@ -570,6 +570,7 @@
     "overpaidInvoiceTotal": "SGD 1,308.00",
     "overpaymentReceived": "SGD 1,500.00",
     "overpayment": "SGD 192.00",
-    "customerReference": "PO-7781"
+    "customerReference": "PO-7781",
+    "xeroOrganisation": "SAMPLE ACCOUNTING FIRM PTE. LTD."
   }
 }
