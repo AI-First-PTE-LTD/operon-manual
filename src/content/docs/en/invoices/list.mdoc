@@ -35,7 +35,7 @@ Overpayments are listed only under **Overpayments**. Each one reads **Overpaymen
 
 - **Search number or client** finds an invoice by its number, by the client's name or by the customer reference, for example `PO-7781`.
 - The client selector (**All clients**) limits the list to one client.
-- **Filters** opens the panel with **Issued between**, **Due between**, **Source** (invoices issued in Operon or uploaded), **Total between** and, when the firm has more than one issuing entity, **Issuing entity**.
+- **Filters** opens the panel with **Issued between**, **Due between**, **Source**, **Total between** and, when the firm has more than one issuing entity, **Issuing entity**. **Source** offers **Issued here** and **Uploaded**, and also **From Xero** once an issuing entity is linked to Xero. With Xero in use, the panel also has **Xero sync failed only**, which lists only the documents whose push to Xero failed; its chip reads **Xero sync failed**.
 
 Every active filter is shown as a chip above the table; select its cross to remove it, or select **Clear filters**. The **Filters** button shows how many filters are active. The cards, the tab counts and the totals all follow the search and the filters.
 
@@ -45,7 +45,7 @@ Every active filter is shown as a chip above the table; select its cross to remo
 |---|---|
 | **Number** | The invoice number, or **Draft**. Select it to open the invoice. |
 | **Client** | The client, with the opportunity in grey under it. |
-| **Source** | **Issued here** or **Uploaded**. |
+| **Source** | **Issued here**, **Uploaded** or **From Xero** (imported from Xero, or a credit received in Xero). |
 | **Issued by** | The issuing entity. Shown only when the firm has more than one. |
 | **Issued** / **Due** | The issue date and the due date. An overdue invoice shows its due date in red with, for example, **5 days overdue**. |
 | **Total**, **Paid / credited**, **Amount due** | The amounts. On the credit note list, the last two read **Applied / refunded** and **Remaining**. |
@@ -76,6 +76,6 @@ Select **Export CSV**. The file holds every invoice that matches the current tab
 
 `Type, Number, Reference, Status, Source, Client, Opportunity, Issue date, Due date, Currency, Subtotal, GST, Total, Paid, Credited, Amount due, Overdue`
 
-Dates are written as YYYY-MM-DD (Singapore time) and amounts as plain numbers with two decimals. **Reference** holds the customer reference, and is empty for a document without one. **Subtotal** is always the amount excluding GST, also for a tax-inclusive invoice. When the subtotal or the GST of an uploaded invoice is not known, the cell is empty, not 0.
+Dates are written as YYYY-MM-DD (Singapore time) and amounts as plain numbers with two decimals. **Source** reads `Issued here`, `Uploaded` or `From Xero`. **Reference** holds the customer reference, and is empty for a document without one. **Subtotal** is always the amount excluding GST, also for a tax-inclusive invoice. When the subtotal or the GST of an uploaded invoice is not known, the cell is empty, not 0.
 
 At most 5,000 rows can be exported at once. When more match, Operon says so; narrow the filters and export again.

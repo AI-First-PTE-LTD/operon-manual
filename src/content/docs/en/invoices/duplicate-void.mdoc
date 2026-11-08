@@ -38,6 +38,8 @@ Voiding cancels an issued invoice. The invoice keeps its number, which is never 
 
 The status becomes **Void** and the reason is shown on the invoice page and in its history. The online link stops working, and the PDF is produced again with a VOID mark. A void invoice cannot be changed any more.
 
+Voiding an invoice raised from a contract's installments frees those installments: they can be billed again on a new invoice (see [Bill a contract by its installments](/en/invoices/create/#bill-a-contract-by-its-installments)). A document imported from Xero cannot be voided here.
+
 An invoice with a payment or applied credit cannot be voided. First delete its payments and remove the applied credit (see [Record payments](/en/invoices/payments/) and [Credit notes](/en/invoices/credit-notes/)), then void it. A credit note is voided in the same way, with **Void credit note**.
 
 {% aside type="tip" title="Wrong issuing entity" %}
@@ -48,4 +50,4 @@ The issuing entity of an issued invoice cannot be changed, because its number be
 
 **Who:** any member who can see the invoice. Credit note drafts are deleted by managers.
 
-Open the draft, select **More** › **Delete draft** and confirm. The draft is removed. It had no number, so nothing is skipped in the numbering. Only drafts can be deleted; an issued invoice can only be voided.
+Open the draft, select **More** › **Delete draft** and confirm. The draft is removed. It had no number, so nothing is skipped in the numbering. Only drafts can be deleted; an issued invoice can only be voided. Deleting a draft raised from a contract's installments frees those installments.

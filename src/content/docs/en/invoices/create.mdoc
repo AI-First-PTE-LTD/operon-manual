@@ -17,7 +17,7 @@ An invoice can be started in four places. In each case you first choose a templa
 {% steps %}
 
 1. Open the contract. The **Create invoice** button appears once the contract is signed. If invoices have already been raised from this contract, their number is shown next to the button, for example **1 invoice raised**.
-2. Select **Create invoice**. The **Choose an invoice template** window opens.
+2. Select **Create invoice**. When a line of the contract is billed in two or more installments, the **Choose installments** window opens first (see [Bill a contract by its installments](#bill-a-contract-by-its-installments)). Otherwise the **Choose an invoice template** window opens.
 3. Select a template. The editor opens with the contract's lines: each service with its description, quantity and agreed price. The client, the opportunity, the contract and the issuing entity are taken from the contract.
 4. Check and edit the invoice (see [Edit lines, adjustments and GST](/en/invoices/edit/)).
 5. Select **Save draft**. The draft is saved.
@@ -25,6 +25,36 @@ An invoice can be started in four places. In each case you first choose a templa
 {% /steps %}
 
 The same shortcut is at the top of the opportunity's **Invoices** tab: one **Create invoice from …** button for each signed contract of the deal, followed by the contract number.
+
+A contract that sells a package gives one line for the package, at the package's price and its own tax code, with the package's code as SKU. The services inside the package follow as lines of 0.00. Lines are named with the contract's English wording.
+
+## Bill a contract by its installments
+
+A service can be billed in installments, for example 50% on signing and 50% on filing. The installments are set in the service catalog and fixed on the contract when it is generated (see [Services & Packages](/en/crm/services-packages/)). Each installment is billed on its own invoice, when you choose.
+
+{% steps %}
+
+1. On the signed contract, select **Create invoice**. The **Choose installments** window lists each line that has installments, with **Installment**, **Share**, **Amount** and **Status**.
+2. Tick the installments to bill on this invoice. The next installment of each line that has not been billed is ticked already. An installment that is already on a draft or an issued invoice cannot be ticked.
+3. Check **Subtotal before tax** at the bottom. The lines of the contract that have no installments are listed under **Billed once on this invoice**: they go on the first invoice raised from the contract, and only on that one.
+4. Select **Continue**, then select a template. The editor opens with one line for each installment chosen, named after the service and the installment, for example `Corporate tax filing — On signing (50%)`.
+5. Select **Save draft**.
+
+{% /steps %}
+
+When a line has an extra fee, the fee goes on the invoice that bills the line's last installment. **Continue** stays greyed out until at least one installment is ticked (**Choose at least one installment.**). When every installment is already on an invoice, the window says **Every installment is already on an invoice.** and offers only **Close**.
+
+{% screenshot id="invoices/contract-installment-picker" caption="The Choose installments window: the first installment of Corporate tax filing ticked, Annual return filing billed once on this invoice." /%}
+
+A contract whose lines each have a single installment does not show the window: Create invoice goes straight to the template, and the installment is recorded in the same way.
+
+### Which invoice holds each installment
+
+The signed contract shows **Installment billing**: for each line, every installment with its amount and its status (**Not billed**, **Draft**, **Issued** or **Paid**), with a link to the invoice that holds it. Payments stay on the invoice; they are not split by installment.
+
+{% screenshot id="invoices/contract-installment-billing" caption="Installment billing on the contract: the first installment issued, the second not billed yet." /%}
+
+An installment is freed again when its invoice is voided or its draft is deleted; it can then be billed on a new invoice. A credit note does not free it.
 
 ## From an opportunity, without a contract
 

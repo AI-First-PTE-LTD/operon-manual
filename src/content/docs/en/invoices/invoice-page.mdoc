@@ -10,9 +10,11 @@ sidebar:
 
 The invoice page shows the invoice paper, read-only and exactly as the client sees it, with everything needed to follow it up around it.
 
+{% screenshot id="invoices/invoice-page-part-paid" caption="An invoice of S$1,979.99 after a part payment of S$800.00: Partially paid, S$1,179.99 due." /%}
+
 ## The header
 
-The header shows the document and its number (for example **Invoice INV-2026-0007**), its status and its source. The second line shows the client, the issue date, the due date and, for an invoice from a contract, the contract number, labelled **Contract**, for example **Contract AGR-2026-0012**. When the invoice has a customer reference, it is shown as a separate item, for example **Reference PO-7781**. An invoice with no reference shows no **Reference** item.
+The header shows the document and its number (for example **Invoice INV-2026-0007**), its status and its source: **Issued here**, **Uploaded** or **From Xero**. The second line shows the client, the issue date, the due date and, for an invoice from a contract, the contract number, labelled **Contract**, for example **Contract AGR-2026-0012**. When the invoice has a customer reference, it is shown as a separate item, for example **Reference PO-7781**. An invoice with no reference shows no **Reference** item.
 
 At most two main buttons are shown next to the header:
 
@@ -57,11 +59,39 @@ A note cannot be edited or deleted afterwards.
 | **Related** | The contract, the opportunity, the case, the credit notes applied to this invoice with their amounts, and any overpayments. For a credit note, the invoice it credits. |
 | **Delivery** | When the invoice was last emailed, when the client last viewed it, the **Payment reminders on** switch and the date of the next reminder. |
 | **Open invoices for this client** | Credit notes only: the client's unpaid invoices in the same currency and their total due. |
+| **Xero** | Only when the issuing entity is linked to Xero: whether the document is in Xero. See [Xero](#xero). |
 
-An issued invoice that has never been emailed shows **No reminder is sent until the invoice has been emailed once.** When reminders are turned off for the client, the card shows **Reminders are off for this client.** and no next reminder date. See [Invoice settings and reminders](/en/invoices/settings-reminders/).
+The **Delivery** card says why no reminder will be sent, when that is the case:
+
+| The card shows | Meaning |
+|---|---|
+| **Automatic reminders are off for this organisation.** | A tenant admin has not turned automatic reminders on (see [Invoice settings, reminders and Xero](/en/invoices/settings-reminders/#turn-automatic-reminders-on)). |
+| **Reminders are off for this client.** | **Payment reminders for this client** is off on the client's **Invoices** tab. |
+| **Reminders are paused.** | Xero holds the reminders back. The ⓘ next to it says why, for example that the invoice was voided in Xero, or that the payments in Xero differ from those recorded here. |
+| **No reminder is sent until the invoice has been emailed once.** | The invoice has never been emailed. |
+
+When none of these applies, the card shows the date of the next reminder.
 
 ## Uploaded invoices
 
 An invoice issued outside Operon and recorded on a case from its file is marked **Uploaded**. Its page shows the original file first, with **Open in Documents** and **Download original file**, and an **As printed on the file** card with the values read from the file. A dash there means that the file does not state the value; it is not zero.
 
 An uploaded invoice cannot be edited, duplicated or credited in Operon. Payments can be recorded on it as on any other invoice.
+
+## Xero
+
+When the invoice's issuing entity is linked to a Xero organisation (see [Connect Xero](/en/invoices/settings-reminders/#connect-xero)), the side of the page has a **Xero** card with the document's state in Xero:
+
+| State | Meaning |
+|---|---|
+| **Not pushed** | Issued before the issuing entity was linked: not pushed automatically. A tenant admin can push it from the Xero connection page. |
+| **Pushing** | Being pushed. |
+| **Synced** | In Xero, the same as here. **Open in Xero** opens it there. |
+| **Failed** | Xero refused it or could not be reached. The card says why; correct the cause and select **Retry**. Failed pushes are also retried automatically. |
+| **Out of step with Xero** | Xero holds it with a different total, GST, status or payments. **Differs in** says what. |
+
+{% screenshot id="invoices/invoice-xero-sync-status" caption="The Xero card of an invoice pushed to Xero." /%}
+
+An invoice issued before its issuing entity was linked, and not in Xero yet, shows **Send to Xero first** in its header: its payments come from Xero, so no reminder is sent until a tenant admin sends it to Xero from the connection page.
+
+A document imported from Xero is marked **From Xero**. It is read-only here: it cannot be edited, emailed, credited, paid or voided in Operon, and no reminder is sent about it. Only **Download PDF** remains.
