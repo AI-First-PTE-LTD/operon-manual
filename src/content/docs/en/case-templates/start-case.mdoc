@@ -6,18 +6,19 @@ sidebar:
   label: "5 · Start a case from the template"
 ---
 
-**Who:** a manager or admin of the department that owns the template, or a partner. Other users see **+ New Case** greyed out; hover over the button to read the reason. **Where:** the department workspace › **Cases**.
+**Who:** a manager or admin of the department that owns the template, or a partner. A tenant admin who is not in that department cannot start one either. Other users see **+ New Case** greyed out; hover over the button to read the reason. **Where:** the department workspace › **Cases**.
 
 ## New case
 
 {% steps %}
 
 1. Select **+ New Case**.
-2. In **Case type**, choose the template.
-3. In **Assigned to**, choose the person in charge, for example Demo Accountant.
-4. In **Client**, choose the client, for example ABC PTE. LTD. The client is required when **Needs a client** is on in the template.
-5. In **Start**, choose the start date.
-6. Select **Create Case**.
+2. Leave **Case title** blank to name the case automatically from the case type and the client, or enter a title.
+3. In **Case type**, choose the template, for example `Sample Client Onboarding`.
+4. In **Assigned to**, choose the person in charge, for example Demo Manager.
+5. In **Client**, choose the client, for example ABC PTE. LTD. The client is required when **Needs a client** is on in the template.
+6. In **Start**, choose the start date. If you leave **Due** blank, the case due date is worked out from the template's **Default case length** (in this example, 10 business days after the start).
+7. Select **Create Case**.
 
 {% /steps %}
 
@@ -25,7 +26,7 @@ sidebar:
 
 ## The case on the board
 
-The case appears in the **Ready to start** column. Its progress shows how many tasks are done, for example `0/7`.
+The case appears in the **Ready to start** column. Its progress shows how many tasks are done, for example `0/6`.
 
 {% screenshot id="case-templates/case-board" caption="The new case on the Cases board." /%}
 
@@ -38,3 +39,7 @@ Open the case and select the **Tasks** tab:
 - A section that must wait for an earlier section shows what it is waiting on. To begin it early, select **Start anyway**.
 
 {% screenshot id="case-templates/case-tasks" caption="The Tasks tab of a case started from the template." /%}
+
+{% aside type="note" title="Cases opened from a contract" %}
+A case that a signed contract opens, or that is started with **Start case** on a contract service, uses the case type set for that service in the service catalog, not a type chosen in **New Case**. If the service has prerequisites, the case shows a **Prerequisites** checklist and stays with the opportunity owner until every item is satisfied; on **My Week** it is marked **Pre-start checklist · Waiting on you**. Prerequisites are set on the service, not in the case template.
+{% /aside %}

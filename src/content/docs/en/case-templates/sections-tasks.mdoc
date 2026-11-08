@@ -71,8 +71,12 @@ The section then does not hold up the sections after it, and it does not change 
 
 ## Task options
 
-- A task can be due on the case due date: in **Counted from**, choose **The case due date**.
-- For work that is done in another system, turn on **Done outside StaffOnAI** under **Options**. The task row then shows the **Off-platform** label.
+- A task can be due on the case due date: in **Counted from**, choose **The case due date**. The case due date comes from **Default case length** on the **Details** tab.
+- Under **Options**:
+  - **Must be done** is on by default. A case of this type is complete when every task with **Must be done** is ticked; tasks with it turned off show the **Optional** label and do not hold the case open.
+  - **Blocks the section** is on by default: the section is not finished until the task is ticked. Turn it off for a task that may come later; the row then shows **Non-blocking**.
+  - **Only sometimes needed** shows the **Conditional** label, so that an untouched task does not look like overdue work.
+  - For work that is done in another system, turn on **Done outside StaffOnAI**. The task row then shows the **Off-platform** label.
 
 {% screenshot id="case-templates/task-options" caption="Task options, with Done outside StaffOnAI turned on." /%}
 
@@ -83,8 +87,8 @@ Select **+ Add client section**, and then set the section up:
 {% steps %}
 
 1. Under **Chasing the client**, set the reminders, for example **Remind before it’s due** `2 days before due`, **Keep reminding** `Every 3 days`, and turn on **Remind again once overdue**.
-2. Under **Board status**, choose **Waiting for client**.
-3. In **Waiting on**, choose **The client**.
+2. Under **Board status**, choose **Waiting for client**. **Waiting on** is then set to **The client**.
+3. If the section waits on someone else, change **Waiting on** to **ACRA** or **Internal approval**.
 
 {% /steps %}
 

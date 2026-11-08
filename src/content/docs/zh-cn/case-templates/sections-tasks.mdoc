@@ -71,8 +71,12 @@ sidebar:
 
 ## 任务选项
 
-- 任务可以按案子到期日到期：**从哪里起算** 选 **案子到期日**（The case due date）。
-- 在其他系统中完成的工作，在 **选项**（Options）下打开 **在 StaffOnAI 之外完成**（Done outside StaffOnAI），任务行会显示 **平台外**（Off-platform）标签。
+- 任务可以按案子到期日到期：**从哪里起算** 选 **案子到期日**（The case due date）。案子到期日由 **详情** 页签中的 **默认案子时长** 算出。
+- 在 **选项**（Options）下：
+  - **必做**（Must be done）默认打开。此类案子在全部打开了 **必做** 的任务都勾掉后即完成；关掉此项的任务显示 **可选**（Optional）标签，不会让案子一直无法完成。
+  - **阻塞整个分区**（Blocks the section）默认打开：这项任务勾掉之前，分区不算做完。允许拖后的任务可以关掉此项，任务行随即显示 **不阻塞**（Non-blocking）。
+  - **只在需要时才做**（Only sometimes needed）会给任务标上 **有条件**（Conditional），没动过的任务不会被当成逾期的活。
+  - 在其他系统中完成的工作，打开 **在 StaffOnAI 之外完成**（Done outside StaffOnAI），任务行会显示 **平台外**（Off-platform）标签。
 
 {% screenshot id="case-templates/task-options" caption="任务选项：已打开「在 StaffOnAI 之外完成」。" /%}
 
@@ -83,8 +87,8 @@ sidebar:
 {% steps %}
 
 1. 在 **催客户**（Chasing the client）下设置提醒，例如 **到期前提醒**（Remind before it’s due）选 `到期前 2 天`，**持续提醒**（Keep reminding）选 `每 3 天`，并打开 **逾期后再提醒一次**（Remind again once overdue）。
-2. 在 **看板状态**（Board status）中选 **等客户**（Waiting for client）。
-3. **在等谁**（Waiting on）选 **客户**（The client）。
+2. 在 **看板状态**（Board status）中选 **等客户**（Waiting for client），**在等谁**（Waiting on）随即设为 **客户**（The client）。
+3. 如果该分区在等别人，把 **在等谁** 改为 **ACRA** 或 **内部审批**（Internal approval）。
 
 {% /steps %}
 
