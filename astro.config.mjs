@@ -53,8 +53,8 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'bookkeeping' } }],
         },
         {
-          label: 'CRM · Contracts',
-          translations: { 'zh-CN': 'CRM · 合同管理' },
+          label: 'CRM',
+          translations: { 'zh-CN': 'CRM' },
           items: [{ autogenerate: { directory: 'crm' } }],
         },
         {
