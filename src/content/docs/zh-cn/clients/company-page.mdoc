@@ -1,0 +1,56 @@
+---
+title: 公司页面
+description: 公司页面的页头、摘要和各个页签，以及怎么修改公司资料、GST 设置、银行户口和 KYC。
+sidebar:
+  order: 3
+---
+
+在列表里选一家公司打开它的页面。顶部显示名称、它是 **Client**（客户）还是 **Related entity**（关联主体），以及 UEN、行业和司法辖区；ACRA 状态需要注意时也会显示。右上角的按钮是 **新建商机**（New opportunity，有 CRM 套件的用户可见，见 [CRM · 合同管理](/zh-cn/crm/overview/)），经理还能看到 **结束这家客户的服务**（End service for this client，见[结束或恢复服务](/zh-cn/clients/end-service/)）。
+
+如果 ACRA 显示这家公司已注销或已终止，而事务所仍在服务它，页面上会有一条提示，并写明 ACRA 数据的日期。
+
+页头下面的 **Contact summary** 显示客户未收和逾期的 **Invoices**，以及 **Work Items**（进行中、等待中、受阻和逾期的案子）。选 **Hide summary** 可以收起。
+
+## 页签
+
+| 页签 | 内容 |
+|---|---|
+| **详情**（Details） | 公司资料、联系方式、会计日期、GST、银行户口、访问权限、客户团队和合规信息（见下文）。 |
+| **时间线**（Timeline） | 公司的备注、案子和文件，按时间排列。在输入框里写备注，选 **Post** 发出；输入 @ 可以通知同事。用 **全部**、**备注**、**案子**、**文件** 筛选。 |
+| **动态**（Activity） | 公司资料的每一次改动：字段、改了什么、谁改的、什么时候。 |
+| **案子**（Cases） | 公司的案子，分为进行中、已完成和已关闭。**开立案子**（Start a Case）为这家公司开新案子（见[工作区与案子](/zh-cn/getting-started/workspaces-cases/#开立案子)）。 |
+| **工时与预算**（Time & Budget） | 尚未启用：还不记录工时与预算。 |
+| **关系**（Relationships） | 董事、股东、秘书、联系人和关联公司。见[关系](/zh-cn/clients/relationships/)。 |
+| **服务**（Services） | 客户已签合同里的服务，以及成交价和交付情况。**起案**（Start a case）为某项服务开案子。 |
+| **发票**（Invoices） | 客户的发票、未收和逾期金额、**+ 新建发票**，以及开关催款提醒的 **该客户的催款提醒**。见[发票](/zh-cn/invoices/overview/)。 |
+| **账簿**（Books） | 客户的账，只读。有税务套件的用户可见。要修改账目，请开立记账案子（见[记账工作台](/zh-cn/bookkeeping/getting-started/)）。 |
+
+如果公司限定了权限名单而你不在名单上，有些页签可能看不到（见[谁能看到公司](/zh-cn/clients/access/)）。
+
+## 修改公司资料
+
+在 **详情** 里选一个字段，修改后按 Enter 或点到别处；每个字段单独保存。各部分如下：
+
+| 部分 | 内容 |
+|---|---|
+| **基本信息**（Basics） | 名称、UEN、成立日期、行业、**语言**（给客户的文件和消息用的语言）、**联系人类型**（例如直接客户、供应商、客户的控股公司）和 **标签**。 |
+| **联系方式**（Contact details） | 地址、邮箱、电话、手机、网站和 SharePoint 链接。**按邮编带出地址** 按新加坡邮编查地址，核对后选 **保存此地址**。 |
+| **会计信息**（Accounting details） | **Financial Year End** 和 **Jurisdiction**。**Next AGM Due**（FYE + 6 个月）和 **Next AR Due**（FYE + 7 个月）按财年结束日推算，不含 ACRA 批准的延期。**Last AGM Date** 和 **Last AR Filed** 由年报案子填写。 |
+| **GST** | 见下文。 |
+| **银行账户**（Bank accounts） | 见下文。 |
+| **访问权限**（Access） | 谁能看到这家公司。见[谁能看到公司](/zh-cn/clients/access/)。 |
+
+右侧：
+
+- **客户团队**（Client team）——**指派给**（由经理修改），以及客户的负责人：负责董事、负责经理、负责人、负责会计、负责秘书和 Corppass 管理员。
+- **合规**（Compliance）——KYC 状态、**ACRA 公司状态** 及其日期，以及 SSIC 代码。**编辑 SSIC 与 KYC** 修改 SSIC 代码和司法辖区；经理还能设 **KYC 结论**：状态（未开始、通过、未通过或过期）、结论日期、过期日期和 KYC 报告。
+
+### GST
+
+**GST** 部分显示公司是否已注册。选 **Edit GST settings**，设好 **GST Company**、**GST No.**、**GST Effective From**、**GST Deregistered On**、**GST Filing Frequency**（Quarterly 或 Monthly）和 **GST Quarter Cycle**，再选 **Save GST settings**。**GST Settings Set By** 显示这些设置是人设的还是 AI 记账运行设的。
+
+**IRAS GST 登记**面板把 GST 号码与 IRAS 登记比对，有出入时会提示。选 **立即向IRAS核对** 马上核对；否则会定期自动再核对。核对结果从不改动你的设置。
+
+### 银行户口
+
+公司的银行户口和公司信用卡登记表，记账时会用到。选 **新增银行户口**，填好类型、币种、银行、标签、账号和开户日期，选 **登记户口**。账号只显示部分号码。用 **修改** 更正，户口关闭后选 **关闭户口**，用 **接到账上** 把它接入记账。

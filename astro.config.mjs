@@ -43,6 +43,11 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'documents' } }],
         },
         {
+          label: 'Clients',
+          translations: { 'zh-CN': '客户' },
+          items: [{ autogenerate: { directory: 'clients' } }],
+        },
+        {
           label: 'Bookkeeping workbench',
           translations: { 'zh-CN': '记账工作台' },
           items: [{ autogenerate: { directory: 'bookkeeping' } }],

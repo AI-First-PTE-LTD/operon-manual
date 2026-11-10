@@ -1,0 +1,55 @@
+---
+title: Companies
+description: Find a company in the list, filter it, read its columns, and add a new client company.
+sidebar:
+  order: 2
+---
+
+## The list
+
+Select **Companies** under **Clients**. The list shows your client companies; the companies with the most recent activity come first. Scroll down to load more.
+
+| Column | Meaning |
+|---|---|
+| **Name** | The company name. |
+| **UEN** | The company's registration number. |
+| **Jurisdiction** | Where the company is registered, for example SG. |
+| **Status** | Your firm's status for the client: Active, Dormant, Prospect or Archived. |
+| **ACRA status** | The company's status at ACRA, for example **Live** or **Struck off**. Red means struck off, cancelled or ceased; amber means to be struck off or in liquidation. "—" means unknown or no UEN. |
+| **Work** | The client's cases: how many are in progress, waiting, overdue (in red), done or blocked. |
+| **Related Contacts** | The people linked to the company. |
+| **Docs** | The number of documents. |
+| **KYC** | The KYC status. A passed KYC whose expiry date has passed shows **Expired**. |
+| **FYE** | The financial year end. |
+
+Select a row to open [the company page](/en/clients/company-page/).
+
+## Search and filter
+
+Type a name or a UEN in **Search companies**. The search covers all companies, not only those already loaded.
+
+Select **Filter** for **Quick filters**:
+
+| Filter | Choices |
+|---|---|
+| **Show** | **Clients** (the default), or **All entities** to include related companies such as shareholders and vendors. With **All entities**, a **Type** column shows Client or Related. |
+| **Status** | **Active**, **Dormant**, **Prospect**, **KYC pending**, **Rejected**, **Archived**. Archived companies are shown only when **Archived** is chosen. |
+| **KYC** | **Not started**, **Passed**, **Failed**, **Expired**. |
+| **Country** | One or more countries, or **No country recorded**. |
+| **Group by** | Group the list by **Status**, **KYC**, **Jurisdiction** or **Country**. |
+
+Each choice shows how many companies it matches. **Clear all** removes the filters.
+
+## Add a client company
+
+{% steps %}
+1. Select **+ New Company**. The **New client** dialog opens.
+2. Type the **Company name**. The other fields are optional: **UEN**, **Status** (Active, Dormant or Prospect), **Industry**, **Tags**, **Jurisdiction**, **Registered address**, **Date of incorporation**, **Financial year end** and **Foreign registration number**.
+3. Select **Create**.
+{% /steps %}
+
+The name and UEN are not looked up at ACRA when you create a company; check them yourself. The weekly ACRA update fills in the company's ACRA status afterwards (see [ACRA updates](/en/clients/end-service/#acra-updates)).
+
+**If the company already exists.** Two companies cannot have the same name or the same UEN. If you type one that is already used, the dialog says so and offers **Open** the existing company or **Use this company**. If the existing company is archived, select **Restore archived client** to bring it back instead of creating a new one.
+
+**What Operon creates with the company.** A new client company gets its document folders in **Documents › Client Docs**: **ACCOUNTS & TAX**, **BILLS**, **INCORP**, **MARKETING**, **SECRETARY** and **VIP**, and the bookkeeping folders **Account**, **GST**, **Tax** and **FS**. See [Documents](/en/documents/overview/#folders-created-by-operon).
