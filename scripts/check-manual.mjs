@@ -12,8 +12,10 @@
 //   - a manifest entry that no page references
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const root = new URL('..', import.meta.url).pathname;
+// fileURLToPath, not URL#pathname: on Windows the pathname is "/C:/..." and join() turns it into "C:\C:\...".
+const root = fileURLToPath(new URL('..', import.meta.url));
 const docsDir = join(root, 'src/content/docs');
 const locales = ['en', 'zh-cn'];
 const strict = process.argv.includes('--strict') || process.env.MANUAL_STRICT_SCREENSHOTS === '1';
