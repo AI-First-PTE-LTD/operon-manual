@@ -1,0 +1,46 @@
+---
+title: Stages and vocabularies
+description: Set up the pipeline stages, their probabilities and follow-up reminders, and the lists of lead types, sources and outcome reasons.
+sidebar:
+  order: 5
+---
+
+**Who:** everyone can read the stages; team leads and tenant admins can change them. **Where:** on the board, **View settings** › **Stages** or **Vocabularies**; on an opportunity, **Manage stages**.
+
+## Pipeline stages
+
+A new firm starts with these stages. You can rename them, reorder them and add your own.
+
+| Stage | Counts as | Default probability | Follow-up after |
+|---|---|---|---|
+| New | Still in play | 10% | 3 days |
+| Qualified | Still in play | 30% | 5 days |
+| Cold | Still in play | 5% | 14 days |
+| Agreed | Still in play | 80% | 3 days |
+| Won | Won | 100% | — |
+| Lost | Lost | 0% | — |
+| Cancelled | Cancelled | 0% | — |
+
+In **Pipeline stages**, each stage has:
+
+- **Stage name** and **Colour**.
+- **Default probability** — used for the weighted forecast of deals in this stage that have no probability of their own.
+- **This stage means** — **Still in play**, **Won**, **Lost** or **Cancelled**. Reports count deals by this meaning, not by the stage name.
+- **Show on the board**.
+- **Chase after … days without movement** with **Remind** — the follow-up reminder for deals that stay too long in this stage (see [Follow-up reminders](/en/crm/follow-ups/)).
+
+**+ Add stage** adds a stage. To delete a stage that still has deals, choose a stage to **Move them to**, then **Move & delete**.
+
+Renaming a stage or changing what it means does not change the deals already recorded in it.
+
+## Vocabularies
+
+**Board vocabularies** are the choice lists used on opportunities:
+
+| List | Used for |
+|---|---|
+| **Lead types** | The kind of lead, for example Existing Client or New Potential Client. |
+| **Sources** | Where the lead came from, for example Search engine or Newsletter. |
+| **Outcome reasons** | Why a deal was lost or cancelled. One list serves both, and a reason must be chosen when a deal is lost or cancelled. |
+
+To retire an entry without changing the deals that used it, select **Stop offering**; **Offer again** brings it back.

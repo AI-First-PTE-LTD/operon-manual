@@ -1,0 +1,51 @@
+---
+title: The opportunity board
+description: Find, filter and sort opportunities, save views, export them, and create a new opportunity.
+sidebar:
+  order: 3
+---
+
+An opportunity is a potential piece of work for a client — a lead, a quote, a deal. Select **Opportunity** in the CRM workspace to open the board of all opportunities you can see.
+
+## The board
+
+Each opportunity is a card in the column of its stage (see [Stages and vocabularies](/en/crm/stages/)). The bar at the top shows, for what is on the board:
+
+- **Opportunities** — how many.
+- **Expected revenue** — their total expected revenue.
+- **Weighted** — expected revenue × probability, added up. For a deal without its own probability, the stage's default probability is used.
+
+Drag a card to another column to move it to that stage; Operon asks for a note first (see [Move to another stage](/en/crm/opportunity-record/#move-to-another-stage)). Closed stages (won, lost, cancelled) fold into narrow bars on the right; you can still drop a card on them. Cards from earlier years fold under the year.
+
+## Find opportunities
+
+- **Search opportunities** — by name.
+- **Person** — the opportunities of one person.
+- **Filter** — **Quick filters**: the outcome (**In play**, **Won**, **Lost**, **Cancelled**), stage, service, lead type, source, salesperson, client, the date created, the expected close date, and a range of expected revenue. **Save as new view** keeps the filter as a view.
+
+## Views
+
+A view is a saved set of filters and display settings. **All opportunities** is the built-in view. **Save view** saves your changes to the current view; **Save view as…** saves them as a new one. Views are your own; you can make one your default.
+
+**View settings** has:
+
+- **Kanban** or **List**. The list shows the opportunity, stage, client, PIC, expected close date and amount.
+- The fields shown on cards: priority, client, PIC, expected revenue.
+- **Display closed stages**.
+- The sort order: date created, name, last updated, expected revenue, expected close, or time in stage.
+- **Export to CSV** — the opportunities in the view, as a spreadsheet.
+- **Stages** and **Vocabularies** (see [Stages and vocabularies](/en/crm/stages/)).
+- Rename, duplicate or delete the view.
+
+## Create an opportunity
+
+{% steps %}
+1. Select **+ New Opportunity** on the board, or **New opportunity** at the top of a company or a person in **Clients**.
+2. Under **Contact**, choose **Choose existing** to pick a person or company already in Operon, or **Someone new** to type the contact's details. A new contact with an e-mail or phone number is saved under **Clients** › **People**.
+3. Fill in the **Stage**, **Manager in charge**, **Director in charge**, **Source**, **Market** (the country of the work, not the client's address) and at least one of the **Service categories**. These are required.
+4. Optionally set the **PIC**, **Lead type**, **Expected revenue** with its **Currency**, **Expected close** and **Referred by**.
+5. Check the **Opportunity name**. Operon composes it from the year and number, the service categories (as codes such as INCORP, SEC, TAX), the market and the client — for example `26-0042_SEC/TAX SG ABC PTE. LTD.`. The number is given when the opportunity is created. You can type another name.
+6. Select **Create Opportunity**.
+{% /steps %}
+
+The Manager in charge is notified when an opportunity is created with them in that role.
