@@ -1,0 +1,92 @@
+---
+title: Two-step verification and account security
+description: Set up a passkey or an authenticator app, keep recovery codes, sign in with two-step verification, and change your password.
+sidebar:
+  order: 3
+---
+
+Two-step verification asks for a second proof after your password, so that a stolen password alone is not enough to sign in. It is required for tenant admins and recommended for everyone.
+
+All of it is on one page: select your avatar › **Settings** › **Account security**. The page lists **Passkey**, **Authenticator app**, **Password sign-in** and **Password**, each with its state and a **Set up**, **Manage** or **Change** button.
+
+## Choose a method
+
+| Method | How it works | Best for |
+|---|---|---|
+| **Passkey** | Your device confirms it is you with a fingerprint, face or PIN. A passkey also lets you sign in without a password, and it cannot be phished. | Computers and phones that support passkeys. |
+| **Authenticator app** | An app on your phone (for example Google Authenticator, Microsoft Authenticator or 1Password) shows a six-digit code that changes every 30 seconds. | Devices that cannot use passkeys. |
+
+An account uses one method at a time. To change from one method to the other, turn two-step verification off and set up the other method. There is no code by e-mail or SMS.
+
+**Recovery codes** are the fallback when you cannot use your passkey or your app. There are 10 codes in a set, and each works once.
+
+{% aside type="caution" title="Tenant admins must use two-step verification" %}
+A tenant admin can create users, reset their passwords and act on their behalf, so a password alone is not enough. When a tenant admin without two-step verification signs in, Operon shows **Administrator accounts must use two-step verification**, and the rest of Operon cannot be used until a passkey or an authenticator app is set up. When it is done, select **Home** in the side bar to continue.
+
+We recommend that a firm has at least two tenant admins, so that each can reset the other's two-step verification if a device is lost.
+{% /aside %}
+
+## Set up a passkey
+
+{% steps %}
+1. On **Account security**, select **Set up** next to **Passkey**.
+2. Select **Add a passkey**. Your browser or device asks you to create a passkey; confirm with your fingerprint, face or PIN.
+3. The passkey is listed with the date it was added. To use it from another computer or phone too, select **Add another device**.
+{% /steps %}
+
+To rename a passkey, select the pencil next to it, type the name and select **Save**. To remove one, select the bin and confirm. Your only passkey cannot be removed this way: removing it would turn two-step verification off, which is a separate action (below).
+
+## Set up an authenticator app
+
+{% steps %}
+1. On **Account security**, select **Set up** next to **Authenticator app**, then **Set up authenticator app**.
+2. **1. Scan this with your authenticator app**: scan the QR code with the app. The entry appears in the app as StaffOnAI with your e-mail address. If you cannot scan it, select **Can't scan it? Type this key instead** and type the key into the app.
+3. **2. Enter the code it shows**: type the six-digit code from the app and select **Turn on**.
+{% /steps %}
+
+## Keep your recovery codes
+
+Right after you turn on two-step verification, create a set of recovery codes and keep it somewhere safe, away from your phone or computer.
+
+{% steps %}
+1. On the passkey or authenticator page, find **Recovery codes**.
+2. Select **Generate new**, then **Replace them**.
+3. Under **Save these now**, select **Copy all** and store the codes, for example in your password manager.
+4. Select **I have saved these**.
+{% /steps %}
+
+The card shows how many codes remain. When two or fewer remain, Operon reminds you to generate a new set. A new set replaces the old one: the old codes stop working.
+
+{% aside type="note" %}
+Turning on two-step verification signs you out on all your other devices.
+{% /aside %}
+
+## Sign in with two-step verification
+
+After you type your e-mail and password and select **Sign in**, the **Two-step verification** page opens. It must be completed within 5 minutes; after that, Operon asks you to sign in again.
+
+| Method | What you do |
+|---|---|
+| Authenticator app | Type the six-digit code from the app in **Authentication code**. It is checked as soon as the sixth digit is typed. |
+| Passkey | Select **Use your passkey** and confirm on your device. |
+| Recovery code | Select **Use a recovery code instead**, type a code in **Recovery code** and select **Verify**. Each code works once. |
+
+If you have lost your phone or passkey and have no recovery code left, ask a tenant admin to reset your two-step verification (**Admin › Users** › **Reset two-step**). Then sign in with your password and set it up again.
+
+## Turn two-step verification off
+
+On the passkey or authenticator page, select **Turn off** under **Turn off two-step verification**. Type your **Password** and confirm with your current code or your passkey. A tenant admin cannot work without two-step verification, so turning it off only makes sense to change to the other method.
+
+## Sign in with a passkey only
+
+When you have a passkey, you can turn password sign-in off, so that your account can only be opened with the passkey: select **Password sign-in** on **Account security**, then **Turn password sign-in off**, and confirm with your password and your passkey. To allow it again, select **Allow password sign-in again** and confirm with your passkey.
+
+## Change your password
+
+{% steps %}
+1. On **Account security**, select **Change** next to **Password**.
+2. Type the **Current password**, the **New password** (at least 8 characters) and **Confirm password**.
+3. Select **Confirm**. If two-step verification is on, confirm with your current code or your passkey.
+{% /steps %}
+
+After the password is changed, you are signed out on all your other devices.

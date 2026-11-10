@@ -1,0 +1,82 @@
+---
+title: 账号与登录
+description: 怎么拿到账号、怎么登录和退出，以及忘记密码时怎么办。
+sidebar:
+  order: 2
+---
+
+## 拿到账号
+
+账号由事务所的管理员建立。你不能自己加入一个已有的事务所：需要账号时，请找你的租户管理员。
+
+管理员在 **管理 › 用户**（Admin › Users）用 **新建用户**（Add user）建好你的账号，并选择你第一次怎么登录：
+
+| 首次登录方式 | 你会收到 | 你要做的 |
+|---|---|---|
+| **发送设置密码链接邮件**（Email a set-password link，默认） | 一封主题为 "You're invited to StaffOnAI" 的英文邮件。 | 选邮件里的 **Set your password**。在 **设置新密码**（Set a new password）页面输入两遍至少 8 位的密码，选 **保存新密码**（Save the new password），然后登录。链接在发出 72 小时后失效。 |
+| **生成临时密码**（Generate a temporary password） | 管理员转交给你的一个临时密码。 | 用它登录。Operon 随后要求你设置自己的密码（**首次登录：请设置新密码**）。 |
+
+链接已过期时，请管理员在你的用户上用 **重置密码**（Reset password）重新发送。
+
+{% aside type="note" title="租户管理员还要设置两步验证" %}
+如果你的角色是 **租户管理员**，第一次登录后 Operon 会立即要求你设置两步验证，设置好之前其他功能都不能用。见[两步验证与账号安全](/zh-cn/getting-started/account-security/)。
+{% /aside %}
+
+## 登录
+
+{% steps %}
+1. 打开 [app.staffonai.com](https://app.staffonai.com)。
+2. 输入 **邮箱**（Email）和 **密码**（Password），选 **登录**（Sign in）。
+3. 如果你的账号开启了两步验证，用验证器应用或通行密钥确认（见[用两步验证登录](/zh-cn/getting-started/account-security/#用两步验证登录)）。
+{% /steps %}
+
+登录后 Operon 打开 **首页**。如果你登录前打开的是某个页面的链接，则打开那个页面。
+
+**用通行密钥登录。** 如果你的账号已添加通行密钥，可以不输入邮箱和密码，直接选 **用通行密钥登录**（Sign in with a passkey），再在设备上用指纹、面容或 PIN 确认。
+
+**本设备上的账号。** Operon 会记住在这个浏览器上登录过的账号的姓名和邮箱，列在 **选择账号**（Choose a user）下。选你的账号再输入密码即可；密码永远不会被记住。名单上没有的账号，用 **使用其他账号**（Use another user）登录；账号旁边的移除按钮可以把它从名单上去掉。
+
+**登录页的语言。** 登录页右上角的切换开关只改变这个浏览器上登录页的语言。登录后，Operon 按你账号的语言显示（见[个人设置与帮助](/zh-cn/getting-started/settings-help/#语言)）。
+
+## 登录不上时
+
+| 提示 | 含义 | 怎么办 |
+|---|---|---|
+| **登录失败，请检查邮箱或密码**（Sign-in failed. Check the email address and password.） | 邮箱或密码不对。 | 两者都检查一遍再试，或重置密码（见下文）。 |
+| **Account temporarily locked due to too many failed attempts** | 15 分钟内失败 5 次，账号锁定 15 分钟。两步验证码输错也计入失败次数。 | 等 15 分钟后再试。 |
+| **This account signs in with a passkey.** | 你的账号已关闭密码登录。 | 用 **用通行密钥登录**；通行密钥丢了的话用恢复码。 |
+| **Account unavailable. Please contact your administrator.** | 你所在事务所的账号不可用。 | 联系你的管理员。 |
+
+其中部分提示即使在中文界面下也以英文显示。
+
+## 忘记密码
+
+{% steps %}
+1. 在登录页选 **忘记密码？**（Forgot password?）。
+2. 输入你账号的邮箱，选 **发送重置链接**（Send a reset link）。
+3. 打开主题为 "Reset your StaffOnAI password" 的邮件，选里面的链接。页面会写明链接的有效期，通常是 24 小时。没收到的话，请查看垃圾邮件文件夹。
+4. 在 **设置新密码** 页面的 **新密码**（New password）和 **再次输入新密码**（New password again）中输入至少 8 位的新密码，选 **保存新密码**。
+5. 选 **返回登录**（Back to sign-in），用新密码登录。
+{% /steps %}
+
+密码重置后，你在所有设备上的登录都会被退出。链接已过期或已用过时，重新申请一次，或请管理员替你重置密码。
+
+## 保持登录与退出
+
+使用 Operon 期间会一直保持登录。连续 7 天没有任何操作，或从登录起满 30 天，登录会失效；这时 Operon 显示 **登录已失效，请重新登录。** 并打开登录页。
+
+要退出，选侧边栏底部的头像，再选 **退出登录**（Log out）。**设置** 菜单底部也有 **退出登录**。要退出其他设备，见[会话与设备](/zh-cn/getting-started/settings-help/#你的设置)。
+
+## 注册新的事务所
+
+如果你的事务所还没有使用 Operon，可由事务所的授权人员注册：在登录页选 **新公司？**（New company?）› **注册账号**（Create an account）。
+
+{% steps %}
+1. 输入 **姓名**（Your name）、**公司邮箱**（Company email）和 **密码**（Password），选 **创建账户**（Create account）。请用公司邮箱：Gmail、Outlook 等公共邮箱不能注册。
+2. 在 5 天内打开验证邮件并选其中的链接。
+3. 填写申请：**公司信息**（Company details，上传公司的 ACRA BizFile PDF 并核对读出的信息）、**签署人**（Signatory，选签署的董事，或说明你获得了某位董事的授权并上传授权书）、**签署协议**（Sign agreements）。然后选 **提交审核**（Submit for review）。
+4. 申请经审核后，结果会以邮件通知你。需要修改时，申请显示 **申请需修改**（Correction required）。
+5. 显示 **账号已开通**（Account activated）后，用同一邮箱和密码登录。你是事务所的租户管理员，所以 Operon 会先要求你设置两步验证。
+{% /steps %}
+
+签好的协议保存在 **设置 › 公司协议**（Settings › Company agreements）。如果公司已有 Operon 账号，请找那个账号的管理员邀请你。

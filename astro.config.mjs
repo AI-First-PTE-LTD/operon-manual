@@ -33,6 +33,11 @@ export default defineConfig({
       editLink: { baseUrl: 'https://github.com/AI-First-PTE-LTD/operon-manual/edit/main/' },
       sidebar: [
         {
+          label: 'Getting started',
+          translations: { 'zh-CN': '入门' },
+          items: [{ autogenerate: { directory: 'getting-started' } }],
+        },
+        {
           label: 'Bookkeeping workbench',
           translations: { 'zh-CN': '记账工作台' },
           items: [{ autogenerate: { directory: 'bookkeeping' } }],
