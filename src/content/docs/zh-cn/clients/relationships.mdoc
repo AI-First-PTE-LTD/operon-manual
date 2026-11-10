@@ -1,0 +1,42 @@
+---
+title: 关系：董事、股东与关联公司
+description: 记录公司的董事、股东、秘书和联系人，以及公司之间的关系。
+sidebar:
+  order: 4
+---
+
+公司的 **关系**（Relationships）页签列出在这家公司担任角色的所有人和公司，按角色分组：董事、股东、秘书、联系人、法人股东等。每行显示 **名称**、**角色**、股东的 **持股 %**，以及 **委任日** 和 **结束日**。股东一组显示持股合计。
+
+下面还有：
+
+- **供应商**——公司的供应商。
+- **本公司在别处的角色**——这家公司本身在别处担任的角色，例如是另一家公司的股东。
+- **可登记控制人（RORC）** 和 **代名董事 / 代名股东（ROND / RONS）**。
+- **Ownership**——公司上下游的持股关系图。只显示 Operon 里记录了的持股。
+
+选某人的名字，可以看到他的电话和邮箱，或打开他的页面。
+
+角色名称和分组标题在中文界面下也显示为英文，例如 Director、Shareholder、Secretary、Contact person。
+
+## 添加角色
+
+{% steps %}
+1. 在 **关系** 页签选 **添加角色**（Add role）。
+2. **这个角色由谁担任？** 选 **个人**（Individual）或 **机构**（Organization）。
+3. 搜索这个人或这家公司。Operon 里还没有的话，就在这里新建：
+   - **个人：** 选证件类型（NRIC、FIN 或 Passport），输入证件号码，选 **查一下**（Look up）。如果此人已经存在，Operon 直接沿用那条记录；证件号码只显示部分。
+   - **机构：** 选新加坡公司（UEN）或外国公司（司法辖区加注册号）。输入 UEN 时，Operon 会去 ACRA 查公司名称并自动填好；查不到时请自己核对名称。在这里新建的公司是关联主体，不是客户。
+4. 选 **角色**，股东还要填持股比例（%）。设好角色开始的日期。
+5. 选 **保存**（Save）。
+{% /steps %}
+
+## 结束或删除角色
+
+- **结束**（End）——角色已经结束，例如董事辞任。角色移到 **已结束的关系**，历史得以保留。
+- **删除角色**（Delete role）——角色是误录的。经理可以在 **已删除** 里用 **恢复**（Restore）把删除的角色找回来。
+
+## 可以记录的角色
+
+Director、Nominee director、Shareholder、Nominee shareholder、Secretary、Chairman、Partner、Manager、Accountant、Contact person、Sole proprietor、Agent、Employee、Corporate representative、Beneficial owner、Registrable controller、CLG member、Vendor、Billing entity、Related party、Referrer，以及亲属或共同职务关系（Spouse、Relative、Friend、Common director、Common shareholder）。
+
+在公司担任角色的人，可以在合同上被选为代表公司签署的人。

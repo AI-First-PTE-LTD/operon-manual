@@ -1,0 +1,44 @@
+---
+title: Who can see a company
+description: Limit a company to an access list, and choose what a Partial company hides.
+sidebar:
+  order: 5
+---
+
+By default everyone in the firm can see every company. For a sensitive client, you can limit the company to an access list.
+
+## The three levels
+
+| Level | Who can see what |
+|---|---|
+| **Everyone** | Everyone in the firm sees the company and all its tabs. |
+| **Partial** | Everyone sees the company, but some of its information is only for the people on the access list. Which information is set for the whole firm (below). |
+| **Restricted** | Only the people on the list can find or open the company and its documents. For everyone else it does not appear anywhere. |
+
+Tenant admins can always see everything.
+
+## Set a company's access
+
+{% steps %}
+1. Open the company and go to **Details** › **Access**. You can change it if you are a tenant admin or have **Can manage** on the company; everyone else sees the level and their own access.
+2. Choose **Everyone**, **Partial** or **Restricted**.
+3. For **Partial** or **Restricted**, build the list: **Add people, departments or Partners**, and give each **Can view**, **Can edit** or **Can manage**. **Expires (optional)** ends someone's access on a date.
+4. Select **Save access**.
+{% /steps %}
+
+You cannot remove your own **Can manage** access.
+
+On a limited company, the people on the list can open its documents; the assignee and the creator of a case for the company can also open that case's documents. See [Documents › Who can see what](/en/documents/access/#client-docs).
+
+## What a Partial company hides
+
+A tenant admin chooses this for the whole firm in **Admin** › **Partial access rules**. Under **Limited on Partial companies**, tick the items that only the access list may see: Timeline, Activity, Cases, Time & Budget, Details, Relationships, Services, Invoices and Documents. If nothing has been saved, only **Documents** is limited.
+
+Each item is marked:
+
+- **Enforced** — the information is protected everywhere in Operon. This applies to **Documents**: the company's folders in the document library are locked.
+- **Hides the tab only** — the tab is hidden on the company page, but the same information can still appear elsewhere, for example on a case, an invoice or a workspace board.
+
+{% aside type="caution" %}
+For a client whose information must not be seen by others in the firm, use **Restricted**, not **Partial**: only **Restricted** hides the company everywhere.
+{% /aside %}
