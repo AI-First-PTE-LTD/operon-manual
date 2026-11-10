@@ -38,6 +38,11 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'getting-started' } }],
         },
         {
+          label: 'Documents',
+          translations: { 'zh-CN': '文档库' },
+          items: [{ autogenerate: { directory: 'documents' } }],
+        },
+        {
           label: 'Bookkeeping workbench',
           translations: { 'zh-CN': '记账工作台' },
           items: [{ autogenerate: { directory: 'bookkeeping' } }],

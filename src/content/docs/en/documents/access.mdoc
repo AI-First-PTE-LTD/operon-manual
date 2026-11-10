@@ -1,0 +1,67 @@
+---
+title: Who can see what
+description: Who can open, upload to and delete in each area of the library, how to share an internal folder, and what "Sensitive" means.
+sidebar:
+  order: 2
+---
+
+What you can do in the library depends on the area, on the folder, and on your role. A folder or file that you cannot open is not shown to you at all — it does not appear in the tree, in the list or in search results.
+
+## Internal Docs
+
+| Where | Tenant admin | Manager | Member |
+|---|---|---|---|
+| The top level of **Internal Docs**, and folders that are not restricted | Open, upload, rename, delete, share | Open, upload, rename, delete, share | Open and download only |
+| A **Restricted** folder | Everything | According to the folder's access list | According to the folder's access list |
+
+A restricted folder shows **Restricted** and the number of people and groups on its list; in the tree it has a lock. Only the people and groups on the list can see it. A folder inside a restricted folder is visible only to people who are on the list of every restricted folder above it.
+
+On an access list, each person or group has one of three levels:
+
+| Level | Allows |
+|---|---|
+| **Can view** | Open and download. |
+| **Can edit** | Also upload, create folders and rename. |
+| **Can manage** | Also delete and change who has access (**Share**). |
+
+Tenant admins always have full access.
+
+### Share an internal folder
+
+{% steps %}
+1. Open the folder in **Internal Docs** and select **Share**. **Share** is shown if you can manage the folder.
+2. Choose who can open it:
+   - **Same as "…"** — everyone who can open the folder above can open this one.
+   - **Restricted** — only the people and groups you list.
+3. For **Restricted**, use **Add people, departments or Partners**, and set **Can view**, **Can edit** or **Can manage** for each. **Expires (optional)** ends someone's access on a date.
+4. Select **Save**.
+{% /steps %}
+
+You cannot remove your own **Can manage** access. Only folders in **Internal Docs** can be shared.
+
+When you move a file into a folder that a different group of people can see, Operon first shows **Moving changes who can see this document**, with who can see it now and after the move. Select **Move anyway** to go ahead.
+
+## Client Docs
+
+Every user of the firm can open, upload, rename and delete the documents of a client company — unless the company's documents are limited to an access list.
+
+A company limited to an access list has a lock after its name. Then:
+
+- A tenant admin can do everything.
+- The people on the company's list can do what the list allows.
+- The assignee and the creator of a case for the company can open and edit that case's documents, but not delete them.
+- Everyone else sees **Only people on the access list can see these documents.**
+
+The company's access list is kept on the company in **Clients**, not in the library. Ask a tenant admin or the person who manages the company's access if you need it.
+
+## Cases
+
+The **Cases** area lists the cases assigned to you and the cases you created. Who can open a case's files is set out in the case's **Details** › **Privacy** (see [Workspaces and cases](/en/getting-started/workspaces-cases/#the-case-page)): normally the case's department, the managers above the case owner, and tenant admins. The assignee and the creator can upload and edit, but not delete.
+
+## When a button is greyed out
+
+If **Upload** or **New folder** cannot be selected, point at it to see why — for example, the folder is view-only for you, or you are not on the company's access list. Ask the folder's or the company's administrator for access.
+
+## Sensitive documents
+
+Operon gives each file a sensitivity, **HIGH** or **LOW**, from its document type. Files in **Internal Docs**, and files whose type is unknown, are always **HIGH**. Highly sensitive files are marked **Sensitive** in the list and are kept encrypted. You do not set the sensitivity yourself.
