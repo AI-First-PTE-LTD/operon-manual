@@ -1,0 +1,82 @@
+---
+title: Your account and signing in
+description: How you get an account, how to sign in and out, and what to do when you forget your password.
+sidebar:
+  order: 2
+---
+
+## Get an account
+
+Accounts are created by your firm's administrator. You cannot add yourself to an existing firm: if you need an account, ask your tenant admin.
+
+The administrator creates your account in **Admin › Users** with **Add user**, and chooses how you sign in for the first time:
+
+| First sign-in | What you receive | What you do |
+|---|---|---|
+| **Email a set-password link** (the default) | An e-mail with the subject "You're invited to StaffOnAI". | Select **Set your password** in the e-mail. On the **Set a new password** page, type a password of at least 8 characters twice and select **Save the new password**. Then sign in. The link expires 72 hours after it is sent. |
+| **Generate a temporary password** | A temporary password, passed to you by the administrator. | Sign in with it. Operon then asks you to choose your own password (**First sign-in: set a new password**). |
+
+If the link has expired, ask the administrator to send a new one with **Reset password** on your user.
+
+{% aside type="note" title="A tenant admin also sets up two-step verification" %}
+If your role is **Tenant admin**, Operon asks you to set up two-step verification right after the first sign-in, and nothing else can be used until it is done. See [Two-step verification and account security](/en/getting-started/account-security/).
+{% /aside %}
+
+## Sign in
+
+{% steps %}
+1. Open [app.staffonai.com](https://app.staffonai.com).
+2. Type your **Email** and **Password**, and select **Sign in**.
+3. If two-step verification is on for your account, confirm with your authenticator app or your passkey (see [Sign in with two-step verification](/en/getting-started/account-security/#sign-in-with-two-step-verification)).
+{% /steps %}
+
+After you sign in, Operon opens **Home**. If you opened a link to a particular page before signing in, it opens that page instead.
+
+**Sign in with a passkey.** If you have added a passkey to your account, you can select **Sign in with a passkey** instead of typing your e-mail and password. Your device then asks for your fingerprint, face or PIN.
+
+**Accounts on this device.** Operon remembers the name and e-mail of the accounts that signed in on this browser and shows them under **Choose a user**. Select your account and type the password. It never remembers the password. Use **Use another user** to sign in with an account that is not on the list, and the remove button next to an account to take it off the list.
+
+**Language of the sign-in page.** The switch at the top right of the sign-in page changes the language of this page in this browser only. After you sign in, Operon uses the language of your account (see [Personal settings and help](/en/getting-started/settings-help/#language)).
+
+## If you cannot sign in
+
+| Message | What it means | What to do |
+|---|---|---|
+| **Sign-in failed. Check the email address and password.** | The e-mail address or the password is wrong. | Check both and try again, or reset your password (below). |
+| **Account temporarily locked due to too many failed attempts** | Five failed attempts within 15 minutes lock the account for 15 minutes. Wrong two-step codes count as failed attempts. | Wait 15 minutes, then try again. |
+| **This account signs in with a passkey.** | Password sign-in is turned off for your account. | Use **Sign in with a passkey**, or a recovery code if you no longer have the passkey. |
+| **Account unavailable. Please contact your administrator.** | Your firm's account is not available. | Contact your administrator. |
+
+Some of these messages are shown in English even when the interface is in Chinese.
+
+## Forgot your password
+
+{% steps %}
+1. On the sign-in page, select **Forgot password?**.
+2. Type the e-mail address of your account and select **Send a reset link**.
+3. Open the e-mail "Reset your StaffOnAI password" and select its link. The page tells you how long the link is valid — normally 24 hours. If nothing arrives, check the spam folder.
+4. On the **Set a new password** page, type a new password of at least 8 characters in **New password** and **New password again**, and select **Save the new password**.
+5. Select **Back to sign-in** and sign in with the new password.
+{% /steps %}
+
+When the password is reset, every device where you were signed in is signed out. If the link has expired or has already been used, request a new one, or ask your administrator to reset the password.
+
+## Stay signed in, and sign out
+
+You stay signed in while you use Operon. A session ends after 7 days without any activity, and in any case 30 days after you signed in. Then Operon shows **The session has ended. Sign in again.** and opens the sign-in page.
+
+To sign out, select your avatar at the bottom of the side bar and then **Log out**. **Log out** is also at the bottom of the **Settings** menu. To sign out other devices, see [Sessions and devices](/en/getting-started/settings-help/#your-settings).
+
+## Register a new firm
+
+If your firm does not use Operon yet, an authorised person of the firm can register it: select **New company?** › **Create an account** on the sign-in page.
+
+{% steps %}
+1. Type **Your name**, **Company email** and **Password**, and select **Create account**. Use your company e-mail address: public providers such as Gmail and Outlook are not accepted.
+2. Open the verification e-mail and select its link within 5 days.
+3. Fill in the application: **Company details** (upload the company's ACRA BizFile as a PDF and check the details read from it), **Signatory** (choose the director who signs, or say that you are authorised by a director and upload the authorisation letter), and **Sign agreements**. Then select **Submit for review**.
+4. The application is reviewed, and the result is sent to you by e-mail. If it needs changes, the application shows **Correction required**.
+5. When it shows **Account activated**, sign in with the same e-mail and password. You are the firm's tenant admin, so Operon first asks you to set up two-step verification.
+{% /steps %}
+
+The signed agreements are kept under **Settings › Company agreements**. If the company already has an Operon account, ask that account's administrator to invite you instead.
