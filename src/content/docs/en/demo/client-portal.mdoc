@@ -1,0 +1,113 @@
+---
+title: Client portal
+description: Sign in to the client portal as Rachel Lau of Marigold Lane Kitchen and show each module, including InvoiceNow invoices.
+sidebar:
+  order: 8
+---
+
+This page shows the client portal from the client's side. The presenter signs in as Rachel Lau Pei Qi, the finance contact of Marigold Lane Kitchen Pte. Ltd., and the tenant admin of the firm reads her sign-in code.
+
+The firm has already opened the portal for Marigold Lane Kitchen on the company's **Client Portal** tab in CRM, turned on the modules and invited Rachel. Rachel's account is a company administrator of the company in the portal.
+
+## Sign in as Rachel
+
+Rachel has no password. She signs in with a code sent by email, and in the demo environment that email goes to the firm's **Demo inbox**. Only the tenant admin can open the demo inbox, so use two browser windows: one signed in as the firm's admin, and a private window for the portal.
+
+{% steps %}
+1. In the private window, open `https://demo.operoncore.app/portal/login`.
+2. Select **Email me a sign-in code**, type `<prefix>.client@demo.operoncore.app` and select **Send code**.
+3. In the other window, sign in as `<prefix>.admin@demo.operoncore.app`. Select the avatar at the bottom of the side bar, then **Demo inbox**, and open the newest email to Rachel's address. Select **Refresh** if it is not listed yet.
+4. Back in the portal, type the code in **6-digit code** and select **Continue**. The code works for 10 minutes and can be used once.
+{% /steps %}
+
+{% screenshot id="demo/portal-sign-in-code" caption="Portal sign-in with an emailed code." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service the code goes to the client's own mailbox. In the demo environment no email leaves Operon; the code is only in the demo inbox.
+{% /aside %}
+
+## Home
+
+After sign-in the portal opens **Home**: a greeting, **Waiting on you** (what Rachel has to do), the key figures **Owed to you**, **GST payable** and **Books closed to**, **Coming up**, **Recent activity**, and **Your team at** Larkspur Corporate Services with a **Message** button for each person.
+
+The side bar lists the company's modules under **Company**: **Secretarial**, **Accounting & Tax**, **Invoices**, **E-sign**, **Documents** and **Messages**.
+
+{% screenshot id="demo/portal-home" caption="The portal home page of Marigold Lane Kitchen." /%}
+
+## E-sign
+
+Open **E-sign**. Under **Waiting for your signature** is the engagement letter for bookkeeping, GST and payroll for the financial year ending 31 December 2027, sent by Daniel Ong. Select **Sign** to sign it online. After signing, it moves to **Signed and completed**, and **Download** gives the signed copy.
+
+{% screenshot id="demo/portal-esign-waiting" caption="The engagement letter waiting for Rachel's signature." /%}
+
+## Documents
+
+Open **Documents**. Under **Folders** is **Shared with Marigold Lane**, which the accountant shared with the client. It holds the FY2025 financial statements and the GST F5 acknowledgement for July to September 2026. Select **Open** or **Download**. What Rachel uploads herself is kept under **Your uploads**.
+
+{% screenshot id="demo/portal-documents-folder" caption="The folder the firm shared with the client." /%}
+
+## Accounting & Tax
+
+Open **Accounting & Tax**. Under **Questions from** Larkspur Corporate Services are two questions from the accountant, both **To answer**:
+
+- the October and November bank statements for the Corallis Bank account ending 7726;
+- this quarter's supplier invoices so far.
+
+Type a reply in **Your answer**, attach a file with **Attach** if needed, and select **Send**. The question becomes **Answered**, and the reply appears on the firm's side in the company's bookkeeping case. Documents for the books can also be sent with **Choose files** under **Send documents for the books**.
+
+{% screenshot id="demo/portal-accounting-questions" caption="Questions from the firm, waiting for an answer." /%}
+
+## Messages
+
+Open **Messages**. The conversation with the firm already has three messages between Daniel Ong and Rachel about the GST return and the engagement letter. Type in **Write a message…** and select **Send**. On the firm's side, the message appears on the company's **Messages** tab in CRM.
+
+## Secretarial: the checklist
+
+Open **Secretarial**. Under **Documents and details** is the checklist for the new director of Marigold Lane Kitchen, **Waiting on you**. Two answers are already filled in: the date the appointment takes effect, and that no director is stepping down. Select **Open** and fill in the rest live:
+
+{% steps %}
+1. Under **New director**, select **Add a person**. Type a made-up **Full name (as in the passport or NRIC)**, **Email** and **Mobile**, and upload the front and the back of the ID card with **Add a file**. Use the files in `TODO(check zip)` of the [demo files](/en/demo/overview/#demo-files), unchanged.
+2. Optional: attach a board approval with **Add a file**.
+3. Select **Submit**, then **Submit** in **Submit these answers?**.
+{% /steps %}
+
+The checklist shows **Sent to us**, and Rachel cannot change the answers unless the firm sends an item back. The firm's side of this checklist is on [Secretarial: the client checklist](/en/demo/client-checklist/).
+
+{% screenshot id="demo/portal-checklist-open" caption="The new-director checklist, with two answers already given." /%}
+
+## Invoices: InvoiceNow
+
+The firm registered Marigold Lane Kitchen and Tidewater Studio for InvoiceNow, so the two companies can send InvoiceNow invoices to each other. Open **Invoices**. The tabs are **Drafts**, **Sent** and **Received**.
+
+**Received.** Two documents from Tidewater Studio:
+
+| Document | What it is |
+|---|---|
+| Invoice TWS-2026-045 | Menu redesign, food photography and two sets of printed table cards, with 9% GST, Net 30. |
+| Credit note TWS-CN-2026-003 | One set of table cards credited back, because the print run was cancelled. |
+
+Open a document to see **Received document**, and select **Download original** for the original file.
+
+{% aside type="note" title="Received documents arrive within 15 minutes" %}
+The two received documents are sent when the account is opened or reset, and they appear in **Received** within about 15 minutes. Right after a reset the tab can still be empty.
+{% /aside %}
+
+**Send the draft live.** Under **Drafts** is an invoice from Marigold Lane Kitchen to Tidewater Studio for catering the studio's open house (60 guests and service staff, Net 14, buyer reference TWS-PO-2611).
+
+{% steps %}
+1. Open the draft. Check **Buyer**, **Details**, **Lines**, **Totals** and **Preview**.
+2. Select **Send**, then **Send** in **Send this document?**.
+3. Open **Sent**. The **Delivery** column shows **Sending**, and after about a minute **Delivered**.
+{% /steps %}
+
+The invoice is delivered to Tidewater Studio over the mock Access Point.
+
+**Invoice design.** **Invoice settings** › **Design** shows Marigold Lane Kitchen's own invoice design: its colour and its Corallis Bank payment details.
+
+{% screenshot id="demo/portal-invoicenow-received" caption="The Received tab, with an invoice and a credit note from Tidewater Studio." /%}
+
+{% screenshot id="demo/portal-invoicenow-delivered" caption="The draft sent live, delivered." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+In the demo environment InvoiceNow uses a mock Access Point. Registration is approved at once, and a sent document is delivered about ten seconds after it is sent. Nothing reaches the Peppol network.
+{% /aside %}

@@ -1,0 +1,46 @@
+---
+title: "Secretarial: corporate changes"
+description: A change of director with online signing, and the share transfer, change of company name and change of registered address cases.
+sidebar:
+  order: 4
+---
+
+This page shows the corporate change cases. The secretary, `<prefix>.secretary@demo.operoncore.app` (Priya Raman), works most of them; the share transfer belongs to the head of corporate secretarial, `<prefix>.secretarial-manager@demo.operoncore.app` (Marcus Goh). Signing as a director is shown from the tenant admin's **Demo inbox**.
+
+Open the cases from **Workspace** › the Secretary workspace › **Cases**.
+
+| Case type | Client | Where the case stops |
+|---|---|---|
+| **Change Director** | Juniper Forge Engineering Pte. Ltd. | Documents out for online signature. |
+| **Share Transfer** | Halcyon Ridge Logistics Pte. Ltd. | Collecting information. |
+| **Change Company Name** | Pebblestone Learning Pte. Ltd. | Just opened. |
+| **Change Registered Address** | Marigold Lane Kitchen Pte. Ltd. | Collecting information. |
+
+## Change of director with online signing
+
+Wilfred Tay Chin Hock resigns as a director of Juniper Forge Engineering, and Samuel Lim Jia Hao is appointed in his place, with effect three days after the account was opened or reset. The plan was confirmed, the documents were generated and reviewed, and they were sent for signature by email.
+
+{% steps %}
+1. Open the case and select **Continue in chat**. The **Collect signed documents** card shows the documents and the signers. Switch between **By document** and **By signer**.
+2. Each signer shows a status such as **Waiting** or **In progress**.
+3. To sign as a director, sign in as the tenant admin in another window and open **Demo inbox** from the avatar menu. Open the e-sign invitation to one of the directors and select its link. Sign on the signing page.
+4. Back on the case, the signer's status changes. When everyone has signed, the documents show **Complete**, and **Download merged** gives one PDF of all signed documents.
+{% /steps %}
+
+{% screenshot id="demo/change-director-signing" caption="The signing card of the change of director, by signer." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service, the directors receive the invitations in their own mailboxes. In the demo environment the invitations are only in the demo inbox, so the presenter can sign for each director. The lodgement with ACRA cannot be shown: the button shows **The demo environment does not provide ACRA filing for this flow.**
+{% /aside %}
+
+## Share transfer
+
+Marco Dela Cruz transfers his 30,000 shares in Halcyon Ridge Logistics (10%) to the parent, Halcyon Ridge Holdings, for SGD 30,000. After the transfer the parent holds all the shares. The case waits for the transfer details. Use it to show the group structure: open the company in **Clients** and show its shareholders, including the parent company as a corporate shareholder. See [Relationships](/en/clients/relationships/).
+
+## Change of company name
+
+Pebblestone Learning Pte. Ltd. is to become Pebblestone Academy Pte. Ltd. The case is in **Ready to start**. Use it to show how a change starts. The name application needs an approval from ACRA, which the demo environment cannot produce, so the case cannot go further than the name application.
+
+## Change of registered address
+
+Marigold Lane Kitchen moves its registered office to 5 Senja Lane #02-08, Singapore 677705, with effect seven days after the account was opened or reset. The case waits at the first step for the BizFile and a proof of the new address. TODO(check zip): name the files of the demo package for this step. Reading the proof of address uses AI, so in the demo it gives a result only for a recorded file.

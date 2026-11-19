@@ -1,0 +1,71 @@
+---
+title: 公司秘书：年审
+description: 停在四个不同步骤的四个年审案子，以及如何逐个往下推进，直到在模拟 ACRA 网站上自动填写。
+sidebar:
+  order: 2
+---
+
+本页演示年审从开案到向 ACRA 申报的全过程。由公司秘书 `<prefix>.secretary@demo.operoncore.app`（Priya Raman）操作；复核步骤由公司秘书部主管 `<prefix>.secretarial-manager@demo.operoncore.app`（Marcus Goh）完成。
+
+## 找到案子
+
+{% steps %}
+1. 以公司秘书身份登录。选 **工作区**，打开秘书工作区。
+2. 选 **案子**。看板按状态分列，每个案子是一张卡片。
+3. 选一张卡片打开案子。步骤列表列出案子的各个步骤，当前步骤标为 **进行中**。选 **在对话中继续**，与 AI 员工一起处理当前步骤。
+{% /steps %}
+
+{% screenshot id="demo/secretary-cases-board" caption="秘书工作区的案子看板。" /%}
+
+演示事务所有四个年审案子，分别停在不同的步骤：
+
+| 客户 | 案子停在哪里 | 原因 |
+|---|---|---|
+| Halcyon Ridge Holdings Pte. Ltd. | 刚开案，尚未开始。 | 年审 7 天后到期。 |
+| Saffron Quay Trading Pte. Ltd. | 正在收集资料。 | 年审已逾期三周，事务所在等财务报表。 |
+| Halcyon Ridge Properties Pte. Ltd. | AGM 文件已发出待签。 | 已复核并批准，董事尚未签署。 |
+| Orchid Mesa Design Pte. Ltd. | 待提交 ACRA。 | 文件已全部签署，只剩申报。 |
+
+这四个案子合起来就是一次完整的年审，请按以下顺序演示。
+
+{% aside type="note" title="步骤名称" %}
+TODO(check UI)：年审案子的步骤名称来自案子类型，目前只有中文，英文界面中也显示中文。本页按步骤做什么来描述。
+{% /aside %}
+
+## 1. Halcyon Ridge Holdings：开始案子
+
+案子在 **待开始** 列。打开案子并开始工作。第一步要填写公司信息和 AGM 相关答复，并附上公司的 BizFile 和财务报表。可以指出：AI 员工会读取 BizFile 和财务报表，填好下一张表单 **Review the Details**，交公司秘书核对。
+
+要把这个案子继续往下推，需要这家公司的 BizFile 和财务报表。TODO(check zip)：写明演示文件中用于这一步的文件；否则这个案子演示到这里为止。
+
+## 2. Saffron Quay Trading：收集资料
+
+案子停在录入步骤，表单为 **Annual Return Intake**。用它说明事务所要客户提供哪些资料，并展示 AI 员工在一段历史对话中起草的催办信：打开 AI 员工的对话记录，选 **Which annual returns are due this month?**。
+
+## 3. Halcyon Ridge Properties：文件已发出待签
+
+资料已核对，公司秘书自查和主管复核都已批准，AGM 文件已生成。案子正在等待签署件。
+
+- 展示案子上的审批记录：先是自查，再是 Marcus Goh 的复核（**批准**）。
+- 回收签署件的步骤提示 **请上传已签署的 AGM 文件（单个 PDF）**。上传签署件后，案子进入 ACRA 申报步骤，即下一个案子的状态。
+
+## 4. Orchid Mesa Design：向 ACRA 申报
+
+演示在这一步结束。案子显示 **ACRA 递交** 卡片。
+
+{% steps %}
+1. 在 Chrome 中安装演示版 ACRA 插件，安装链接向给你开账户的人索取。
+2. 在 **File with ACRA** 步骤上选 **ACRA 自动填报**。
+3. 新标签页打开模拟 ACRA 网站的年审页面。插件按案子的数据填写公司的 UEN、高管、财年截止日和 AGM 答复。
+4. 把填好的页面与案子对照：董事 Alpha Synthetic Tester 和 Beta Sample Person，公司秘书 Gamma Example Officer，与案子一致。
+{% /steps %}
+
+{% screenshot id="demo/annual-return-acra-filing" caption="Orchid Mesa 年审的 ACRA 递交卡片。" /%}
+
+{% aside type="note" title="与正式环境的差异" %}
+在正式环境中，**ACRA 自动填报** 打开 Bizfile，由正式版插件填写。在演示环境中，它打开模拟 ACRA 网站，只有演示版插件能在上面运行，不会向 ACRA 提交任何内容。
+{% /aside %}
+
+## 到期日一览
+
+Halcyon Ridge Holdings 7 天后到期，Halcyon Ridge Properties 25 天后到期，Saffron Quay Trading 已逾期。在秘书工作区打开 **秘书部仪表盘**，可以一起查看所有客户的到期日。

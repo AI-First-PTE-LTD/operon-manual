@@ -1,0 +1,63 @@
+---
+title: Reset and FAQ
+description: Return an experience account to its starting state, and answers to common questions about the demo environment.
+sidebar:
+  order: 9
+---
+
+This page shows how to reset an experience account and answers common questions. The reset is done by the tenant admin of the account, or by a platform administrator.
+
+## Reset the account
+
+A reset deletes everything in the account — cases, documents, invoices, messages and every change made during the demo — and writes the demo data pack again. The sign-in addresses and the password do not change. The AI allowance starts again at USD 1.
+
+{% steps %}
+1. Sign in as `<prefix>.admin@demo.operoncore.app`.
+2. Open **Settings** › **About**. The **Demo account** card shows **Available until** and the last day of the account.
+3. Select **Reset demo account**, then **Reset** in **Reset the demo account?**.
+4. Operon shows **Reset started. Sign in again in a few minutes.** Everyone who is signed in to the account, including you, is signed out.
+5. Wait a few minutes, then sign in again.
+{% /steps %}
+
+{% screenshot id="demo/settings-reset-card" caption="The Demo account card under Settings › About." /%}
+
+A platform administrator can also reset an account from **Experience accounts** in the platform console with **Reset**. The console shows the progress of the reset (**Now:** followed by the current step) and the status **Resetting**, then **Ready**. If a reset fails, the status is **Reset failed**; select **Retry**.
+
+{% aside type="caution" title="A reset cannot be undone" %}
+Everything you and others changed in the account is deleted. If a demo is still going on in another window, finish it first.
+{% /aside %}
+
+## Frequently asked questions
+
+**How long does a reset take?**
+Usually a few minutes. The received InvoiceNow documents in the client portal can take up to about 15 minutes more.
+
+**I cannot sign in. The page says the account has expired.**
+The account is past its last day. Contact the person who gave you access; they can change the last day. The data is kept until then.
+
+**Can someone else use my account at the same time?**
+Yes. Everyone who knows the sign-in details works in the same firm and sees the same data. A reset signs everyone out.
+
+**The AI conversation says the allowance is used up.**
+Each account can spend USD 1 on AI conversations between resets. Reset the account to restore it.
+
+**A document in the bookkeeping workbench shows "No result for this document in the demo recording."**
+Bookkeeping in the demo plays back recorded answers, and only the documents of the data pack are recorded. A document you uploaded yourself, or a step taken outside the demo script, has no recorded answer. Reset the account to start again from the prepared state. See [Bookkeeping](/en/demo/bookkeeping/).
+
+**Where do the emails go?**
+To the **Demo inbox** of the account, which only the tenant admin can open from the avatar menu. Nothing leaves the demo environment.
+
+**The ACRA button cannot be selected.**
+The demo environment has mock ACRA pages only for annual returns and incorporations. For corporate changes the button shows **The demo environment does not provide ACRA filing for this flow.**
+
+**The ACRA extension does nothing on the mock ACRA website.**
+The demo environment needs the demo version of the ACRA extension, which is a separate entry in the Chrome Web Store. The extension of the live service does not run on the demo environment or on the mock website. Ask the person who gave you the account for the link to the demo version.
+
+**Can I upload our own documents to try them?**
+No. The demo environment is for fictional data only. Do not upload real documents or personal data. Also, the AI features that read documents give a result only for the documents of the data pack.
+
+**Is anything filed with ACRA or IRAS, or sent over InvoiceNow?**
+No. Filings go to a mock ACRA website, nothing is filed with IRAS, and InvoiceNow uses a mock Access Point that does not reach the Peppol network.
+
+**Is the demo environment the same version as the live service?**
+Yes. The demo environment is updated with each release of the live service, and it never runs a version that has not been released.

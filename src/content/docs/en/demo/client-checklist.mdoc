@@ -1,0 +1,52 @@
+---
+title: "Secretarial: the client checklist"
+description: A pre-start checklist sent to the client Rachel Lau, filled in by her in the client portal, and confirmed by the firm.
+sidebar:
+  order: 5
+---
+
+This page shows a checklist that the firm sends to a client before a case starts. The salesperson, `<prefix>.sales@demo.operoncore.app` (Ryan Chua), holds the case and confirms the checklist; the client, Rachel Lau of Marigold Lane Kitchen, fills it in the client portal.
+
+## The story
+
+Marigold Lane Kitchen is adding a director. Ryan won the opportunity **Marigold Lane — new director** for the catalogue service **Change of Director**. Winning it put the service in force, and the **Change Director** case opened from it carries the service's checklist. Ryan sent the checklist to Rachel. She has already answered two items:
+
+| Item | Who fills it | State in the demo |
+|---|---|---|
+| New director (name, email, mobile, both sides of the ID card) | Client | Not filled: Rachel adds it live. |
+| Date the appointment takes effect | Client | Filled: 14 days after the account was opened or reset. |
+| Is a director stepping down at the same time? | Client | Filled: No. |
+| Board approval of the appointment, if your directors have already signed one | Client | Optional; not filled. |
+| Name screening of the new director done | Team | Not done. |
+
+The checklist is completed when the case owner confirms it.
+
+## 1. The firm's side before the client answers
+
+{% steps %}
+1. Sign in as Ryan Chua. **My Week** shows **Pre-start checklist · Waiting on you**.
+2. Open the **Change Director** case of Marigold Lane Kitchen. The **Prerequisites** panel at the top lists each item, with **Client** or **Team** for who fills it, and the two answers Rachel already gave.
+{% /steps %}
+
+{% screenshot id="demo/checklist-staff-sent" caption="The Prerequisites panel of the case, sent to the client." /%}
+
+The checklist was sent with **Send to client**. To show sending again, use **Resend** and choose the contact in **Contact to send it to**. The email goes to the **Demo inbox**.
+
+## 2. The client fills it in
+
+Sign in to the client portal as Rachel Lau and complete the checklist. See [Client portal › Secretarial: the checklist](/en/demo/client-portal/#secretarial-the-checklist).
+
+## 3. The firm confirms
+
+{% steps %}
+1. Back as Ryan Chua, refresh the case. The panel shows that the client submitted on today's date, and that the answers are locked until the firm sends items back. The answers from the client are marked **Filled by the client**.
+2. Mark the team's item, **Name screening of the new director done**, as done. TODO(check UI): the name of the control on a team item.
+3. If an answer is not acceptable, select **Return to client**, write the reason and select **Send back**. Rachel sees **Sent back:** with the reason in the portal.
+4. When everything is in order, select **Confirm complete**. The panel shows that Ryan confirmed the checklist, and the case moves to the department manager.
+{% /steps %}
+
+{% screenshot id="demo/checklist-staff-confirmed" caption="The checklist confirmed by the firm." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service, the client receives the checklist email in their own mailbox. In the demo environment it is kept in the demo inbox.
+{% /aside %}

@@ -68,6 +68,11 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'case-templates' } }],
         },
         {
+          label: 'Demo environment',
+          translations: { 'zh-CN': '演示环境' },
+          items: [{ autogenerate: { directory: 'demo' } }],
+        },
+        {
           label: 'E-Sign',
           translations: { 'zh-CN': '电子签' },
           items: [{ autogenerate: { directory: 'e-sign' } }],

@@ -1,0 +1,82 @@
+---
+title: CRM、合同与发票
+description: 演示各阶段的商机看板、两份待签合同、电子签，以及各状态的发票。
+sidebar:
+  order: 6
+---
+
+本页演示演示事务所的销售一侧：商机、合同、电子签和发票。以销售 `<prefix>.sales@demo.operoncore.app`（Ryan Chua）身份登录；需要经理或租户管理员权限的发票操作，以 `<prefix>.admin@demo.operoncore.app`（Evelyn Tan）身份登录。
+
+各页面的完整操作说明见 [CRM](/zh-cn/crm/overview/) 和 [发票](/zh-cn/invoices/overview/) 两章。本页只说明演示账户里有什么，以及按什么顺序演示。
+
+## 商机看板
+
+选 **工作区**，打开 CRM 工作区，选 **商机**。看板上每个进行中阶段和已结案阶段都有商机：
+
+| 阶段 | 商机 | 服务 |
+|---|---|---|
+| New | Wren & Alder — incorporation and secretary（潜在客户，尚不是客户） | Company Incorporation、Corporate Secretary Retainer |
+| Qualified | Pebblestone — quarterly bookkeeping and GST | Bookkeeping (Quarterly)、GST F5 Return |
+| Cold | Juniper Forge — payroll outsourcing | Payroll Processing |
+| Agreed | Halcyon Ridge group — payroll for three entities | Payroll Processing |
+| Agreed | Saffron Quay — corporate tax filing | Corporate Tax (Form C-S) |
+| Won | Kestrel Bay — company set-up package | Company Incorporation、Corporate Secretary Retainer、Registered Office Address |
+| Won | Fernreach — company set-up package | 同上 |
+| Won | Marigold Lane — new director | Change of Director（用于 [客户资料清单](/zh-cn/demo/client-checklist/)） |
+| Lost | Bramblewood — final tax return | Corporate Tax (Form C-S) |
+
+阶段、商机和服务名称是事务所自己的数据，所以保持英文。先展示顶部一栏（**商机**、**预计收入**、**加权预计收入**），再把 Pebblestone 的卡片拖到 Agreed：Operon 会先请你写一条备注。打开 **仪表盘** 查看销售管道报表。见 [商机看板](/zh-cn/crm/opportunities/)。
+
+{% screenshot id="demo/crm-board-stages" caption="演示事务所的商机看板。" /%}
+
+## 待签合同
+
+两个 Agreed 阶段的商机各有一份正在准备的合同，客户签字人已经选好：
+
+| 商机 | 合同 | 客户签字人 |
+|---|---|---|
+| Halcyon Ridge group — payroll for three entities | Payroll services agreement | Gregory Teo Kok Meng |
+| Saffron Quay — corporate tax filing | Corporate tax engagement | Hamid Osman |
+
+打开其中一个商机的 **合同** 页签，按合同各阶段往下走：核对 **1 准备**，在 **2 草稿** 中生成并通读合同，然后在 **4 签署** 中选 **发送** 发出签署。见 [准备合同](/zh-cn/crm/prepare/) 和 [发电子签](/zh-cn/crm/e-signature/)。
+
+{% screenshot id="demo/crm-contract-draft" caption="Agreed 阶段商机上正在准备的合同。" /%}
+
+### 以客户身份签署
+
+发给客户签字人的邀请不会进入真实邮箱。以租户管理员身份登录，从头像菜单打开 **演示收件箱**，打开这封邀请，其中的链接打开签署页，你可以以客户身份签署。随后合同变为 **5 已签**，签署件 PDF 归入商机文件。见 [签署人看到什么](/zh-cn/e-sign/signer/)。
+
+{% aside type="note" title="与正式环境的差异" %}
+在正式环境中，邀请发到客户的邮箱。在演示环境中，所有邮件都留在演示收件箱里，演示人可以扮演客户。
+{% /aside %}
+
+## 发票
+
+在侧边栏选 **发票**。演示事务所有以下状态的发票：
+
+| 状态 | 客户 | 内容 |
+|---|---|---|
+| **草稿** | Kestrel Bay Analytics | 公司注册及第一年注册地址服务 |
+| **草稿** | Fernreach Botanicals | 同上 |
+| **草稿** | Pebblestone Learning | 公司改名 |
+| **待收款** | Halcyon Ridge Holdings | 年审申报及挂名居民董事年费 |
+| **待收款** | Marigold Lane Kitchen | 本季度记账和 GST F5 申报，以及九名员工的薪资处理 |
+| **已付** | Tidewater Studio | 本季度记账和 GST F5 申报 |
+| **已付** | Juniper Forge Engineering | 公司秘书年费 |
+| **逾期** | Saffron Quay Trading | 公司秘书年费及年审申报 |
+| **逾期** | Bramblewood Consulting | 公司注销 |
+
+所有金额以 SGD 计，GST 9%。
+
+建议的演示顺序：
+
+1. 选顶部的 **逾期** 卡片，列出两张逾期发票。
+2. 打开 Kestrel Bay 的草稿，核对明细和 GST，然后开出。见 [开出与发送](/zh-cn/invoices/issue-send/)。
+3. 用邮件发送。邮件进入 **演示收件箱**。
+4. 打开 Halcyon Ridge Holdings 的发票，登记一笔收款。见 [登记收款](/zh-cn/invoices/payments/)。
+
+{% screenshot id="demo/invoices-list-statuses" caption="演示事务所的发票列表。" /%}
+
+{% aside type="note" title="与正式环境的差异" %}
+演示环境不连接 Xero 和 Stripe，相关设置显示 **未连接。演示环境不提供这个外部系统的连接。** 发票由 Operon 编号，收款手工登记。发票设置里事务所自己的 InvoiceNow 连接也不可用；InvoiceNow 在 [客户门户](/zh-cn/demo/client-portal/#发票invoicenow) 中以客户公司之间收发的方式演示。
+{% /aside %}

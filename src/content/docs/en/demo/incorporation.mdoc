@@ -1,0 +1,64 @@
+---
+title: "Secretarial: incorporation"
+description: Upload specimen ID documents for a new company and let Operon read them, then auto-fill the mock ACRA registration for a company that is ready to file.
+sidebar:
+  order: 3
+---
+
+This page shows two incorporation cases: Fernreach Botanicals, where the presenter uploads ID documents and Operon reads them, and Kestrel Bay Analytics, where the extension fills the ACRA registration. The secretary, `<prefix>.secretary@demo.operoncore.app` (Priya Raman), does the work.
+
+Open both cases from **Workspace** › the Secretary workspace › **Cases**. Their case type is **Company Incorporation**.
+
+## Fernreach Botanicals: ID recognition
+
+The case was just opened. The company details are already filled in: the proposed name Fernreach Botanicals Pte. Ltd., the registered address and the share capital. The case waits at the step **Collect people roster & IDs**, with the form **People roster**.
+
+The company has two proposed directors and shareholders:
+
+| Person | Who | ID tier | Files in the demo package |
+|---|---|---|---|
+| Nadia Chua Pei Shan | Singapore Citizen | **Singapore Citizen (NRIC, both sides)** | `01-incorporation/Nadia Chua NRIC front (specimen).pdf`, `01-incorporation/Nadia Chua NRIC back (specimen).pdf` |
+| Haziq Iskandar bin Roslan | Malaysian, living in Malaysia | **Non-resident (passport + national ID or proof of address)** | `01-incorporation/Haziq Roslan passport (specimen).pdf`, `01-incorporation/Haziq Roslan proof of address (specimen).pdf` |
+
+Download the files first; see [Demo files](/en/demo/overview/#demo-files).
+
+### Upload the ID documents
+
+{% steps %}
+1. Open the case and select **Continue in chat**. The **People roster** form opens.
+2. Select **+ Add director** and choose **Singapore Citizen (NRIC, both sides)** for Nadia Chua.
+3. In **ID front (NRIC)**, select **+ Upload** and choose `01-incorporation/Nadia Chua NRIC front (specimen).pdf`.
+4. Then, in **ID back (with address)**, select **+ Upload** and choose `01-incorporation/Nadia Chua NRIC back (specimen).pdf`.
+5. Only when both sides are uploaded, select **Extract from ID**. Operon reads the name, the NRIC number, the date of birth, the nationality and the address, and marks the fields **Extracted from the ID below — please check**.
+6. Select **+ Add director** again and choose **Non-resident (passport + national ID or proof of address)** for Haziq Roslan. Upload `01-incorporation/Haziq Roslan passport (specimen).pdf` in **Passport** and `01-incorporation/Haziq Roslan proof of address (specimen).pdf` in **Proof of address**, then select **Extract from ID**.
+7. Check the fields against the documents and select **Save** on each person.
+{% /steps %}
+
+{% screenshot id="demo/incorporation-id-extracted" caption="Fields read from the specimen NRIC, ready to be checked." /%}
+
+{% aside type="caution" title="Upload the front first, then the back, then extract" %}
+Upload the front of the NRIC first and the back second, and select **Extract from ID** only after both sides are uploaded. The demo plays back a recording of exactly this order. Upload the files from the demo package unchanged: a renamed-and-saved, edited or rescanned file has different content, and recognition then shows **Extraction failed — fill in manually (you can retry)**.
+{% /aside %}
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service, **Extract from ID** reads any ID with an AI model. In the demo environment it plays back recorded answers, so it gives a result only for the four specimen files of the demo package.
+{% /aside %}
+
+## Kestrel Bay Analytics: register with ACRA
+
+The case has passed the people roster, the self-check and the signatures. Its lodgement details, including the name application number T264218095, are filled in. The case waits at **Lodge with ACRA (record)**.
+
+The company has two directors and shareholders, Clara Wee Li Ting (6,000 shares) and Arjun Mehta (4,000 shares), the firm's address as its registered office, and Priya Raman as its company secretary.
+
+{% steps %}
+1. Install the demo version of the ACRA extension in Chrome. Ask the person who gave you the account for the link.
+2. Open the case and select **Continue in chat**. On the **ACRA filing** card, select **Fill the ACRA form**.
+3. A new tab opens the registration wizard of the mock ACRA website. The extension fills in the company name, the address, the activity, the share capital, the officers and the shareholders from the case.
+4. Walk through the pages of the wizard and compare them with the case.
+{% /steps %}
+
+{% screenshot id="demo/incorporation-acra-mock-filled" caption="The mock ACRA registration wizard, filled in by the extension." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service, **Fill the ACRA form** opens Bizfile. In the demo environment it opens the mock ACRA website, and only the demo version of the extension runs on it. No company is registered.
+{% /aside %}

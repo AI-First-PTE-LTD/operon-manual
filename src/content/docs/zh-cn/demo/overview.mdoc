@@ -1,0 +1,131 @@
+---
+title: 演示环境
+description: 什么是演示环境和体验账户，怎样取得账户，每个账户里有什么，以及与正式环境有哪些不同。
+sidebar:
+  order: 1
+---
+
+本页介绍演示环境和体验账户，供向客户演示 Operon 的售前人员和自行试用 Operon 的潜在客户阅读。
+
+演示环境是 Operon 的一套独立副本，地址为 [demo.operoncore.app](https://demo.operoncore.app)。它运行与正式环境相同版本的 Operon，但只装虚构数据。你可以在其中体验各条主要业务线，并且随时可以把账户恢复到初始状态。
+
+## 体验账户
+
+体验账户是给一个人（售前同事或潜在客户）使用的演示事务所。每个账户都是一家完整的事务所，有自己的员工、客户、案子、发票和账簿。在一个账户里做的改动不会出现在其他账户中。
+
+### 取得账户
+
+由演示环境的平台管理员在平台控制台的 **体验账户** 页开出账户。平台管理员需要填写：
+
+| 字段 | 含义 |
+|---|---|
+| **名称** | 账户名称，例如使用人的名字。 |
+| **使用人** | 可不填：谁来使用这个账户。 |
+| **登录前缀** | 小写字母、数字和连字符。账户的所有登录邮箱都以它开头。 |
+| **最后可用日** | 账户可以使用的最后一天。售前同事自己用的账户可以不设。 |
+
+账户开出后，控制台只显示一次 **管理员邮箱** 和 **密码**，由平台管理员转交给你。账户里所有角色共用同一个密码。
+
+### 登录
+
+打开 [demo.operoncore.app](https://demo.operoncore.app)，用下表中的一个邮箱登录。`<prefix>` 是你的账户的登录前缀。
+
+| 登录邮箱 | 人员 | 角色 | 用它演示 |
+|---|---|---|---|
+| `<prefix>.admin@demo.operoncore.app` | Evelyn Tan Shu Ying，董事总经理 | 管理员 | 审批、发票、设置、演示收件箱和重置。 |
+| `<prefix>.secretarial-manager@demo.operoncore.app` | Marcus Goh Wei Jie，公司秘书部主管 | 经理 | 复核年审和公司变更。 |
+| `<prefix>.secretary@demo.operoncore.app` | Priya Raman，公司秘书专员 | 成员 | 年审、公司注册和变更。 |
+| `<prefix>.accounting-manager@demo.operoncore.app` | Daniel Ong Kah Wai，会计部主管 | 经理 | 复核账簿和 GST 申报；客户消息。 |
+| `<prefix>.accountant@demo.operoncore.app` | Nur Aisyah Rahman，会计 | 成员 | 记账工作台和一键填报。 |
+| `<prefix>.sales@demo.operoncore.app` | Ryan Chua Jun Hao，业务拓展经理 | 经理 | 商机、合同和客户资料清单。 |
+
+第七个邮箱 `<prefix>.client@demo.operoncore.app` 属于客户 Marigold Lane Kitchen 的财务联系人 Rachel Lau Pei Qi，用于登录客户门户，而不是事务所一侧。见 [客户门户](/zh-cn/demo/client-portal/)。
+
+登录页和首页显示固定提示 **这是演示环境，请勿上传真实资料。**
+
+{% screenshot id="demo/sign-in-notice" caption="演示环境的登录页及演示提示。" /%}
+
+## 每个账户里有什么
+
+每个账户都由同一份演示数据包写入。日期从账户开出或上次重置的那一天起推算，所以数据看起来总是新的。记账季度是例外：固定为 2026 年 7 月至 9 月，因为单据是印有日期的 PDF。
+
+**事务所。** Larkspur Corporate Services Pte. Ltd.，一家新加坡企业服务事务所，有三个部门（Secretary、Accounting 和 Sales）、上表六位员工、另外三位没有登录账号的员工，以及包含十五项服务的服务目录（SGD 计价）。
+
+**客户。** 十二家虚构公司，每家在演示中各有用途：
+
+| 客户 | 在演示中的用途 |
+|---|---|
+| Kestrel Bay Analytics Pte. Ltd. | 公司注册，等待向 ACRA 提交。见 [公司注册](/zh-cn/demo/incorporation/)。 |
+| Fernreach Botanicals Pte. Ltd. | 刚开案的公司注册，用于演示证件识别。 |
+| Marigold Lane Kitchen Pte. Ltd. | C 公司：一键填报；变更注册地址；客户资料清单；Rachel Lau 的门户。 |
+| Tidewater Studio Pte. Ltd. | A 公司：已记完一个季度。也向 Marigold Lane 发送 InvoiceNow 发票。 |
+| Juniper Forge Engineering Pte. Ltd. | B 公司：一个季度记了一半；更换董事。 |
+| Orchid Mesa Design Pte. Ltd. | 年审，等待向 ACRA 提交。 |
+| Pebblestone Learning Pte. Ltd. | 公司改名。 |
+| Saffron Quay Trading Pte. Ltd. | 年审已逾期，案子正在收集资料。 |
+| Halcyon Ridge Holdings Pte. Ltd. | 集团母公司；年审 7 天后到期。 |
+| Halcyon Ridge Logistics Pte. Ltd. | 子公司；股权转让给母公司。 |
+| Halcyon Ridge Properties Pte. Ltd. | 子公司；年审的 AGM 文件已发出待签。 |
+| Bramblewood Consulting Pte. Ltd. | 注销中。 |
+
+账户里还有处于各阶段的商机、处于各状态的发票、两份待签合同、两段历史 AI 对话和两份知识文档。
+
+## 演示环境与正式环境的差异
+
+| 方面 | 在演示环境中 |
+|---|---|
+| 数据 | 只有虚构数据。请勿上传真实资料或个人数据。 |
+| 邮件 | 不向外发送任何邮件。所有本应发出的邮件（门户登录码、电子签邀请、发票）都进入账户的 **演示收件箱**。只有租户管理员能打开：选侧边栏底部的头像，再选 **演示收件箱**。 |
+| ACRA | ACRA 按钮打开模拟 ACRA 网站，不打开 Bizfile，由演示版 ACRA 插件自动填写。只有年审和公司注册有模拟页面；其他流程的按钮不能点，并显示 **演示环境不提供这个流程的 ACRA 填报。** |
+| InvoiceNow | 客户公司可以经模拟 Access Point 收发 InvoiceNow 发票，不会进入 Peppol 网络。事务所自己的 InvoiceNow 连接不可用。 |
+| Xero、Stripe | 未连接。显示 **未连接。演示环境不提供这个外部系统的连接。** |
+| AI 对话 | 真实调用 AI 模型，每个账户在两次重置之间以 1 美元为限。见下文。 |
+| 记账与读取单据 | 回放预先录好的回答，不调用 AI 模型。见 [记账](/zh-cn/demo/bookkeeping/)。 |
+| 申报 | 不会向 ACRA 或 IRAS 提交任何申报，也不会发出真实的电子发票。 |
+
+{% screenshot id="demo/demo-inbox-list" caption="体验账户的演示收件箱。" /%}
+
+## AI 对话：每个账户 1 美元
+
+与 AI 员工和记账 agent 的对话会真实调用 AI 模型。每个体验账户可以在这类对话上花 1 美元，从账户开出或上次重置那天算起。额度用完后，对话中显示 **本次演示的 AI 额度已用完，重置账户后恢复。**
+
+演示中其他用到 AI 的功能，例如读取单据、证件识别和一键填报，都回放录好的回答，不产生费用。这些功能只对演示数据包里的单据给出结果。
+
+## 演示文件
+
+演示中有些步骤要上传文件，例如公司注册时的证件。开始前请先下载演示文件：
+
+- [demo-files.zip](/downloads/demo-files.zip) — TODO(file size)，SHA-256 `TODO(sha256)`
+
+压缩包里只有编造的样本单据，每份都带 SPECIMEN 水印。演示的每个部分各一个文件夹，另有 `README.txt` 和用于核对文件的 `SHA256SUMS`。
+
+| 文件夹 | 用于 |
+|---|---|
+| `01-incorporation/` | [公司注册](/zh-cn/demo/incorporation/#上传证件)：Fernreach Botanicals 两位拟任董事的证件。 |
+| TODO(check zip) | [客户资料清单](/zh-cn/demo/client-checklist/)：Rachel Lau 在门户中添加的新任董事的证件。 |
+| TODO(check zip) | [记账](/zh-cn/demo/bookkeeping/)：Marigold Lane Kitchen 本季度的单据（如果现场上传）。 |
+
+{% aside type="caution" title="上传原文件，不要做任何改动" %}
+请上传压缩包里的原文件。不要改名后另存、编辑、打印后重新扫描或拍照。演示按单据的内容查找录好的回答：内容一有变化（哪怕很小），这份单据就没有结果。
+{% /aside %}
+
+## 到期与重置
+
+账户在 **最后可用日** 之前可以使用。过了这一天，任何人都不能登录，也不能重置；数据保留，直到平台管理员延期或删除账户。
+
+账户的租户管理员可以随时重置账户：账户里的全部内容被删除，再按演示数据包重新写入。见 [重置与常见问题](/zh-cn/demo/reset-faq/)。
+
+## 演示步骤
+
+1. [公司秘书：年审](/zh-cn/demo/annual-returns/)
+2. [公司秘书：公司注册](/zh-cn/demo/incorporation/)
+3. [公司秘书：公司变更](/zh-cn/demo/corporate-changes/)
+4. [公司秘书：客户资料清单](/zh-cn/demo/client-checklist/)
+5. [CRM、合同与发票](/zh-cn/demo/crm-invoices/)
+6. [记账](/zh-cn/demo/bookkeeping/)
+7. [客户门户](/zh-cn/demo/client-portal/)
+8. [重置与常见问题](/zh-cn/demo/reset-faq/)
+
+{% aside type="note" title="所有数据均为虚构" %}
+演示环境和本章中的所有事务所、公司、人员、证件号、地址、金额和单据均为虚构。
+{% /aside %}

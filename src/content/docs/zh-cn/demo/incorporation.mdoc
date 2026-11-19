@@ -1,0 +1,64 @@
+---
+title: 公司秘书：公司注册
+description: 为新公司上传证件样本并由 Operon 识别；再为一家已可申报的公司在模拟 ACRA 网站上自动填写注册信息。
+sidebar:
+  order: 3
+---
+
+本页演示两个公司注册案子：Fernreach Botanicals，演示人上传证件并由 Operon 识别；Kestrel Bay Analytics，由插件填写 ACRA 注册。由公司秘书 `<prefix>.secretary@demo.operoncore.app`（Priya Raman）操作。
+
+从 **工作区** › 秘书工作区 › **案子** 打开这两个案子，案子类型为 **公司注册**。
+
+## Fernreach Botanicals：证件识别
+
+案子刚开出，公司信息已经填好：拟用名称 Fernreach Botanicals Pte. Ltd.、注册地址和股本。案子停在 **Collect people roster & IDs** 步骤，表单为 **People roster**。
+
+公司有两位拟任董事兼股东：
+
+| 人员 | 身份 | 证件类别 | 演示文件中的文件 |
+|---|---|---|---|
+| Nadia Chua Pei Shan | 新加坡公民 | **新加坡公民（NRIC 正反面）** | `01-incorporation/Nadia Chua NRIC front (specimen).pdf`、`01-incorporation/Nadia Chua NRIC back (specimen).pdf` |
+| Haziq Iskandar bin Roslan | 马来西亚籍，居住在马来西亚 | **非居民（护照 + 本国身份证或地址证明）** | `01-incorporation/Haziq Roslan passport (specimen).pdf`、`01-incorporation/Haziq Roslan proof of address (specimen).pdf` |
+
+请先下载这些文件，见 [演示文件](/zh-cn/demo/overview/#演示文件)。
+
+### 上传证件
+
+{% steps %}
+1. 打开案子，选 **在对话中继续**，打开 **People roster** 表单。
+2. 选 **+ 添加董事**，为 Nadia Chua 选 **新加坡公民（NRIC 正反面）**。
+3. 在 **证件正面（NRIC）** 中选 **+ 上传**，选择 `01-incorporation/Nadia Chua NRIC front (specimen).pdf`。
+4. 然后在 **证件背面（带地址）** 中选 **+ 上传**，选择 `01-incorporation/Nadia Chua NRIC back (specimen).pdf`。
+5. 两面都上传后，再选 **识别证件**。Operon 读出姓名、NRIC 号码、出生日期、国籍和地址，并在这些字段上标注 **由下方证件识别得到 —— 请核对**。
+6. 再选 **+ 添加董事**，为 Haziq Roslan 选 **非居民（护照 + 本国身份证或地址证明）**。在 **护照** 中上传 `01-incorporation/Haziq Roslan passport (specimen).pdf`，在 **地址证明** 中上传 `01-incorporation/Haziq Roslan proof of address (specimen).pdf`，然后选 **识别证件**。
+7. 对照证件核对各字段，在每个人员卡片上选 **保存**。
+{% /steps %}
+
+{% screenshot id="demo/incorporation-id-extracted" caption="从 NRIC 样本识别出的字段，等待核对。" /%}
+
+{% aside type="caution" title="先传正面，再传背面，最后识别" %}
+先上传 NRIC 正面，再上传背面，两面都上传后才选 **识别证件**。演示回放的正是按这个顺序录制的结果。请原样上传演示文件中的文件：改名另存、编辑过或重新扫描的文件内容已经不同，识别会显示 **识别失败 —— 请手工填写（可以重试）**。
+{% /aside %}
+
+{% aside type="note" title="与正式环境的差异" %}
+在正式环境中，**识别证件** 用 AI 模型读取任何证件。在演示环境中，它回放录好的回答，因此只对演示文件中的四份样本文件给出结果。
+{% /aside %}
+
+## Kestrel Bay Analytics：向 ACRA 注册
+
+案子已经过人员名册、自查和签署，申报所需信息（包括名称申请编号 T264218095）已经填好。案子停在 **Lodge with ACRA (record)** 步骤。
+
+公司有两位董事兼股东：Clara Wee Li Ting（6,000 股）和 Arjun Mehta（4,000 股）；注册地址为事务所地址，公司秘书为 Priya Raman。
+
+{% steps %}
+1. 在 Chrome 中安装演示版 ACRA 插件，安装链接向给你开账户的人索取。
+2. 打开案子，选 **在对话中继续**。在 **ACRA 递交** 卡片上选 **ACRA 自动填报**。
+3. 新标签页打开模拟 ACRA 网站的注册向导。插件按案子的数据填写公司名称、地址、业务、股本、高管和股东。
+4. 逐页查看向导，与案子对照。
+{% /steps %}
+
+{% screenshot id="demo/incorporation-acra-mock-filled" caption="插件填好的模拟 ACRA 注册向导。" /%}
+
+{% aside type="note" title="与正式环境的差异" %}
+在正式环境中，**ACRA 自动填报** 打开 Bizfile。在演示环境中，它打开模拟 ACRA 网站，只有演示版插件能在上面运行，不会真的注册公司。
+{% /aside %}

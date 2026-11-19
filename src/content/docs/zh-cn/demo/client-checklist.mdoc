@@ -1,0 +1,52 @@
+---
+title: 公司秘书：客户资料清单
+description: 发给客户 Rachel Lau 的开工前资料清单，由她在客户门户中填写，再由事务所确认。
+sidebar:
+  order: 5
+---
+
+本页演示事务所在案子开工前发给客户的资料清单。由销售 `<prefix>.sales@demo.operoncore.app`（Ryan Chua）负责案子并确认清单；客户 Marigold Lane Kitchen 的 Rachel Lau 在客户门户中填写。
+
+## 故事
+
+Marigold Lane Kitchen 要新增一位董事。Ryan 就服务目录中的 **Change of Director** 服务赢下了商机 **Marigold Lane — new director**。赢单后这项服务生效，由它开出的 **更换董事** 案子带有该服务的资料清单。Ryan 已把清单发给 Rachel，她已经答了两项：
+
+| 条目 | 由谁填写 | 演示中的状态 |
+|---|---|---|
+| New director（姓名、邮箱、手机、身份证正反面） | 客户 | 未填：Rachel 现场添加。 |
+| Date the appointment takes effect | 客户 | 已填：账户开出或重置 14 天后。 |
+| Is a director stepping down at the same time? | 客户 | 已填：No。 |
+| Board approval of the appointment, if your directors have already signed one | 客户 | 可选，未填。 |
+| Name screening of the new director done | 我们 | 未完成。 |
+
+条目名称是事务所在服务目录中自己设置的内容，所以保持英文。这份清单在案件负责人确认后才算完成。
+
+## 1. 客户作答前事务所一侧的情况
+
+{% steps %}
+1. 以 Ryan Chua 身份登录。**我的一周** 显示 **开工前清单 · 等你处理**。
+2. 打开 Marigold Lane Kitchen 的 **更换董事** 案子。顶部的 **前置条件** 面板列出各条目，注明由 **客户** 还是 **我们** 填写，并显示 Rachel 已给出的两项答复。
+{% /steps %}
+
+{% screenshot id="demo/checklist-staff-sent" caption="案子的前置条件面板，已发给客户。" /%}
+
+清单是用 **发给客户** 发出的。如需演示再次发送，选 **重新发送**，在 **发给哪位联系人** 中选联系人。邮件进入 **演示收件箱**。
+
+## 2. 客户填写
+
+以 Rachel Lau 的身份登录客户门户，填完资料清单。见 [客户门户 › 公司秘书：资料清单](/zh-cn/demo/client-portal/#公司秘书资料清单)。
+
+## 3. 事务所确认
+
+{% steps %}
+1. 回到 Ryan Chua，刷新案子。面板显示客户已于今天提交，在事务所退回条目之前客户不能再改。客户填写的答复标有 **客户填写**。
+2. 把由我们填写的条目 **Name screening of the new director done** 标为完成。TODO(check UI)：这类条目上控件的名称。
+3. 如果某项答复不合格，选 **退回客户**，填写原因，再选 **退回**。Rachel 在门户中看到 **已退回：** 和原因。
+4. 全部无误后，选 **确认完成**。面板显示 Ryan 已确认清单完成，案子转交部门经理。
+{% /steps %}
+
+{% screenshot id="demo/checklist-staff-confirmed" caption="事务所已确认的资料清单。" /%}
+
+{% aside type="note" title="与正式环境的差异" %}
+在正式环境中，客户在自己的邮箱收到清单邮件。在演示环境中，邮件留在演示收件箱里。
+{% /aside %}

@@ -1,0 +1,113 @@
+---
+title: 客户门户
+description: 以 Marigold Lane Kitchen 的 Rachel Lau 身份登录客户门户，逐一演示各模块，包括 InvoiceNow 发票。
+sidebar:
+  order: 8
+---
+
+本页从客户一侧演示客户门户。演示人以 Marigold Lane Kitchen Pte. Ltd. 财务联系人 Rachel Lau Pei Qi 的身份登录，登录码由事务所的租户管理员查看。
+
+事务所已在 CRM 中这家公司的 **客户门户** 页签上为 Marigold Lane Kitchen 开通门户、打开各模块并邀请了 Rachel。Rachel 在门户中是这家公司的公司管理员。
+
+## 以 Rachel 的身份登录
+
+Rachel 没有密码，用邮件发来的验证码登录。在演示环境中，这封邮件进入事务所的 **演示收件箱**，而演示收件箱只有租户管理员能打开。因此请开两个浏览器窗口：一个以事务所管理员身份登录，另一个用无痕窗口打开门户。
+
+{% steps %}
+1. 在无痕窗口中打开 `https://demo.operoncore.app/portal/login`。
+2. 选 **用邮箱验证码登录**，输入 `<prefix>.client@demo.operoncore.app`，选 **发送验证码**。
+3. 在另一个窗口以 `<prefix>.admin@demo.operoncore.app` 登录，选侧边栏底部的头像，再选 **演示收件箱**，打开发给 Rachel 的最新一封邮件。如果还没有列出，选 **刷新**。
+4. 回到门户，在 **6 位验证码** 中输入验证码，选 **继续**。验证码 10 分钟内有效，只能用一次。
+{% /steps %}
+
+{% screenshot id="demo/portal-sign-in-code" caption="用邮件验证码登录门户。" /%}
+
+{% aside type="note" title="与正式环境的差异" %}
+在正式环境中，验证码发到客户自己的邮箱。演示环境不向外发送任何邮件，验证码只在演示收件箱里。
+{% /aside %}
+
+## 首页
+
+登录后门户打开 **首页**：问候语、**等你处理**（Rachel 要处理的事项）、关键数字 **客户欠你**、**应缴 GST** 和 **已结账到**，以及 **即将到期**、**最近动态** 和 **你在 Larkspur Corporate Services 的团队**，每个人旁边有 **发消息** 按钮。
+
+侧边栏在 **公司** 下列出这家公司的模块：**公司秘书**、**会计与税务**、**发票**、**电子签**、**文件** 和 **消息**。
+
+{% screenshot id="demo/portal-home" caption="Marigold Lane Kitchen 的门户首页。" /%}
+
+## 电子签
+
+打开 **电子签**。**等你签署** 下是 Daniel Ong 发来的委托书，内容为截至 2027 年 12 月 31 日财年的记账、GST 和薪资服务。选 **签署** 在线签署。签署后它移到 **已签署 / 已完成** 下，选 **下载** 可取得签署件。
+
+{% screenshot id="demo/portal-esign-waiting" caption="等待 Rachel 签署的委托书。" /%}
+
+## 文件
+
+打开 **文件**。**文件夹** 下有会计共享给客户的 **Shared with Marigold Lane**，里面是 FY2025 财务报表和 2026 年 7 月至 9 月的 GST F5 申报回执。选 **打开** 或 **下载**。Rachel 自己上传的文件放在 **你上传的** 下。
+
+{% screenshot id="demo/portal-documents-folder" caption="事务所共享给客户的文件夹。" /%}
+
+## 会计与税务
+
+打开 **会计与税务**。**Larkspur Corporate Services 的问题** 下有会计提出的两个问题，状态都是 **待答**：
+
+- Corallis Bank 尾号 7726 账户 10 月和 11 月的银行对账单；
+- 本季度到目前为止的供应商发票。
+
+在 **你的答复** 中填写答复，需要时用 **附件** 附上文件，再选 **发送**。问题变为 **已答**，答复出现在事务所一侧这家公司的记账案子中。做账用的单据也可以在 **把做账要的单据发过来** 下用 **选择文件** 发送。
+
+{% screenshot id="demo/portal-accounting-questions" caption="事务所提出、等待答复的问题。" /%}
+
+## 消息
+
+打开 **消息**。与事务所的对话里已有 Daniel Ong 和 Rachel 之间关于 GST 申报和委托书的三条消息。在 **写一条消息…** 中输入内容，选 **发送**。在事务所一侧，这条消息出现在 CRM 中这家公司的 **消息** 页签上。
+
+## 公司秘书：资料清单
+
+打开 **公司秘书**。**材料与信息** 下是 Marigold Lane Kitchen 新任董事的资料清单，状态为 **等你填写**。其中两项已经答好：任命生效日期，以及没有董事同时卸任。选 **打开**，现场填写其余部分：
+
+{% steps %}
+1. 在 **New director** 下选 **添加人员**。填写虚构的 **英文全名（与护照或 NRIC 一致）**、**邮箱** 和 **手机**，并用 **添加文件** 上传身份证正面和背面。使用 [演示文件](/zh-cn/demo/overview/#演示文件) 中 `TODO(check zip)` 下的文件，不作任何改动。
+2. 可选：用 **添加文件** 附上董事会批准文件。
+3. 选 **提交**，再在 **确认提交？** 中选 **提交**。
+{% /steps %}
+
+清单显示 **已提交给我们**。除非事务所把某一项退回，Rachel 不能再修改答复。这份清单在事务所一侧的操作见 [公司秘书：资料清单](/zh-cn/demo/client-checklist/)。
+
+{% screenshot id="demo/portal-checklist-open" caption="新任董事资料清单，已有两项答复。" /%}
+
+## 发票：InvoiceNow
+
+事务所已为 Marigold Lane Kitchen 和 Tidewater Studio 开通 InvoiceNow，两家公司可以互相收发 InvoiceNow 发票。打开 **发票**，页签为 **草稿**、**已发** 和 **收件**。
+
+**收件。** Tidewater Studio 发来的两份单据：
+
+| 单据 | 内容 |
+|---|---|
+| 发票 TWS-2026-045 | 菜单重新设计、食品摄影和两套印刷桌卡，含 9% GST，Net 30。 |
+| 红字发票 TWS-CN-2026-003 | 冲回一套桌卡，因为该批印刷已取消。 |
+
+打开一份单据可看到 **收到的单据**，选 **下载原文** 可取得原始文件。
+
+{% aside type="note" title="收到的单据在 15 分钟内到达" %}
+这两份单据在开出或重置账户时发出，约 15 分钟内出现在 **收件** 下。刚重置完时这个页签可能还是空的。
+{% /aside %}
+
+**现场发出草稿。** **草稿** 下有一张 Marigold Lane Kitchen 开给 Tidewater Studio 的发票，内容为工作室开放日的餐饮服务（60 位来宾及服务人员，Net 14，买方参考号 TWS-PO-2611）。
+
+{% steps %}
+1. 打开草稿，核对 **买方**、**单据信息**、**明细行**、**合计** 和 **预览**。
+2. 选 **发送**，再在 **确认发送这份单据？** 中选 **发送**。
+3. 打开 **已发**。**送达情况** 一栏先显示 **发送中**，约一分钟后显示 **已送达**。
+{% /steps %}
+
+这张发票经模拟 Access Point 送达 Tidewater Studio。
+
+**发票版式。** **发票设置** › **版式** 显示 Marigold Lane Kitchen 自己的发票版式：主题颜色和 Corallis Bank 收款信息。
+
+{% screenshot id="demo/portal-invoicenow-received" caption="收件页签：Tidewater Studio 发来的发票和红字发票。" /%}
+
+{% screenshot id="demo/portal-invoicenow-delivered" caption="现场发出的草稿已送达。" /%}
+
+{% aside type="note" title="与正式环境的差异" %}
+演示环境的 InvoiceNow 使用模拟 Access Point：开通立即获批，单据发出约十秒后送达，不会进入 Peppol 网络。
+{% /aside %}
