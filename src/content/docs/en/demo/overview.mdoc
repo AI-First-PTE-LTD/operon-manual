@@ -57,9 +57,9 @@ Every account is filled from the same demo data pack. Dates are counted from the
 |---|---|
 | Kestrel Bay Analytics Pte. Ltd. | Incorporation waiting for ACRA registration. See [Incorporation](/en/demo/incorporation/). |
 | Fernreach Botanicals Pte. Ltd. | Incorporation just opened, for ID recognition. |
-| Marigold Lane Kitchen Pte. Ltd. | Company C: one-click fill; change of registered address; the client checklist; Rachel Lau's portal. |
-| Tidewater Studio Pte. Ltd. | Company A: a quarter already booked. Also sends InvoiceNow invoices to Marigold Lane. |
-| Juniper Forge Engineering Pte. Ltd. | Company B: a quarter half booked; change of director. |
+| Marigold Lane Kitchen Pte. Ltd. | Company C: one-click fill (in preparation); change of registered address; the client checklist; Rachel Lau's portal. |
+| Tidewater Studio Pte. Ltd. | Company A: a quarter already booked (in preparation). Also sends InvoiceNow invoices to Marigold Lane. |
+| Juniper Forge Engineering Pte. Ltd. | Company B: a quarter half booked (in preparation); change of director. |
 | Orchid Mesa Design Pte. Ltd. | Annual return waiting for ACRA filing. |
 | Pebblestone Learning Pte. Ltd. | Change of company name. |
 | Saffron Quay Trading Pte. Ltd. | Annual return overdue; the case is collecting information. |
@@ -68,7 +68,7 @@ Every account is filled from the same demo data pack. Dates are counted from the
 | Halcyon Ridge Properties Pte. Ltd. | Subsidiary; annual return with AGM documents out for signature. |
 | Bramblewood Consulting Pte. Ltd. | Striking off. |
 
-The account also holds opportunities in each stage, invoices in each status, two contracts waiting for signature, two past AI conversations and two knowledge documents.
+The account also holds opportunities in each stage, invoices in each status, two contract drafts on agreed opportunities, two past AI conversations and two knowledge documents.
 
 ## How the demo environment differs from the live service
 
@@ -95,15 +95,17 @@ Everything else that uses AI in the demo, such as reading documents, ID recognit
 
 Some steps of the demo upload a file, for example the ID documents in an incorporation. Download the demo files before you start:
 
-- [demo-files.zip](/downloads/demo-files.zip) — TODO(file size), SHA-256 `TODO(sha256)`
+- [demo-files.zip](/downloads/demo-files.zip) — 18 KB, SHA-256 `14c6202d666a521aafd5e632bc67fb6fc9ee23b3a5c7793fed5f507db0ff9fe1`
 
 The package holds only made-up specimen documents, each marked SPECIMEN. It has one folder for each part of the demo, a `README.txt` and a `SHA256SUMS` file to check the files.
 
 | Folder | Used in |
 |---|---|
 | `01-incorporation/` | [Incorporation](/en/demo/incorporation/#upload-the-id-documents): the ID documents of Fernreach Botanicals' two proposed directors. |
-| TODO(check zip) | [The client checklist](/en/demo/client-checklist/): the ID of the new director that Rachel Lau adds in the portal. |
-| TODO(check zip) | [Bookkeeping](/en/demo/bookkeeping/): the quarter's documents of Marigold Lane Kitchen, if you upload them live. |
+| `02-checklist/` | [Client portal](/en/demo/client-portal/#secretarial-the-checklist): the NRIC of the new director Clement Yeo, and the optional board resolution, which Rachel Lau uploads in the checklist. |
+| `03-change-of-address/` | [Corporate changes](/en/demo/corporate-changes/#change-of-registered-address): the proof of Marigold Lane Kitchen's new registered office. |
+
+The other documents of the demo, such as the case papers, the portal documents and company C's bookkeeping documents, are already in the account. You do not upload them.
 
 {% aside type="caution" title="Upload the files exactly as they are" %}
 Upload the original files from the package. Do not rename and save them again, edit them, print and scan them, or take photos of them. The demo finds the recorded answer for a document by its content: when the content changes, even slightly, there is no result for that document.
