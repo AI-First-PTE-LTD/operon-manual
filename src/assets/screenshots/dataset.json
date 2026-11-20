@@ -572,5 +572,57 @@
     "overpayment": "SGD 192.00",
     "customerReference": "PO-7781",
     "xeroOrganisation": "SAMPLE ACCOUNTING FIRM PTE. LTD."
+  },
+  "demo": {
+    "note": "Fictional data. Read from packages/demo-pack in the Operon repository (the experience-account pack); do not edit by hand.",
+    "packVersion": "2026.11.1",
+    "firm": "Larkspur Corporate Services Pte. Ltd.",
+    "loginPrefix": "sample",
+    "users": [
+      {
+        "loginKey": "admin",
+        "name": "Evelyn Tan Shu Ying",
+        "role": "tenant_admin"
+      },
+      {
+        "loginKey": "secretarial-manager",
+        "name": "Marcus Goh Wei Jie",
+        "role": "tenant_manager"
+      },
+      {
+        "loginKey": "secretary",
+        "name": "Priya Raman",
+        "role": "tenant_member"
+      },
+      {
+        "loginKey": "accounting-manager",
+        "name": "Daniel Ong Kah Wai",
+        "role": "tenant_manager"
+      },
+      {
+        "loginKey": "accountant",
+        "name": "Nur Aisyah Rahman",
+        "role": "tenant_member"
+      },
+      {
+        "loginKey": "sales",
+        "name": "Ryan Chua Jun Hao",
+        "role": "tenant_manager"
+      }
+    ],
+    "clients": [
+      "Kestrel Bay Analytics Pte. Ltd.",
+      "Fernreach Botanicals Pte. Ltd.",
+      "Marigold Lane Kitchen Pte. Ltd.",
+      "Tidewater Studio Pte. Ltd.",
+      "Juniper Forge Engineering Pte. Ltd.",
+      "Orchid Mesa Design Pte. Ltd.",
+      "Pebblestone Learning Pte. Ltd.",
+      "Saffron Quay Trading Pte. Ltd.",
+      "Halcyon Ridge Holdings Pte. Ltd.",
+      "Halcyon Ridge Logistics Pte. Ltd.",
+      "Halcyon Ridge Properties Pte. Ltd.",
+      "Bramblewood Consulting Pte. Ltd."
+    ]
   }
 }
