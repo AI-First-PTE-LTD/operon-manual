@@ -1,0 +1,46 @@
+---
+title: 公司秘书：公司变更
+description: 在线签署的更换董事案子，以及股份转让、更改公司名称和更改注册地址案子。
+sidebar:
+  order: 4
+---
+
+本页演示公司变更案子。大部分由公司秘书 `<prefix>.secretary@demo.operoncore.app`（Priya Raman）处理；股份转让由公司秘书部主管 `<prefix>.secretarial-manager@demo.operoncore.app`（Marcus Goh）负责。以董事身份签署时，通过租户管理员的 **演示收件箱**（Demo inbox）演示。
+
+从 **工作区**（Workspace） › 秘书工作区 › **案子**（Cases）打开这些案子。
+
+| 案子类型 | 客户 | 案子停在哪里 |
+|---|---|---|
+| **更换董事**（Change Director） | Juniper Forge Engineering Pte. Ltd. | 文件已发出在线签署。 |
+| **股份转让**（Share Transfer） | Halcyon Ridge Logistics Pte. Ltd. | 正在收集资料。 |
+| **更改公司名称**（Change Company Name） | Pebblestone Learning Pte. Ltd. | 刚开案。 |
+| **更改注册地址**（Change Registered Address） | Marigold Lane Kitchen Pte. Ltd. | 正在收集资料。 |
+
+## 在线签署的更换董事
+
+Wilfred Tay Chin Hock 辞去 Juniper Forge Engineering 的董事职务，由 Samuel Lim Jia Hao 接任，自账户开出或重置三天后生效。方案已确认，文件已生成并复核，并已通过邮件发出签署。
+
+{% steps %}
+1. 打开案子，选 **在对话中继续**（Continue in chat）。**收集已签署文书**（Collect signed documents）卡片列出各份文书和签署人，可以在 **按文书看**（By document）和 **按签署人看**（By signer）之间切换。
+2. 每位签署人显示一个状态，例如 **等待签署**（Waiting）或 **签署中**（In progress）。
+3. 要以董事身份签署，在另一个窗口以租户管理员身份登录，从头像菜单打开 **演示收件箱**，打开发给某位董事的电子签邀请，选其中的链接，在签署页上签署。
+4. 回到案子，该签署人的状态随之变化。所有人签完后，文书显示 **已完成**（Complete），选 **下载合并版**（Download merged）可得到全部签署件合成的一个 PDF。
+{% /steps %}
+
+{% screenshot id="demo/change-director-signing" caption="更换董事的签署卡片，按签署人查看。" /%}
+
+{% aside type="note" title="与正式环境的差异" %}
+在正式环境中，董事在自己的邮箱收到邀请。在演示环境中，邀请只在演示收件箱里，演示人可以代每位董事签署。向 ACRA 递交这一步无法演示：按钮显示 **演示环境不提供这个流程的 ACRA 填报。**（The demo environment does not provide ACRA filing for this flow.）
+{% /aside %}
+
+## 股份转让
+
+Marco Dela Cruz 把他在 Halcyon Ridge Logistics 的 30,000 股（10%）以 SGD 30,000 转让给母公司 Halcyon Ridge Holdings，转让后母公司持有全部股份。案子正在等转让资料。可以用它展示集团结构：在 **客户**（Clients）中打开这家公司，查看它的股东，包括作为法人股东的母公司。见 [关系](/zh-cn/clients/relationships/)。
+
+## 更改公司名称
+
+Pebblestone Learning Pte. Ltd. 将改名为 Pebblestone Academy Pte. Ltd.。案子在 **待开始**（Ready to start）列，可用来演示变更案子如何开始。名称申请需要 ACRA 的批复，演示环境无法产生，因此这个案子最多推进到名称申请。
+
+## 更改注册地址
+
+Marigold Lane Kitchen 把注册地址迁到 5 Senja Lane #02-08, Singapore 677705，自账户开出或重置七天后生效。在这一版演示中，案子停在第一步。这一步要求上传公司的 BizFile 和新地址证明。地址证明在演示文件中（`03-change-of-address/Marigold Lane proof of new registered office (specimen).pdf`），BizFile 还没有，因此这个案子暂时无法往下推。

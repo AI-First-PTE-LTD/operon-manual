@@ -1,0 +1,82 @@
+---
+title: CRM, contracts and invoices
+description: Show the opportunity board in every stage, the two contract drafts, e-signature, and invoices in each status.
+sidebar:
+  order: 6
+---
+
+This page shows the sales side of the demo firm: opportunities, contracts, e-signature and invoices. Sign in as the salesperson, `<prefix>.sales@demo.operoncore.app` (Ryan Chua). For invoice actions that need a manager or the tenant admin, sign in as `<prefix>.admin@demo.operoncore.app` (Evelyn Tan).
+
+The full instructions for each screen are in the [CRM](/en/crm/overview/) and [Invoices](/en/invoices/overview/) chapters. This page says only what the demo account holds and in which order to show it.
+
+## The opportunity board
+
+Select **Workspace**, open the CRM workspace and select **Opportunity**. The board has an opportunity in each open stage and in the closed stages:
+
+| Stage | Opportunity | Services |
+|---|---|---|
+| New | Wren & Alder — incorporation and secretary (a prospect, not yet a client) | Company Incorporation, Corporate Secretary Retainer |
+| Qualified | Pebblestone — quarterly bookkeeping and GST | Bookkeeping (Quarterly), GST F5 Return |
+| Cold | Juniper Forge — payroll outsourcing | Payroll Processing |
+| Agreed | Halcyon Ridge group — payroll for three entities | Payroll Processing |
+| Agreed | Saffron Quay — corporate tax filing | Corporate Tax (Form C-S) |
+| Won | Kestrel Bay — company set-up package | Company Incorporation, Corporate Secretary Retainer, Registered Office Address |
+| Won | Fernreach — company set-up package | The same package |
+| Won | Marigold Lane — new director | Change of Director (used by the [client checklist](/en/demo/client-checklist/)) |
+| Lost | Bramblewood — final tax return | Corporate Tax (Form C-S) |
+
+Show the bar at the top (**Opportunities**, **Expected revenue**, **Weighted**), then drag the Pebblestone card to **Agreed**: Operon asks for a note first. Open **Dashboard** for the pipeline report. See [The opportunity board](/en/crm/opportunities/).
+
+{% screenshot id="demo/crm-board-stages" caption="The opportunity board of the demo firm." /%}
+
+## Contract drafts
+
+The two **Agreed** opportunities each have a contract draft. Only the client signatory is chosen; the contract has not been generated or sent yet. Take it forward live, starting from **1 Prepare**:
+
+| Opportunity | Contract | Client signatory |
+|---|---|---|
+| Halcyon Ridge group — payroll for three entities | Payroll services agreement | Gregory Teo Kok Meng |
+| Saffron Quay — corporate tax filing | Corporate tax engagement | Hamid Osman |
+
+Open one of them and its **Contract** tab. Continue through the contract stages: complete **1 Prepare**, generate and read the contract in **2 Draft**, then send it for signature in **4 Signing** with **Send**. See [Prepare the contract](/en/crm/prepare/) and [Send for e-signature](/en/crm/e-signature/).
+
+{% screenshot id="demo/crm-contract-draft" caption="A contract in preparation on an agreed opportunity." /%}
+
+### Sign as the client
+
+The invitation to the client signatory does not go to a real mailbox. Sign in as the tenant admin, open the **Demo inbox** from the avatar menu, and open the invitation. Its link opens the signing page, where you sign as the client. The contract then becomes **Signed**, and the signed PDF is filed with the opportunity. See [Signing as a signer](/en/e-sign/signer/).
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service the invitation goes to the client's mailbox. In the demo environment every email is kept in the demo inbox, so the presenter can play the client.
+{% /aside %}
+
+## Invoices
+
+Select **Invoices** in the side bar. The demo firm has invoices in these statuses:
+
+| Status | Client | For |
+|---|---|---|
+| **Draft** | Kestrel Bay Analytics | Company incorporation and the first year of the registered office address |
+| **Draft** | Fernreach Botanicals | The same |
+| **Draft** | Pebblestone Learning | Change of company name |
+| **Awaiting payment** | Halcyon Ridge Holdings | Annual return filing and the nominee resident director fee |
+| **Awaiting payment** | Marigold Lane Kitchen | Bookkeeping and GST F5 return for the quarter, and payroll for nine employees |
+| **Paid** | Tidewater Studio | Bookkeeping and GST F5 return for the quarter |
+| **Paid** | Juniper Forge Engineering | Corporate secretary retainer |
+| **Overdue** | Saffron Quay Trading | Corporate secretary retainer and annual return filing |
+| **Overdue** | Bramblewood Consulting | Striking off |
+
+All amounts are in SGD with GST at 9%.
+
+A good order to show them:
+
+1. Select the **Overdue** card at the top to list the two overdue invoices.
+2. Open the Kestrel Bay draft, check the lines and GST, and issue it. See [Issue and send](/en/invoices/issue-send/).
+3. Send it by email. The email goes to the **Demo inbox**.
+4. Open the Halcyon Ridge Holdings invoice and record a payment. See [Record payments](/en/invoices/payments/).
+
+{% screenshot id="demo/invoices-list-statuses" caption="The invoice list of the demo firm." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+Xero and Stripe are not connected in the demo environment: their settings show **Not connected. This integration is not available in the demo environment.** Invoices are numbered by Operon, and payments are recorded by hand. The firm's own InvoiceNow connection in the invoice settings is not available either; InvoiceNow is shown between client companies in the [client portal](/en/demo/client-portal/#invoices-invoicenow).
+{% /aside %}

@@ -1,0 +1,133 @@
+---
+title: The demo environment
+description: What the demo environment and an experience account are, how to get one, what each account holds, and how it differs from the live service.
+sidebar:
+  order: 1
+---
+
+This page explains the demo environment and its experience accounts. It is for pre-sales staff who present Operon and for prospects who try Operon themselves.
+
+The demo environment is a separate copy of Operon at [demo.operoncore.app](https://demo.operoncore.app). It runs the same version of Operon as the live service, but it holds only fictional data. You can try every main line of work there, and you can return an account to its starting state at any time.
+
+## Experience accounts
+
+An experience account is a demo firm for one person: a pre-sales colleague or a prospect. Each account is a complete firm with its own staff, clients, cases, invoices and books. What you change in one account does not show in any other account.
+
+### Get an account
+
+A platform administrator of the demo environment opens the account under **Experience accounts** in the platform console. The administrator chooses:
+
+| Field | Meaning |
+|---|---|
+| **Name** | The name of the account, for example the person who uses it. |
+| **For** | Optional: who will use the account. |
+| **Sign-in prefix** | Lower-case letters, digits and hyphens. All sign-in addresses of the account start with it. |
+| **Last day** | The last day the account can be used. An account for a pre-sales colleague can have no last day. |
+
+When the account is opened, the console shows the **Administrator email** and the **Password** once. The administrator sends them to you. All roles of the account use the same password.
+
+### Sign in
+
+Open [demo.operoncore.app](https://demo.operoncore.app) and sign in with one of the addresses below. `<prefix>` is the sign-in prefix of your account.
+
+| Sign-in address | Person | Role | Use it to show |
+|---|---|---|---|
+| `<prefix>.admin@demo.operoncore.app` | Evelyn Tan Shu Ying, Managing Director | Tenant admin | Approvals, invoices, settings, the demo inbox and the reset. |
+| `<prefix>.secretarial-manager@demo.operoncore.app` | Marcus Goh Wei Jie, Head of Corporate Secretarial | Manager | Reviews of annual returns and corporate changes. |
+| `<prefix>.secretary@demo.operoncore.app` | Priya Raman, Corporate Secretarial Executive | Member | Annual returns, incorporations and changes. |
+| `<prefix>.accounting-manager@demo.operoncore.app` | Daniel Ong Kah Wai, Head of Accounting | Manager | Reviews of the books and GST returns; client messages. |
+| `<prefix>.accountant@demo.operoncore.app` | Nur Aisyah Rahman, Accountant | Member | The bookkeeping workbench and one-click fill. |
+| `<prefix>.sales@demo.operoncore.app` | Ryan Chua Jun Hao, Business Development Manager | Manager | Opportunities, contracts and the client checklist. |
+
+A seventh address, `<prefix>.client@demo.operoncore.app`, belongs to Rachel Lau Pei Qi, the finance contact of the client Marigold Lane Kitchen. It signs in to the client portal, not to the firm's side. See [Client portal](/en/demo/client-portal/).
+
+The sign-in page and the home page show the notice **This is a demo environment. Do not upload real documents or personal data.**
+
+{% screenshot id="demo/sign-in-notice" caption="The sign-in page of the demo environment, with the demo notice." /%}
+
+## What each account holds
+
+Every account is filled from the same demo data pack. Dates are counted from the day the account was opened or last reset, so the data always looks current. The bookkeeping quarter is the exception: it is always July to September 2026, because the documents are PDFs with printed dates.
+
+**The firm.** Larkspur Corporate Services Pte. Ltd., a corporate services firm in Singapore, with three departments (Secretary, Accounting and Sales), the six people above, three more staff without a sign-in, and a catalogue of fifteen services in SGD.
+
+**The clients.** Twelve fictional companies, each with a part in the demo:
+
+| Client | Part in the demo |
+|---|---|
+| Kestrel Bay Analytics Pte. Ltd. | Incorporation waiting for ACRA registration. See [Incorporation](/en/demo/incorporation/). |
+| Fernreach Botanicals Pte. Ltd. | Incorporation just opened, for ID recognition. |
+| Marigold Lane Kitchen Pte. Ltd. | Company C: one-click fill (in preparation); change of registered address; the client checklist; Rachel Lau's portal. |
+| Tidewater Studio Pte. Ltd. | Company A: a quarter already booked (in preparation). Also sends InvoiceNow invoices to Marigold Lane. |
+| Juniper Forge Engineering Pte. Ltd. | Company B: a quarter half booked (in preparation); change of director. |
+| Orchid Mesa Design Pte. Ltd. | Annual return waiting for ACRA filing. |
+| Pebblestone Learning Pte. Ltd. | Change of company name. |
+| Saffron Quay Trading Pte. Ltd. | Annual return overdue; the case is collecting information. |
+| Halcyon Ridge Holdings Pte. Ltd. | Group parent; annual return due in 7 days. |
+| Halcyon Ridge Logistics Pte. Ltd. | Subsidiary; share transfer to the parent. |
+| Halcyon Ridge Properties Pte. Ltd. | Subsidiary; annual return with AGM documents out for signature. |
+| Bramblewood Consulting Pte. Ltd. | Striking off. |
+
+The account also holds opportunities in each stage, invoices in each status, two contract drafts on agreed opportunities, two past AI conversations and two knowledge documents.
+
+## How the demo environment differs from the live service
+
+| Area | In the demo environment |
+|---|---|
+| Data | Only fictional data. Do not upload real documents or personal data. |
+| Email | No email leaves the demo environment. Every email that would be sent (portal sign-in codes, e-sign invitations, invoices) goes to the **Demo inbox** of the account. Only the tenant admin can open it: select the avatar at the bottom of the side bar, then **Demo inbox**. |
+| ACRA | The ACRA button opens a mock ACRA website, not Bizfile. The demo version of the ACRA extension fills it. Only annual returns and incorporations have mock pages. For other flows the button cannot be selected, and Operon shows **The demo environment does not provide ACRA filing for this flow.** |
+| InvoiceNow | Client companies can send and receive InvoiceNow invoices through a mock Access Point. Nothing reaches the Peppol network. The firm's own InvoiceNow connection is not available. |
+| Xero, Stripe | Not connected. Operon shows **Not connected. This integration is not available in the demo environment.** |
+| AI conversations | Real AI model calls, limited to USD 1 for each account between resets. See below. |
+| Bookkeeping and document reading | Recorded answers are played back. No AI model is called. See [Bookkeeping](/en/demo/bookkeeping/). |
+| Filings | Nothing is filed with ACRA or IRAS, and no real e-invoice is sent. |
+
+{% screenshot id="demo/demo-inbox-list" caption="The Demo inbox of an experience account." /%}
+
+## AI conversations: USD 1 for each account
+
+Conversations with the AI employees and with the bookkeeping agent call a real AI model. Each experience account can spend USD 1 on them, counted from the day it was opened or last reset. When the allowance is used up, the conversation shows **This demo's AI allowance is used up. Reset the account to restore it.**
+
+Everything else that uses AI in the demo, such as reading documents, ID recognition and one-click fill, plays back recorded answers and costs nothing. Those features give a result only for the demo documents of the data pack.
+
+## Demo files
+
+Some steps of the demo upload a file, for example the ID documents in an incorporation. Download the demo files before you start:
+
+- [demo-files.zip](/downloads/demo-files.zip) — 18 KB, SHA-256 `14c6202d666a521aafd5e632bc67fb6fc9ee23b3a5c7793fed5f507db0ff9fe1`
+
+The package holds only made-up specimen documents, each marked SPECIMEN. It has one folder for each part of the demo, a `README.txt` and a `SHA256SUMS` file to check the files.
+
+| Folder | Used in |
+|---|---|
+| `01-incorporation/` | [Incorporation](/en/demo/incorporation/#upload-the-id-documents): the ID documents of Fernreach Botanicals' two proposed directors. |
+| `02-checklist/` | [Client portal](/en/demo/client-portal/#secretarial-the-checklist): the NRIC of the new director Clement Yeo, and the optional board resolution, which Rachel Lau uploads in the checklist. |
+| `03-change-of-address/` | [Corporate changes](/en/demo/corporate-changes/#change-of-registered-address): the proof of Marigold Lane Kitchen's new registered office. |
+
+The other documents of the demo, such as the case papers, the portal documents and company C's bookkeeping documents, are already in the account. You do not upload them.
+
+{% aside type="caution" title="Upload the files exactly as they are" %}
+Upload the original files from the package. Do not rename and save them again, edit them, print and scan them, or take photos of them. The demo finds the recorded answer for a document by its content: when the content changes, even slightly, there is no result for that document.
+{% /aside %}
+
+## Expiry and reset
+
+An account can be used until its **Last day**. After that nobody can sign in to it, and it cannot be reset. Its data is kept until the platform administrator extends the account or deletes it.
+
+The tenant admin of the account can reset it at any time: everything in the account is deleted and written again from the data pack. See [Reset and FAQ](/en/demo/reset-faq/).
+
+## The demo, step by step
+
+1. [Secretarial: annual returns](/en/demo/annual-returns/)
+2. [Secretarial: incorporation](/en/demo/incorporation/)
+3. [Secretarial: corporate changes](/en/demo/corporate-changes/)
+4. [Secretarial: the client checklist](/en/demo/client-checklist/)
+5. [CRM, contracts and invoices](/en/demo/crm-invoices/)
+6. [Bookkeeping](/en/demo/bookkeeping/)
+7. [Client portal](/en/demo/client-portal/)
+8. [Reset and FAQ](/en/demo/reset-faq/)
+
+{% aside type="note" title="All data is fictional" %}
+Every firm, company, person, ID number, address, amount and document in the demo environment and on these pages is made up.
+{% /aside %}

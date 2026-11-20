@@ -1,0 +1,67 @@
+---
+title: "Secretarial: annual returns"
+description: Four annual return cases stopped at four different steps, and how to move each one forward, up to auto-filling the mock ACRA website.
+sidebar:
+  order: 2
+---
+
+This page shows the annual return from the case being opened to the ACRA filing. The secretary, `<prefix>.secretary@demo.operoncore.app` (Priya Raman), does the work; the review step is done by the head of corporate secretarial, `<prefix>.secretarial-manager@demo.operoncore.app` (Marcus Goh).
+
+## Find the cases
+
+{% steps %}
+1. Sign in as the secretary. Select **Workspace** and open the Secretary workspace.
+2. Select **Cases**. The board shows each case as a card in the column of its status.
+3. Select a card to open the case. The step list shows the steps of the case, the current one marked **In progress**. Select **Continue in chat** to work on the current step with the AI employee.
+{% /steps %}
+
+{% screenshot id="demo/secretary-cases-board" caption="The case board of the Secretary workspace." /%}
+
+The demo firm has four annual return cases, each stopped at a different step:
+
+| Client | Where the case stops | Why it is there |
+|---|---|---|
+| Halcyon Ridge Holdings Pte. Ltd. | Just opened; the work has not started. | Its annual return is due in 7 days. |
+| Saffron Quay Trading Pte. Ltd. | Collecting information. | The annual return is three weeks overdue; the firm waits for the financial statements. |
+| Halcyon Ridge Properties Pte. Ltd. | AGM documents out for signature. | Reviewed and approved; the directors have not signed yet. |
+| Orchid Mesa Design Pte. Ltd. | Ready for ACRA filing. | Everything is signed; only the filing is left. |
+
+Together they show the whole annual return. Show them in this order.
+
+## 1. Halcyon Ridge Holdings: start the case
+
+The case is in **Ready to start**. Open it and start the work. The first step asks for the company's details and its AGM answers, with the company's BizFile and financial statements. Point out that the AI employee reads the BizFile and the financial statements and fills the next form, **Review the Details**, for the secretary to check.
+
+The demo of this case ends here: the demo package has no BizFile or financial statements for this company.
+
+## 2. Saffron Quay Trading: collecting information
+
+The case waits at the intake step, **Annual Return Intake**. Use it to show what the firm asks for, and the reminder the AI employee drafted in a past conversation: open the chat history of the AI employee and select **Which annual returns are due this month?**.
+
+## 3. Halcyon Ridge Properties: documents out for signature
+
+The details were checked, the secretary's self-check and the manager's review were approved, and the AGM documents were generated. The case now waits for the signed copy.
+
+- Show the approval history on the case: the self-check, then the review by Marcus Goh with **Approve**.
+- The signed-copy step asks **Please upload the signed AGM documents (single PDF)**. Uploading the signed copy moves the case to the ACRA filing step, which is the state of the next case.
+
+## 4. Orchid Mesa Design: file with ACRA
+
+This is the step the demo ends on. The case shows the **ACRA filing** card.
+
+{% steps %}
+1. Install the demo version of the ACRA extension in Chrome. Ask the person who gave you the account for the link.
+2. On the **File with ACRA** step, select **Fill the ACRA form**.
+3. A new tab opens the mock ACRA website at the annual return page. The extension fills in the company's UEN, its officers, the financial year end and the AGM answers from the case.
+4. Compare the filled page with the case: the directors Alpha Synthetic Tester and Beta Sample Person, and the secretary Gamma Example Officer, as in the case.
+{% /steps %}
+
+{% screenshot id="demo/annual-return-acra-filing" caption="The ACRA filing card of the Orchid Mesa annual return." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service, **Fill the ACRA form** opens Bizfile and the extension of the live service fills it. In the demo environment it opens a mock ACRA website, and only the demo version of the extension runs on it. Nothing is filed with ACRA.
+{% /aside %}
+
+## The due-date view
+
+Halcyon Ridge Holdings is due in 7 days and Halcyon Ridge Properties in 25 days; Saffron Quay Trading is overdue. Open **Secretary Dashboard** in the Secretary workspace to show the due dates of all clients together.

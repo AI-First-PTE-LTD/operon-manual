@@ -1,0 +1,103 @@
+---
+title: Bookkeeping
+description: Three companies in the bookkeeping workbench — a quarter already booked with its GST result, a quarter half booked with open to-dos and client queries, and a live AI bookkeeping run.
+sidebar:
+  order: 7
+---
+
+This page shows the bookkeeping workbench with three companies, all for the quarter July to September 2026. The accountant, `<prefix>.accountant@demo.operoncore.app` (Nur Aisyah Rahman), does the work; the GST sign-off is done by the head of accounting, `<prefix>.accounting-manager@demo.operoncore.app` (Daniel Ong).
+
+{% aside type="caution" title="This part of the demo is still being prepared" %}
+For now, companies A, B and C have no bookkeeping data in the experience account: no case for the July to September 2026 quarter, no documents and no booked entries. The rest of this page is the demo script for when this part is ready.
+{% /aside %}
+
+| Company | State in the demo | What to show |
+|---|---|---|
+| A — Tidewater Studio Pte. Ltd. | The quarter is booked to the end. | The books and the GST F5 result. |
+| B — Juniper Forge Engineering Pte. Ltd. | The quarter is half booked. | Open to-dos and questions for the client. |
+| C — Marigold Lane Kitchen Pte. Ltd. | The quarter's documents are uploaded; nothing is booked yet. | An AI bookkeeping run, live. |
+
+The full instructions for each screen are in the [Bookkeeping workbench](/en/bookkeeping/overview/) chapter.
+
+{% aside type="caution" title="Follow the demo script" %}
+In the demo environment the bookkeeping AI does not call an AI model. Every answer it gives is played back from a recording made with the demo documents and the steps on this page. A step taken outside this script, or a document that is not one of the demo documents, has no recorded answer: the document shows **No result for this document in the demo recording.** and the work stops there.
+
+Questions typed into **Talk to the bookkeeping agent** are different: they call a real AI model and are counted against the account's USD 1 allowance. See [AI conversations](/en/demo/overview/#ai-conversations-usd-1-for-each-account).
+{% /aside %}
+
+## Open a company's quarter
+
+{% steps %}
+1. Sign in as the accountant. Select **Workspace** and open the Tax workspace.
+2. Select **Cases** and open the quarter case of the company.
+3. Select **Open workbench**. The workbench shows the steps **Documents**, **Reconcile**, **Review**, **Close** and **Report**.
+{% /steps %}
+
+## A — Tidewater Studio: the result and GST
+
+Tidewater Studio is a design studio. Its quarter has eight documents: a bank statement for the quarter, three sales invoices, two supplier invoices, a receipt and the 30 June balance sheet. All of them are booked.
+
+{% steps %}
+1. Open **Documents** › **Source Documents**: every document is booked, and nothing is waiting.
+2. Open **Reconcile** › **Bank**: every line of the Harbourlight Bank statement is matched.
+3. Open **Review** › **F5 check**. The GST F5 boxes for the quarter are:
+
+   | Box | Amount (SGD) |
+   |---|---:|
+   | 1 Standard-rated supplies | 12,700.00 |
+   | 2 Zero-rated supplies | 12,000.00 |
+   | 4 Total supplies | 24,700.00 |
+   | 5 Taxable purchases | 2,760.00 |
+   | 6 Output tax due | 1,143.00 |
+   | 7 Input tax and refunds claimed | 248.40 |
+   | 8 Net GST payable | 894.60 |
+
+4. Point out box 2: one invoice is for design work for a customer in Australia, booked as a zero-rated international service.
+5. Open **Report** › **F5 report**, and the report tabs such as the balance sheet and the profit and loss.
+{% /steps %}
+
+Generating the F5 is a sign-off for a manager. Sign in as Daniel Ong, open the same quarter, and select **Generate F5** on **F5 check**. The page then shows **Confirmed** with his name and the time, and **Download Excel worksheet**.
+
+{% screenshot id="demo/bookkeeping-a-f5-check" caption="The F5 check of company A." /%}
+
+## B — Juniper Forge: to-dos and questions for the client
+
+Juniper Forge is an engineering design firm. Its quarter has seven documents. The AI bookkeeping run was paused half way, so some documents are booked and some questions are left for the accountant.
+
+{% steps %}
+1. Open **Documents**. Filter with **To do** to list what is waiting for the accountant, and with **Waiting for client** for what waits for the client.
+2. Open a to-do and answer it, or select **Ask client** when only the client can answer, for example what the freelance drafting invoice from a supplier without GST was for.
+3. Select **Client queries** at the top right to open the client query list. Show **Copy list**, **Export Excel** and **Print / Save as PDF**. Nothing is sent to the client from this list.
+4. To put the questions in the client portal, select **Share in portal**.
+{% /steps %}
+
+See [Client queries](/en/bookkeeping/client-queries/).
+
+{% screenshot id="demo/bookkeeping-b-todos" caption="The open to-dos of company B." /%}
+
+## C — Marigold Lane Kitchen: a live AI bookkeeping run
+
+Marigold Lane Kitchen is a café and caterer. Its quarter's documents are already uploaded: three monthly bank statements, four sales invoices, the supplier invoices and a receipt, payroll sheets, two payslips, a CPF acknowledgement and the 30 June balance sheet.
+
+{% steps %}
+1. Open **Documents**. At the top is the **AI bookkeeping run** card, with **No run for this fiscal year.**
+2. Select **Start the AI bookkeeping run**. Operon shows **The run was created. Approve its spend quote to begin.**
+3. The card shows **Spend awaiting approval** with the quote for the run, about USD 3.45. Select **Approve** with the amount. Operon shows **Approved. The spend limit is open.**
+4. The run starts. The card shows the current phase, **Counterparties** done, stopped and left, and the spend.
+5. When the run ends, the last phase is **Handed over to the accountant**. Below the card, **AI decisions still for you** lists what the AI decided and wants the accountant to look at.
+6. Open **Reconcile** and **Review** › **F5 check** to show the booked quarter and its GST.
+{% /steps %}
+
+{% screenshot id="demo/bookkeeping-c-run-progress" caption="The AI bookkeeping run of company C, in progress." /%}
+
+{% aside type="note" title="Difference from the live service" %}
+On the live service the run calls an AI model and its spend is charged. In the demo environment the run plays back recorded answers and costs nothing; the quote is shown so that the approval can be demonstrated. A run after you changed the documents has no recorded answers.
+{% /aside %}
+
+### Ask the bookkeeping agent
+
+Select rows in a table and select **Ask AI** to open **Talk to the bookkeeping agent**. Type an instruction or a question in **Tell the agent what to do, or ask about this period** and select **Send**. This conversation calls a real AI model and is counted against the USD 1 allowance of the account.
+
+## Marigold Lane in the client portal
+
+Marigold Lane Kitchen also has a case for the next quarter, with two questions shared in the client portal. They are answered on the [client portal](/en/demo/client-portal/#accounting--tax) page.
