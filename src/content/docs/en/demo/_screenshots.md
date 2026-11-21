@@ -25,6 +25,8 @@ This list is the input for the screenshot pipeline. Each id is captured in Engli
 | `demo/settings-reset-card` | reset-faq | tenant admin | Settings › About | "Demo account" card with "Available until" and "Reset demo account". |
 | `demo/portal-sign-in-code` | client-portal | portal (`<prefix>.client`) | `/portal/login` › Email me a sign-in code | "Enter the code" screen. |
 | `demo/portal-home` | client-portal | portal | `/portal` | Home of Marigold Lane Kitchen (redesigned portal): the four tiles, key figures and the Waiting on you board. |
+| `demo/portal-todo` | client-portal | portal | `/portal/c/<company>/todo` | To-do of Marigold Lane Kitchen, grouped by module, with Overdue / This week and This company / All companies. |
+| `demo/portal-account` | client-portal | portal | avatar › My account | My account: name, Language (English / 中文), Password, Authenticator app. |
 | `demo/portal-esign-waiting` | client-portal | portal | `/portal/esign` | The three tiles and the engagement letter under "Waiting for your signature". |
 | `demo/portal-documents-folder` | client-portal | portal | Documents | Folder "Shared with Marigold Lane" with its two PDFs. |
 | `demo/portal-accounting-questions` | client-portal | portal | Accounting & Tax › the bookkeeping case › Open | The case page: two questions "To answer", and "Handled by" on the right. |
