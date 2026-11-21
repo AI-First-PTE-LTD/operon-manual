@@ -1,13 +1,13 @@
 ---
 title: Client portal
-description: Sign in to the client portal as Rachel Lau of Marigold Lane Kitchen and show each module, including InvoiceNow invoices.
+description: Sign in to the client portal as Rachel Lau of Marigold Lane Kitchen and walk through each page, including InvoiceNow invoices.
 sidebar:
   order: 8
 ---
 
 This page shows the client portal from the client's side. The presenter signs in as Rachel Lau Pei Qi, the finance contact of Marigold Lane Kitchen Pte. Ltd., and the tenant admin of the firm reads her sign-in code.
 
-The firm has already opened the portal for Marigold Lane Kitchen on the company's **Client Portal** tab in CRM, turned on the modules and invited Rachel. Rachel's account is a company administrator of the company in the portal.
+The firm has already opened the portal for Marigold Lane Kitchen on the company's **Client Portal** tab in CRM, turned on the modules and invited Rachel. Rachel is a **Company admin** of the company in the portal.
 
 ## Sign in as Rachel
 
@@ -26,58 +26,84 @@ Rachel has no password. She signs in with a code sent by email, and in the demo 
 On the live service the code goes to the client's own mailbox. In the demo environment no email leaves Operon; the code is only in the demo inbox.
 {% /aside %}
 
+If a person has access to more than one company, the portal first asks them to choose one under **Companies**. They can switch at any time with **Switch** at the top of the side bar.
+
+## Find your way around
+
+Every page has the same frame:
+
+- **Side bar.** At the top, the company that is open and **Switch**. Below it, **Home**, **To-do** and **Messages**, then the company's modules under **Company**: **Invoices**, **Accounting & Tax**, **Secretarial**, **E-sign** and **Documents**. A module appears only if the firm turned it on. At the bottom, **Serviced by** names the firm.
+- **Top bar.** **Search** looks through invoices, cases, documents and the other modules (type at least 2 characters). The bell opens **Notifications**. The avatar opens **My account** and **Sign out**.
+- **Status colours.** The same colours are used on every page: orange **Needs you**, red **Failed** or **Overdue**, blue for something that is with the firm, and green **Completed**, **Delivered** or **Signed**.
+
 ## Home
 
-After sign-in the portal opens **Home**: a greeting, **Waiting on you** (what Rachel has to do), the key figures **Owed to you**, **GST payable** and **Books closed to**, **Coming up**, **Recent activity**, and **Your team at** Larkspur Corporate Services with a **Message** button for each person.
+After sign-in the portal opens **Home**: a greeting, the company and today's date in Singapore time, and four tiles: **Waiting on you**, **To sign**, **Questions from your accountant** and **Unread messages**. Select a tile to filter the board below it.
 
-The side bar lists the company's modules under **Company**: **Secretarial**, **Accounting & Tax**, **Invoices**, **E-sign**, **Documents** and **Messages**.
+Below the tiles are the key figures that the firm keeps for the company, such as **Owed to you**, **GST payable** and **Books closed to**, and the deadlines under **Coming up**.
+
+The **Waiting on you** board lists everything Rachel has to do, with **Item**, **Module**, **Status** and **Due**. Each row has one action: **Answer**, **Sign**, **Fix** or **Open**. **Done recently** lists what was finished in the last days. **Recent activity** on the right shows what happened in the company's portal, such as a new message, a shared file or a delivered invoice.
 
 {% screenshot id="demo/portal-home" caption="The portal home page of Marigold Lane Kitchen." /%}
 
+## To-do
+
+Open **To-do**. It holds the same items as **Waiting on you**, grouped by module. **Overdue** and **This week** count what is late and what is due soon. Use **This company** and **All companies** to choose whether the list shows only Marigold Lane Kitchen or every company Rachel can open.
+
 ## E-sign
 
-Open **E-sign**. Under **Waiting for your signature** is the engagement letter for bookkeeping, GST and payroll for the financial year ending 31 December 2027, sent by Daniel Ong. Select **Sign** to sign it online. After signing, it moves to **Signed and completed**, and **Download** gives the signed copy.
+Open **E-sign**. Three tiles count **Waiting for your signature**, **Waiting for others** and **Completed**, and the documents are grouped below them. This page lists documents for every company Rachel can open, so each row names its company.
+
+Under **Waiting for your signature** is the engagement letter for bookkeeping, GST and payroll for the financial year ending 31 December 2027, sent by Daniel Ong. Select **Sign** to sign it online. After signing, it moves to **Completed**, and **Download** gives the signed copy.
 
 {% screenshot id="demo/portal-esign-waiting" caption="The engagement letter waiting for Rachel's signature." /%}
 
 ## Documents
 
-Open **Documents**. Under **Folders** is **Shared with Marigold Lane**, which the accountant shared with the client. It holds the FY2025 financial statements and the GST F5 acknowledgement for July to September 2026. Select **Open** or **Download**. What Rachel uploads herself is kept under **Your uploads**.
+Open **Documents**. The path at the top starts at **Home**. Under **Folders** is **Shared with Marigold Lane**, which the accountant shared with the client. It holds the FY2025 financial statements and the GST F5 acknowledgement for July to September 2026. Open the folder and select a file to open or download it.
+
+Select **Upload** to send a file to the firm. What Rachel uploads is kept in **Your uploads**. **Search file names** finds a file in any folder.
 
 {% screenshot id="demo/portal-documents-folder" caption="The folder the firm shared with the client." /%}
 
 ## Accounting & Tax
 
-Open **Accounting & Tax**. Under **Questions from** Larkspur Corporate Services are two questions from the accountant, both **To answer**:
+Open **Accounting & Tax**. **Owed to you** at the top shows what the company's customers still owe it, from the invoices the firm has recorded. The filters **Needs you**, **With** Larkspur Corporate Services and **Completed** narrow the list of cases. Each case shows its **Period**, what is **Waiting on you** and its **Status**.
+
+Select **Open** on the bookkeeping case. The case page shows how many questions are done, and the questions from the accountant. Two are **To answer**:
 
 - the October and November bank statements for the Corallis Bank account ending 7726;
 - this quarter's supplier invoices so far.
 
-Type a reply in **Your answer**, attach a file with **Attach** if needed, and select **Send**. The question becomes **Answered**, and the reply appears on the firm's side in the company's bookkeeping case. Documents for the books can also be sent with **Choose files** under **Send documents for the books**.
+Type a reply in **Your answer**, attach a file with **Attach** if needed, and select **Send**. The question becomes **Answered**. An answer cannot be changed after it is sent; Rachel can add something in **Messages**. On the firm's side, the reply appears in the company's bookkeeping case.
+
+On the right, **Handled by** names the accountant, with a **Message** button. Under **Anything else for this period?**, **Choose files** sends more documents for the books.
 
 {% screenshot id="demo/portal-accounting-questions" caption="Questions from the firm, waiting for an answer." /%}
 
 ## Messages
 
-Open **Messages**. The conversation with the firm already has three messages between Daniel Ong and Rachel about the GST return and the engagement letter. Type in **Write a message…** and select **Send**. On the firm's side, the message appears on the company's **Messages** tab in CRM.
+Open **Messages**. The conversation with the firm already has three messages between Daniel Ong and Rachel about the GST return and the engagement letter. Type in the message box, attach a file with **Attach** if needed, and select **Send**. On the firm's side, the message appears on the company's **Messages** tab in CRM.
+
+On the right, **Your team at** Larkspur Corporate Services lists the people at the firm who look after the company, and **People at your company** lists everyone at Marigold Lane Kitchen who can read the conversation.
 
 ## Secretarial: the checklist
 
-Open **Secretarial**. Under **Documents and details** is the checklist for the new director of Marigold Lane Kitchen, **Waiting on you**. Two answers are already filled in: the date the appointment takes effect, and that no director is stepping down. Select **Open** and fill in the rest live:
+Open **Secretarial**. The checklist for the new director of Marigold Lane Kitchen is listed with the status **Needs you**. Select **Open**. Each item shows **Done** or **To fill**, and the bar at the top counts how many are done. Two answers are already filled in: the date the appointment takes effect, and that no director is stepping down. Fill in the rest live:
 
 {% steps %}
 1. Under **New director**, select **Add a person**. Type **Full name (as in the passport or NRIC)** `Clement Yeo Shao Wen`, **Email** `clement.yeo@marigoldlane.example` and **Mobile** `+65 5201 3368`. With **Add a file**, upload first `02-checklist/Clement Yeo NRIC front (specimen).pdf` and then `02-checklist/Clement Yeo NRIC back (specimen).pdf` from the [demo files](/en/demo/overview/#demo-files), unchanged.
 2. Optional: under the board approval item, attach `02-checklist/Marigold Lane board resolution - new director (specimen).pdf` with **Add a file**.
-3. Select **Submit**, then **Submit** in **Submit these answers?**.
+3. Select **Send to Larkspur Corporate Services** at the top, then **Submit** in **Submit these answers?**.
 {% /steps %}
 
-The checklist shows **Sent to us**, and Rachel cannot change the answers unless the firm sends an item back. The firm's side of this checklist is on [Secretarial: the client checklist](/en/demo/client-checklist/).
+The checklist shows **Sent to us**, and Rachel cannot change the answers unless the firm sends an item back. A file that Rachel uploads to the checklist can be opened only by her; other people at her company see who uploaded it. The firm's side of this checklist is on [Secretarial: the client checklist](/en/demo/client-checklist/).
 
 {% screenshot id="demo/portal-checklist-open" caption="The new-director checklist, with two answers already given." /%}
 
 ## Invoices: InvoiceNow
 
-The firm registered Marigold Lane Kitchen and Tidewater Studio for InvoiceNow, so the two companies can send InvoiceNow invoices to each other. Open **Invoices**. The tabs are **Drafts**, **Sent** and **Received**.
+The firm registered Marigold Lane Kitchen and Tidewater Studio for InvoiceNow, so the two companies can send InvoiceNow invoices to each other. Open **Invoices**. The strip at the top counts **Draft**, **Sending**, **Not delivered**, **Delivered this month** and **Received this month**. The tabs are **All**, **Draft**, **Sent**, **Not delivered**, **Credit notes** and **Received**. The **Delivery** column shows where each sent document is.
 
 **Received.** Two documents from Tidewater Studio:
 
@@ -92,17 +118,17 @@ Open a document to see **Received document**, and select **Download original** f
 The two received documents are sent when the account is opened or reset, and they appear in **Received** within about 15 minutes. Right after a reset the tab can still be empty.
 {% /aside %}
 
-**Send the draft live.** Under **Drafts** is an invoice from Marigold Lane Kitchen to Tidewater Studio for catering the studio's open house (60 guests and service staff, Net 14, buyer reference TWS-PO-2611).
+**Send the draft live.** Under **Draft** is an invoice from Marigold Lane Kitchen to Tidewater Studio for catering the studio's open house (60 guests and service staff, Net 14, buyer reference TWS-PO-2611).
 
 {% steps %}
-1. Open the draft. Check **Buyer**, **Details**, **Lines**, **Totals** and **Preview**.
+1. Open the draft. Check the buyer, the details, the lines, the totals and the preview.
 2. Select **Send**, then **Send** in **Send this document?**.
-3. Open **Sent**. The **Delivery** column shows **Sending**, and after about a minute **Delivered**.
+3. Open **Sent**. The **Delivery** column shows **On its way**, and after about a minute a tick with the delivery time.
 {% /steps %}
 
-The invoice is delivered to Tidewater Studio over the mock Access Point.
+The invoice is delivered to Tidewater Studio over the mock Access Point. If a document cannot be delivered, its row is marked **Failed** with a short reason, and **Copy to a new draft** starts a corrected copy. A sent document cannot be changed.
 
-**Invoice design.** **Invoice settings** › **Design** shows Marigold Lane Kitchen's own invoice design: its colour and its Corallis Bank payment details.
+**New** starts an invoice or a credit note. **Invoice settings** › **Design** shows Marigold Lane Kitchen's own invoice design: its colour and its Corallis Bank payment details.
 
 {% screenshot id="demo/portal-invoicenow-received" caption="The Received tab, with an invoice and a credit note from Tidewater Studio." /%}
 
@@ -111,3 +137,14 @@ The invoice is delivered to Tidewater Studio over the mock Access Point.
 {% aside type="note" title="Difference from the live service" %}
 In the demo environment InvoiceNow uses a mock Access Point. Registration is approved at once, and a sent document is delivered about ten seconds after it is sent. Nothing reaches the Peppol network.
 {% /aside %}
+
+## My account
+
+Select the avatar at the top right, then **My account**:
+
+- **Language**: **English** or **中文**. This changes the portal for Rachel on every device. It does not depend on the browser's language.
+- **Password**: Rachel signs in with an emailed code. **Set a password** lets her sign in with a password as well; Operon emails a link to set it.
+- **Authenticator app**: adds a second step at sign-in.
+- **Sign out everywhere**: signs Rachel out on every device, including this one.
+
+The email address she signs in with is managed by the firm and cannot be changed here.
