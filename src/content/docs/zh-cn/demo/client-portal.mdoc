@@ -1,13 +1,13 @@
 ---
 title: 客户门户
-description: 以 Marigold Lane Kitchen 的 Rachel Lau 身份登录客户门户，逐一演示各模块，包括 InvoiceNow 发票。
+description: 以 Marigold Lane Kitchen 的 Rachel Lau 身份登录客户门户，逐页演示各模块，包括 InvoiceNow 发票。
 sidebar:
   order: 8
 ---
 
 本页从客户一侧演示客户门户。演示人以 Marigold Lane Kitchen Pte. Ltd. 财务联系人 Rachel Lau Pei Qi 的身份登录，登录码由事务所的租户管理员查看。
 
-事务所已在 CRM 中这家公司的 **客户门户**（Client Portal）页签上为 Marigold Lane Kitchen 开通门户、打开各模块并邀请了 Rachel。Rachel 在门户中是这家公司的公司管理员。
+事务所已在 CRM 中这家公司的 **客户门户**（Client Portal）页签上为 Marigold Lane Kitchen 开通门户、打开各模块并邀请了 Rachel。Rachel 在门户中是这家公司的 **公司管理员**（Company admin）。
 
 ## 以 Rachel 的身份登录
 
@@ -26,60 +26,86 @@ Rachel 没有密码，用邮件发来的验证码登录。在演示环境中，�
 在正式环境中，验证码发到客户自己的邮箱。演示环境不向外发送任何邮件，验证码只在演示收件箱里。
 {% /aside %}
 
+如果一个人能访问不止一家公司，门户会先让他在 **公司**（Companies）下选一家。之后随时可以用侧边栏顶部的 **切换**（Switch）换到另一家。
+
+## 认识页面
+
+每一页的框架都一样：
+
+- **侧边栏。** 顶部是当前打开的公司和 **切换**。下面是 **首页**（Home）、**待办**（To-do）和 **消息**（Messages），再往下是 **公司**（Company）下这家公司的模块：**发票**（Invoices）、**会计与税务**（Accounting & Tax）、**公司秘书**（Secretarial）、**电子签**（E-sign）和 **文件**（Documents）。事务所打开了哪些模块，这里就显示哪些。最底部的 **服务提供方**（Serviced by）写着事务所的名字。
+- **顶栏。** **搜索**（Search）可以在发票、案子、文件等各模块中查找，至少输入 2 个字符。铃铛打开 **通知**（Notifications）。头像打开 **我的账号**（My account）和 **退出**（Sign out）。
+- **状态颜色。** 每一页用同一套颜色：橙色是 **需要你处理**（Needs you），红色是 **失败**（Failed）或 **已逾期**（Overdue），蓝色表示事情在事务所手上，绿色是 **已完成**（Completed）、**已送达**（Delivered）或 **已签署**（Signed）。
+
 ## 首页
 
-登录后门户打开 **首页**（Home）：问候语、**等你处理**（Waiting on you，即 Rachel 要处理的事项）、关键数字 **客户欠你**（Owed to you）、**应缴 GST**（GST payable）和 **已结账到**（Books closed to），以及 **即将到期**（Coming up）、**最近动态**（Recent activity）和 **你在 Larkspur Corporate Services 的团队**（Your team at Larkspur Corporate Services），每个人旁边有 **发消息**（Message）按钮。
+登录后门户打开 **首页**：问候语、公司名和新加坡时间的今天日期，以及四个数字块：**等你处理**（Waiting on you）、**待签署**（To sign）、**会计师的提问**（Questions from your accountant）和 **未读消息**（Unread messages）。选一个数字块，下面的列表就只显示那一类。
 
-侧边栏在 **公司**（Company）下列出这家公司的模块：**公司秘书**（Secretarial）、**会计与税务**（Accounting & Tax）、**发票**（Invoices）、**电子签**（E-sign）、**文件**（Documents）和 **消息**（Messages）。
+数字块下面是事务所为这家公司维护的关键数字，例如 **客户欠你**（Owed to you）、**应缴 GST**（GST payable）和 **已结账到**（Books closed to），以及 **即将到期**（Coming up）下的截止日期。
+
+**等你处理** 列表列出 Rachel 要做的所有事，栏目是 **事项**（Item）、**模块**（Module）、**状态**（Status）和 **截止**（Due）。每一行有一个按钮：**回答**（Answer）、**签署**（Sign）、**处理**（Fix）或 **打开**（Open）。**最近完成**（Done recently）列出最近几天做完的事。右侧的 **最近动态**（Recent activity）显示这家公司门户里发生的事，例如新消息、共享的文件或已送达的发票。
 
 {% screenshot id="demo/portal-home" caption="Marigold Lane Kitchen 的门户首页。" /%}
 
+## 待办
+
+打开 **待办**。这里的事项和 **等你处理** 相同，按模块分组。**已逾期**（Overdue）和 **本周到期**（This week）分别统计已经过期和快要到期的事项。用 **本公司**（This company）和 **全部公司**（All companies）选择只看 Marigold Lane Kitchen，还是看 Rachel 能打开的每一家公司。
+
 ## 电子签
 
-打开 **电子签**。**等你签署**（Waiting for your signature）下是 Daniel Ong 发来的委托书，内容为截至 2027 年 12 月 31 日财年的记账、GST 和薪资服务。选 **签署**（Sign）在线签署。签署后它移到 **已签署 / 已完成**（Signed and completed）下，选 **下载**（Download）可取得签署件。
+打开 **电子签**。三个数字块分别统计 **等你签署**（Waiting for your signature）、**等其他人**（Waiting for others）和 **已完成**（Completed），文件按这三组列在下面。这一页列出 Rachel 能打开的每一家公司的文件，所以每一行都写明是哪家公司。
+
+**等你签署** 下是 Daniel Ong 发来的委托书，内容为截至 2027 年 12 月 31 日财年的记账、GST 和薪资服务。选 **签署**（Sign）在线签署。签署后它移到 **已完成** 下，选 **下载**（Download）可取得签署件。
 
 {% screenshot id="demo/portal-esign-waiting" caption="等待 Rachel 签署的委托书。" /%}
 
 ## 文件
 
-打开 **文件**。**文件夹**（Folders）下有会计共享给客户的 **Shared with Marigold Lane**，里面是 FY2025 财务报表和 2026 年 7 月至 9 月的 GST F5 申报回执。选 **打开**（Open）或 **下载**。Rachel 自己上传的文件放在 **你上传的**（Your uploads）下。
+打开 **文件**。页头的路径从 **首页** 开始。**文件夹**（Folders）下有会计共享给客户的 **Shared with Marigold Lane**，里面是 FY2025 财务报表和 2026 年 7 月至 9 月的 GST F5 申报回执。打开文件夹，选一个文件即可打开或下载。
+
+选 **上传**（Upload）可以把文件发给事务所。Rachel 上传的文件放在 **你上传的**（Your uploads）里。用 **搜索文件名**（Search file names）可以在所有文件夹中查找文件。
 
 {% screenshot id="demo/portal-documents-folder" caption="事务所共享给客户的文件夹。" /%}
 
 ## 会计与税务
 
-打开 **会计与税务**。**Larkspur Corporate Services 的问题**（Questions from Larkspur Corporate Services）下有会计提出的两个问题，状态都是 **待答**（To answer）：
+打开 **会计与税务**。顶部的 **客户欠你**（Owed to you）按事务所已记录的发票，显示这家公司的客户还欠它多少钱。用 **需要你处理**（Needs you）、**在 Larkspur Corporate Services 手上** 和 **已完成**（Completed）筛选案子。每个案子列出 **期间**（Period）、**等你处理**（Waiting on you）的内容和 **状态**（Status）。
+
+在记账案子上选 **打开**（Open）。案子页顶部显示问题已完成几项，下面是会计提出的问题，其中两个是 **待答**（To answer）：
 
 - Corallis Bank 尾号 7726 账户 10 月和 11 月的银行对账单；
 - 本季度到目前为止的供应商发票。
 
-在 **你的答复**（Your answer）中填写答复，需要时用 **附件**（Attach）附上文件，再选 **发送**（Send）。问题变为 **已答**（Answered），答复出现在事务所一侧这家公司的记账案子中。做账用的单据也可以在 **把做账要的单据发过来**（Send documents for the books）下用 **选择文件**（Choose files）发送。
+在 **你的答复**（Your answer）中填写答复，需要时用 **附件**（Attach）附上文件，再选 **发送**（Send）。问题变为 **已答**（Answered）。答复发出后不能再改，还要补充的话可以在 **消息** 里说。在事务所一侧，答复出现在这家公司的记账案子中。
+
+右侧的 **负责人**（Handled by）写着负责的会计，旁边有 **发消息**（Message）按钮。在 **这一期还有别的文件吗？**（Anything else for this period?）下，用 **选择文件**（Choose files）可以再发做账用的单据。
 
 {% screenshot id="demo/portal-accounting-questions" caption="事务所提出、等待答复的问题。" /%}
 
 ## 消息
 
-打开 **消息**。与事务所的对话里已有 Daniel Ong 和 Rachel 之间关于 GST 申报和委托书的三条消息。在 **写一条消息…**（Write a message…）中输入内容，选 **发送**。在事务所一侧，这条消息出现在 CRM 中这家公司的 **消息** 页签上。
+打开 **消息**。与事务所的对话里已有 Daniel Ong 和 Rachel 之间关于 GST 申报和委托书的三条消息。在输入框中写消息，需要时用 **附件**（Attach）附上文件，再选 **发送**。在事务所一侧，这条消息出现在 CRM 中这家公司的 **消息** 页签上。
+
+右侧的 **你在 Larkspur Corporate Services 的团队** 列出事务所里负责这家公司的人，**你公司的成员**（People at your company）列出 Marigold Lane Kitchen 中能看到这段对话的所有人。
 
 ## 公司秘书：资料清单
 
-打开 **公司秘书**。**材料与信息**（Documents and details）下是 Marigold Lane Kitchen 新任董事的资料清单，状态为 **等你填写**（Waiting on you）。其中两项已经答好：任命生效日期，以及没有董事同时卸任。选 **打开**，现场填写其余部分：
+打开 **公司秘书**。Marigold Lane Kitchen 新任董事的资料清单列在这里，状态为 **需要你处理**（Needs you）。选 **打开**。每一项标着 **已完成**（Done）或 **待填写**（To fill），顶部的进度条显示已完成几项。其中两项已经答好：任命生效日期，以及没有董事同时卸任。现场填写其余部分：
 
 {% steps %}
 1. 在 **New director** 下选 **添加人员**（Add a person）。在 **英文全名（与护照或 NRIC 一致）**（Full name (as in the passport or NRIC)）中填 `Clement Yeo Shao Wen`，**邮箱**（Email）填 `clement.yeo@marigoldlane.example`，**手机**（Mobile）填 `+65 5201 3368`。用 **添加文件**（Add a file）从 [演示文件](/zh-cn/demo/overview/#演示文件) 中先上传 `02-checklist/Clement Yeo NRIC front (specimen).pdf`，再上传 `02-checklist/Clement Yeo NRIC back (specimen).pdf`，文件不作任何改动。
 2. 可选：在董事会批准一项下，用 **添加文件** 附上 `02-checklist/Marigold Lane board resolution - new director (specimen).pdf`。
-3. 选 **提交**（Submit），再在 **确认提交？**（Submit these answers?）中选 **提交**。
+3. 选顶部的 **发送给 Larkspur Corporate Services**（Send to Larkspur Corporate Services），再在 **确认提交？**（Submit these answers?）中选 **提交**（Submit）。
 {% /steps %}
 
-清单显示 **已提交给我们**（Sent to us）。除非事务所把某一项退回，Rachel 不能再修改答复。这份清单在事务所一侧的操作见 [公司秘书：资料清单](/zh-cn/demo/client-checklist/)。
+清单显示 **已提交给我们**（Sent to us）。除非事务所把某一项退回，Rachel 不能再修改答复。Rachel 在清单里上传的文件只有她自己能打开，公司里的其他人只看到是谁上传的。这份清单在事务所一侧的操作见 [公司秘书：资料清单](/zh-cn/demo/client-checklist/)。
 
 {% screenshot id="demo/portal-checklist-open" caption="新任董事资料清单，已有两项答复。" /%}
 
 ## 发票：InvoiceNow
 
-事务所已为 Marigold Lane Kitchen 和 Tidewater Studio 开通 InvoiceNow，两家公司可以互相收发 InvoiceNow 发票。打开 **发票**，页签为 **草稿**（Drafts）、**已发**（Sent）和 **收件**（Received）。
+事务所已为 Marigold Lane Kitchen 和 Tidewater Studio 开通 InvoiceNow，两家公司可以互相收发 InvoiceNow 发票。打开 **发票**。顶部一栏统计 **草稿**（Draft）、**发送中**（Sending）、**未送达**（Not delivered）、**本月已送达**（Delivered this month）和 **本月收到**（Received this month）。页签为 **全部**（All）、**草稿**、**已发出**（Sent）、**未送达**、**贷项通知单**（Credit notes）和 **收到的**（Received）。**送达**（Delivery）一栏显示每份已发单据的送达情况。
 
-**收件。** Tidewater Studio 发来的两份单据：
+**收到的。** Tidewater Studio 发来的两份单据：
 
 | 单据 | 内容 |
 |---|---|
@@ -89,25 +115,36 @@ Rachel 没有密码，用邮件发来的验证码登录。在演示环境中，�
 打开一份单据可看到 **收到的单据**（Received document），选 **下载原文**（Download original）可取得原始文件。
 
 {% aside type="note" title="收到的单据在 15 分钟内到达" %}
-这两份单据在开出或重置账户时发出，约 15 分钟内出现在 **收件** 下。刚重置完时这个页签可能还是空的。
+这两份单据在开通或重置账户时发出，约 15 分钟内出现在 **收到的** 下。刚重置完时这个页签可能还是空的。
 {% /aside %}
 
 **现场发出草稿。** **草稿** 下有一张 Marigold Lane Kitchen 开给 Tidewater Studio 的发票，内容为工作室开放日的餐饮服务（60 位来宾及服务人员，Net 14，买方参考号 TWS-PO-2611）。
 
 {% steps %}
-1. 打开草稿，核对 **买方**（Buyer）、**单据信息**（Details）、**明细行**（Lines）、**合计**（Totals）和 **预览**（Preview）。
-2. 选 **发送**，再在 **确认发送这份单据？**（Send this document?）中选 **发送**。
-3. 打开 **已发**。**送达情况**（Delivery）一栏先显示 **发送中**（Sending），约一分钟后显示 **已送达**（Delivered）。
+1. 打开草稿，核对买方、单据信息、明细行、合计和预览。
+2. 选 **发送**（Send），再在 **确认发送这份单据？**（Send this document?）中选 **发送**。
+3. 打开 **已发出**。**送达** 一栏先显示 **在途**（On its way），约一分钟后显示勾号和送达时间。
 {% /steps %}
 
-这张发票经模拟 Access Point 送达 Tidewater Studio。
+这张发票经模拟 Access Point 送达 Tidewater Studio。如果单据没能送达，这一行标为 **失败**（Failed）并写明简短原因，选 **复制为新草稿**（Copy to a new draft）可以改正后重发。已发出的单据不能再修改。
 
-**发票版式。** **发票设置**（Invoice settings） › **版式**（Design）显示 Marigold Lane Kitchen 自己的发票版式：主题颜色和 Corallis Bank 收款信息。
+**新建**（New）用来开发票或贷项通知单。**发票设置**（Invoice settings） › **版式**（Design）显示 Marigold Lane Kitchen 自己的发票版式：主题颜色和 Corallis Bank 收款信息。
 
-{% screenshot id="demo/portal-invoicenow-received" caption="收件页签：Tidewater Studio 发来的发票和红字发票。" /%}
+{% screenshot id="demo/portal-invoicenow-received" caption="收到的页签：Tidewater Studio 发来的发票和红字发票。" /%}
 
 {% screenshot id="demo/portal-invoicenow-delivered" caption="现场发出的草稿已送达。" /%}
 
 {% aside type="note" title="与正式环境的差异" %}
 演示环境的 InvoiceNow 使用模拟 Access Point：开通立即获批，单据发出约十秒后送达，不会进入 Peppol 网络。
 {% /aside %}
+
+## 我的账号
+
+选右上角的头像，再选 **我的账号**（My account）：
+
+- **语言**（Language）：**English** 或 **中文**。改了之后，Rachel 在任何设备上看到的门户都跟着变，与浏览器的语言无关。
+- **密码**（Password）：Rachel 现在用邮箱验证码登录。选 **设置密码**（Set a password）后也可以用密码登录，设置密码的链接会发到她的邮箱。
+- **验证器 App**（Authenticator app）：登录时多加一步验证。
+- **在所有设备上退出**（Sign out everywhere）：在所有设备上退出，包括当前这台。
+
+用来登录的邮箱由事务所维护，不能在这里修改。

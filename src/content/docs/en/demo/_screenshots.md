@@ -24,10 +24,10 @@ This list is the input for the screenshot pipeline. Each id is captured in Engli
 | `demo/bookkeeping-c-run-progress` | bookkeeping | accountant | Marigold Lane quarter › workbench › Documents | "AI bookkeeping run" card while running (phase, counterparties, spend). |
 | `demo/settings-reset-card` | reset-faq | tenant admin | Settings › About | "Demo account" card with "Available until" and "Reset demo account". |
 | `demo/portal-sign-in-code` | client-portal | portal (`<prefix>.client`) | `/portal/login` › Email me a sign-in code | "Enter the code" screen. |
-| `demo/portal-home` | client-portal | portal | `/portal` | Home of Marigold Lane Kitchen: Waiting on you, key figures, team. |
-| `demo/portal-esign-waiting` | client-portal | portal | `/portal/esign` | Engagement letter under "Waiting for your signature". |
+| `demo/portal-home` | client-portal | portal | `/portal` | Home of Marigold Lane Kitchen (redesigned portal): the four tiles, key figures and the Waiting on you board. |
+| `demo/portal-esign-waiting` | client-portal | portal | `/portal/esign` | The three tiles and the engagement letter under "Waiting for your signature". |
 | `demo/portal-documents-folder` | client-portal | portal | Documents | Folder "Shared with Marigold Lane" with its two PDFs. |
-| `demo/portal-accounting-questions` | client-portal | portal | Accounting & Tax | "Questions from Larkspur Corporate Services", both "To answer". |
+| `demo/portal-accounting-questions` | client-portal | portal | Accounting & Tax › the bookkeeping case › Open | The case page: two questions "To answer", and "Handled by" on the right. |
 | `demo/portal-checklist-open` | client-portal | portal | Secretarial › checklist › Open | New-director checklist with two answers prefilled. |
 | `demo/portal-invoicenow-received` | client-portal | portal | Invoices › Received | Invoice TWS-2026-045 and credit note TWS-CN-2026-003 (wait about 15 minutes after the reset). |
-| `demo/portal-invoicenow-delivered` | client-portal | portal | Invoices › Sent | The open-house invoice sent live, Delivery "Delivered". |
+| `demo/portal-invoicenow-delivered` | client-portal | portal | Invoices › Sent | The open-house invoice sent live, Delivery shows a tick and the time. |
